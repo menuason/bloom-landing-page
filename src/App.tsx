@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
       <div className="h-full bg-gray-800">
         page content
       </div>
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }

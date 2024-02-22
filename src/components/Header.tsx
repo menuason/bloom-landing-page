@@ -1,75 +1,12 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import logo from '../assets/logo/logo-dark.svg';
-import arrowDown from '../assets/icons/arrowDown/arrowDown.svg';
-
-const LANG_ITEMS = [
-  {
-    lang: 'English',
-    name: 'en',
-  },
-  {
-    lang: 'Русский',
-    name: 'ru',
-  },
-  {
-    lang: 'հայերեն',
-    name: 'hy',
-  },
-];
-
-const MultiLanguageSelect = () => {
-  const [selectedValue, setSelectedLanguage] = useState('en');
-  const { i18n } = useTranslation();
-
-  const changeLanguage = (language: string) => {
-    setSelectedLanguage(language);
-    i18n.changeLanguage(language);
-  };
-
-  return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger
-        className="
-          flex items-center cursor-pointer text-black border-none
-          hover:border-none hover:outline-none
-          focus:outline-none
-        "
-      >
-        <div className="flex gap-2 hover:text-green-600">
-          {selectedValue === 'en' ? 'Eng' : selectedValue === 'ru' ? 'Рус' : 'Հայ'}
-          <img src={arrowDown} alt="Arrow Down" />
-        </div>
-      </DropdownMenu.Trigger>
-      <DropdownMenu.Content
-        align="start"
-        className="
-            absolute text-black bg-white
-            hover:outline-none py-2 px-4"
-      >
-        {
-          LANG_ITEMS.map((item) => (
-            <DropdownMenu.Item
-              onSelect={() => changeLanguage(`${item.name}`)}
-              className="
-                flex self-start px-4 py-2 my-0.5 cursor-pointer
-                hover:outline-none
-              "
-            >
-              {item.lang}
-            </DropdownMenu.Item>
-          ))
-        }
-      </DropdownMenu.Content>
-    </DropdownMenu.Root>
-  );
-};
+import { useTranslation } from 'react-i18next';
+import MultiLanguageSelect from './MultilanguageSelect';
+import HamburgerSelect from './HamburgerSelect';
 
 const Header = () => {
   const { t } = useTranslation();
 
-  const NAV_BAR_ITEMS = [
+  const NAV_BAR_ITEMS_WEB = [
     {
       title: t('header.home'),
       href: '',
@@ -93,15 +30,35 @@ const Header = () => {
   ];
 
   return (
-    <div className="bg-white h-20 flex justify-between px-20">
-      <img src={logo} className="self-center h-14 w-[105px] cursor-pointer" alt="logo" />
-      <div className="flex gap-12">
-        <div className="flex gap-12 items-center cursor-pointer text-black">
-          {NAV_BAR_ITEMS.map((item, ind) => (
-            <a href={item.href} className="hover:text-green-600" key={ind}>{t(`${item.title}`)}</a>
-          ))}
+    <div className="
+      bg-white h-20 w-full flex justify-between px-6
+      lg:px-20
+      md:px-8
+     "
+    >
+      <img
+        src={logo}
+        className="
+          self-center cursor-pointer h-14 w-[105px]
+          xs:h-12 w-[89px]
+        "
+        alt="logo"
+      />
+
+      <div className="flex items-center gap-12 cursor-pointer text-black">
+        <div className="hidden lg:flex gap-12 items-center">
+          {
+            NAV_BAR_ITEMS_WEB.map((item) => (
+              <a key={item.title} href={item.href} className="hover:text-green-600">{item.title}</a>
+            ))
+          }
         </div>
-        <MultiLanguageSelect />
+        <div className="flex gap-3">
+          <MultiLanguageSelect />
+          <div className="flex items-center cursor-pointer lg:hidden">
+            <HamburgerSelect />
+          </div>
+        </div>
       </div>
     </div>
   );
