@@ -10,7 +10,7 @@ function App() {
       <div className="h-full bg-gray-800">
         page content
       </div>
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }

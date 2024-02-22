@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import logo from '../assets/logo/logo-dark.svg';
+import hamburger from '../assets/icons/hamburger/hamburger.svg';
+import close from '../assets/icons/close/close.svg';
 import { useTranslation } from 'react-i18next';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import logo from '../assets/logo/logo-dark.svg';
 import arrowDown from '../assets/icons/arrowDown/arrowDown.svg';
+
+import { useState } from 'react';
 
 const LANG_ITEMS = [
   {
@@ -39,7 +42,7 @@ const MultiLanguageSelect = () => {
       >
         <div className="flex gap-2 hover:text-green-600">
           {selectedValue === 'en' ? 'Eng' : selectedValue === 'ru' ? 'Рус' : 'Հայ'}
-          <img src={arrowDown} alt="Arrow Down" />
+          <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
         </div>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content
@@ -66,10 +69,100 @@ const MultiLanguageSelect = () => {
   );
 };
 
+const NAV_BAR_ITEMS_MOB = [
+  {
+    title: 'Catalogue',
+    href: '',
+  },
+  {
+    title: 'Packaging',
+    href: '',
+  },
+  {
+    title: 'About Us',
+    href: '',
+  },
+  {
+    title: 'Mission and Vision',
+    href: '',
+  },
+  {
+    title: 'Our System',
+    href: '',
+  },
+  {
+    title: 'Partners',
+    href: '',
+  },
+  {
+    title: 'Contact',
+    href: '',
+  },
+];
+
+const HamburgerSelect = () => {
+  const [show, setShow] = useState(false);
+
+  const handleHamburgerToggle = () => {
+    setShow(!show);
+  };
+
+  return (
+    <>
+      <button
+        className="border-none hover:outline-none hover:border-none "
+        onClick={handleHamburgerToggle}
+      >
+        <img
+          src={hamburger}
+          className="self-center cursor-pointer h-[27px] w-10"
+          alt="logo"
+        />
+      </button>
+
+      {show && (
+        <div
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50"
+          onClick={handleHamburgerToggle}
+        >
+          <div
+            className="flex flex-col gap-3 absolute top-0 left-0 w-[337px] h-full py-8 px-4 bg-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-4">
+              <button
+                className="float-right text-gray-700 hover:text-gray-900"
+                onClick={handleHamburgerToggle}
+              >
+                <img
+                  src={close}
+                  className="self-center cursor-pointer h-[14px] w-[14px]"
+                  alt="logo"
+                />
+              </button>
+            </div>
+            <div>
+              {
+                NAV_BAR_ITEMS_MOB.map((item) => {
+                  return (
+                    <div key={item.title} className="flex self-center font-medium py-3 px-4 -mx-4 border-b border-gray-100">
+                      {item.title}
+                    </div>
+                  );
+                })
+              }
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
 const Header = () => {
   const { t } = useTranslation();
 
-  const NAV_BAR_ITEMS = [
+  const NAV_BAR_ITEMS_WEB = [
     {
       title: t('header.home'),
       href: '',
@@ -93,16 +186,33 @@ const Header = () => {
   ];
 
   return (
-    <div className="bg-white h-20 flex justify-between px-20">
-      <img src={logo} className="self-center h-14 w-[105px] cursor-pointer" alt="logo" />
-      <div className="flex gap-12">
-        <div className="flex gap-12 items-center cursor-pointer text-black">
-          {NAV_BAR_ITEMS.map((item, ind) => (
-            <a href={item.href} className="hover:text-green-600" key={ind}>{t(`${item.title}`)}</a>
-          ))}
-        </div>
-        <MultiLanguageSelect />
+    <div className="
+      bg-white h-20 w-full flex justify-between px-6
+      lg:px-20
+      md:px-8
+     "
+    >
+      <img
+        src={logo}
+        className="
+          self-center cursor-pointer h-14 w-[105px]
+          xs:h-12 w-[89px]
+        "
+        alt="logo"
+      />
+
+      <div className="flex gap-12 items-center cursor-pointer text-black">
+          {
+            NAV_BAR_ITEMS_WEB.map((item) => (
+              <a key={item.title} href={item.href} className="hover:text-green-600">{item.title}</a>
+            ))
+          }
+          <MultiLanguageSelect />
+          {/*<div className="flex items-center cursor-pointer lg:hidden">*/}
+          {/*  <HamburgerSelect />*/}
+          {/*</div>*/}
       </div>
+
     </div>
   );
 };
