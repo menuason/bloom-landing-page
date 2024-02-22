@@ -6,7 +6,7 @@ import logoLight from "../assets/logo/logo-light.svg";
 
 const Footer: FC = () => {
   return (
-    <div className="bg-[#1F2023] text-white w-full flex flex-col absolute bottom-0">
+    <div className="bg-[#1F2023] text-white w-full flex flex-col bottom-0">
       <div
         className="
         flex items-center justify-between

@@ -44,7 +44,7 @@ const MultiLanguageSelect = () => {
       <DropdownMenu.Content
         align="start"
         className="
-            absolute text-black bg-white
+            absolute text-black bg-white z-10
             hover:outline-none py-2 px-4"
       >
         {
