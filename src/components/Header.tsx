@@ -201,18 +201,21 @@ const Header = () => {
         alt="logo"
       />
 
-      <div className="flex gap-12 items-center cursor-pointer text-black">
+      <div className="flex items-center gap-12 cursor-pointer text-black">
+        <div className="hidden lg:flex gap-12 items-center">
           {
             NAV_BAR_ITEMS_WEB.map((item) => (
               <a key={item.title} href={item.href} className="hover:text-green-600">{item.title}</a>
             ))
           }
+        </div>
+        <div className="flex gap-3">
           <MultiLanguageSelect />
-          {/*<div className="flex items-center cursor-pointer lg:hidden">*/}
-          {/*  <HamburgerSelect />*/}
-          {/*</div>*/}
+          <div className="flex items-center cursor-pointer lg:hidden">
+            <HamburgerSelect />
+          </div>
+        </div>
       </div>
-
     </div>
   );
 };
