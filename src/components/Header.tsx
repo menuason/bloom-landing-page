@@ -25,7 +25,7 @@ const Header = () => {
     },
     {
       title: t("header.contact"),
-      href: "",
+      href: "/contact-us",
     },
   ];
 
