@@ -1,12 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { AboutBloomHouse, Assortment, WhyChooseUs } from ".";
 
 const HomePage = () => {
   const videoContainerHeight = "calc(100vh - 80px)";
+  const { t } = useTranslation();
 
   return (
     <div className="mb-[156px]">
       <div style={{ height: videoContainerHeight }} className="relative">
-        Your browser does not support the video tag.
+        {t("homePage.videoNotSupported")}
       </div>
       <Assortment />
       <AboutBloomHouse />

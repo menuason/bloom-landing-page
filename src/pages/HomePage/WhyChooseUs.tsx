@@ -1,44 +1,65 @@
+import { useTranslation } from "react-i18next";
 import precisionCultivation from "../../assets/icons/iconsForChoosUs/precisionCultivation.svg";
 import temperature from "../../assets/icons/iconsForChoosUs/Temperature.svg";
 import timeCosuming from "../../assets/icons/iconsForChoosUs/timeCosuming.svg";
 
-const iconsForChooseUs = [
-  { icon: timeCosuming, text: "Best Seedlings" },
-  { icon: temperature, text: "Precision Cultivation" },
-  { icon: precisionCultivation, text: "Temperature Control" },
-];
-
-const infoForChooseUs = [
-  {
-    number: 1,
-    header: "Best Seedlings",
-    description:
-      "Our commitment to using the best Dutch seedlings ensures the quality, luster, and longevity of our gerberas.",
-  },
-  {
-    number: 2,
-    header: "Precision Cultivation",
-    description:
-      "Every stage of gerbera cultivation is meticulously managed to ensure optimal growth and excellent flowering.",
-  },
-  {
-    number: 3,
-    header: "Temperature Control",
-    description:
-      "The perfect temperature for gerberas is ensured through our advanced control systems, ensuring they thrive in a comfortable and conducive environment.",
-  },
-];
+interface IconsForChooseUs {
+  icon: string;
+  text: string;
+}
+interface InfoForChooseUs {
+  number: number;
+  header: string;
+  description: string;
+}
 
 export const WhyChooseUs = () => {
+  const { t } = useTranslation();
+
+  const iconsForChooseUs: IconsForChooseUs[] = [
+    {
+      icon: timeCosuming,
+      text: t("homePage.whyChooseUs.reasons.icons.seedling"),
+    },
+    {
+      icon: precisionCultivation,
+      text: t("homePage.whyChooseUs.reasons.icons.cultivation"),
+    },
+    {
+      icon: temperature,
+      text: t("homePage.whyChooseUs.reasons.icons.temperature"),
+    },
+  ];
+
+  const infoForChooseUs: InfoForChooseUs[] = [
+    {
+      number: 1,
+      header: t("homePage.whyChooseUs.reasons.numbers.oneTitle"),
+      description: t("homePage.whyChooseUs.reasons.numbers.oneDescription"),
+    },
+    {
+      number: 2,
+      header: t("homePage.whyChooseUs.reasons.numbers.twoTitle"),
+      description: t("homePage.whyChooseUs.reasons.numbers.twoDescription"),
+    },
+    {
+      number: 3,
+      header: t("homePage.whyChooseUs.reasons.numbers.threeTitle"),
+      description: t("homePage.whyChooseUs.reasons.numbers.threeDescription"),
+    },
+  ];
+
   return (
     <div className="flex flex-col items-center gap-1 m-[72px]">
-      <h1 className="text-4xl text-gray-950">Why Choose Us?</h1>
+      <div className="flex flex-col items-center justify-center gap-2">
+        <h1 className="text-4xl text-gray-950">
+          {t("homePage.whyChooseUs.whyChooseUsTitle")}
+        </h1>
 
-      <h6 className="w-8/12 text-center font-light text-base text-gray-950">
-        Our greenhouses are meticulously crafted to provide the optimal
-        environment for year-round gerbera cultivation, ensuring a constant
-        bloom of vibrant colors and exquisite blossoms.
-      </h6>
+        <h6 className="w-8/12 text-center font-light text-base text-gray-950">
+          {t("homePage.whyChooseUs.whyChooseDescription")}
+        </h6>
+      </div>
       <div className="flex mt-9 ">
         <div className="flex flex-col m-0">
           <img src="src/assets/home-page-photos/5P4A3279.png" />
