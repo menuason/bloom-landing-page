@@ -1,10 +1,13 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { PhoneIcon } from "../assets/icons/phone/phone";
 import { MailIcon } from "../assets/icons/mail/mail";
 import { LocationIcon } from "../assets/icons/location/location";
 import logoLight from "../assets/logo/logo-light.svg";
 
 const Footer: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-[#1F2023] text-white w-full flex flex-col bottom-0">
       <div
@@ -37,40 +40,39 @@ const Footer: FC = () => {
           </a>
 
           <span className="text-white text-sm/[16px] font-thin leading-6">
-            Bloom House is a gerbera greenhouse farm established in 2022 with
-            the unique mission of cultivating the best gerberas.
+            {t("footer.info")}
           </span>
         </div>
 
         <div className="mt-4 flex flex-col gap-3 items-baseline">
-          <p className="mb-2 text-sm">Useful Links</p>
+          <p className="mb-2 text-sm">{t("footer.usefulLinks.links")}</p>
           <div className="flex flex-col gap-3">
             <a href="#home" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
-                Catalogue
+                {t("footer.usefulLinks.catalogue")}
               </span>
             </a>
 
             <a href="#about" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
-                Packaging
+                {t("footer.usefulLinks.packaging")}
               </span>
             </a>
             <a href="#services" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
-                About Us
+                {t("footer.usefulLinks.aboutUs")}
               </span>
             </a>
             <a href="#contact" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
-                Contact
+                {t("footer.usefulLinks.contact")}
               </span>
             </a>
           </div>
         </div>
 
         <div className="w-72 mt-4 flex flex-col justify-center items-baseline flex-wrap gap-3">
-          <p className="mb-2 text-sm">Contact</p>
+          <p className="mb-2 text-sm">{t("footer.contactInfo.contact")}</p>
           <div className="flex items-center gap-2 text-white">
             <PhoneIcon />
             <a href="tel:+374 77103567">
@@ -101,7 +103,7 @@ const Footer: FC = () => {
               rel="noopener noreferrer"
             >
               <span className="text-sm/[16px] font-thin leading-6">
-                Marmarashen village Yerevan-Ararat highway 136/1
+                {t("footer.contactInfo.location")}
               </span>
             </a>
           </div>
