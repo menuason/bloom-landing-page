@@ -9,7 +9,7 @@ const NAV_BAR_ITEMS_MOB = [
   },
   {
     title: 'Packaging',
-    href: '',
+    href: '/packaging',
   },
   {
     title: 'About Us',
@@ -29,7 +29,7 @@ const NAV_BAR_ITEMS_MOB = [
   },
   {
     title: 'Contact',
-    href: '',
+    href: '/contact-us',
   },
 ];
 
@@ -78,9 +78,9 @@ const HamburgerSelect = () => {
               {
                 NAV_BAR_ITEMS_MOB.map((item) => {
                   return (
-                    <div key={item.title} className="flex self-center font-medium py-3 px-4 -mx-4 border-b border-gray-100">
+                    <a href={item.href} key={item.title} className="flex self-center font-medium py-3 px-4 -mx-4 border-b border-gray-100">
                       {item.title}
-                    </div>
+                    </a>
                   );
                 })
               }
