@@ -1,34 +1,33 @@
+import { useTranslation } from "react-i18next";
 import arrowRight from "../../assets/icons/arrowRight/arrowRight.svg";
 
 export const AboutBloomHouse = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-row gap-16 px-20">
       <div className="flex flex-col justify-center gap-6">
         <h1 className=" font-normal text-5xl text-gray-950">
-          About Bloom House
+          {t("homePage.aboutBloomHouse.aboutBloomHouseTitle")}
         </h1>
         <div>
           <p className="font-light text-base text-gray-950">
-            Bloom House is a gerbera greenhouse farm established in 2022 with
-            the unique mission of cultivating the best gerberas, sourcing their
-            seedlings directly from Holland.
+            {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionBulletOne")}
           </p>
           <p className="font-light text-base text-gray-950">
-            We pay great attention to the careful sorting and packaging of each
-            gerbera.
+            {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionBulletTwo")}
           </p>
           <p className="font-light text-base text-gray-950">
-            Each flower undergoes careful selection and careful packaging,
-            ensuring that it reaches its destination in perfect condition.
+            {t(
+              "homePage.aboutBloomHouse.aboutBloomHouseDescriptionBulletThree"
+            )}
           </p>
           <p className="font-light text-base text-gray-950">
-            In the greenhouse industry, we aim to set an example by setting new
-            standards that reiterate our commitment to creating a harmonious
-            balance of quality and beauty.
+            {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionBulletFour")}
           </p>
         </div>
-        <button className="h-14 w-40 mt-8 px-4 rounded-none bg-black text-white flex items-center justify-center gap-3">
-          Read More
+        <button className="h-14 w-fit mt-8 px-6 rounded-none bg-black text-white flex items-center justify-center gap-3">
+          {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
           <img src={arrowRight} />
         </button>
       </div>

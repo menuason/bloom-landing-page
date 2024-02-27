@@ -1,39 +1,48 @@
-const flowersArr = [
-  {
-    src: "src/assets/flowers/5P4A3263.png",
-    name: "Mondello",
-    author: "By Schreurs",
-  },
-  {
-    src: "src/assets/flowers/5P4A3265.png",
-    name: "Snow King",
-    author: "By HiverdaFlorist",
-  },
-  {
-    src: "src/assets/flowers/5P4A3260.png",
-    name: "Mariatta",
-    author: "By Schreurs",
-  },
-  {
-    key: 4,
-    src: "src/assets/flowers/5P4A3269.png",
-    name: "Briliance",
-    author: "By HiverdaFlorist",
-  },
-];
+import { useTranslation } from "react-i18next";
+
+interface FlowersArr {
+  src: string;
+  name: string;
+  author: string;
+}
 
 export const Assortment = () => {
+  const { t } = useTranslation();
+
+  const flowersArr: FlowersArr[] = [
+    {
+      src: "src/assets/flowers/5P4A3263.png",
+      name: t("homePage.flowers.mondello.name"),
+      author: t("homePage.flowers.mondello.author"),
+    },
+    {
+      src: "src/assets/flowers/5P4A3265.png",
+      name: t("homePage.flowers.snowKing.name"),
+      author: t("homePage.flowers.snowKing.author"),
+    },
+    {
+      src: "src/assets/flowers/5P4A3260.png",
+      name: t("homePage.flowers.mariatta.name"),
+      author: t("homePage.flowers.mariatta.author"),
+    },
+    {
+      src: "src/assets/flowers/5P4A3269.png",
+      name: t("homePage.flowers.briliance.name"),
+      author: t("homePage.flowers.briliance.author"),
+    },
+  ];
+
   return (
     <div className="flex flex-col items-center gap-1 m-[72px]">
-      <h1 className=" font-normal text-5xl text-gray-950">
-        Our Unique Assortment
-      </h1>
+      <div className="flex flex-col items-center justify-center gap-2">
+        <h1 className=" font-normal text-5xl text-gray-950">
+          {t("homePage.assortment.assortmentSectionTitle")}
+        </h1>
 
-      <h6 className="w-8/12 text-center font-light text-base text-gray-950">
-        Discover gerberas that stand out for their uniqueness. Each petal is
-        meticulously groomed, and every flower narrates a story of color and
-        elegance.
-      </h6>
+        <h6 className="w-8/12 text-center font-light text-base text-gray-950">
+          {t("homePage.assortment.assortmentSectionDescription")}
+        </h6>
+      </div>
       <div className="flex flex-row gap-4 mt-9 ">
         {flowersArr.map((item, index) => {
           return (
