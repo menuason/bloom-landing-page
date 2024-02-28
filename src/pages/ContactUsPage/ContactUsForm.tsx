@@ -27,18 +27,23 @@ const ContactUsForm = () => {
     };
 
     return (
-      <div className="flex flex-col mr-[104px] gap-8 ">
-        <div className="text-lg w-[520px] font-light">
+      <div className="flex flex-col pr-[104px] gap-8">
+        <div className="text-lg font-light lg:w-[513px] md:w-[513px] xs:w-[295px]">
           <p>Have a question or inquiry? Feel free to reach out to us via email. We're here to assist you!</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-col gap-8">
-            <div className="flex gap-8 justify-between">
+          <div className="flex flex-col gap-8 w-fit">
+            <div className="flex gap-8
+              lg:flex-row lg:justify-between
+              md:flex-row md:justify-between
+              xs:flex-col
+            "
+            >
               <div className="flex flex-col gap-2">
                 <label htmlFor="name">Name</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none"
+                  className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="text"
                   id="name"
                   {...register("name", { required: "Name is required" })}
@@ -53,7 +58,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col gap-2">
                 <label htmlFor="surname">Surname</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none"
+                  className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="text"
                   id="surname"
                   {...register("surname", { required: "Surname is required" })}
@@ -67,11 +72,16 @@ const ContactUsForm = () => {
               </div>
             </div>
 
-            <div className="flex gap-8 justify-between">
+            <div className="flex gap-8
+              lg:flex-row lg:justify-between
+              md:flex-row md:justify-between
+              xs:flex-col
+            "
+            >
               <div className="flex flex-col gap-2">
                 <label htmlFor="email">Email:</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none"
+                  className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="email"
                   id="email"
                   {...register("email", { required: "Email is required" })}
@@ -87,7 +97,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col gap-2">
                 <label htmlFor="phone">Phone:</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none"
+                  className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="tel"
                   id="phone"
                   {...register("phone", { required: "Phone is required" })}
