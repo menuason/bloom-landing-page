@@ -35,7 +35,7 @@ const resources = {
           },
         },
         aboutBloomHouse: {
-          aboutBloomHouseTitle: "About Bloom House",
+          aboutBloomHouseTitle: "“About Us” we are more than just a greenhouse",
           aboutBloomHouseDescriptionBulletOne:
             "Bloom House is a gerbera greenhouse farm established in 2022 withthe unique mission of cultivating the best gerberas, sourcing theirseedlings directly from Holland.",
           aboutBloomHouseDescriptionBulletTwo:
@@ -104,7 +104,8 @@ const resources = {
           },
         },
         aboutBloomHouse: {
-          aboutBloomHouseTitle: "Bloom House-ի Մասին",
+          aboutBloomHouseTitle:
+            "«Մեր մասին» մենք ավելին ենք քան պարզապես ջերմոց",
           aboutBloomHouseDescriptionBulletOne:
             "Bloom House-ը հերբերաների ջերմոցային տնտեսություն է, որը հիմնադրվել է 2022 թվականին՝ լավագույն հերբերաները մշակելու եզակի առաքելությամբ՝ սածիլները ձեռք բերելով անմիջապես Հոլանդիայից:",
           aboutBloomHouseDescriptionBulletTwo:
@@ -173,7 +174,7 @@ const resources = {
           },
         },
         aboutBloomHouse: {
-          aboutBloomHouseTitle: "О Bloom House",
+          aboutBloomHouseTitle: "«О нас» мы больше чем просто теплица",
           aboutBloomHouseDescriptionBulletOne:
             "Bloom House — это тепличная ферма по выращиванию гербер, основанная в 2022 году с уникальной миссией по выращиванию лучших гербер, закупая саженцы непосредственно из Голландии.",
           aboutBloomHouseDescriptionBulletTwo:
