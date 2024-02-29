@@ -21,7 +21,7 @@ const NAV_BAR_ITEMS_MOB = [
   },
   {
     title: 'Our System',
-    href: '',
+    href: '/our-system',
   },
   {
     title: 'Partners',
@@ -59,7 +59,7 @@ const HamburgerSelect = () => {
           onClick={handleHamburgerToggle}
         >
           <div
-            className="flex flex-col gap-3 absolute top-0 right-0 w-[337px] h-full py-8 px-4 bg-white"
+            className="flex flex-col gap-3 absolute top-0 left-0 w-[337px] h-full py-8 px-4 bg-white"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-4">

@@ -2,6 +2,7 @@ import logo from "../assets/logo/logo-dark.svg";
 import { useTranslation } from "react-i18next";
 import MultiLanguageSelect from "./MultilanguageSelect";
 import HamburgerSelect from "./HamburgerSelect";
+import AboutUsSelect from "./AboutUsSelect";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -22,6 +23,7 @@ const Header = () => {
     {
       title: t("header.about.aboutUs"),
       href: "",
+      component: <AboutUsSelect />,
     },
     {
       title: t("header.contact"),
@@ -37,15 +39,16 @@ const Header = () => {
       md:px-8
      "
     >
-      <img
-        src={logo}
-        className="
+      <a href="/" className="
           self-center cursor-pointer h-14 w-[105px]
           xs:h-12 w-[89px]
-        "
-        alt="logo"
-      />
+        ">
+        <img
+          src={logo}
 
+          alt="logo"
+        />
+      </a>
       <div className="flex items-center gap-12 cursor-pointer text-black">
         <div className="hidden lg:flex gap-12 items-center">
           {NAV_BAR_ITEMS_WEB.map((item) => (
@@ -54,7 +57,7 @@ const Header = () => {
               href={item.href}
               className="hover:text-green-600"
             >
-              {item.title}
+              {item?.component ?? item.title}
             </a>
           ))}
         </div>

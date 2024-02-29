@@ -1,21 +1,14 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import OurSystemPageTranslation from "./system";
+import PackagingPageTranslation from "./packaging";
+import FooterTranslation from "./footer";
+import HeaderTranslation from "./header";
 
 const resources = {
   en: {
     translation: {
-      header: {
-        home: "Home",
-        catalogue: "Catalogue",
-        packaging: "Packaging",
-        about: {
-          aboutUs: "About Us",
-          mission: "Mission and Vision",
-          system: "Our System",
-          partners: "Partners",
-        },
-        contact: "Contact",
-      },
+      header: HeaderTranslation.en,
       homePage: {
         videoNotSupported: "Your browser does not support the video tag.",
         assortment: {
@@ -77,36 +70,14 @@ const resources = {
           },
         },
       },
-      footer: {
-        info: "Bloom House is a gerbera greenhouse farm established in 2022 with the unique mission of cultivating the best gerberas.",
-        usefulLinks: {
-          links: "Useful Links",
-          catalogue: "Catalogue",
-          packaging: "Packaging",
-          aboutUs: "About Us",
-          contact: "Contact",
-        },
-        contactInfo: {
-          contact: "Contact",
-          location: "Marmarashen village Yerevan-Ararat highway 136/1",
-        },
-      },
+      systemPage: OurSystemPageTranslation.en,
+      packagingPage: PackagingPageTranslation.en,
+      footer: FooterTranslation.en,
     },
   },
   hy: {
     translation: {
-      header: {
-        home: "Գլխավոր",
-        catalogue: "Կատալոգ",
-        packaging: "Փաթեթավորում",
-        about: {
-          aboutUs: "Մեր Մասին",
-          mission: "Առաքելություն Եվ Տեսլական",
-          system: "Մեր Համակարգը",
-          partners: "Գործընկերներ",
-        },
-        contact: "Կապ",
-      },
+      header: HeaderTranslation.hy,
       homePage: {
         videoNotSupported: "Ձեր զննարկիչը չի աջակցում տեսանյութի պիտակը:",
         assortment: {
@@ -168,36 +139,14 @@ const resources = {
           },
         },
       },
-      footer: {
-        info: "Bloom House -ը հերբերաների ջերմոցային տնտեսություն է, որը հիմնադրվել է 2022 թվականին՝ լավագույն հերբերաների մշակման եզակի առաքելությամբ:",
-        usefulLinks: {
-          links: "Օգտակար հղումներ",
-          catalogue: "Մեր Մասին",
-          packaging: "Կատալոգ",
-          aboutUs: "Մեր Մասին",
-          contact: "Կապ",
-        },
-        contactInfo: {
-          contact: "Կապ",
-          location: "Գյուղ Մարմարաշեն Երևան-Արարատ խճուղի 136/1",
-        },
-      },
+      systemPage: OurSystemPageTranslation.hy,
+      packagingPage: PackagingPageTranslation.hy,
+      footer: FooterTranslation.hy,
     },
   },
   ru: {
     translation: {
-      header: {
-        home: "Главная",
-        catalogue: "Каталог",
-        packaging: "Упаковка",
-        about: {
-          aboutUs: "О Нас",
-          mission: "Миссия и видение",
-          system: "Наша система",
-          partners: "Партнеры",
-        },
-        contact: "Контакт",
-      },
+      header: HeaderTranslation.ru,
       homePage: {
         videoNotSupported: "Ваш браузер не поддерживает видео тег.",
         assortment: {
@@ -259,20 +208,9 @@ const resources = {
           },
         },
       },
-      footer: {
-        info: "Bloom House — это тепличная ферма по выращиванию гербер основанная в 2022 году с уникальной миссией по выращиванию лучших гербер.",
-        usefulLinks: {
-          links: "Полезные ссылки",
-          catalogue: "Каталог",
-          packaging: "Упаковка",
-          aboutUs: "О Нас",
-          contact: "Контакт",
-        },
-        contactInfo: {
-          contact: "Контакт",
-          location: "Село Мармарашен шоссе Ереван-Арарат 136/1",
-        },
-      },
+      systemPage: OurSystemPageTranslation.ru,
+      packagingPage: PackagingPageTranslation.ru,
+      footer: FooterTranslation.ru,
     },
   },
 };
