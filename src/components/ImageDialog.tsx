@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { CloseIcon } from "../../assets/icons/close/close";
-import { ArrowLeftIcon } from "../../assets/icons/arrowLeft/arrowLeft";
-import { ArrowRightIcon } from "../../assets/icons/arrowRight/arrowRight";
+import { ArrowLeftIcon } from "../assets/icons/arrowLeft/arrowLeft";
+import { CloseIcon } from "../assets/icons/close/close";
+import { ArrowRightIcon } from "../assets/icons/arrowRight/arrowRight";
 
 interface Image {
   thumbnail: string;

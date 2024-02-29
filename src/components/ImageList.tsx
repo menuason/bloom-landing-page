@@ -1,36 +1,16 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { ImageDialog } from "./ImageDialog";
-
-const images = [
-  {
-    thumbnail: "src/assets/packaging-page-photos/pic-1.png",
-    hoverImg: "src/assets/packaging-page-photos/pic1-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-1-dialog.png",
-  },
-  {
-    thumbnail: "src/assets/packaging-page-photos/pic-2.png",
-    hoverImg: "src/assets/packaging-page-photos/pic2-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-2-dialog.png",
-  },
-  {
-    thumbnail: "src/assets/packaging-page-photos/pic-3.png",
-    hoverImg: "src/assets/packaging-page-photos/pic3-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-3-dialog.png",
-  },
-  {
-    thumbnail: "src/assets/packaging-page-photos/pic-4.png",
-    hoverImg: "src/assets/packaging-page-photos/pic4-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-4-dialog.png",
-  },
-];
 
 interface Image {
   thumbnail: string;
   hoverImg: string;
   dialogImg: string;
 }
+interface ImageListProps {
+  images: Image[];
+}
 
-export const ImageList = () => {
+export const ImageList: FC<ImageListProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
 

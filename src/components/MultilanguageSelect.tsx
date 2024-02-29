@@ -37,11 +37,13 @@ const MultiLanguageSelect = () => {
         "
       >
         <div className="flex gap-2 hover:text-green-600">
-          {selectedValue === "en"
-            ? "Eng"
-            : selectedValue === "ru"
-            ? "Рус"
-            : "Հայ"}
+          {
+            selectedValue === "en"
+              ? "Eng"
+              : selectedValue === "ru"
+                ? "Рус"
+                : "Հայ"
+          }
           <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
         </div>
       </DropdownMenu.Trigger>
@@ -49,13 +51,13 @@ const MultiLanguageSelect = () => {
         align="start"
         className="
             absolute text-black bg-white z-10
-            hover:outline-none py-2 px-4"
+            hover:outline-none py-3 px-4"
       >
         {LANG_ITEMS.map((item) => (
           <DropdownMenu.Item
             onSelect={() => changeLanguage(`${item.name}`)}
             className="
-                flex self-start px-4 py-2 my-0.5 cursor-pointer
+                flex self-start py-2 my-0.5 cursor-pointer
                 hover:outline-none
               "
           >
