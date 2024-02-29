@@ -27,16 +27,20 @@ export const ImageList: FC<ImageListProps> = ({ images }) => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
-    setSelectedImage(images[currentIndex === images.length - 1 ? 0 : currentIndex + 1]);
+    setSelectedImage(
+      images[currentIndex === images.length - 1 ? 0 : currentIndex + 1]
+    );
   };
 
   const handleBack = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-    setSelectedImage(images[currentIndex === 0 ? images.length - 1 : currentIndex - 1]);
+    setSelectedImage(
+      images[currentIndex === 0 ? images.length - 1 : currentIndex - 1]
+    );
   };
 
   return (
