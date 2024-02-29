@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
-import { PhoneIcon } from "../assets/icons/phone/phone";
-import { MailIcon } from "../assets/icons/mail/mail";
-import { LocationIcon } from "../assets/icons/location/location";
 import logoLight from "../assets/logo/logo-light.svg";
+import { useTranslation } from "react-i18next";
+import { MailFilledIcon } from "../assets/icons/mail/mail-filled";
+import { LocationFilledIcon } from "../assets/icons/location/location-filled";
+import { PhoneFilledIcon } from "../assets/icons/phone/phone-filled";
 
 const Footer: FC = () => {
   const { t } = useTranslation();
@@ -71,10 +71,10 @@ const Footer: FC = () => {
           </div>
         </div>
 
-        <div className="w-72 mt-4 flex flex-col justify-center items-baseline flex-wrap gap-3">
+        <div className="w-72 mt-4 flex flex-col justify-center items-baseline flex-wrap gap-4">
           <p className="mb-2 text-sm">{t("footer.contactInfo.contact")}</p>
           <div className="flex items-center gap-2 text-white">
-            <PhoneIcon />
+            <PhoneFilledIcon color={"white"} />
             <a href="tel:+374 77103567">
               <span className="text-sm/[16px] font-thin leading-6">
                 +374 77103567
@@ -88,7 +88,7 @@ const Footer: FC = () => {
             </a>
           </div>
           <div className="flex items-center gap-2 text-white">
-            <MailIcon />
+            <MailFilledIcon color={"white"} />
             <a href="mailto:bloomhouse.arm@gmail.com">
               <span className="text-sm/[16px] font-thin leading-6">
                 bloomhouse.arm@gmail.com
@@ -96,7 +96,7 @@ const Footer: FC = () => {
             </a>
           </div>
           <div className="flex gap-2 text-white">
-            <LocationIcon />
+            <LocationFilledIcon color={"white"} />
             <a
               href="https://maps.google.com?q=Marmarashen+village+Yerevan-Ararat+highway+136/1"
               target="_blank"
