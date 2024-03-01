@@ -50,17 +50,41 @@ export const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-1 m-[72px]">
-      <div className="flex flex-col items-center justify-center gap-2">
-        <h1 className="text-4xl text-gray-950">
+    <div
+      className="flex
+        lg:flex-col lg:items-center lg:gap-1 lg:px-20
+        md:flex-col md:items-center md:px-8
+        xs:flex-col xs:items-center xs:px-4
+      "
+    >
+      <div
+        className="flex gap-2
+          lg:flex-col lg:items-center lg:justify-center
+          md:flex-col md:items-center md:justify-center
+          xs:flex-col  xs:items-start
+        "
+      >
+        <h1
+          className=" text-gray-950
+            lg:font-normal lg:text-5xl
+            md:font-medium md:text-2xl
+            xs:font-medium xs:text-2xl
+          "
+        >
           {t("homePage.whyChooseUs.whyChooseUsTitle")}
         </h1>
 
-        <h6 className="w-8/12 text-center font-light text-base text-gray-950">
+        <h6
+          className="text-gray-950 font-light
+            lg:w-8/12 lg:text-base lg:text-center
+            md:text-sm
+            xs:text-sm xs:w-full
+          "
+        >
           {t("homePage.whyChooseUs.whyChooseDescription")}
         </h6>
       </div>
-      <div className="flex mt-9 ">
+      <div className="flex mt-9 lg:flex-row md:flex-col xs:flex-col">
         <div className="flex flex-col m-0">
           <img src="src/assets/home-page-photos/5P4A3279.png" />
           <div className="h-40 w-640 flex items-center justify-between">
@@ -71,23 +95,37 @@ export const WhyChooseUs = () => {
                   className="w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
                 >
                   <img src={item.icon} />
-                  <p className="w-1/2 text-center">{item.text}</p>
+                  <p
+                    className="w-1/2 text-center font-light
+                      lg:text-base
+                      md:text-sm md:w-2/6
+                      xs:text-sm xs:w-10/12
+                    "
+                  >
+                    {item.text}
+                  </p>
                 </div>
               );
             })}
           </div>
         </div>
-        <div className="flex flex-col w-1/2">
+        <div className="flex flex-col lg:w-1/2">
           {infoForChooseUs.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex gap-2 first:border-b first:border-[#b0b4c0] p-6 h-[160px] last:bg-[#1f2023] last:text-white "
+                className="h-fit min-h-40 flex gap-2 first:border-b first:border-[#b0b4c0] p-6 last:bg-[#1f2023] last:text-white
+                  lg:first:border-t-0
+                  md:first:border-t
+                  xs:first:border-t
+                "
               >
                 <h1 className="text-5xl text-[#529b3c]">{item.number}</h1>
                 <div className="flex flex-col ml-2 gap-2">
-                  <h4 className="text-xl font-light">{item.header}</h4>
-                  <p className="w-11/12 font-extralight text-base">
+                  <h4 className="font-light lg:text-xl md:text-xl xs:text-lg">
+                    {item.header}
+                  </h4>
+                  <p className="w-11/12 font-extralight text-base lg:text-base md:text-sm xs:text-xs">
                     {item.description}
                   </p>
                 </div>

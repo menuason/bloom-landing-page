@@ -33,21 +33,19 @@ const Header = () => {
 
   return (
     <div
-      className="
-      bg-white h-20 w-full flex justify-between px-6
-      lg:px-20
-      md:px-8
+      className="bg-white h-20 w-full flex justify-between px-6
+        lg:px-20
+        md:px-8
+        xs:px-4
      "
     >
-      <a href="/" className="
-          self-center cursor-pointer h-14 w-[105px]
-          xs:h-12 w-[89px]
-        ">
-        <img
-          src={logo}
-
-          alt="logo"
-        />
+      <a
+        href="/"
+        className="self-center cursor-pointer h-14 w-[105px]
+          xs:h-12 xs:w-[89px]
+        "
+      >
+        <img src={logo} alt="logo" />
       </a>
       <div className="flex items-center gap-12 cursor-pointer text-black">
         <div className="hidden lg:flex gap-12 items-center">

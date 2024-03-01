@@ -38,13 +38,25 @@ export const Assortment = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-1 m-[72px]">
-      <div className="flex flex-col items-center justify-center gap-2">
-        <h1 className=" font-normal text-5xl text-gray-950">
+    <div className="flex flex-col items-center lg:gap-1 lg:px-20 md:px-8 md:my-6 xs:pl-4 xs:gap-4">
+      <div className="flex flex-col justify-center lg:items-center lg:gap-2 md:gap-1 xs:gap-2 xs:items-start ">
+        <h1
+          className="text-gray-950
+            lg:font-normal lg:text-5xl
+            md:font-medium md:text-2xl
+            xs:font-medium xs:text-2xl
+          "
+        >
           {t("homePage.assortment.assortmentSectionTitle")}
         </h1>
 
-        <h6 className="w-8/12 text-center font-light text-base text-gray-950">
+        <h6
+          className="text-gray-950 lg:w-10/12 font-light
+            lg:text-base lg:text-center
+            md:text-sm
+            xs:text-sm xs:items-start
+          "
+        >
           {t("homePage.assortment.assortmentSectionDescription")}
         </h6>
       </div>

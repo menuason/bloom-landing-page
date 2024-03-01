@@ -6,7 +6,7 @@ const HomePage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="mb-[156px]">
+    <div className="flex flex-col gap-4 lg:mb-[156px] md:mb-24 xs:mb-14">
       <div style={{ height: videoContainerHeight }} className="relative">
         {t("homePage.videoNotSupported")}
       </div>
