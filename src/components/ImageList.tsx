@@ -6,6 +6,7 @@ interface Image {
   hoverImg: string;
   dialogImg: string;
 }
+
 interface ImageListProps {
   images: Image[];
 }
@@ -44,19 +45,24 @@ export const ImageList: FC<ImageListProps> = ({ images }) => {
   };
 
   return (
-    <div className="flex justify-center gap-4 cursor-pointer">
+    <div className="flex gap-4 cursor-pointer
+        lg:w-full lg:h-full
+        md:w-full md:h-full
+        xs:w-[350px] xs:h-[210px] xs:overflow-x-auto xs:overflow-y-hidden
+      "
+    >
       {images.map((image, index) => (
-        <div key={index} className="relative group">
+        <div key={index} className="relative xs:shrink-0 md:shrink">
           <img
             src={image.thumbnail}
             alt={`Image ${index}`}
-            className="w-full h-auto cursor-pointer group-hover:hidden"
+            className="w-full h-full object-cover transition-opacity opacity-100 hover:opacity-0 absolute inset-0 cursor-pointer"
             onClick={() => handleImageClick(image, index)}
           />
           <img
             src={image.hoverImg}
             alt={`Image ${index}`}
-            className="w-full h-auto hidden group-hover:block"
+            className="w-full h-full object-cover cursor-pointer"
             onClick={() => handleImageClick(image, index)}
           />
         </div>

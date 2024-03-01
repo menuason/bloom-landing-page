@@ -1,8 +1,14 @@
-export const ArrowRightIcon = () => {
+import { FC } from "react";
+
+interface ArrowRightIconProps {
+  width: number;
+  height: number;
+}
+export const ArrowRightIcon:FC<ArrowRightIconProps> = ({ width, height }) => {
   return (
     <div>
-      <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.1 6L0.5 1.4L1.9 0L7.9 6L1.9 12L0.5 10.6L5.1 6Z" fill="#F1F1F1" />
+      <svg width={width} height={height} viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.79984 8L0.666504 1.86667L2.53317 0L10.5332 8L2.53317 16L0.666504 14.1333L6.79984 8Z" fill="white"/>
       </svg>
     </div>
   );
