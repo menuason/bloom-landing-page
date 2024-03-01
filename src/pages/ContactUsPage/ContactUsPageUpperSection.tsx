@@ -55,7 +55,7 @@ const ContactUsPageUpperSection = () => {
           <a href="/">
             <p className="cursor-pointer hover:text-[#C0C0C0]">Home</p>
           </a>
-          <ArrowRightIcon />
+          <ArrowRightIcon width={8} height={12} />
           Packaging
         </div>
       </div>

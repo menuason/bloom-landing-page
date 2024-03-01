@@ -34,7 +34,7 @@ export const ImageDialog: FC<ImageDialogProps> = ({ image, onClose, onNext, onBa
           </div>
           <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-10">
             <button onClick={onNext}>
-              <ArrowRightIcon />
+              <ArrowRightIcon width={11} height={16} />
             </button>
           </div>
         </div>

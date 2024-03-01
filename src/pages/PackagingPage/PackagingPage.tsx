@@ -45,7 +45,7 @@ const PackagingPage = () => {
             <a href="/">
               <p className="cursor-pointer hover:text-[#C0C0C0]">{t("packagingPage.packaging.nav1")}</p>
             </a>
-            <ArrowRightIcon />
+            <ArrowRightIcon width={8} height={12} />
             {t("packagingPage.packaging.nav2")}
           </div>
         </div>
