@@ -2,11 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Noto Sans", "sans-serif"],
+      },
+    },
     screens: {
       xs: "320px",
       md: "481px",
-      lg: "769px"
+      lg: "769px",
     },
   },
   plugins: [],
