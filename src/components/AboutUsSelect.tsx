@@ -2,11 +2,15 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import arrowDown from "../assets/icons/arrowDown/arrowDown.svg";
 import { useTranslation } from "react-i18next";
 
-
 const AboutUsSelect = () => {
   const { t } = useTranslation();
 
   const ABOUT_US_ITEMS = [
+    {
+      menuItem: t("header.about.aboutUs"),
+      name: "about",
+      href: "/about-us  ",
+    },
     {
       menuItem: t("header.about.mission"),
       name: "mission",
@@ -46,16 +50,18 @@ const AboutUsSelect = () => {
          "
       >
         {ABOUT_US_ITEMS.map((item) => (
-          <DropdownMenu.Item
-            className="
+          <div key={item.name}>
+            <DropdownMenu.Item
+              className="
                 flex self-start py-2 my-0.5 cursor-pointer
                 hover:outline-none
               "
-          >
-            <a href={item.href}>
-              {item.menuItem}
-            </a>
-          </DropdownMenu.Item>
+            >
+              <a href={item.href}>
+                {item.menuItem}
+              </a>
+            </DropdownMenu.Item>
+          </div>
         ))}
       </DropdownMenu.Content>
     </DropdownMenu.Root>

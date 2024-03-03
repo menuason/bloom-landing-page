@@ -13,7 +13,7 @@ const NAV_BAR_ITEMS_MOB = [
   },
   {
     title: 'About Us',
-    href: '',
+    href: '/about-us',
   },
   {
     title: 'Mission and Vision',
