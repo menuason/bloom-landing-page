@@ -3,6 +3,7 @@ import { LocationFilledIcon } from "../../assets/icons/location/location-filled"
 import { PhoneFilledIcon } from "../../assets/icons/phone/phone-filled";
 import { TelegramIcon } from "../../assets/icons/telegram/telegram";
 import { WhatsappIcon } from "../../assets/icons/whatsapp/whatsapp";
+import { useTranslation } from "react-i18next";
 
 const CONTACT_US_ICONS = [
   {
@@ -29,6 +30,8 @@ const CONTACT_US_ICONS = [
 ];
 
 export const GetInTouchSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       className="flex flex-col gap-8
@@ -36,7 +39,7 @@ export const GetInTouchSection = () => {
     "
     >
       <p className="w-[186px] text-2xl font-light">
-        Get in Touch with Bloom House
+        {t("contactUsPage.mainContent.title")}
       </p>
 
       <div
@@ -54,7 +57,7 @@ export const GetInTouchSection = () => {
         "
         >
           <div className="font-medium text-lg w-fit border-b border-black">
-            <p>Call us</p>
+            <p>{t("contactUsPage.mainContent.subTitleOne")}</p>
           </div>
           {CONTACT_US_ICONS.map((item) => (
             <div className="flex gap-4 items-center tracking-wider">
@@ -72,7 +75,7 @@ export const GetInTouchSection = () => {
 
         <div className="flex flex-col gap-8">
           <div className="font-medium text-lg w-fit border-b border-black">
-            <p>Information</p>
+            <p>{t("contactUsPage.mainContent.subTitleTwo")}</p>
           </div>
 
           <div className="flex flex-col gap-4">
@@ -93,7 +96,7 @@ export const GetInTouchSection = () => {
                 rel="noopener noreferrer"
               >
                 <span className="text-base leading-6">
-                  Marmarashen village Yerevan-Ararat highway 136/1
+                 {t("contactUsPage.mainContent.address")}
                 </span>
               </a>
             </div>
