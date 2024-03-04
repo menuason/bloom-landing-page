@@ -14,7 +14,7 @@ const Header = () => {
     },
     {
       title: t("header.catalogue"),
-      href: "",
+      href: "/catalogue",
     },
     {
       title: t("header.packaging"),
