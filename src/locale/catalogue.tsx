@@ -12,8 +12,19 @@ const CataloguePageTranslation = {
     filterType: {
       colour: "Colour",
       brand: "Brand",
-      colourType: {},
-      braandType: {},
+      colourType: {
+        white: "White",
+        cream: "Cream",
+        yellow: "Yellow",
+        orange: "Orange",
+        red: "Red",
+        purple: "Purple",
+        bicolor: "Bicolor",
+      },
+      braandType: {
+        byHilverdaFlorist: "By HilverdaFlorist",
+        bySchreurs: "By Schreurs",
+      },
     },
   },
   ru: {
@@ -29,11 +40,22 @@ const CataloguePageTranslation = {
     filterType: {
       colour: "Цвет",
       brand: "Бренд",
-      colourType: {},
-      braandType: {},
+      colourType: {
+        white: "Белый",
+        cream: "Kремовый",
+        yellow: "Желтый",
+        orange: "апельсиновый",
+        red: "Красный",
+        purple: "Розовый",
+        bicolor: "Двухцветный",
+      },
+      braandType: {
+        byHilverdaFlorist: "By HilverdaFlorist",
+        bySchreurs: "By Schreurs",
+      },
     },
   },
-  hy:{
+  hy: {
     catalogue: {
       title: "Կատալոգ",
       nav1: "Գլխավոր",
@@ -46,11 +68,21 @@ const CataloguePageTranslation = {
     filterType: {
       colour: "Գույն",
       brand: "Ապրանքանիշը",
-      colourType: {},
-      braandType: {},
+      colourType: {
+        white: "Սպիտակ",
+        cream: "Կրեմ",
+        yellow: "Դեղին",
+        orange: "Նարնջագույն",
+        red: "Կարմիր",
+        purple: "Վարդագույն",
+        bicolor: "Երկգույն",
+      },
+      braandType: {
+        byHilverdaFlorist: "By HilverdaFlorist",
+        bySchreurs: "By Schreurs",
+      },
     },
-  }
+  },
 };
-
 
 export default CataloguePageTranslation;

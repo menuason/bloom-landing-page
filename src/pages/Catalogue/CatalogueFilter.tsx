@@ -1,7 +1,7 @@
-// components/TailwindAccordion.jsx
 import { FC, useState } from "react";
 import arrowDown from "../../assets/icons/arrowDown/arrowDown.svg";
 import FilterItem from "./FilterItem";
+import { useTranslation } from "react-i18next";
 
 interface CatalogueFilterProps {
   colors: string[];
@@ -9,6 +9,7 @@ interface CatalogueFilterProps {
 }
 
 const CatalogueFilter: FC<CatalogueFilterProps> = ({ colors, brands }) => {
+  const { t } = useTranslation();
   const [isColorsOpen, setColorsOpen] = useState(false);
   const [isBrandsOpen, setBrandsOpen] = useState(false);
 
@@ -29,7 +30,7 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({ colors, brands }) => {
           className="w-full h-12 text-left py-2 px-2 focus:outline-none flex justify-between items-center"
           onClick={toggleColorsAccordion}
         >
-          Color
+          {t("cataloguePage.filterType.colour")}
           <span className={`transform ${isColorsOpen ? "rotate-180" : ""}`}>
             <img src={arrowDown} alt="Arrow Down" />
           </span>
@@ -48,7 +49,7 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({ colors, brands }) => {
           className="w-full h-20 text-left py-2 px-2 focus:outline-none flex justify-between items-center"
           onClick={toggleBrandsAccordion}
         >
-          Brands <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
+          {t("cataloguePage.filterType.brand")} <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
         </button>
         <div
           className={`transition-transform transform origin-top ${
