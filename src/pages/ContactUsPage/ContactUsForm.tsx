@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { ErrorIcon } from "../../assets/icons/error/error";
+import { useTranslation } from "react-i18next";
 
 type ContactUsFormInputs = {
   name: string;
@@ -18,7 +19,9 @@ const formDefaultValues: ContactUsFormInputs = {
 };
 
 const ContactUsForm = () => {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactUsFormInputs>({
+  const { t } = useTranslation();
+
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactUsFormInputs>({
       defaultValues: formDefaultValues,
     });
 
@@ -29,7 +32,7 @@ const ContactUsForm = () => {
     return (
       <div className="flex flex-col pr-[104px] gap-8">
         <div className="text-lg font-light lg:w-[513px] md:w-[513px] xs:w-[295px]">
-          <p>Have a question or inquiry? Feel free to reach out to us via email. We're here to assist you!</p>
+          <p>{t("contactUsPage.form.title")}</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -41,7 +44,7 @@ const ContactUsForm = () => {
             "
             >
               <div className="flex flex-col gap-2">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">{t("contactUsPage.form.inputOne")}</label>
                 <input
                   className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="text"
@@ -56,7 +59,7 @@ const ContactUsForm = () => {
                 )}
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="surname">Surname</label>
+                <label htmlFor="surname">{t("contactUsPage.form.inputTwo")}</label>
                 <input
                   className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="text"
@@ -79,7 +82,7 @@ const ContactUsForm = () => {
             "
             >
               <div className="flex flex-col gap-2">
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">{t("contactUsPage.form.inputThree")}</label>
                 <input
                   className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="email"
@@ -95,7 +98,7 @@ const ContactUsForm = () => {
 
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="phone">Phone:</label>
+                <label htmlFor="phone">{t("contactUsPage.form.inputFour")}</label>
                 <input
                   className="w-[288px] py-3 border-b border-black outline-none px-2"
                   type="tel"
@@ -112,7 +115,7 @@ const ContactUsForm = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label htmlFor="message">Type your message:</label>
+              <label htmlFor="message">{t("contactUsPage.form.textarea")}</label>
               <textarea
                 id="message"
                 className="border border-black resize-none outline-none px-2"
@@ -128,7 +131,7 @@ const ContactUsForm = () => {
             </div>
 
             <button className="text-base h-14 w-40 bg-[#1F2023] text-white" type="submit">
-              SEND
+              {t("contactUsPage.form.button")}
             </button>
           </div>
         </form>
