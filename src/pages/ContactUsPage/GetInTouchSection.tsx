@@ -60,7 +60,7 @@ export const GetInTouchSection = () => {
             <p>{t("contactUsPage.mainContent.subTitleOne")}</p>
           </div>
           {CONTACT_US_ICONS.map((item) => (
-            <div className="flex gap-4 items-center tracking-wider">
+            <div key={item.name} className="flex gap-4 items-center tracking-wider">
               {item.icon}
               <a href={item.link.tel1}>
                 <span>+374 77103567</span>

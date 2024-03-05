@@ -9,12 +9,12 @@ const AboutUsSelect = () => {
     {
       menuItem: t("header.about.aboutUs"),
       name: "about",
-      href: "/about-us  ",
+      href: "/about-us",
     },
     {
       menuItem: t("header.about.mission"),
       name: "mission",
-      href: "",
+      href: "/mission-and-vision",
     },
     {
       menuItem: t("header.about.system"),
