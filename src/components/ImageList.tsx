@@ -111,7 +111,6 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
               src={image.thumbnail}
               alt={`Image ${index}`}
               className={`${className} w-full h-full object-cover cursor-pointer`}
-              // onClick={() => handleImageClick(image, index)}
               onClick={!image.sliderImages?.title ? () => handleImageClick(image, index) : undefined}
             />
             {

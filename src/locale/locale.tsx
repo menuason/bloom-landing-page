@@ -6,6 +6,7 @@ import FooterTranslation from "./footer";
 import HeaderTranslation from "./header";
 import ContactUsPageTranslation from "./contact";
 import AboutUsPageTranslation from "./about";
+import MissionAndVisionPageTranslation from "./mission";
 
 const resources = {
   en: {
@@ -76,6 +77,7 @@ const resources = {
       packagingPage: PackagingPageTranslation.en,
       contactUsPage: ContactUsPageTranslation.en,
       aboutUsPage: AboutUsPageTranslation.en,
+      missionAndVisionPage: MissionAndVisionPageTranslation.en,
       footer: FooterTranslation.en,
     },
   },
@@ -148,6 +150,7 @@ const resources = {
       packagingPage: PackagingPageTranslation.hy,
       contactUsPage: ContactUsPageTranslation.hy,
       aboutUsPage: AboutUsPageTranslation.hy,
+      missionAndVisionPage: MissionAndVisionPageTranslation.hy,
       footer: FooterTranslation.hy,
     },
   },
@@ -219,6 +222,7 @@ const resources = {
       packagingPage: PackagingPageTranslation.ru,
       contactUsPage: ContactUsPageTranslation.ru,
       aboutUsPage: AboutUsPageTranslation.ru,
+      missionAndVisionPage: MissionAndVisionPageTranslation.ru,
       footer: FooterTranslation.ru,
     },
   },
