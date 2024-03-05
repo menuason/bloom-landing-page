@@ -7,22 +7,22 @@ const PACKAGING_IMAGE_LIST = [
   {
     thumbnail: "src/assets/packaging-page-photos/pic-1.png",
     hoverImg: "src/assets/packaging-page-photos/pic1-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-1-dialog.png",
+    sliderImg: "src/assets/packaging-page-photos/pic-1-dialog.png",
   },
   {
     thumbnail: "src/assets/packaging-page-photos/pic-2.png",
     hoverImg: "src/assets/packaging-page-photos/pic2-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-2-dialog.png",
+    sliderImg: "src/assets/packaging-page-photos/pic-2-dialog.png",
   },
   {
     thumbnail: "src/assets/packaging-page-photos/pic-3.png",
     hoverImg: "src/assets/packaging-page-photos/pic3-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-3-dialog.png",
+    sliderImg: "src/assets/packaging-page-photos/pic-3-dialog.png",
   },
   {
     thumbnail: "src/assets/packaging-page-photos/pic-4.png",
     hoverImg: "src/assets/packaging-page-photos/pic4-2.png",
-    dialogImg: "src/assets/packaging-page-photos/pic-4-dialog.png",
+    sliderImg: "src/assets/packaging-page-photos/pic-4-dialog.png",
   },
 ];
 
@@ -37,11 +37,11 @@ const PackagingPage = () => {
           alt="Bloom House"
           className="w-full lg:h-full xs:h-[102px]"
         />
-        <div className="absolute inset-0 p-0 m-0 w-fit h-fit text-center text-white flex flex-col m-auto
+        <div className="absolute inset-0 p-0 w-fit h-fit text-center text-white flex flex-col m-auto
             lg:gap-2 md:gap-1
           "
         >
-          <h2 className="font-light
+          <h2 className="font-medium
             lg:text-4xl lg:mt-6
             md:mt-5 md:text-xl
             xs:text-xl
@@ -55,7 +55,7 @@ const PackagingPage = () => {
                 {t("packagingPage.packaging.nav1")}
               </p>
             </a>
-            <ArrowRightIcon width={8} height={12} />
+            <ArrowRightIcon color="white" width={8} height={12} />
             {t("packagingPage.packaging.nav2")}
           </div>
         </div>
@@ -80,7 +80,7 @@ const PackagingPage = () => {
           />
         </div>
 
-        <div className="flex flex-col text-gray-950
+        <div className="flex flex-col text-gray-950 justify-center
             lg:gap-6 lg:w-1/2
             md:gap-3 md:w-full
             xs:gap-3 md:w-full
@@ -141,12 +141,12 @@ const PackagingPage = () => {
           <p className="
              lg:text-3xl lg:self-center
              md:text-2xl md:self-center
-             xs:text-2xl  xs:self-start
+             xs:text-2xl xs:self-start
             "
           >
             {t("packagingPage.gallerySection.title")}
           </p>
-          <p className="font-light text-[#323232]
+          <p className="font-normal text-[#323232]
               lg:text-base
               md:text-sm
               xs:text-sm

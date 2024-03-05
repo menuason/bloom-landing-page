@@ -6,22 +6,22 @@ const OUR_SYSTEM_IMAGE_LIST = [
   {
     thumbnail: "src/assets/our-system-page-photos/pic-1.png",
     hoverImg: "src/assets/our-system-page-photos/pic1-2.png",
-    dialogImg: "src/assets/our-system-page-photos/pic-1-dialog.png",
+    sliderImg: "src/assets/our-system-page-photos/pic-1-dialog.png",
   },
   {
     thumbnail: "src/assets/our-system-page-photos/pic-2.png",
     hoverImg: "src/assets/our-system-page-photos/pic2-2.png",
-    dialogImg: "src/assets/our-system-page-photos/pic-2-dialog.png",
+    sliderImg: "src/assets/our-system-page-photos/pic-2-dialog.png",
   },
   {
     thumbnail: "src/assets/our-system-page-photos/pic-3.png",
     hoverImg: "src/assets/our-system-page-photos/pic3-2.png",
-    dialogImg: "src/assets/our-system-page-photos/pic-3-dialog.png",
+    sliderImg: "src/assets/our-system-page-photos/pic-3-dialog.png",
   },
   {
     thumbnail: "src/assets/our-system-page-photos/pic-4.png",
     hoverImg: "src/assets/our-system-page-photos/pic4-2.png",
-    dialogImg: "src/assets/our-system-page-photos/pic-4-dialog.png",
+    sliderImg: "src/assets/our-system-page-photos/pic-4-dialog.png",
   },
 ];
 
@@ -40,7 +40,7 @@ const OurSystemPage = () => {
             lg:gap-2 md:gap-1
           "
         >
-          <h2 className="font-light
+          <h2 className="font-medium
             lg:text-4xl lg:mt-6 md:mt-5 md:text-xl xs:text-xl
           "
           >
@@ -50,7 +50,7 @@ const OurSystemPage = () => {
             <a href="/">
               <p className="cursor-pointer hover:text-[#C0C0C0]">{t("systemPage.system.nav1")}</p>
             </a>
-            <ArrowRightIcon width={8} height={12} />
+            <ArrowRightIcon color="white" width={8} height={12} />
             {t("systemPage.system.nav2")}
           </div>
         </div>
@@ -126,7 +126,7 @@ const OurSystemPage = () => {
           >
             {t("systemPage.gallerySection.title")}
           </p>
-          <p className="font-light text-[#323232]
+          <p className="normal text-[#323232]
               lg:text-base
               md:text-sm
               xs:text-sm

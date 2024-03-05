@@ -54,15 +54,17 @@ const MultiLanguageSelect = () => {
             hover:outline-none py-3 px-4"
       >
         {LANG_ITEMS.map((item) => (
-          <DropdownMenu.Item
-            onSelect={() => changeLanguage(`${item.name}`)}
-            className="
+          <div key={item.lang}>
+            <DropdownMenu.Item
+              onSelect={() => changeLanguage(`${item.name}`)}
+              className="
                 flex self-start py-2 my-0.5 cursor-pointer
                 hover:outline-none
               "
-          >
-            {item.lang}
-          </DropdownMenu.Item>
+            >
+              {item.lang}
+            </DropdownMenu.Item>
+          </div>
         ))}
       </DropdownMenu.Content>
     </DropdownMenu.Root>
