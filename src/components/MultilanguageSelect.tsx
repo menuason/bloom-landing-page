@@ -22,12 +22,16 @@ const LANG_ITEMS = [
 ];
 
 const MultiLanguageSelect = () => {
-  const [selectedValue, setSelectedLanguage] = useState("en");
+  const storedLanguage = localStorage.getItem("selectedLanguage");
+
+  const [selectedValue, setSelectedLanguage] = useState(storedLanguage || 'en');
   const { i18n } = useTranslation();
 
   const changeLanguage = (language: string) => {
     setSelectedLanguage(language);
     i18n.changeLanguage(language);
+
+    localStorage.setItem("selectedLanguage", language);
   };
 
   return (
