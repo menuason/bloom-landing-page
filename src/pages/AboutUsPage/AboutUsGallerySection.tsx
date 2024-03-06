@@ -68,7 +68,7 @@ export const AboutUsGallerySection = () => {
     <div className="flex flex-col gap-9
         lg:mt-8 lg:mb-40 lg:px-20 lg:gap-8
         md:mt-6 md:mb-[72px] md:px-8 md:gap-6
-        xs:mt-6 xs:mb-[72px] xs:px-4 xs:gap-4
+        xs:mt-6 xs:mb-6 xs:px-4 xs:gap-4
        "
     >
       <div className="flex flex-col items-center gap-2 text-gray-950 justify-center

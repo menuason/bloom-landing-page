@@ -59,11 +59,11 @@ const Header = () => {
             </a>
           ))}
         </div>
-        <div className="flex gap-3">
+        <div className="hidden lg:flex">
           <MultiLanguageSelect />
-          <div className="flex items-center cursor-pointer lg:hidden">
-            <HamburgerSelect />
-          </div>
+        </div>
+        <div className="lg:hidden flex items-center cursor-pointer ">
+          <HamburgerSelect />
         </div>
       </div>
     </div>

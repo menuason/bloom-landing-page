@@ -1,6 +1,7 @@
-import { ArrowRightIcon } from "../../assets/icons/arrowRight/arrowRight";
 import { ImageList } from "../../components/ImageList";
 import { useTranslation } from "react-i18next";
+import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
+import { PageSection } from "../../components/PageSection";
 
 const OUR_SYSTEM_IMAGE_LIST = [
   {
@@ -30,49 +31,23 @@ const OurSystemPage = () => {
 
   return (
     <>
-      <div className="relative">
-        <img
-          src="src/assets/our-system-page-photos/system.png"
-          alt="Bloom House"
-          className="w-full lg:h-full xs:h-[102px]"
-        />
-        <div className="absolute inset-0 p-0 m-0 w-fit h-fit text-center text-white flex flex-col m-auto
-            lg:gap-2 md:gap-1
-          "
-        >
-          <h2 className="font-medium
-            lg:text-4xl lg:mt-6 md:mt-5 md:text-xl xs:text-xl
-          "
-          >
-            {t("systemPage.system.title")}
-          </h2>
-          <div className="flex items-center gap-3 justify-center font-light">
-            <a href="/">
-              <p className="cursor-pointer hover:text-[#C0C0C0]">{t("systemPage.system.nav1")}</p>
-            </a>
-            <ArrowRightIcon color="white" width={8} height={12} />
-            {t("systemPage.system.nav2")}
-          </div>
-        </div>
-      </div>
+      <PageDescriptionHeader
+        image="src/assets/our-system-page-photos/system.png"
+        title={t("systemPage.system.title")}
+        navOne={t("systemPage.system.nav2")}
+      />
 
-      <div className="flex
-          lg:flex-row lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:mb-[124px]
-          md:flex-col md:gap-6 md:px-8 md:mt-12 md:mb-6
-          xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
-        "
+      <PageSection
+        isImageFirst
+        image="src/assets/our-system-page-photos/mainPic.png"
       >
-        <img
-          alt="Bloom House"
-          src="src/assets/our-system-page-photos/mainPic.png"
-        />
-        <div className="flex flex-col text-gray-950
-            lg:gap-6
-            md:gap-3
-            xs:gap-3
-          "
+        <div className="flex flex-col text-gray-950 justify-center
+          lg:gap-6
+          md:gap-3
+          xs:gap-3
+         "
         >
-          <p className="text-4xl text-gray-950
+          <p className="text-4xl text-gray-950 items-center font-medium
              lg:text-3xl lg:self-start
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
@@ -80,7 +55,7 @@ const OurSystemPage = () => {
           >
             {t("systemPage.mainContent.title")}
           </p>
-          <div className="font-normal
+          <div className="font-light
               lg:text-base
               md:text-sm
               xs:text-sm
@@ -104,7 +79,7 @@ const OurSystemPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </PageSection>
 
       <div className="flex flex-col gap-9
           lg:mt-8 lg:mb-40 lg:px-20 lg:gap-8
@@ -118,7 +93,7 @@ const OurSystemPage = () => {
             xs:self-start
           "
         >
-          <p className="
+          <p className="font-medium
              lg:text-3xl lg:self-center
              md:text-2xl md:self-center
              xs:text-2xl  xs:self-start
@@ -126,7 +101,7 @@ const OurSystemPage = () => {
           >
             {t("systemPage.gallerySection.title")}
           </p>
-          <p className="normal text-[#323232]
+          <p className="font-light text-[#323232]
               lg:text-base
               md:text-sm
               xs:text-sm
