@@ -4,6 +4,7 @@ import OurSystemPageTranslation from "./system";
 import PackagingPageTranslation from "./packaging";
 import FooterTranslation from "./footer";
 import HeaderTranslation from "./header";
+import CataloguePageTranslation from "./catalogue";
 import ContactUsPageTranslation from "./contact";
 import AboutUsPageTranslation from "./about";
 import MissionAndVisionPageTranslation from "./mission";
@@ -74,6 +75,7 @@ const resources = {
         },
       },
       systemPage: OurSystemPageTranslation.en,
+      cataloguePage: CataloguePageTranslation.en,
       packagingPage: PackagingPageTranslation.en,
       contactUsPage: ContactUsPageTranslation.en,
       aboutUsPage: AboutUsPageTranslation.en,
@@ -147,6 +149,7 @@ const resources = {
         },
       },
       systemPage: OurSystemPageTranslation.hy,
+      cataloguePage: CataloguePageTranslation.hy,
       packagingPage: PackagingPageTranslation.hy,
       contactUsPage: ContactUsPageTranslation.hy,
       aboutUsPage: AboutUsPageTranslation.hy,
@@ -219,6 +222,7 @@ const resources = {
         },
       },
       systemPage: OurSystemPageTranslation.ru,
+      cataloguePage: CataloguePageTranslation.ru,
       packagingPage: PackagingPageTranslation.ru,
       contactUsPage: ContactUsPageTranslation.ru,
       aboutUsPage: AboutUsPageTranslation.ru,
