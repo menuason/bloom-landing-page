@@ -1,33 +1,33 @@
-import logo from "../assets/logo/logo-dark.svg";
-import { useTranslation } from "react-i18next";
-import MultiLanguageSelect from "./MultilanguageSelect";
-import HamburgerSelect from "./HamburgerSelect";
-import AboutUsSelect from "./AboutUsSelect";
+import logo from '../assets/logo/logo-dark.svg';
+import { useTranslation } from 'react-i18next';
+import MultiLanguageSelect from './MultilanguageSelect';
+import HamburgerSelect from './HamburgerSelect';
+import AboutUsSelect from './AboutUsSelect';
 
 const Header = () => {
   const { t } = useTranslation();
 
   const NAV_BAR_ITEMS_WEB = [
     {
-      title: t("header.home"),
-      href: "/",
+      title: t('header.home'),
+      href: '/',
     },
     {
-      title: t("header.catalogue"),
-      href: "/catalogue",
+      title: t('header.catalogue'),
+      href: '/catalogue',
     },
     {
-      title: t("header.packaging"),
-      href: "/packaging",
+      title: t('header.packaging'),
+      href: '/packaging',
     },
     {
-      title: t("header.about.aboutUs"),
-      href: "",
+      title: t('header.about.aboutUs'),
+      href: '',
       component: <AboutUsSelect />,
     },
     {
-      title: t("header.contact"),
-      href: "/contact-us",
+      title: t('header.contact'),
+      href: '/contact-us',
     },
   ];
 

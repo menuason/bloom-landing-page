@@ -8,8 +8,19 @@ import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 import OurSystemPage from "./pages/OurSystemPage/OurSystemPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import MissionAndVisionPage from "./pages/MissionAndVisionPage/MissionAndVisionPage";
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const {i18n} = useTranslation();
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("selectedLanguage");
+    if (storedLanguage) {
+      i18n.changeLanguage(storedLanguage);
+    }
+  }, []);
+
   return (
     <>
       <Header />
