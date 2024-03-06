@@ -1,6 +1,6 @@
-import * as Checkbox from "@radix-ui/react-checkbox";
-import { CheckIcon } from "@radix-ui/react-icons";
 import { FC } from "react";
+import { CheckIcon } from "@radix-ui/react-icons";
+import * as Checkbox from "@radix-ui/react-checkbox";
 
 interface CheckboxBloomProps {
   key: number;
