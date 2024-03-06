@@ -3,11 +3,11 @@ const ContactUsPageTranslation = {
     contact: {
       title: "Contact Us",
       nav1: "Home",
-      nav2: "Packaging",
+      nav2: "Contact",
     },
     mainContent: {
       title: "Get in Touch with Bloom House",
-      subTitleOne: "Call us",
+      subTitleOne: "Call Us",
       subTitleTwo: "Information",
       address: "Marmarashen village Yerevan-Ararat highway 136/1",
     },
@@ -29,7 +29,7 @@ const ContactUsPageTranslation = {
     },
     mainContent: {
       title: "Свяжитесь с Bloom House",
-      subTitleOne: "Позвоните нам",
+      subTitleOne: "Позвоните Нам",
       subTitleTwo: "Информация",
       address: "Село Мармарашен шоссе Ереван-Арарат 136/1",
     },
@@ -50,8 +50,8 @@ const ContactUsPageTranslation = {
       nav2: "Կապ",
     },
     mainContent: {
-      title: "Կապվեք Bloom House",
-      subTitleOne: "Զանգահարեք մեզ",
+      title: "Կապվեք Bloom House-ի հետ",
+      subTitleOne: "Զանգահարեք Մեզ",
       subTitleTwo: "Տեղեկություն",
       address: "Գյուղ Մարմարաշեն Երևան-Արարատ խճուղի 136/1",
     },

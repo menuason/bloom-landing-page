@@ -1,39 +1,42 @@
 import { useState } from 'react';
 import hamburger from '../assets/icons/hamburger/hamburger.svg';
-import close from '../assets/icons/close/close.svg';
-
-const NAV_BAR_ITEMS_MOB = [
-  {
-    title: 'Catalogue',
-    href: '',
-  },
-  {
-    title: 'Packaging',
-    href: '/packaging',
-  },
-  {
-    title: 'About Us',
-    href: '/about-us',
-  },
-  {
-    title: 'Mission and Vision',
-    href: '/mission-and-vision',
-  },
-  {
-    title: 'Our System',
-    href: '/our-system',
-  },
-  {
-    title: 'Partners',
-    href: '',
-  },
-  {
-    title: 'Contact',
-    href: '/contact-us',
-  },
-];
+import { useTranslation } from "react-i18next";
+import MultiLanguageSelect from "./MultilanguageSelect";
 
 const HamburgerSelect = () => {
+  const { t } = useTranslation();
+
+  const NAV_BAR_ITEMS_MOB = [
+    {
+      title: t("header.catalogue"),
+      href: '/catalogue',
+    },
+    {
+      title: t("header.packaging"),
+      href: '/packaging',
+    },
+    {
+      title: t("header.about.aboutUs"),
+      href: '/about-us',
+    },
+    {
+      title: t("header.about.mission"),
+      href: '/mission-and-vision',
+    },
+    {
+      title: t("header.about.system"),
+      href: '/our-system',
+    },
+    {
+      title: t("header.about.partners"),
+      href: '',
+    },
+    {
+      title: t("header.contact"),
+      href: '/contact-us',
+    },
+  ];
+
   const [show, setShow] = useState(false);
 
   const handleHamburgerToggle = () => {
@@ -62,29 +65,18 @@ const HamburgerSelect = () => {
             className="flex flex-col gap-3 absolute top-0 left-0 w-[337px] h-full py-8 px-4 bg-white"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mb-4">
-              <button
-                className="float-right text-gray-700 hover:text-gray-900"
-                onClick={handleHamburgerToggle}
-              >
-                <img
-                  src={close}
-                  className="self-center cursor-pointer h-[14px] w-[14px]"
-                  alt="logo"
-                />
-              </button>
-            </div>
             <div>
               {
                 NAV_BAR_ITEMS_MOB.map((item) => {
                   return (
-                    <a href={item.href} key={item.title} className="flex self-center font-medium py-3 px-4 -mx-4 border-b border-gray-100">
+                    <a href={item.href} key={item.title} className="flex self-center  py-3 px-4 -mx-4 border-b border-gray-100">
                       {item.title}
                     </a>
                   );
                 })
               }
             </div>
+            <MultiLanguageSelect />
           </div>
         </div>
       )}

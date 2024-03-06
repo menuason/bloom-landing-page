@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { ArrowRightIcon } from "../../assets/icons/arrowRight/arrowRight";
 import CatalogueFilter from "./CatalogueFilter";
 import CatalogueFlowersList from "./CatalogueFlowersList";
+import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 
 export interface CatalogueFlower {
   image: string;
@@ -326,39 +326,11 @@ const CataloguePage = () => {
 
   return (
     <>
-      <div className="relative">
-        <img
-          src="src/assets/catalogue-page-photos/catalogue.png"
-          alt="Bloom House"
-          className="w-full lg:h-full xs:h-[102px]"
-        />
-        <div
-          className="absolute inset-0 p-0 w-fit h-fit text-center text-white flex flex-col m-auto
-            lg:gap-2 md:gap-1
-          "
-        >
-          <h2
-            className="font-medium
-            lg:text-4xl lg:mt-6
-            md:mt-5 md:text-xl
-            xs:text-xl
-          "
-          >
-            {t("cataloguePage.catalogue.title")}
-          </h2>
-          <div className="flex items-center gap-3 justify-center font-light">
-            <a href="/">
-              <p className="cursor-pointer hover:text-[#C0C0C0]">
-                {t("cataloguePage.catalogue.nav1")}
-              </p>
-            </a>
-            <ArrowRightIcon width={8} height={12} color="white" />
-            <p className="cursor-pointer hover:text-[#C0C0C0]">
-              {t("cataloguePage.catalogue.nav2")}
-            </p>
-          </div>
-        </div>
-      </div>
+      <PageDescriptionHeader
+        image="src/assets/catalogue-page-photos/catalogue.png"
+        title={t("cataloguePage.catalogue.title")}
+        navOne={t("cataloguePage.catalogue.nav2")}
+      />
 
       <div className="flex lg:gap-[72px] lg:px-20 lg:mt-[72px]">
         <div className="flex flex-col gap-3">

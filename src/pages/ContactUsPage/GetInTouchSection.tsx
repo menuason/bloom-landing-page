@@ -35,23 +35,23 @@ export const GetInTouchSection = () => {
   return (
     <div
       className="flex flex-col gap-8
-      lg:pl-[104px] lg:mb-[137px]
+        lg:pl-[104px] lg:mb-[137px]
     "
     >
-      <p className="w-[186px] text-2xl font-light">
+      <p className="lg:w-[200px] md:w-full xs:w-[200px] text-2xl font-medium">
         {t("contactUsPage.mainContent.title")}
       </p>
 
       <div
         className="flex
-        lg:flex-col lg:gap-11
-        md:flex-row md:gap-20
+        lg:flex-col lg:gap-6
+        md:flex-row md:gap-[112px]
         xs:flex-col xs:gap-6
       "
       >
         <div
           className="flex flex-col justify-center
-           lg:gap-8
+           lg:gap-6
            md:gap-4
            xs:gap-6
         "

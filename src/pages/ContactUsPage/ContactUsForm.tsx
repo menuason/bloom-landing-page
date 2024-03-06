@@ -43,10 +43,10 @@ const ContactUsForm = () => {
               xs:flex-col
             "
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="name">{t("contactUsPage.form.inputOne")}</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-black outline-none px-2"
                   type="text"
                   id="name"
                   {...register("name", { required: "Name is required" })}
@@ -58,10 +58,10 @@ const ContactUsForm = () => {
                   </div>
                 )}
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="surname">{t("contactUsPage.form.inputTwo")}</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-black outline-none px-2"
                   type="text"
                   id="surname"
                   {...register("surname", { required: "Surname is required" })}
@@ -81,10 +81,10 @@ const ContactUsForm = () => {
               xs:flex-col
             "
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="email">{t("contactUsPage.form.inputThree")}</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-black outline-none px-2"
                   type="email"
                   id="email"
                   {...register("email", { required: "Email is required" })}
@@ -97,10 +97,10 @@ const ContactUsForm = () => {
                 )}
 
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="phone">{t("contactUsPage.form.inputFour")}</label>
                 <input
-                  className="w-[288px] py-3 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-black outline-none px-2"
                   type="tel"
                   id="phone"
                   {...register("phone", { required: "Phone is required" })}
@@ -114,7 +114,7 @@ const ContactUsForm = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 font-light">
               <label htmlFor="message">{t("contactUsPage.form.textarea")}</label>
               <textarea
                 id="message"
