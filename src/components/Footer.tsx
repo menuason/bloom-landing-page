@@ -47,23 +47,23 @@ const Footer: FC = () => {
         <div className="mt-4 flex flex-col gap-3 items-baseline">
           <p className="mb-2 text-sm">{t("footer.usefulLinks.links")}</p>
           <div className="flex flex-col gap-3">
-            <a href="#home" className="text-white hover:text-gray-400">
+            <a href="/catalogue" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.catalogue")}
               </span>
             </a>
 
-            <a href="#about" className="text-white hover:text-gray-400">
+            <a href="/packaging" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.packaging")}
               </span>
             </a>
-            <a href="#services" className="text-white hover:text-gray-400">
+            <a href="/about-us" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.aboutUs")}
               </span>
             </a>
-            <a href="#contact" className="text-white hover:text-gray-400">
+            <a href="/contact-us" className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.contact")}
               </span>

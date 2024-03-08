@@ -14,7 +14,7 @@ const MissionAndVisionPageTranslation = {
           " flower-rich fields of Holland. This ensures that each gerbera that blossoms at Bloom House is of the utmost quality.",
         boldP2: "Thoughtfully designed greenhouse. ",
         p2: "Our greenhouse is a carefully designed environment that allows gerberas to grow year-round. Thoughtful design," +
-          " optimal conditions and meticulous care combine to create an ideal environment for flowers.",
+          " optimal conditions and meticulous care combine to create an ideal environment for catalogue-flowers.",
         boldP3: "A diverse collection. ",
         p3: "Bloom House has a collection of over 43 unique gerberas, each representing different shapes and species. From " +
           "classic varieties to exclusive varieties, our diverse range caters to every taste and preference.",
@@ -27,7 +27,7 @@ const MissionAndVisionPageTranslation = {
       title: "Our Mission",
       text: "At Bloom House, our mission is twofold. to cultivate and export the best quality gerberas and to do so sustainably" +
         " while promoting sustainability and environmental protection. We strive to provide a nurturing environment for our" +
-        " flowers and our team, fostering growth, innovation and excellence in everything we do. Through our commitment to" +
+        " catalogue-flowers and our team, fostering growth, innovation and excellence in everything we do. Through our commitment to" +
         " quality, integrity and customer satisfaction, we aim to maintain the quality bar we set.",
     },
     vision: {

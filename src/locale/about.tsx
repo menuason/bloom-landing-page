@@ -10,10 +10,10 @@ const AboutUsPageTranslation = {
       text: {
         p1: "Bloom House is a gerbera greenhouse founded in 2022 with the unique mission " +
           "of cultivating the best gerberas, sourcing the seedlings directly from Holland.",
-        p2: "All flowers  at Bloom House meet the required quality standards, confirming and reinforcing our commitment to excellence.",
+        p2: "All catalogue-flowers  at Bloom House meet the required quality standards, confirming and reinforcing our commitment to excellence.",
         p3: "Our greenhouse is thoughtfully designed to provide an optimal environment for growing gerberas all year round." +
-          " The spacious area allows for the thorough and careful cultivation of flowers, which flourish in an environment" +
-          " adapted to their needs. The perfect conditions allow us to ensure the constant blooming of bright colors and elegant flowers.",
+          " The spacious area allows for the thorough and careful cultivation of catalogue-flowers, which flourish in an environment" +
+          " adapted to their needs. The perfect conditions allow us to ensure the constant blooming of bright colors and elegant catalogue-flowers.",
         p4: "This unique environment enables us to offer a collection of over 43 different gerberas, each representing" +
           " various shapes and species. ",
         p5: "We pay great attention to the careful sorting and packaging of each gerbera. \n" +

@@ -87,7 +87,7 @@ const PackagingPage = () => {
               <p>
                 {t("packagingPage.mainContent.text.p4")}
               </p>
-              <button className=" flex text-base w-fit py-4 px-6 gap-3 items-center bg-[#1F2023] text-white">
+              <button className="hidden lg:block flex text-base w-fit py-4 px-6 gap-3 items-center bg-[#1F2023] text-white">
                 <PlayIcon width={24} height={24} />
                 {t("packagingPage.mainContent.button.text")}
               </button>

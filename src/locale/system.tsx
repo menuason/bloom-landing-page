@@ -11,7 +11,7 @@ const OurSystemPageTranslation = {
         boldP1: "A greener future. ",
         p1: "Bloom House envisions a future where the beauty of our gerberas is harmoniously combined with" +
           " nature. Our solar energy system is a testament to this vision, a significant step towards" +
-          " a more sustainable and environmentally conscious approach to growing flowers.",
+          " a more sustainable and environmentally conscious approach to growing catalogue-flowers.",
         boldP2: "Renewable energy. ",
         p2: "Our solar panels harness the power of the sun, turning it into clean and renewable energy. " +
           "By using solar energy, we contribute to a greener environment by minimizing our carbon footprint.",
