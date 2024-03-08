@@ -3,16 +3,22 @@ import { CheckIcon } from "@radix-ui/react-icons";
 import * as Checkbox from "@radix-ui/react-checkbox";
 
 interface CheckboxBloomProps {
-  key: number;
+  id: number;
   label: string;
+  onChange: (checked: Checkbox.CheckedState, label: string) => void;
 }
 
-export const CheckboxBloom: FC<CheckboxBloomProps> = ({ key, label }) => {
+export const CheckboxBloom: FC<CheckboxBloomProps> = ({
+  id,
+  label,
+  onChange,
+}) => {
   return (
     <div className="flex gap-3 items-center">
       <Checkbox.Root
-        key={key}
-        className="shadow-blackA4 border border-black rounded-sm h-3 w-3"
+        key={id}
+        className="flex items-center justify-center border-2 border-black rounded-sm h-4 w-4"
+        onCheckedChange={(checked) => onChange(checked, label)}
       >
         <Checkbox.Indicator className="text-violet11">
           <CheckIcon />
