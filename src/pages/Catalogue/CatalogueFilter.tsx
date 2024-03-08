@@ -6,32 +6,39 @@ import { useTranslation } from "react-i18next";
 interface CatalogueFilterProps {
   colors: string[];
   brands: string[];
+  onChange: (
+    checked: string | boolean,
+    label: string,
+    filterType: "color" | "brand"
+  ) => void;
 }
 
-const CatalogueFilter: FC<CatalogueFilterProps> = ({ colors, brands }) => {
+const CatalogueFilter: FC<CatalogueFilterProps> = ({
+  colors,
+  brands,
+  onChange,
+}) => {
   const { t } = useTranslation();
-  const [isColorsOpen, setColorsOpen] = useState(false);
-  const [isBrandsOpen, setBrandsOpen] = useState(false);
+  const [isColorsOpen, setColorsOpen] = useState(true);
+  const [isBrandsOpen, setBrandsOpen] = useState(true);
 
   const toggleColorsAccordion = () => {
     setColorsOpen(!isColorsOpen);
-    setBrandsOpen(false);
   };
 
   const toggleBrandsAccordion = () => {
     setBrandsOpen(!isBrandsOpen);
-    setColorsOpen(false);
   };
 
   return (
     <div className="flex flex-col w-52">
       <div className="overflow-hidden border-t border-stone-300">
         <button
-          className="w-full h-12 text-left py-2 px-2 focus:outline-none flex justify-between items-center"
+          className="w-full h-12 text-left focus:outline-none flex justify-between items-center"
           onClick={toggleColorsAccordion}
         >
           {t("cataloguePage.filterType.colour")}
-          <span className={`transform ${isColorsOpen ? "rotate-180" : ""}`}>
+          <span className={`transform ${isColorsOpen ? "rotate-180" : " "}`}>
             <img src={arrowDown} alt="Arrow Down" />
           </span>
         </button>
@@ -40,23 +47,32 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({ colors, brands }) => {
             isColorsOpen ? "max-h-full" : ""
           }`}
         >
-          <FilterItem items={colors} />
+          <FilterItem
+            items={colors}
+            onChange={(checked, label) => onChange(checked, label, "color")}
+          />
         </div>
       </div>
 
-      <div className="overflow-hidden border-t border-stone-300">
+      <div className="overflow-hidden border-t border-stone-300 mt-4">
         <button
-          className="w-full h-20 text-left py-2 px-2 focus:outline-none flex justify-between items-center"
+          className="w-full h-12 text-left focus:outline-none flex justify-between items-center"
           onClick={toggleBrandsAccordion}
         >
-          {t("cataloguePage.filterType.brand")} <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
+          {t("cataloguePage.filterType.brand")}
+          <span className={`transform ${isBrandsOpen ? "rotate-180" : " "}`}>
+            <img src={arrowDown} alt="Arrow Down" />
+          </span>
         </button>
         <div
-          className={`transition-transform transform origin-top ${
-            isBrandsOpen ? "scale-y-100" : "scale-y-0"
+          className={`transition-max-height max-h-0 overflow-hidden ${
+            isBrandsOpen ? "max-h-full" : " "
           }`}
         >
-          <FilterItem items={brands} />
+          <FilterItem
+            items={brands}
+            onChange={(checked, label) => onChange(checked, label, "brand")}
+          />
         </div>
       </div>
     </div>

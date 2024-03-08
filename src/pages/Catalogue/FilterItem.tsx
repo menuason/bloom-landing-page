@@ -3,13 +3,18 @@ import { CheckboxBloom } from "../../components/Checkbox";
 
 interface FilterItemProps {
   items: string[];
+  onChange: (checked: string | boolean, label: string) => void;
 }
 
-const FilterItem:FC<FilterItemProps> = ({ items }) => {
+const FilterItem:FC<FilterItemProps> = ({ items, onChange }) => {
   return (
-    <div className="p-2 flex flex-col">
+    <div className="flex flex-col gap-3">
       {items.map((item, ind) => (
-        <CheckboxBloom key={ind} label={item} />
+        <CheckboxBloom
+          id={ind}
+          label={item}
+          onChange={(checked, label) => onChange(checked, label)}
+        />
       ))}
     </div>
   );

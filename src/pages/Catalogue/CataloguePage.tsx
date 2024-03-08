@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import CatalogueFilter from "./CatalogueFilter";
 import CatalogueFlowersList from "./CatalogueFlowersList";
@@ -58,7 +59,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     image:
       "src/assets/catalogue-page-photos/catalogue-flowers/Cafe del Mar.png",
     name: "Cafe del Mar",
-    color: "salmon",
+    color: "cream",
     brand: "By Schreurs",
     size: "12.5-13 cm",
   },
@@ -298,7 +299,7 @@ const catalogueFlowers: CatalogueFlower[] = [
   {
     image: "src/assets/catalogue-page-photos/catalogue-flowers/Stilo.png",
     name: "Stilo",
-    color: "cataloguePage.filterType.colourType.yellow",
+    color: "yellow",
     brand: "By Hilverda Florist",
     size: "12.5-13 cm",
   },
@@ -324,6 +325,61 @@ const brands = Array.from(new Set(catalogueFlowers.map((item) => item.brand)));
 const CataloguePage = () => {
   const { t } = useTranslation();
 
+  const [selectedFlowers, setSelectedFlowers] = useState(catalogueFlowers);
+
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
+  const [selectedBrands, setselectedBrands] = useState<string[]>([]);
+
+  const filterColors = (checked: string | boolean, label: string) => {
+    if (checked) {
+      setSelectedColors((prevColors) => {
+        return prevColors.includes(label)
+          ? prevColors.filter((color) => color !== label)
+          : [...prevColors, label];
+      });
+    } else {
+      setSelectedColors(selectedColors.filter((color) => color !== label));
+    }
+  };
+
+  const filterBrands = (checked: string | boolean, label: string) => {
+    if (checked) {
+      setselectedBrands((prevBrands) => {
+        return prevBrands.includes(label)
+          ? prevBrands.filter((brand) => brand !== label)
+          : [...prevBrands, label];
+      });
+    } else {
+      setselectedBrands(selectedBrands.filter((brand) => brand !== label));
+    }
+  };
+
+  const handleChange = (
+    checked: string | boolean,
+    label: string,
+    filterType: "color" | "brand"
+  ) => {
+    filterType === "color"
+      ? filterColors(checked, label)
+      : filterBrands(checked, label);
+  };
+
+  const filterFlowers = () => {
+    const newCatalogueFlowers = catalogueFlowers.filter((flower) => {
+      const colorMatch =
+        selectedColors.length === 0 || selectedColors.includes(flower.color);
+      const brandMatch =
+        selectedBrands.length === 0 || selectedBrands.includes(flower.brand);
+      return colorMatch && brandMatch;
+    });
+
+    setSelectedFlowers(newCatalogueFlowers);
+  };
+
+  useEffect(() => {
+    filterFlowers();
+  }, [selectedColors, selectedBrands]);
+
   return (
     <>
       <PageDescriptionHeader
@@ -332,17 +388,24 @@ const CataloguePage = () => {
         navOne={t("cataloguePage.catalogue.nav2")}
       />
 
-      <div className="flex lg:gap-[72px] lg:px-20 lg:mt-[72px]">
+      <div className="min-h-[100vh] flex lg:gap-[72px] lg:px-20 lg:mt-[72px] mb-20 lg:mb-[156px] md:mb-24 xs:mb-14">
         <div className="flex flex-col gap-3">
           <p className="font-light md:text-base md:text- xs:text-sm">
-            {t("cataloguePage.filterHeader.showing")} | 43{" "}
+            {t("cataloguePage.filterHeader.showing")} |{" "}
+            {catalogueFlowers.length + " "}
             {t("cataloguePage.filterHeader.items")}
           </p>
 
-          <CatalogueFilter colors={colors} brands={brands} />
+          <CatalogueFilter
+            colors={colors}
+            brands={brands}
+            onChange={(checked, label, filterType) =>
+              handleChange(checked, label, filterType)
+            }
+          />
         </div>
 
-        <CatalogueFlowersList flowers={catalogueFlowers}/>
+        <CatalogueFlowersList flowers={selectedFlowers} />
       </div>
     </>
   );

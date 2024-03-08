@@ -8,11 +8,11 @@ interface CatalogueFlowersListProps {
 
 const CatalogueFlowersList: FC<CatalogueFlowersListProps> = ({ flowers }) => {
   return (
-    <div className="w-full h-full flex flex-wrap gap-4">
-      {flowers.map((flower) => {
+    <div className="w-full h-full mt-9 flex flex-wrap gap-4">
+      {flowers.map((flower, ind) => {
         return (
           <div className="flex flex-col">
-            <CatalogueFlowerCard flower={flower} />
+            <CatalogueFlowerCard key={ind} flower={flower} />
           </div>
         );
       })}
