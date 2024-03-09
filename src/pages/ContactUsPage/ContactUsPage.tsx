@@ -9,7 +9,7 @@ const ContactUsPage = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="src/assets/contact-us-page-photos/contact.png"
+        image="/src/assets/contact-us-page-photos/contact.png"
         title={t("contactUsPage.contact.title")}
         navOne={t("contactUsPage.contact.nav2")}
       />

@@ -6,24 +6,24 @@ import { Button } from "../../components/Button";
 
 const PACKAGING_IMAGE_LIST = [
   {
-    thumbnail: "src/assets/packaging-page-photos/pic-1.png",
-    hoverImg: "src/assets/packaging-page-photos/pic1-2.png",
-    sliderImg: "src/assets/packaging-page-photos/pic-1-dialog.png",
+    thumbnail: "/src/assets/packaging-page-photos/pic-1.png",
+    hoverImg: "/src/assets/packaging-page-photos/pic1-2.png",
+    sliderImg: "/src/assets/packaging-page-photos/pic-1-dialog.png",
   },
   {
-    thumbnail: "src/assets/packaging-page-photos/pic-2.png",
-    hoverImg: "src/assets/packaging-page-photos/pic2-2.png",
-    sliderImg: "src/assets/packaging-page-photos/pic-2-dialog.png",
+    thumbnail: "/src/assets/packaging-page-photos/pic-2.png",
+    hoverImg: "/src/assets/packaging-page-photos/pic2-2.png",
+    sliderImg: "/src/assets/packaging-page-photos/pic-2-dialog.png",
   },
   {
-    thumbnail: "src/assets/packaging-page-photos/pic-3.png",
-    hoverImg: "src/assets/packaging-page-photos/pic3-2.png",
-    sliderImg: "src/assets/packaging-page-photos/pic-3-dialog.png",
+    thumbnail: "/src/assets/packaging-page-photos/pic-3.png",
+    hoverImg: "/src/assets/packaging-page-photos/pic3-2.png",
+    sliderImg: "/src/assets/packaging-page-photos/pic-3-dialog.png",
   },
   {
-    thumbnail: "src/assets/packaging-page-photos/pic-4.png",
-    hoverImg: "src/assets/packaging-page-photos/pic4-2.png",
-    sliderImg: "src/assets/packaging-page-photos/pic-4-dialog.png",
+    thumbnail: "/src/assets/packaging-page-photos/pic-4.png",
+    hoverImg: "/src/assets/packaging-page-photos/pic4-2.png",
+    sliderImg: "/src/assets/packaging-page-photos/pic-4-dialog.png",
   },
 ];
 
@@ -33,7 +33,7 @@ const PackagingPage = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="src/assets/packaging-page-photos/packaging.png"
+        image="/src/assets/packaging-page-photos/packaging.png"
         title={t("systemPage.system.title")}
         navOne={t("packagingPage.packaging.nav2")}
       />
@@ -48,7 +48,7 @@ const PackagingPage = () => {
         <div className="relative">
           <img
             alt="Bloom House"
-            src="src/assets/packaging-page-photos/mainPic.png"
+            src="/src/assets/packaging-page-photos/mainPic.png"
             className="w-full"
           />
           <PlayIcon

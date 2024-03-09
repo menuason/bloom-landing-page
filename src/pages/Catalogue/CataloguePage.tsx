@@ -15,7 +15,7 @@ export interface CatalogueFlower {
 
 const catalogueFlowers: CatalogueFlower[] = [
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Alcantara.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Alcantara.svg",
     "name": "Alcantara",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -23,7 +23,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "ic73"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Amarone.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Amarone.svg",
     "name": "Amarone",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -31,7 +31,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "hiwa"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Ankur.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Ankur.svg",
     "name": "Ankur",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -39,7 +39,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "xa6a"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Bayandere.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Bayandere.svg",
     "name": "Bayandere",
     "color": "Bicolor",
     "brand": "By Schreurs",
@@ -47,7 +47,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "fpgt"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Briliance.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Briliance.svg",
     "name": "Briliance",
     "color": "Yellow",
     "brand": "By Hilverda Florist",
@@ -55,7 +55,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "q0ct"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Bubblgum.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Bubblgum.svg",
     "name": "Bubblgum",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -63,7 +63,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "ainy"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Cafe del Mar.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Cafe del Mar.svg",
     "name": "Cafe del Mar",
     "color": "Cream",
     "brand": "By Schreurs",
@@ -71,7 +71,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "ubbg"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Contigo.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Contigo.svg",
     "name": "Contigo",
     "color": "Orange",
     "brand": "By Schreurs",
@@ -79,7 +79,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "829l"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Cotton Candy.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Cotton Candy.svg",
     "name": "Cotton Candy",
     "color": "Bicolor",
     "brand": "By Schreurs",
@@ -87,7 +87,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "5a5c"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Cubanita.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Cubanita.svg",
     "name": "Cubanita",
     "color": "Bicolor",
     "brand": "By Hilverda Florist",
@@ -95,7 +95,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "zot5"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Dinamic.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Dinamic.svg",
     "name": "Dinamic",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -103,7 +103,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "euxu"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Dune.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Dune.svg",
     "name": "Dune",
     "color": "Orange",
     "brand": "By Hilverda Florist",
@@ -111,7 +111,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "3352"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Elan.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Elan.svg",
     "name": "Elan",
     "color": "Bicolor",
     "brand": "By Hilverda Florist",
@@ -119,7 +119,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "w569"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Esmara.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Esmara.svg",
     "name": "Esmara",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -127,7 +127,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "t0cu"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Forza.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Forza.svg",
     "name": "Forza",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -135,7 +135,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "91fv"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Hamptons.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Hamptons.svg",
     "name": "Hamptons",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -143,7 +143,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "7ltr"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Haribo.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Haribo.svg",
     "name": "Haribo",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -151,7 +151,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "bws4"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Highlight.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Highlight.svg",
     "name": "Highlight",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -159,7 +159,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "120m"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Inferno.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Inferno.svg",
     "name": "Inferno",
     "color": "Red",
     "brand": "By Hilverda Florist",
@@ -167,7 +167,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "65l2"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Intense.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Intense.svg",
     "name": "Intense",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -175,7 +175,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "gyja"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Mammut.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Mammut.svg",
     "name": "Mammut",
     "color": "Yellow",
     "brand": "By Schreurs",
@@ -183,7 +183,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "0y44"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Mandala.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Mandala.svg",
     "name": "Mandala",
     "color": "Bicolor",
     "brand": "By Hilverda Florist",
@@ -191,7 +191,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "bcd3"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Mariatta.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Mariatta.svg",
     "name": "Mariatta",
     "color": "Bicolor",
     "brand": "By Schreurs",
@@ -199,7 +199,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "xbbu"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Marimba.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Marimba.svg",
     "name": "Marimba",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -207,7 +207,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "zljo"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Melrose-2.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Melrose-2.svg",
     "name": "Melrose",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -215,7 +215,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "8pfv"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Melrose.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Melrose.svg",
     "name": "Melrose",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -223,7 +223,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "gemb"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Mocktail.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Mocktail.svg",
     "name": "Mocktail",
     "color": "Bicolor",
     "brand": "By Hilverda Florist",
@@ -231,7 +231,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "qsxs"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Mondello.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Mondello.svg",
     "name": "Mondello",
     "color": "Orange",
     "brand": "By Schreurs",
@@ -239,7 +239,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "n7h7"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Montella.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Montella.svg",
     "name": "Montella",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -247,7 +247,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "0gox"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Mozart-2.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Mozart-2.svg",
     "name": "Mozart",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -255,7 +255,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "ncpx"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Mozart.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Mozart.svg",
     "name": "Mozart",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -263,7 +263,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "1dmb"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Olympic Gold.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Olympic Gold.svg",
     "name": "Olympic Gold",
     "color": "Yellow",
     "brand": "By Schreurs",
@@ -271,7 +271,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "b42p"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Pantanal.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Pantanal.svg",
     "name": "Pantanal",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -279,7 +279,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "ktz3"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Pole Star.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Pole Star.svg",
     "name": "Pole Star",
     "color": "White",
     "brand": "By Hilverda Florist",
@@ -287,7 +287,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "3k4a"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Romesco.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Romesco.svg",
     "name": "Romesco",
     "color": "Bicolor",
     "brand": "By Schreurs",
@@ -295,7 +295,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "3yv4"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Rosalin.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Rosalin.svg",
     "name": "Rosalin",
     "color": "Purple",
     "brand": "By Hilverda Florist",
@@ -303,7 +303,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "o4wj"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Ruble.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Ruble.svg",
     "name": "Ruble",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -311,7 +311,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "0348"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Silky Tears.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Silky Tears.svg",
     "name": "Silky Tears",
     "color": "Purple",
     "brand": "By Schreurs",
@@ -319,7 +319,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "c4qn"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Snow King.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Snow King.svg",
     "name": "Snow King",
     "color": "White",
     "brand": "By Schreurs",
@@ -327,7 +327,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "x0rz"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Soap.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Soap.svg",
     "name": "Soap",
     "color": "Cream",
     "brand": "By Schreurs",
@@ -335,7 +335,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "g8cw"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Stilo.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Stilo.svg",
     "name": "Stilo",
     "color": "Yellow",
     "brand": "By Hilverda Florist",
@@ -343,7 +343,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "az4t"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Toro Rosso.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Toro Rosso.svg",
     "name": "Toro Rosso",
     "color": "Red",
     "brand": "By Schreurs",
@@ -351,7 +351,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     "id": "2qtz"
   },
   {
-    "image": "src/assets/catalogue-page-photos/catalogue-flowers/Wake Up.svg",
+    "image": "/src/assets/catalogue-page-photos/catalogue-flowers/Wake Up.svg",
     "name": "Wake Up",
     "color": "Yellow",
     "brand": "By Hilverda Florist",
@@ -424,7 +424,7 @@ const CataloguePage = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="src/assets/catalogue-page-photos/catalogue.png"
+        image="/src/assets/catalogue-page-photos/catalogue.png"
         title={t("cataloguePage.catalogue.title")}
         navOne={t("cataloguePage.catalogue.nav2")}
       />

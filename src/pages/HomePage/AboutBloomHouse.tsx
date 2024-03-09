@@ -10,7 +10,7 @@ export const AboutBloomHouse = () => {
     <>
       <PageSection
         isImageFirst={false}
-        image="src/assets/home-page-photos/5P4A3419.png"
+        image="/src/assets/home-page-photos/5P4A3419.png"
       >
         <div className="flex flex-col text-gray-950 justify-center
           lg:gap-6

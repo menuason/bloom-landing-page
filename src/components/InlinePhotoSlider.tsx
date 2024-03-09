@@ -5,13 +5,13 @@ import { Image, ImageList } from "./ImageList";
 
 const INTERIOR_PHOTOS = [
   {
-    thumbnail: "src/assets/about-us-page-photos/interior/interior-1.png",
+    thumbnail: "/src/assets/about-us-page-photos/interior/interior-1.png",
     sliderImages: {
       images: [
-        "src/assets/about-us-page-photos/interior/interior-1.png",
-        "src/assets/about-us-page-photos/interior/interior-2.png",
-        "src/assets/about-us-page-photos/interior/interior-3.png",
-        "src/assets/about-us-page-photos/interior/interior-4.png",
+        "/src/assets/about-us-page-photos/interior/interior-1.png",
+        "/src/assets/about-us-page-photos/interior/interior-2.png",
+        "/src/assets/about-us-page-photos/interior/interior-3.png",
+        "/src/assets/about-us-page-photos/interior/interior-4.png",
       ],
     },
   },

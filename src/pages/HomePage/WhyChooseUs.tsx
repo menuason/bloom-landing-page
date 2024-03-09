@@ -86,7 +86,7 @@ export const WhyChooseUs = () => {
       </div>
       <div className="flex mt-9 lg:flex-row md:flex-col xs:flex-col">
         <div className="flex flex-col m-0">
-          <img src="src/assets/home-page-photos/5P4A3279.png" alt="Bloom House" />
+          <img src="/src/assets/home-page-photos/5P4A3279.png" />
           <div className="h-40 w-640 flex items-center justify-between">
             {iconsForChooseUs.map((item, index) => {
               return (
