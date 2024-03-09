@@ -9,6 +9,11 @@ const CataloguePageTranslation = {
       showing: "Showing",
       items: "Items",
     },
+    previewItems: {
+      name: "Name",
+      size: "Size",
+      brand: "Brand",
+    },
     filterType: {
       colour: "Colour",
       brand: "Brand",
@@ -37,6 +42,11 @@ const CataloguePageTranslation = {
       showing: "Показано",
       items: "Элементa",
     },
+    previewItems: {
+      name: "Имя",
+      size: "Размер",
+      brand: "Бренд",
+    },
     filterType: {
       colour: "Цвет",
       brand: "Бренд",
@@ -64,6 +74,11 @@ const CataloguePageTranslation = {
     filterHeader: {
       showing: "Ցուցադրված է",
       items: "Տարրեր",
+    },
+    previewItems: {
+      name: "Անուն",
+      size: "Չափ",
+      brand: "Բրանդ"
     },
     filterType: {
       colour: "Գույն",

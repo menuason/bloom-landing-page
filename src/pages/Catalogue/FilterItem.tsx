@@ -11,6 +11,7 @@ const FilterItem:FC<FilterItemProps> = ({ items, onChange }) => {
     <div className="flex flex-col gap-3">
       {items.map((item, ind) => (
         <CheckboxBloom
+          key={ind}
           id={ind}
           label={item}
           onChange={(checked, label) => onChange(checked, label)}

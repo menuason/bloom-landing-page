@@ -20,7 +20,7 @@ export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({ image, t
         alt="Bloom House"
         className="w-full lg:h-full xs:h-[102px]"
       />
-      <div className="absolute inset-0 p-0 m-0 w-fit h-fit text-center text-white flex flex-col
+      <div className="absolute inset-0 p-0 m-0 w-fit h-fit text-center text-white flex flex-col m-auto
          lg:gap-2 md:gap-1
        "
       >

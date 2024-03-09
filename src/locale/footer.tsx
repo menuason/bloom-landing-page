@@ -31,8 +31,8 @@ const FooterTranslation = {
     info: "Bloom House-ը հերբերաների ջերմոցային տնտեսություն է, որը հիմնադրվել է 2022 թվականին՝ լավագույն հերբերաների մշակման եզակի առաքելությամբ:",
     usefulLinks: {
       links: "Օգտակար հղումներ",
-      catalogue: "Մեր Մասին",
-      packaging: "Կատալոգ",
+      catalogue: "Կատալոգ",
+      packaging: "Փաթեթավորում",
       aboutUs: "Մեր Մասին",
       contact: "Կապ",
     },

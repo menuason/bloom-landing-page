@@ -13,7 +13,7 @@ const PackagingPageTranslation = {
         p2: "We emphasize the packaging process to ensure the safe delivery of gerberas. From picking plants in a" +
           " greenhouse, loading a car to air cargo.",
         p3: "Effective packaging not only protects plants, but also preserves their freshness and appearance." +
-          " Well-designed packaging is essential to maintaining the quality of gerberas, ensuring that the flowers" +
+          " Well-designed packaging is essential to maintaining the quality of gerberas, ensuring that the catalogue-flowers" +
           " arrive in excellent condition.",
         p4: "You can see how we pack our gerberas to ensure their safe transportation.",
       },
