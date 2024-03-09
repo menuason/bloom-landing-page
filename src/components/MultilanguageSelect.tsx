@@ -1,96 +1,78 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import arrowDown from "../assets/icons/arrowDown/arrowDown.svg";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-const LANG_ITEMS = [
-  {
-    lang: "English",
-    shortLang: "Eng",
-    name: "en",
-  },
-  {
-    lang: "Հայերեն",
-    shortLang: "Հայ",
-    name: "hy",
-  },
-  {
-    lang: "Русский",
-    shortLang: "Рус",
-    name: "ru",
-  },
-];
+type LanguageInfo = {
+  shortName: string;
+  fullName: string;
+};
+
+type Languages = {
+  [key: string]: LanguageInfo;
+};
+
+const languages: Languages = {
+  hy: { shortName: "հայ", fullName: "հայերեն" },
+  ru: { shortName: "Рус", fullName: "Русский" },
+  en: { shortName: "Eng", fullName: "English" },
+};
+
 
 const MultiLanguageSelect = () => {
-  const storedLanguage = localStorage.getItem("selectedLanguage");
+  const location = useLocation();
+  const { pathname } = location;
 
-  const [selectedValue, setSelectedLanguage] = useState(storedLanguage || 'en');
   const { i18n } = useTranslation();
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    lang || i18n.language
+  );
 
   const changeLanguage = (language: string) => {
     setSelectedLanguage(language);
     i18n.changeLanguage(language);
 
-    localStorage.setItem("selectedLanguage", language);
+    const redirectionPath = `${pathname.slice(0, -2)}${language}`;
+
+    navigate(redirectionPath);
   };
+
+  useEffect(() => {
+    setSelectedLanguage(lang || i18n.language);
+  }, [i18n.language, lang]);
 
   return (
     <>
       <div className="hidden lg:flex md:hidden sx:hidden">
         <DropdownMenu.Root>
-          <DropdownMenu.Trigger
-            className="
-          flex items-center cursor-pointer text-bloomBlack border-none
-          hover:border-none hover:outline-none
-          focus:outline-none
-        "
-          >
+          <DropdownMenu.Trigger className="flex items-center cursor-pointer text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
             <div className="flex gap-2 hover:text-green-600">
-              {
-                selectedValue === "en"
-                  ? "Eng"
-                  : selectedValue === "ru"
-                    ? "Рус"
-                    : "Հայ"
-              }
+              {languages[selectedLanguage].fullName}
+
               <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
             </div>
           </DropdownMenu.Trigger>
           <DropdownMenu.Content
             align="start"
-            className="
-            absolute text-bloomBlack bg-white z-10
-            hover:outline-none py-3 px-4"
+            className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 px-4"
           >
-            {LANG_ITEMS.map((item) => (
-              <div key={item.lang}>
+
+            {Object.keys(languages).map((item) => (
+              <div key={item}>
                 <DropdownMenu.Item
-                  onSelect={() => changeLanguage(`${item.name}`)}
-                  className="
-                flex self-start py-2 my-0.5 cursor-pointer
-                hover:outline-none
-              "
+                  onSelect={() => changeLanguage(`${item}`)}
+                  className=" flex self-start py-2 my-0.5 cursor-pointer hover:outline-none"
                 >
-                  {item.lang}
+                  {languages[item].shortName}
                 </DropdownMenu.Item>
               </div>
             ))}
           </DropdownMenu.Content>
         </DropdownMenu.Root>
-      </div>
-
-      <div className="lg:hidden md:flex xs:flex ">
-        <div className="flex gap-3 h-6">
-          {LANG_ITEMS.map((item) => (
-            <div
-              key={item.lang}
-              onClick={() => changeLanguage(`${item.name}`)}
-              className="flex pr-4 border-r border-[#B0B4C0] h-4 last:border-0"
-            >
-              <span className="self-center">{item.shortLang}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </>
   );

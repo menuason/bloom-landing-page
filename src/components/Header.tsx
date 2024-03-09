@@ -1,33 +1,33 @@
-import logo from '../assets/logo/logo-dark.svg';
-import { useTranslation } from 'react-i18next';
-import MultiLanguageSelect from './MultilanguageSelect';
-import HamburgerSelect from './HamburgerSelect';
-import AboutUsSelect from './AboutUsSelect';
+import logo from "../assets/logo/logo-dark.svg";
+import { useTranslation } from "react-i18next";
+import MultiLanguageSelect from "./MultilanguageSelect";
+import HamburgerSelect from "./HamburgerSelect";
+import AboutUsSelect from "./AboutUsSelect";
 
 const Header = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const NAV_BAR_ITEMS_WEB = [
     {
-      title: t('header.home'),
-      href: '/',
+      title: t("header.home"),
+      href: `/home/${i18n.language}`,
     },
     {
-      title: t('header.catalogue'),
-      href: '/catalogue',
+      title: t("header.catalogue"),
+      href: `/catalogue/${i18n.language}`,
     },
     {
-      title: t('header.packaging'),
-      href: '/packaging',
+      title: t("header.packaging"),
+      href: `/packaging/${i18n.language}`,
     },
     {
-      title: t('header.about.aboutUs'),
-      href: '',
+      title: t("header.about.aboutUs"),
+      href: "",
       component: <AboutUsSelect />,
     },
     {
-      title: t('header.contact'),
-      href: '/contact-us',
+      title: t("header.contact"),
+      href: `/contact-us/${i18n.language}`,
     },
   ];
 
@@ -40,7 +40,7 @@ const Header = () => {
      "
     >
       <a
-        href="/"
+        href={`/home/${i18n.language}`}
         className="self-center cursor-pointer h-14 w-[105px]
           xs:h-12 xs:w-[89px]
         "

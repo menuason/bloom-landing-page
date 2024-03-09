@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "../../assets/icons/arrowRight/arrowRight";
 import { Button } from "../../components/Button";
 
 export const AboutBloomHouse = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -47,7 +47,7 @@ export const AboutBloomHouse = () => {
           </div>
 
           <Button
-            link="/about-us"
+            link={`/about-us/${i18n.language}`}
             endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
             type="outlined"
           >

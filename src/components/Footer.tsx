@@ -6,7 +6,7 @@ import { LocationFilledIcon } from "../assets/icons/location/location-filled";
 import { PhoneFilledIcon } from "../assets/icons/phone/phone-filled";
 
 const Footer: FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="bg-[#1F2023] text-white w-full flex flex-col bottom-0">
@@ -27,7 +27,7 @@ const Footer: FC = () => {
           "
         >
           <a
-            href="https://github.com/yourusername"
+            href={`/home/${i18n.language}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-400"
@@ -47,23 +47,23 @@ const Footer: FC = () => {
         <div className="mt-4 flex flex-col gap-3 items-baseline">
           <p className="mb-2 text-sm">{t("footer.usefulLinks.links")}</p>
           <div className="flex flex-col gap-3">
-            <a href="/catalogue" className="text-white hover:text-gray-400">
+            <a href={`/catalogue/${i18n.language}`} className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.catalogue")}
               </span>
             </a>
 
-            <a href="/packaging" className="text-white hover:text-gray-400">
+            <a href={`/packaging/${i18n.language}`} className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.packaging")}
               </span>
             </a>
-            <a href="/about-us" className="text-white hover:text-gray-400">
+            <a href={`/about-us/${i18n.language}`} className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.aboutUs")}
               </span>
             </a>
-            <a href="/contact-us" className="text-white hover:text-gray-400">
+            <a href={`/contact-us/${i18n.language}`} className="text-white hover:text-gray-400">
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.contact")}
               </span>
