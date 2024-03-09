@@ -3,28 +3,28 @@ import arrowDown from "../assets/icons/arrowDown/arrowDown.svg";
 import { useTranslation } from "react-i18next";
 
 const AboutUsSelect = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const ABOUT_US_ITEMS = [
     {
       menuItem: t("header.about.aboutUs"),
       name: "about",
-      href: "/about-us",
+      href: `/about-us/${i18n.language}`,
     },
     {
       menuItem: t("header.about.mission"),
       name: "mission",
-      href: "/mission-and-vision",
+      href: `/mission-and-vision/${i18n.language}`,
     },
     {
       menuItem: t("header.about.system"),
       name: "system",
-      href: "/our-system",
+      href: `/our-system/${i18n.language}`,
     },
     {
       menuItem: t("header.about.partners"),
       name: "partners",
-      href: "",
+      href: `/${i18n.language}`,
     },
   ];
 

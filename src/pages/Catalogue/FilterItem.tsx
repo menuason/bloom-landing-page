@@ -6,7 +6,7 @@ interface FilterItemProps {
   onChange: (checked: string | boolean, label: string) => void;
 }
 
-const FilterItem:FC<FilterItemProps> = ({ items, onChange }) => {
+const FilterItem: FC<FilterItemProps> = ({ items, onChange }) => {
   return (
     <div className="flex flex-col gap-3">
       {items.map((item, ind) => (

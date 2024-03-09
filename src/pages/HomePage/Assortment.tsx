@@ -71,7 +71,7 @@ export const Assortment = () => {
           return (
             <div
               key={index}
-              className="lg:w-1/4 relative h-full md:w-1/4 md:felx-1 xs:w-1/2 xs:shrink-0"
+              className="lg:w-1/4 lg:xs:shrink-1 relative h-full md:w-1/4 md:felx-1 xs:w-1/2 xs:shrink-0"
             >
               <img
                 src={item.img}

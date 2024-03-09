@@ -5,7 +5,7 @@ import { PageSection } from "../../components/PageSection";
 import { Button } from "../../components/Button";
 
 export const AboutUsSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -57,7 +57,7 @@ export const AboutUsSection = () => {
               </p>
             </div>
             <Button
-              link="/mission-and-vision"
+              link={`/mission-and-vision/${i18n.language}`}
               type="outlined"
               endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
             >

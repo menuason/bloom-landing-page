@@ -1,8 +1,7 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import { useEffect, useLayoutEffect } from "react";
-import { useTranslation } from "react-i18next";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import {
+  createBrowserRouter, RouterProvider,
+} from 'react-router-dom';
+import React from "react";
 import HomePage from "./pages/HomePage/HomePage";
 import PackagingPage from "./pages/PackagingPage/PackagingPage";
 import CataloguePage from "./pages/Catalogue/CataloguePage";
@@ -10,48 +9,55 @@ import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 import OurSystemPage from "./pages/OurSystemPage/OurSystemPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import MissionAndVisionPage from "./pages/MissionAndVisionPage/MissionAndVisionPage";
-
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
+import { RootComponent } from "./components/RootComponent";
 
 function App() {
-  const { i18n } = useTranslation();
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootComponent />,
 
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem("selectedLanguage");
-    if (storedLanguage) {
-      i18n.changeLanguage(storedLanguage);
-    }
-  }, [i18n]);
+      children: [
+        {
+          path: "/home/:lang",
+          element: <HomePage />,
+        },
+        {
+          path: "/packaging/:lang",
+          element: <PackagingPage />,
+        },
+        {
+          path: "/catalogue/:lang",
+          element: <CataloguePage />,
+        },
+        {
+          path: "/contact-us/:lang",
+          element: <ContactUsPage />,
+        },
+        {
+          path: "/our-system/:lang",
+          element: <ContactUsPage />,
+        },
+        {
+          path: "/our-system/:lang",
+          element: <OurSystemPage />,
+        },
+        {
+          path: "/about-us/:lang",
+          element: <AboutUsPage />,
+        },
+        {
+          path: "/mission-and-vision/:lang",
+          element: <MissionAndVisionPage />,
+        },
+      ],
+    },
+  ]);
 
   return (
-    <>
-      <Header />
-      <Router>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/packaging" element={<PackagingPage />} />
-          <Route path="/catalogue" element={<CataloguePage />} />
-          <Route path="/contact-us" element={<ContactUsPage />} />
-          <Route path="/our-system" element={<OurSystemPage />} />
-          <Route path="/about-us" element={<AboutUsPage />} />
-          <Route
-            path="/mission-and-vision"
-            element={<MissionAndVisionPage />}
-          />
-        </Routes>
-      </Router>
-      <Footer />
-    </>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
   );
 }
 
