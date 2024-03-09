@@ -34,7 +34,7 @@ const HomePageTranslation = {
         "Each flower undergoes careful selection and careful packaging, ensuring that it reaches its destination in perfect condition.",
       aboutBloomHouseDescriptionBulletFour:
         "In the greenhouse industry, we aim to set an example by setting new standards that reiterate our commitment to creating a harmonious balance of quality and beauty.",
-      aboutBloomHouseButton: "Read More",
+      aboutBloomHouseButton: "See More",
     },
     whyChooseUs: {
       whyChooseUsTitle: "Why choose us?",
@@ -95,7 +95,7 @@ const HomePageTranslation = {
         "Каждый цветок проходит тщательный отбор и тщательную упаковку, благодаря чему он доставляется по назначению в идеальном состоянии.",
       aboutBloomHouseDescriptionBulletFour:
         "В тепличной отрасли мы стремимся подать пример, устанавливая новые стандарты, которые подтверждают нашу приверженность созданию гармоничного баланса качества и красоты.",
-      aboutBloomHouseButton: "Читать Далее",
+      aboutBloomHouseButton: "Узнать Больше",
     },
     whyChooseUs: {
       whyChooseUsTitle: "Почему выбрали нас?",
@@ -157,7 +157,7 @@ const HomePageTranslation = {
         "Յուրաքանչյուր ծաղիկ ենթարկվում է մանրակրկիտ ընտրության և մանրակրկիտ փաթեթավորման՝ ապահովելով, որ այն հասնի իր նպատակակետին կատարյալ վիճակում:",
       aboutBloomHouseDescriptionBulletFour:
         "Ջերմոցային արդյունաբերության մեջ մենք նպատակ ունենք օրինակ ծառայել՝ սահմանելով նոր չափանիշներ, որոնք վերահաստատում են որակի և գեղեցկության ներդաշնակ հավասարակշռություն ստեղծելու մեր հանձնառությունը:",
-      aboutBloomHouseButton: "Կարդալ ավելին",
+      aboutBloomHouseButton: "Տեսնել ավելին",
     },
     whyChooseUs: {
       whyChooseUsTitle: "Ինչու՞ Ընտրել Մեզ",

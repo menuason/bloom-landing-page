@@ -56,7 +56,7 @@ export const GetInTouchSection = () => {
            xs:gap-6
         "
         >
-          <div className="font-medium text-lg w-fit border-b border-black">
+          <div className="font-medium text-lg w-fit border-b border-bloomBlack">
             <p>{t("contactUsPage.mainContent.subTitleOne")}</p>
           </div>
           {CONTACT_US_ICONS.map((item) => (
@@ -74,7 +74,7 @@ export const GetInTouchSection = () => {
         </div>
 
         <div className="flex flex-col gap-8">
-          <div className="font-medium text-lg w-fit border-b border-black">
+          <div className="font-medium text-lg w-fit border-b border-bloomBlack">
             <p>{t("contactUsPage.mainContent.subTitleTwo")}</p>
           </div>
 

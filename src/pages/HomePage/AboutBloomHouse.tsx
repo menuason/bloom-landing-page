@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { PageSection } from "../../components/PageSection";
 import { ArrowRightIcon } from "../../assets/icons/arrowRight/arrowRight";
+import { Button } from "../../components/Button";
 
 export const AboutBloomHouse = () => {
   const { t } = useTranslation();
@@ -44,16 +45,14 @@ export const AboutBloomHouse = () => {
               {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionBulletFour")}
             </p>
           </div>
-          <button
-            className="w-fit bg-black px-4 text-white flex items-center justify-center gap-4
-              lg:py-3 lg:text-base lg:self-start
-              md:py-1.5 md:text-sm md:self-center
-              xs:py-1.5 xs:text-sm xs:self-start
-             "
+
+          <Button
+            link="/about-us"
+            endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
+            type="outlined"
           >
             {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
-            <ArrowRightIcon color="white" width={12} height={12} />
-          </button>
+          </Button>
         </div>
       </PageSection>
     </>
