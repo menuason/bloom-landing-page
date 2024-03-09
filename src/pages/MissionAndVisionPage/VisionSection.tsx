@@ -24,7 +24,7 @@ export const VisionSection = () => {
           {t("missionAndVisionPage.vision.title")}
         </p>
 
-        <div className="flex flex-col font-light
+        <div className="flex flex-col font-normal
           lg:text-base lg:pr-5
           md:text-sm
           xs:text-sm

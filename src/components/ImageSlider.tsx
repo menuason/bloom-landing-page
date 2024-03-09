@@ -14,7 +14,7 @@ interface ImageSliderProps {
 export const ImageSlider: FC<ImageSliderProps> = ({ image, onClose, onNext, onBack }) => {
   return (
     image && (
-      <div className="hidden lg:block fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center cursor-auto z-10">
+      <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center cursor-auto z-10">
         <div className="flex h-full max-w-3xl w-full mx-auto">
           <img
             src={image.sliderImg || image?.sliderImages?.images?.[0]}

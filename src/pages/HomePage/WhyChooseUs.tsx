@@ -74,19 +74,19 @@ export const WhyChooseUs = () => {
           {t("homePage.whyChooseUs.whyChooseUsTitle")}
         </h1>
 
-        <h6
-          className="text-gray-950 font-light
+        <p
+          className="text-gray-950 font-normal
             lg:w-8/12 lg:text-base lg:text-center
             md:text-sm
             xs:text-sm xs:w-full
           "
         >
           {t("homePage.whyChooseUs.whyChooseDescription")}
-        </h6>
+        </p>
       </div>
       <div className="flex mt-9 lg:flex-row md:flex-col xs:flex-col">
         <div className="flex flex-col m-0">
-          <img src="src/assets/home-page-photos/5P4A3279.png" />
+          <img src="src/assets/home-page-photos/5P4A3279.png" alt="Bloom House" />
           <div className="h-40 w-640 flex items-center justify-between">
             {iconsForChooseUs.map((item, index) => {
               return (
@@ -94,9 +94,9 @@ export const WhyChooseUs = () => {
                   key={index}
                   className="w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
                 >
-                  <img src={item.icon} />
+                  <img src={item.icon} alt="Bloom House"/>
                   <p
-                    className="w-1/2 text-center font-light
+                    className="w-1/2 text-center font-normal
                       lg:text-base
                       md:text-sm md:w-2/6
                       xs:text-sm xs:w-10/12
@@ -122,10 +122,10 @@ export const WhyChooseUs = () => {
               >
                 <h1 className="text-5xl text-[#529b3c]">{item.number}</h1>
                 <div className="flex flex-col ml-2 gap-2">
-                  <h4 className="font-light lg:text-xl md:text-xl xs:text-lg">
+                  <h4 className="font-normal lg:text-xl md:text-xl xs:text-lg">
                     {item.header}
                   </h4>
-                  <p className="w-11/12 font-extralight text-base lg:text-base md:text-sm xs:text-xs">
+                  <p className="w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs">
                     {item.description}
                   </p>
                 </div>

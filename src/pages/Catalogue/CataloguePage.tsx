@@ -419,7 +419,7 @@ const CataloguePage = () => {
 
   useEffect(() => {
     filterFlowers();
-  }, [selectedColors, selectedBrands]);
+  }, [filterFlowers, selectedColors, selectedBrands]);
 
   return (
     <>
@@ -431,8 +431,8 @@ const CataloguePage = () => {
 
       <div className="min-h-[100vh] flex lg:gap-[72px] lg:px-20 lg:mt-[72px] mb-20 lg:mb-[156px] md:mb-24 xs:mb-14">
         <div className="flex flex-col gap-3">
-          <p className="font-light md:text-base md:text- xs:text-sm">
-            {t("cataloguePage.filterHeader.showing")} |{" "}
+          <p className="font-normal md:text-base md:text- xs:text-sm">
+            {t("cataloguePage.filterHeader.showing")} |
             {catalogueFlowers.length + " "}
             {t("cataloguePage.filterHeader.items")}
           </p>

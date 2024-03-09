@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import hamburger from '../assets/icons/hamburger/hamburger.svg';
 import { useTranslation } from "react-i18next";
-import MultiLanguageSelect from "./MultilanguageSelect";
 
 const HamburgerSelect = () => {
   const { t } = useTranslation();
@@ -41,6 +40,12 @@ const HamburgerSelect = () => {
 
   const handleHamburgerToggle = () => {
     setShow(!show);
+
+    if (!show) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   };
 
   return (
@@ -69,14 +74,13 @@ const HamburgerSelect = () => {
               {
                 NAV_BAR_ITEMS_MOB.map((item) => {
                   return (
-                    <a href={item.href} key={item.title} className="flex self-center  py-3 px-4 -mx-4 border-b border-gray-100">
+                    <a href={item.href} key={item.title} className="flex self-center py-3 px-4 -mx-4 border-b border-gray-100">
                       {item.title}
                     </a>
                   );
                 })
               }
             </div>
-            <MultiLanguageSelect />
           </div>
         </div>
       )}

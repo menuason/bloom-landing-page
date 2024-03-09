@@ -32,7 +32,7 @@ const ContactUsForm = () => {
 
     return (
       <div className="flex flex-col pr-[104px] gap-8">
-        <div className="text-lg font-light lg:w-[513px] md:w-[513px] xs:w-[295px]">
+        <div className="text-lg font-normal lg:w-[513px] md:w-[513px] xs:w-[295px]">
           <p>{t("contactUsPage.form.title")}</p>
         </div>
 
@@ -44,7 +44,7 @@ const ContactUsForm = () => {
               xs:flex-col
             "
             >
-              <div className="flex flex-col gap-2 font-light">
+              <div className="flex flex-col gap-2 font-normal">
                 <label htmlFor="name">{t("contactUsPage.form.inputOne")}</label>
                 <input
                   className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
@@ -59,7 +59,7 @@ const ContactUsForm = () => {
                   </div>
                 )}
               </div>
-              <div className="flex flex-col gap-2 font-light">
+              <div className="flex flex-col gap-2 font-normal">
                 <label htmlFor="surname">{t("contactUsPage.form.inputTwo")}</label>
                 <input
                   className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
@@ -82,7 +82,7 @@ const ContactUsForm = () => {
               xs:flex-col
             "
             >
-              <div className="flex flex-col gap-2 font-light">
+              <div className="flex flex-col gap-2 font-normal">
                 <label htmlFor="email">{t("contactUsPage.form.inputThree")}</label>
                 <input
                   className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
@@ -98,7 +98,7 @@ const ContactUsForm = () => {
                 )}
 
               </div>
-              <div className="flex flex-col gap-2 font-light">
+              <div className="flex flex-col gap-2 font-normal">
                 <label htmlFor="phone">{t("contactUsPage.form.inputFour")}</label>
                 <input
                   className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
@@ -115,7 +115,7 @@ const ContactUsForm = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 font-light">
+            <div className="flex flex-col gap-2 font-normal">
               <label htmlFor="message">{t("contactUsPage.form.textarea")}</label>
               <textarea
                 id="message"

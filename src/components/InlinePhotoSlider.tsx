@@ -47,7 +47,7 @@ const InlinePhotoSlider: FC<PhotoSliderProps> = ({ images }) => {
         alt={`Photo ${currentPhotoIndex + 1}`}
         className="w-full lg:w-full xs:w-[204px] md:w-[340px]"
       />
-      <div className="hidden lg:block w-full h-full absolute m-auto">
+      <div className="w-full h-full absolute m-auto">
         <ImageList images={INTERIOR_PHOTOS} className="opacity-0" />
       </div>
 

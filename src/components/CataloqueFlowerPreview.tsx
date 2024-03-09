@@ -80,19 +80,19 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({ children, id, f
 
               <div className="flex flex-col py-3 gap-1 lg:w-[385px] md:w-[480px] xs:w-[250px]">
                 <div className="text-base flex gap-2 py-3 px-4 bg-[#F6F6F7]">
-                  <span className="font-light min-w-16">{t("cataloguePage.previewItems.name")}:</span>
+                  <span className="font-normal min-w-16">{t("cataloguePage.previewItems.name")}:</span>
                   <span className="font-medium">{name}</span>
                 </div>
                 <div className="text-base flex gap-2 py-3 px-4">
-                  <span className="font-light min-w-16">{t("cataloguePage.filterType.colour")}:</span>
+                  <span className="font-normal min-w-16">{t("cataloguePage.filterType.colour")}:</span>
                   <span className="font-medium">{color}</span>
                 </div>
                 <div className="text-base flex gap-2 py-3 px-4 bg-[#F6F6F7]">
-                  <span className="font-light min-w-16">{t("cataloguePage.previewItems.brand")}:</span>
+                  <span className="font-normal min-w-16">{t("cataloguePage.previewItems.brand")}:</span>
                   <span className="font-medium">{brand}</span>
                 </div>
                 <div className="text-base flex gap-2 py-3 px-4">
-                  <span className="font-light min-w-16">{t("cataloguePage.previewItems.size")}:</span>
+                  <span className="font-normal min-w-16">{t("cataloguePage.previewItems.size")}:</span>
                   <span className="font-medium">{size}</span>
                 </div>
               </div>
