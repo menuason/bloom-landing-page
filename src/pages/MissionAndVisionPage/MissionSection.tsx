@@ -25,7 +25,7 @@ export const MissionSection = () => {
           {t("missionAndVisionPage.mission.title")}
         </p>
 
-        <div className="flex flex-col font-light
+        <div className="flex flex-col font-normal
           lg:text-base
           md:text-sm
           xs:text-sm

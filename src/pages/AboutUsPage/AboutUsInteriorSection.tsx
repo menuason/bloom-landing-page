@@ -31,7 +31,7 @@ export const AboutUsInteriorSection = () => {
         xs:gap-3
        "
       >
-        <p className="text-4xl text-gray-950 font-medium
+        <p className="text-4xl text-gray-950 font-normal
            lg:text-3xl lg:self-start
            md:text-2xl md:self-center
            xs:text-2xl xs:self-start

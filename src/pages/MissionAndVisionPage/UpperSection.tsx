@@ -25,7 +25,7 @@ export const MissionAndVisionUpperSection = () => {
         </p>
 
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col font-light
+          <div className="flex flex-col font-normal
               lg:text-base lg:gap-6
               md:text-sm
               xs:text-sm

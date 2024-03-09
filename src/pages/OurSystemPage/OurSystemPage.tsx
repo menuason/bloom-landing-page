@@ -55,7 +55,7 @@ const OurSystemPage = () => {
           >
             {t("systemPage.mainContent.title")}
           </p>
-          <div className="font-light
+          <div className="font-normal
               lg:text-base
               md:text-sm
               xs:text-sm
@@ -101,7 +101,7 @@ const OurSystemPage = () => {
           >
             {t("systemPage.gallerySection.title")}
           </p>
-          <p className="font-light text-[#323232]
+          <p className="font-normal text-[#323232]
               lg:text-base
               md:text-sm
               xs:text-sm

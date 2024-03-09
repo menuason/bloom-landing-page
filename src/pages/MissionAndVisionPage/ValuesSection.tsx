@@ -45,7 +45,7 @@ export const ValuesSection = () => {
         </p>
 
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col font-light
+          <div className="flex flex-col font-normal
             lg:text-base
             md:text-sm
             xs:text-sm

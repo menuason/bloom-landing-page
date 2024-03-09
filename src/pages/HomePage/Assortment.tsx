@@ -50,15 +50,15 @@ export const Assortment = () => {
           {t("homePage.assortment.assortmentSectionTitle")}
         </h1>
 
-        <h6
-          className="text-gray-950 lg:w-10/12 font-light
+        <p
+          className="text-gray-950 lg:w-10/12 font-normal
             lg:text-base lg:text-center
             md:text-sm  md:text-center
             xs:text-sm xs:items-start
           "
         >
           {t("homePage.assortment.assortmentSectionDescription")}
-        </h6>
+        </p>
       </div>
       <div
         className="flex flex-row gap-4 mt-9
@@ -74,6 +74,7 @@ export const Assortment = () => {
               className="lg:w-1/4 lg:xs:shrink-1 relative h-full md:w-1/4 md:felx-1 xs:w-1/2 xs:shrink-0"
             >
               <img
+                alt="Bloom House"
                 src={item.img}
                 className="w-full h-full object-cover transition-opacity opacity-100 hover:opacity-0 absolute inset-0 cursor-pointer"
               />

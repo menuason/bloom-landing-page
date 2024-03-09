@@ -26,7 +26,7 @@ export const AboutBloomHouse = () => {
           >
             {t("homePage.aboutBloomHouse.aboutBloomHouseTitle")}
           </p>
-          <div className="font-light
+          <div className="font-normal
               lg:text-base
               md:text-sm
               xs:text-sm

@@ -30,10 +30,9 @@ const Header = () => {
       href: `/contact-us/${i18n.language}`,
     },
   ];
-
   return (
     <div
-      className="bg-white h-20 w-full flex justify-between px-6
+      className="bg-white h-20 w-full flex justify-between px-6 shadow-bloomBoxShadow fixed z-10
         lg:px-20
         md:px-8
         xs:px-4
@@ -41,29 +40,33 @@ const Header = () => {
     >
       <a
         href={`/home/${i18n.language}`}
-        className="self-center cursor-pointer h-14 w-[105px]
-          xs:h-12 xs:w-[89px]
+        className="self-center cursor-pointer
+          lg:h-14 lg:w-[105px]
+          md:h-12 md:w-[95px]
+          xs:h-12 xs:w-[90px]
         "
       >
         <img src={logo} alt="logo" />
       </a>
       <div className="flex items-center gap-12 cursor-pointer text-bloomBlack">
-        <div className="hidden lg:flex gap-12 items-center">
-          {NAV_BAR_ITEMS_WEB.map((item) => (
-            <a
-              key={item.title}
-              href={item.href}
-              className="hover:text-green-600"
-            >
-              {item?.component ?? item.title}
-            </a>
-          ))}
+        <div className="hidden lg:flex gap-12 items-center font-medium">
+          {
+            NAV_BAR_ITEMS_WEB.map((item) => (
+              <a
+                key={item.title}
+                href={item.href}
+                className="hover:text-green-600"
+              >
+                {item?.component ?? item.title}
+              </a>
+            ))
+          }
         </div>
-        <div className="hidden lg:flex">
+        <div className="flex gap-3">
           <MultiLanguageSelect />
-        </div>
-        <div className="lg:hidden flex items-center cursor-pointer ">
-          <HamburgerSelect />
+          <div className="flex items-center cursor-pointer lg:hidden">
+            <HamburgerSelect />
+          </div>
         </div>
       </div>
     </div>

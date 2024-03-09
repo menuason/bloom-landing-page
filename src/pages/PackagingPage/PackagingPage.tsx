@@ -60,7 +60,7 @@ const PackagingPage = () => {
         </div>
 
         <div
-          className="flex flex-col text-gray-950
+          className="flex flex-col text-gray-950 justify-center
           lg:gap-6 lg:w-1/2
           md:gap-3 md:w-full
           xs:gap-3 xs:w-full
@@ -123,7 +123,7 @@ const PackagingPage = () => {
             {t("packagingPage.gallerySection.title")}
           </p>
           <p
-            className="font-light text-[#323232]
+            className="font-normal text-[#323232]
             lg:text-base
             md:text-sm
             xs:text-sm

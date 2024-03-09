@@ -2,7 +2,6 @@ import { FC, useState } from "react";
 import { ImageSlider } from "./ImageSlider";
 import { MoreIcon } from "../assets/icons/more/more";
 import { useTranslation } from "react-i18next";
-import { ScrollHintIcon } from "../assets/icons/scrollHint/scroll-hint";
 
 interface SliderImage {
   title?: string;
@@ -127,7 +126,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
                         <h4 className="font-medium lg:text-xl md:text-sm xs:text-sm">
                           {image.sliderImages?.title}
                         </h4>
-                        <p className="font-extralight text-xs">
+                        <p className="font-light text-xs">
                           {t("aboutUsPage.gallerySection.more")}
                         </p>
                       </div>
@@ -145,9 +144,6 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
           onBack={handleBack}
           onNext={handleNext}
         />
-      </div>
-      <div className="lg:hidden md:hidden xs:block">
-        <ScrollHintIcon />
       </div>
     </>
   );
