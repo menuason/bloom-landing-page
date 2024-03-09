@@ -12,26 +12,26 @@ export const Assortment = () => {
 
   const flowersArr: FlowersArr[] = [
     {
-      img: "src/assets/flowers/5P4A32631-1.png",
-      hoverImg: "src/assets/flowers/5P4A32631-2.png",
+      img: "/src/assets/flowers/5P4A32631-1.png",
+      hoverImg: "/src/assets/flowers/5P4A32631-2.png",
       name: t("homePage.flowers.mondello.name"),
       author: t("homePage.flowers.mondello.author"),
     },
     {
-      img: "src/assets/flowers/5P4A3265-1.png",
-      hoverImg: "src/assets/flowers/5P4A3265-2.png",
+      img: "/src/assets/flowers/5P4A3265-1.png",
+      hoverImg: "/src/assets/flowers/5P4A3265-2.png",
       name: t("homePage.flowers.snowKing.name"),
       author: t("homePage.flowers.snowKing.author"),
     },
     {
-      img: "src/assets/flowers/5P4A3260-1.png",
-      hoverImg: "src/assets/flowers/5P4A3260-2.png",
+      img: "/src/assets/flowers/5P4A3260-1.png",
+      hoverImg: "/src/assets/flowers/5P4A3260-2.png",
       name: t("homePage.flowers.mariatta.name"),
       author: t("homePage.flowers.mariatta.author"),
     },
     {
-      img: "src/assets/flowers/5P4A3269-1.png",
-      hoverImg: "src/assets/flowers/5P4A3269-2.png",
+      img: "/src/assets/flowers/5P4A3269-1.png",
+      hoverImg: "/src/assets/flowers/5P4A3269-2.png",
       name: t("homePage.flowers.briliance.name"),
       author: t("homePage.flowers.briliance.author"),
     },

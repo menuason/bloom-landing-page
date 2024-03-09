@@ -10,14 +10,14 @@ export const AboutUsSection = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="src/assets/about-us-page-photos/aboutUs.png"
+        image="/src/assets/about-us-page-photos/aboutUs.png"
         title={t("aboutUsPage.about.title")}
         navOne={t("aboutUsPage.about.nav2")}
       />
       <PageSection
         isImageFirst
         imageClassName="w-full"
-        image="src/assets/about-us-page-photos/mainPic1.png"
+        image="/src/assets/about-us-page-photos/mainPic1.png"
       >
         <div className="flex flex-col text-gray-950 justify-center
           lg:gap-8

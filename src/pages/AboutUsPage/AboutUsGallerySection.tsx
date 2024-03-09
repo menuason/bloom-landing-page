@@ -6,59 +6,59 @@ export const AboutUsGallerySection = () => {
 
   const ABOUT_US_IMAGE_LIST = [
     {
-      thumbnail: "src/assets/about-us-page-photos/aest/aest.png",
+      thumbnail: "/src/assets/about-us-page-photos/aest/aest.png",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextOne"),
         images: [
-          "src/assets/about-us-page-photos/aest/aest1.png",
-          "src/assets/about-us-page-photos/aest/aest2.png",
-          "src/assets/about-us-page-photos/aest/aest7.png",
-          "src/assets/about-us-page-photos/aest/aest3.png",
-          "src/assets/about-us-page-photos/aest/aest4.png",
-          "src/assets/about-us-page-photos/aest/aest5.png",
-          "src/assets/about-us-page-photos/aest/aest6.png",
+          "/src/assets/about-us-page-photos/aest/aest1.png",
+          "/src/assets/about-us-page-photos/aest/aest2.png",
+          "/src/assets/about-us-page-photos/aest/aest7.png",
+          "/src/assets/about-us-page-photos/aest/aest3.png",
+          "/src/assets/about-us-page-photos/aest/aest4.png",
+          "/src/assets/about-us-page-photos/aest/aest5.png",
+          "/src/assets/about-us-page-photos/aest/aest6.png",
         ]
       },
     },
     {
-      thumbnail: "src/assets/about-us-page-photos/heating/heat.png",
+      thumbnail: "/src/assets/about-us-page-photos/heating/heat.png",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextTwo"),
         images: [
-          "src/assets/about-us-page-photos/heating/heat-1.png",
-          "src/assets/about-us-page-photos/heating/heat-2.png",
-          "src/assets/about-us-page-photos/heating/heat-3.png",
-          "src/assets/about-us-page-photos/heating/heat-4.png",
-          "src/assets/about-us-page-photos/heating/heat-5.png",
-          "src/assets/about-us-page-photos/heating/heat-6.png",
+          "/src/assets/about-us-page-photos/heating/heat-1.png",
+          "/src/assets/about-us-page-photos/heating/heat-2.png",
+          "/src/assets/about-us-page-photos/heating/heat-3.png",
+          "/src/assets/about-us-page-photos/heating/heat-4.png",
+          "/src/assets/about-us-page-photos/heating/heat-5.png",
+          "/src/assets/about-us-page-photos/heating/heat-6.png",
         ],
       }
     },
     {
-      thumbnail: "src/assets/about-us-page-photos/env/env.png",
+      thumbnail: "/src/assets/about-us-page-photos/env/env.png",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextThree"),
         images: [
-        "src/assets/about-us-page-photos/env/env-1.png",
-        "src/assets/about-us-page-photos/env/env-2.png",
-        "src/assets/about-us-page-photos/env/env-3.png",
-        "src/assets/about-us-page-photos/env/env-4.png",
-        "src/assets/about-us-page-photos/env/env-5.png",
-        "src/assets/about-us-page-photos/env/env-6.png",
+        "/src/assets/about-us-page-photos/env/env-1.png",
+        "/src/assets/about-us-page-photos/env/env-2.png",
+        "/src/assets/about-us-page-photos/env/env-3.png",
+        "/src/assets/about-us-page-photos/env/env-4.png",
+        "/src/assets/about-us-page-photos/env/env-5.png",
+        "/src/assets/about-us-page-photos/env/env-6.png",
       ],
       }
     },
     {
-      thumbnail: "src/assets/packaging-page-photos/pic-3.png",
+      thumbnail: "/src/assets/packaging-page-photos/pic-3.png",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextFour"),
         images: [
-          "src/assets/about-us-page-photos/packaging/pac-1.png",
-          "src/assets/about-us-page-photos/packaging/pac-2.png",
-          "src/assets/about-us-page-photos/packaging/pac-3.png",
-          "src/assets/about-us-page-photos/packaging/pac-4.png",
-          "src/assets/about-us-page-photos/packaging/pac-5.png",
-          "src/assets/about-us-page-photos/packaging/pac-6.png",
+          "/src/assets/about-us-page-photos/packaging/pac-1.png",
+          "/src/assets/about-us-page-photos/packaging/pac-2.png",
+          "/src/assets/about-us-page-photos/packaging/pac-3.png",
+          "/src/assets/about-us-page-photos/packaging/pac-4.png",
+          "/src/assets/about-us-page-photos/packaging/pac-5.png",
+          "/src/assets/about-us-page-photos/packaging/pac-6.png",
         ],
       }
     },

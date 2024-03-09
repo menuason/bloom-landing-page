@@ -5,24 +5,24 @@ import { PageSection } from "../../components/PageSection";
 
 const OUR_SYSTEM_IMAGE_LIST = [
   {
-    thumbnail: "src/assets/our-system-page-photos/pic-1.png",
-    hoverImg: "src/assets/our-system-page-photos/pic1-2.png",
-    sliderImg: "src/assets/our-system-page-photos/pic-1-dialog.png",
+    thumbnail: "/src/assets/our-system-page-photos/pic-1.png",
+    hoverImg: "/src/assets/our-system-page-photos/pic1-2.png",
+    sliderImg: "/src/assets/our-system-page-photos/pic-1-dialog.png",
   },
   {
-    thumbnail: "src/assets/our-system-page-photos/pic-2.png",
-    hoverImg: "src/assets/our-system-page-photos/pic2-2.png",
-    sliderImg: "src/assets/our-system-page-photos/pic-2-dialog.png",
+    thumbnail: "/src/assets/our-system-page-photos/pic-2.png",
+    hoverImg: "/src/assets/our-system-page-photos/pic2-2.png",
+    sliderImg: "/src/assets/our-system-page-photos/pic-2-dialog.png",
   },
   {
-    thumbnail: "src/assets/our-system-page-photos/pic-3.png",
-    hoverImg: "src/assets/our-system-page-photos/pic3-2.png",
-    sliderImg: "src/assets/our-system-page-photos/pic-3-dialog.png",
+    thumbnail: "/src/assets/our-system-page-photos/pic-3.png",
+    hoverImg: "/src/assets/our-system-page-photos/pic3-2.png",
+    sliderImg: "/src/assets/our-system-page-photos/pic-3-dialog.png",
   },
   {
-    thumbnail: "src/assets/our-system-page-photos/pic-4.png",
-    hoverImg: "src/assets/our-system-page-photos/pic4-2.png",
-    sliderImg: "src/assets/our-system-page-photos/pic-4-dialog.png",
+    thumbnail: "/src/assets/our-system-page-photos/pic-4.png",
+    hoverImg: "/src/assets/our-system-page-photos/pic4-2.png",
+    sliderImg: "/src/assets/our-system-page-photos/pic-4-dialog.png",
   },
 ];
 
@@ -32,14 +32,14 @@ const OurSystemPage = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="src/assets/our-system-page-photos/system.png"
+        image="/src/assets/our-system-page-photos/system.png"
         title={t("systemPage.system.title")}
         navOne={t("systemPage.system.nav2")}
       />
 
       <PageSection
         isImageFirst
-        image="src/assets/our-system-page-photos/mainPic.png"
+        image="/src/assets/our-system-page-photos/mainPic.png"
       >
         <div className="flex flex-col text-gray-950 justify-center
           lg:gap-6

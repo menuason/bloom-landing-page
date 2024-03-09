@@ -36,10 +36,6 @@ function App() {
         },
         {
           path: "/our-system/:lang",
-          element: <ContactUsPage />,
-        },
-        {
-          path: "/our-system/:lang",
           element: <OurSystemPage />,
         },
         {

@@ -134,7 +134,7 @@ const HomePageTranslation = {
         author: "By Schreurs",
       },
       snowKing: {
-        name: "snowKing",
+        name: "Snow King",
         author: "By HiverdaFlorist",
       },
       mariatta: {

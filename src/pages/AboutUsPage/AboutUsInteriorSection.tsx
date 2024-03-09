@@ -3,13 +3,13 @@ import InlinePhotoSlider from "../../components/InlinePhotoSlider";
 
 const INTERIOR_PHOTOS_INLINE = [
   {
-    thumbnail: "src/assets/about-us-page-photos/interior/interior.png",
+    thumbnail: "/src/assets/about-us-page-photos/interior/interior.png",
     sliderImages: {
       images: [
-        "src/assets/about-us-page-photos/interior/interior.png",
-        "src/assets/about-us-page-photos/interior/slider-1.png",
-        "src/assets/about-us-page-photos/interior/slider-2.png",
-        "src/assets/about-us-page-photos/interior/slider-3.png",
+        "/src/assets/about-us-page-photos/interior/interior.png",
+        "/src/assets/about-us-page-photos/interior/slider-1.png",
+        "/src/assets/about-us-page-photos/interior/slider-2.png",
+        "/src/assets/about-us-page-photos/interior/slider-3.png",
       ]
     },
   }

@@ -7,7 +7,7 @@ export const VisionSection = () => {
   return (
     <PageSection
       isImageFirst
-      image="src/assets/mission-and-vision-photos/vision.png"
+      image="/src/assets/mission-and-vision-photos/vision.png"
     >
       <div className="flex flex-col text-gray-950 justify-center
         lg:gap-6
