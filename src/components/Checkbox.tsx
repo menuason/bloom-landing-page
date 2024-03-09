@@ -17,7 +17,7 @@ export const CheckboxBloom: FC<CheckboxBloomProps> = ({
     <div className="flex gap-3 items-center">
       <Checkbox.Root
         key={id}
-        className="flex items-center justify-center border-2 border-black rounded-sm h-4 w-4"
+        className="flex items-center justify-center border-2 border-bloomBlack rounded-sm h-4 w-4"
         onCheckedChange={(checked) => onChange(checked, label)}
       >
         <Checkbox.Indicator className="text-violet11">

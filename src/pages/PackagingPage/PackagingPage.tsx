@@ -2,6 +2,7 @@ import { ImageList } from "../../components/ImageList";
 import { useTranslation } from "react-i18next";
 import { PlayIcon } from "../../assets/icons/roundArrowRight/play";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
+import { Button } from "../../components/Button";
 
 const PACKAGING_IMAGE_LIST = [
   {
@@ -51,9 +52,10 @@ const PackagingPage = () => {
             className="w-full"
           />
           <PlayIcon
-            width={40}
-            height={40}
-            className="lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-80"
+            width={72}
+            height={72}
+            color="white"
+            className="lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           />
         </div>
 
@@ -87,10 +89,14 @@ const PackagingPage = () => {
               <p>
                 {t("packagingPage.mainContent.text.p4")}
               </p>
-              <button className="hidden lg:block flex text-base w-fit py-4 px-6 gap-3 items-center bg-[#1F2023] text-white">
-                <PlayIcon width={24} height={24} />
+              <Button
+                // link={videoLink}
+                type="outlined"
+                className="hidden lg:flex"
+                startIcon={<PlayIcon color="black" width={24} height={24} />}
+              >
                 {t("packagingPage.mainContent.button.text")}
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -103,10 +109,10 @@ const PackagingPage = () => {
         "
       >
         <div className="flex flex-col items-center gap-2 text-gray-950 justify-center
-            lg:self-center
-            md:self-center
-            xs:self-start
-          "
+          lg:self-center
+          md:self-center
+          xs:self-start
+        "
         >
           <p className="
              lg:text-3xl lg:self-center

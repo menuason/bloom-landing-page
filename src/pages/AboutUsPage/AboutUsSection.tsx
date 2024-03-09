@@ -2,6 +2,7 @@ import { ArrowRightIcon } from "../../assets/icons/arrowRight/arrowRight";
 import { useTranslation } from "react-i18next";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { PageSection } from "../../components/PageSection";
+import { Button } from "../../components/Button";
 
 export const AboutUsSection = () => {
   const { t } = useTranslation();
@@ -55,16 +56,14 @@ export const AboutUsSection = () => {
                 {t("aboutUsPage.mainContent.text.p5")}
               </p>
             </div>
-            <button
-              className="w-fit bg-black px-4 text-white flex items-center justify-center gap-4
-                lg:py-3 lg:text-base lg:self-start
-                md:py-1.5 md:text-sm md:self-center
-                xs:py-1.5 xs:text-sm xs:self-start
-              "
+            <Button
+              link="/mission-and-vision"
+              type="outlined"
+              endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
             >
               {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
-              <ArrowRightIcon color="white" width={12} height={12} />
-            </button>
+
+            </Button>
           </div>
         </div>
       </PageSection>

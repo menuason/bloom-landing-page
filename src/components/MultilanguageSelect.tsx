@@ -40,7 +40,7 @@ const MultiLanguageSelect = () => {
         <DropdownMenu.Root>
           <DropdownMenu.Trigger
             className="
-          flex items-center cursor-pointer text-black border-none
+          flex items-center cursor-pointer text-bloomBlack border-none
           hover:border-none hover:outline-none
           focus:outline-none
         "
@@ -59,7 +59,7 @@ const MultiLanguageSelect = () => {
           <DropdownMenu.Content
             align="start"
             className="
-            absolute text-black bg-white z-10
+            absolute text-bloomBlack bg-white z-10
             hover:outline-none py-3 px-4"
           >
             {LANG_ITEMS.map((item) => (

@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         sans: ["Noto Sans", "sans-serif"],
       },
+      colors: {
+        bloomBlack: "#191A1C"
+      },
     },
     screens: {
       xs: "320px",

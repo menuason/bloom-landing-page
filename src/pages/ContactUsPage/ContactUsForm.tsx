@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { ErrorIcon } from "../../assets/icons/error/error";
 import { useTranslation } from "react-i18next";
+import { Button } from "../../components/Button";
 
 type ContactUsFormInputs = {
   name: string;
@@ -46,7 +47,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="name">{t("contactUsPage.form.inputOne")}</label>
                 <input
-                  className="w-[288px] py-1 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
                   type="text"
                   id="name"
                   {...register("name", { required: "Name is required" })}
@@ -61,7 +62,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="surname">{t("contactUsPage.form.inputTwo")}</label>
                 <input
-                  className="w-[288px] py-1 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
                   type="text"
                   id="surname"
                   {...register("surname", { required: "Surname is required" })}
@@ -84,7 +85,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="email">{t("contactUsPage.form.inputThree")}</label>
                 <input
-                  className="w-[288px] py-1 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
                   type="email"
                   id="email"
                   {...register("email", { required: "Email is required" })}
@@ -100,7 +101,7 @@ const ContactUsForm = () => {
               <div className="flex flex-col gap-2 font-light">
                 <label htmlFor="phone">{t("contactUsPage.form.inputFour")}</label>
                 <input
-                  className="w-[288px] py-1 border-b border-black outline-none px-2"
+                  className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
                   type="tel"
                   id="phone"
                   {...register("phone", { required: "Phone is required" })}
@@ -118,7 +119,7 @@ const ContactUsForm = () => {
               <label htmlFor="message">{t("contactUsPage.form.textarea")}</label>
               <textarea
                 id="message"
-                className="border border-black resize-none outline-none px-2"
+                className="border border-bloomBlack resize-none outline-none px-2"
                 rows={6}
                 {...register("message", { required: "Message is required" })}
               ></textarea>
@@ -130,9 +131,14 @@ const ContactUsForm = () => {
               )}
             </div>
 
-            <button className="text-base h-14 w-40 bg-[#1F2023] text-white" type="submit">
-              {t("contactUsPage.form.button")}
-            </button>
+            <div>
+              <Button
+                type="filled"
+                className="h-12 w-[150px] justify-center"
+              >
+                {t("contactUsPage.form.button")}
+              </Button>
+            </div>
           </div>
         </form>
       </div>

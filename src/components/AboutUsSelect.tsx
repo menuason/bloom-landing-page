@@ -32,7 +32,7 @@ const AboutUsSelect = () => {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger
         className="
-          flex items-center cursor-pointer text-black border-none
+          flex items-center cursor-pointer text-bloomBlack border-none
           hover:border-none hover:outline-none
           focus:outline-none
         "
@@ -45,7 +45,7 @@ const AboutUsSelect = () => {
       <DropdownMenu.Content
         align="start"
         className="
-            absolute text-black bg-white z-10 w-[200px]
+            absolute text-bloomBlack bg-white z-10 w-[200px]
             hover:outline-none px-4 py-3
          "
       >

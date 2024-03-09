@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect, useLayoutEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,6 +11,17 @@ import OurSystemPage from "./pages/OurSystemPage/OurSystemPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import MissionAndVisionPage from "./pages/MissionAndVisionPage/MissionAndVisionPage";
 
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const { i18n } = useTranslation();
 
@@ -19,12 +30,13 @@ function App() {
     if (storedLanguage) {
       i18n.changeLanguage(storedLanguage);
     }
-  }, []);
+  }, [i18n]);
 
   return (
     <>
       <Header />
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/packaging" element={<PackagingPage />} />
