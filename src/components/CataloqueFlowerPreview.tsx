@@ -85,7 +85,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({ children, id, f
                 </div>
                 <div className="text-base flex gap-2 py-3 px-4">
                   <span className="font-normal min-w-16">{t("cataloguePage.filterType.colour")}:</span>
-                  <span className="font-medium">{color}</span>
+                  <span className="font-medium">{t(`cataloguePage.filterType.colourType.${color}`)}</span>
                 </div>
                 <div className="text-base flex gap-2 py-3 px-4 bg-[#F6F6F7]">
                   <span className="font-normal min-w-16">{t("cataloguePage.previewItems.brand")}:</span>

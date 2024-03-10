@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import arrowDown from "../../assets/icons/arrowDown/arrowDown.svg";
 import FilterItem from "./FilterItem";
 import { useTranslation } from "react-i18next";
+import { Separator } from "@radix-ui/react-separator";
 
 interface CatalogueFilterProps {
   colors: string[];
@@ -9,7 +10,7 @@ interface CatalogueFilterProps {
   onChange: (
     checked: string | boolean,
     label: string,
-    filterType: "color" | "brand"
+    filterType: "color" | "brand",
   ) => void;
 }
 
@@ -31,8 +32,10 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({
   };
 
   return (
-    <div className="flex flex-col w-52">
-      <div className="overflow-hidden border-t border-stone-300">
+    <div className="flex flex-col lg:w-52 md:w-full xs:w-full gap-4">
+      <Separator orientation="horizontal" className="h-[1px] bg-stone-300 mr-[-16px]" />
+
+      <div>
         <button
           className="w-full h-12 text-left focus:outline-none flex justify-between items-center"
           onClick={toggleColorsAccordion}
@@ -54,7 +57,9 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({
         </div>
       </div>
 
-      <div className="overflow-hidden border-t border-stone-300 mt-4">
+      <Separator orientation="horizontal" className="h-[1px] bg-stone-300 mr-[-16px]" />
+
+      <div>
         <button
           className="w-full h-12 text-left focus:outline-none flex justify-between items-center"
           onClick={toggleBrandsAccordion}

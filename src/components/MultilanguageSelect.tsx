@@ -19,7 +19,6 @@ const languages: Languages = {
   en: { shortName: "Eng", fullName: "English" },
 };
 
-
 const MultiLanguageSelect = () => {
   const location = useLocation();
   const { pathname } = location;
@@ -29,7 +28,7 @@ const MultiLanguageSelect = () => {
   const navigate = useNavigate();
 
   const [selectedLanguage, setSelectedLanguage] = useState(
-    lang || i18n.language
+    lang || i18n.language,
   );
 
   const changeLanguage = (language: string) => {
@@ -47,33 +46,32 @@ const MultiLanguageSelect = () => {
 
   return (
     <>
-      <div className="hidden lg:flex md:hidden sx:hidden">
-        <DropdownMenu.Root>
-          <DropdownMenu.Trigger className="flex items-center cursor-pointer text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
-            <div className="flex gap-2 hover:text-green-600 font-medium">
-              {languages[selectedLanguage].fullName}
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger
+          className="flex items-center cursor-pointer text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
+          <div className="flex gap-2 hover:text-green-600 font-medium">
+            {languages[selectedLanguage].shortName}
 
-              <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
+            <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
+          </div>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content
+          align="start"
+          className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 px-4 font-medium"
+        >
+
+          {Object.keys(languages).map((item) => (
+            <div key={item}>
+              <DropdownMenu.Item
+                onSelect={() => changeLanguage(`${item}`)}
+                className=" flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-medium"
+              >
+                {languages[item].shortName}
+              </DropdownMenu.Item>
             </div>
-          </DropdownMenu.Trigger>
-          <DropdownMenu.Content
-            align="start"
-            className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 px-4 font-medium"
-          >
-
-            {Object.keys(languages).map((item) => (
-              <div key={item}>
-                <DropdownMenu.Item
-                  onSelect={() => changeLanguage(`${item}`)}
-                  className=" flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-medium"
-                >
-                  {languages[item].shortName}
-                </DropdownMenu.Item>
-              </div>
-            ))}
-          </DropdownMenu.Content>
-        </DropdownMenu.Root>
-      </div>
+          ))}
+        </DropdownMenu.Content>
+      </DropdownMenu.Root>
     </>
   );
 };
