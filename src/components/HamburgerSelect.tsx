@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import hamburger from '../assets/icons/hamburger/hamburger.svg';
 import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 const HamburgerSelect = () => {
   const { t } = useTranslation();
@@ -8,23 +9,23 @@ const HamburgerSelect = () => {
   const NAV_BAR_ITEMS_MOB = [
     {
       title: t("header.catalogue"),
-      href: '/catalogue',
+      href: `/catalogue/${i18n.language}`,
     },
     {
       title: t("header.packaging"),
-      href: '/packaging',
+      href: `/packaging/${i18n.language}`,
     },
     {
       title: t("header.about.aboutUs"),
-      href: '/about-us',
+      href: `/about-us/${i18n.language}`,
     },
     {
       title: t("header.about.mission"),
-      href: '/mission-and-vision',
+      href: `/mission-and-vision/${i18n.language}`,
     },
     {
       title: t("header.about.system"),
-      href: '/our-system',
+      href: `/our-system/${i18n.language}`,
     },
     {
       title: t("header.about.partners"),
@@ -32,7 +33,7 @@ const HamburgerSelect = () => {
     },
     {
       title: t("header.contact"),
-      href: '/contact-us',
+      href: `/contact-us/${i18n.language}`,
     },
   ];
 

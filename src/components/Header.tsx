@@ -30,6 +30,7 @@ const Header = () => {
       href: `/contact-us/${i18n.language}`,
     },
   ];
+
   return (
     <div
       className="bg-white h-20 w-full flex justify-between px-6 shadow-bloomBoxShadow fixed z-10

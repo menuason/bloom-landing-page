@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowRightIcon } from "../assets/icons/arrowRight/arrowRight";
+import i18n from "i18next";
 
 interface PageDescriptionHeaderProps {
   image: string;
@@ -32,7 +33,7 @@ export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({ image, t
             {title}
           </h2>
           <div className="flex items-center gap-3 justify-center font-normal">
-            <a href="/">
+            <a href={`/home/${i18n.language}`}>
               <p className="cursor-pointer hover:text-[#C0C0C0]">{t("systemPage.system.nav1")}</p>
             </a>
             <ArrowRightIcon color="white" width={8} height={12} />
