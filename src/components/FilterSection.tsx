@@ -6,6 +6,7 @@ import CatalogueFlowersList from "../pages/Catalogue/CatalogueFlowersList";
 import { CatalogueFlower } from "../pages/Catalogue/CataloguePage";
 import Pagination from "../pages/Catalogue/Pagination";
 
+
 const catalogueFlowers: CatalogueFlower[] = [
   {
     image: "/src/assets/catalogue-page-photos/catalogue-flowers/Alcantara.svg",
@@ -357,7 +358,28 @@ const catalogueFlowers: CatalogueFlower[] = [
   },
 ];
 
-const colors = Array.from(new Set(catalogueFlowers.map((item) => item.color)));
+export interface Colors {
+  [language: string]: {
+    names: string[];
+    displayNames: string[];
+  };
+}
+
+const colors: Colors = {
+  en: {
+    names: ["White", "Cream", "Yellow", "Orange", "Red", "Pink", "Bicolor"],
+    displayNames: ["White", "Cream", "Yellow", "Orange", "Red", "Pink", "Bicolor"],
+  },
+  ru: {
+    names: ["White", "Cream", "Yellow", "Orange", "Red", "Pink", "Bicolor"],
+    displayNames: ["Белый", "Kремовый", "Желтый", "Апельсиновый", "Красный", "Розовый", "Двухцветный"],
+  },
+  hy: {
+    names: ["White", "Cream", "Yellow", "Orange", "Red", "Pink", "Bicolor"],
+    displayNames: ["Սպիտակ", "Կրեմ", "Դեղին", "Նարնջագույն", "Կարմիր", "Վարդագույն", "Երկգույն"],
+  },
+};
+
 const brands = Array.from(new Set(catalogueFlowers.map((item) => item.brand)));
 
 export const FilterSection = () => {
@@ -368,7 +390,7 @@ export const FilterSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [selectedColors, setSelectedColors] = useState<string[]>([]);
-  const [selectedBrands, setselectedBrands] = useState<string[]>([]);
+  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 
   const [showFilter, setShowFilter] = useState(false);
 
@@ -396,20 +418,20 @@ export const FilterSection = () => {
 
   const filterBrands = (checked: string | boolean, label: string) => {
     if (checked) {
-      setselectedBrands((prevBrands) => {
+      setSelectedBrands((prevBrands) => {
         return prevBrands.includes(label)
           ? prevBrands.filter((brand) => brand !== label)
           : [...prevBrands, label];
       });
     } else {
-      setselectedBrands(selectedBrands.filter((brand) => brand !== label));
+      setSelectedBrands(selectedBrands.filter((brand) => brand !== label));
     }
   };
 
   const handleChange = (
     checked: string | boolean,
     label: string,
-    filterType: "color" | "brand"
+    filterType: "color" | "brand",
   ) => {
     filterType === "color"
       ? filterColors(checked, label)
@@ -464,10 +486,9 @@ export const FilterSection = () => {
       flex mb-20
       lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:flex lg:mb-[156px] lg:flex-row
       md:mb-24 md:px-8 md:flex-col
-      xs:mb-14 xs:flex-col xs:px-8 xs:py-6"
-    >
+      xs:mb-14 xs:flex-col xs:px-8 xs:py-6">
       <button
-        className="lg:hidden md:flex xs:flex border-none hover:outline-none hover:border-none "
+        className="lg:hidden md:flex xs:flex flex border-none hover:outline-none hover:border-none "
         onClick={handleToggle}
       >
         <div className="flex gap-3 items-center">
@@ -476,33 +497,35 @@ export const FilterSection = () => {
         </div>
       </button>
 
-      {showFilter && (
+      <div
+        className={`fixed flex items-center justify-center overflow-hidden 
+        ${showFilter && "bg-black bg-opacity-50 z-10 inset-0 w-full h-full"}`}
+        onClick={handleToggle}
+      >
         <div
-          className="fixed top-0 right-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-10"
-          onClick={handleToggle}
+          className={
+            `overflow-hidden flex flex-col gap-3 absolute top-0 left-0 h-full  bg-white transform transition-transform ease-in-out duration-400
+             ${showFilter ? "w-[337px] py-8 px-4" : "w-0 p-0" }`}
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            className="flex flex-col gap-3 absolute top-0 left-0 w-[337px] h-full py-8 px-4 bg-white"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex flex-col gap-3 ">
-              <p className="font-normal md:text-base md:text- xs:text-sm">
-                {t("cataloguePage.filterHeader.showing")} |
-                {catalogueFlowers.length + " "}
-                {t("cataloguePage.filterHeader.items")}
-              </p>
+          <div className="flex flex-col gap-3 ">
+            <p className="font-normal md:text-base md:text- xs:text-sm">
+              {t("cataloguePage.filterHeader.showing")} |
+              {catalogueFlowers.length + " "}
+              {t("cataloguePage.filterHeader.items")}
+            </p>
 
-              <CatalogueFilter
-                colors={colors}
-                brands={brands}
-                onChange={(checked, label, filterType) =>
-                  handleChange(checked, label, filterType)
-                }
-              />
-            </div>
+            <CatalogueFilter
+              colors={colors}
+              brands={brands}
+              onChange={(checked, label, filterType) =>
+                handleChange(checked, label, filterType)
+              }
+            />
           </div>
         </div>
-      )}
+      </div>
+
 
       <div
         className="
