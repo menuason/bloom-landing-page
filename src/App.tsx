@@ -1,7 +1,5 @@
-import {
-  createBrowserRouter, RouterProvider,
-} from 'react-router-dom';
 import React from "react";
+import { createBrowserRouter, Navigate,  RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import PackagingPage from "./pages/PackagingPage/PackagingPage";
 import CataloguePage from "./pages/Catalogue/CataloguePage";
@@ -9,15 +7,22 @@ import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
 import OurSystemPage from "./pages/OurSystemPage/OurSystemPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import MissionAndVisionPage from "./pages/MissionAndVisionPage/MissionAndVisionPage";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import { useTranslation } from "react-i18next";
 import { RootComponent } from "./components/RootComponent";
 
 function App() {
+  const { i18n } = useTranslation();
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: <RootComponent />,
-
+      errorElement: <ErrorBoundary />,
       children: [
+        { index: true,
+          element: <Navigate to={`/home/${i18n.language}`} replace />
+        },
         {
           path: "/home/:lang",
           element: <HomePage />,
