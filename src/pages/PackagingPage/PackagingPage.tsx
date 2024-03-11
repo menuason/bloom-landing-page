@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { PlayIcon } from "../../assets/icons/roundArrowRight/play";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { Button } from "../../components/Button";
+import { PackagingFullScreenVideo } from "../../components/PackagingFullScreenVideo";
 
 const PACKAGING_IMAGE_LIST = [
   {
@@ -51,12 +52,14 @@ const PackagingPage = () => {
             src="/src/assets/packaging-page-photos/mainPic.png"
             className="w-full"
           />
-          <PlayIcon
-            width={72}
-            height={72}
-            color="white"
-            className="lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          />
+          <PackagingFullScreenVideo>
+            <PlayIcon
+              width={60}
+              height={60}
+              color="white"
+              className="lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            />
+          </PackagingFullScreenVideo>
         </div>
 
         <div
@@ -89,14 +92,17 @@ const PackagingPage = () => {
               <p>
                 {t("packagingPage.mainContent.text.p4")}
               </p>
-              <Button
-                // link={videoLink}
-                type="outlined"
-                className="hidden lg:flex"
-                startIcon={<PlayIcon color="black" width={24} height={24} />}
-              >
-                {t("packagingPage.mainContent.button.text")}
-              </Button>
+
+              <PackagingFullScreenVideo>
+                <Button
+                  type="outlined"
+                  className="hidden lg:flex"
+                  startIcon={<PlayIcon color="black" width={24} height={24} />}
+                >
+                  {t("packagingPage.mainContent.button.text")}
+                </Button>
+              </PackagingFullScreenVideo>
+
             </div>
           </div>
         </div>

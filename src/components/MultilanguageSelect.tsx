@@ -49,7 +49,7 @@ const MultiLanguageSelect = () => {
       <DropdownMenu.Root>
         <DropdownMenu.Trigger
           className="flex items-center cursor-pointer text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
-          <div className="flex gap-2 hover:text-green-600 font-medium">
+          <div className="flex gap-2 hover:text-green-600 focus:text-green-600">
             {languages[selectedLanguage].shortName}
 
             <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
@@ -57,14 +57,14 @@ const MultiLanguageSelect = () => {
         </DropdownMenu.Trigger>
         <DropdownMenu.Content
           align="start"
-          className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 px-4 font-medium"
+          className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 px-4"
         >
 
           {Object.keys(languages).map((item) => (
             <div key={item}>
               <DropdownMenu.Item
                 onSelect={() => changeLanguage(`${item}`)}
-                className=" flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-medium"
+                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-medium hover:text-green-600"
               >
                 {languages[item].shortName}
               </DropdownMenu.Item>

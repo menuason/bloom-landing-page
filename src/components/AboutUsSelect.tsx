@@ -54,7 +54,7 @@ const AboutUsSelect = () => {
             <DropdownMenu.Item
               className="
                 flex self-start py-2 my-0.5 cursor-pointer
-                hover:outline-none
+                hover:outline-none hover:text-green-600
               "
             >
               <a href={item.href}>

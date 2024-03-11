@@ -96,7 +96,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
                 <img
                   src={image.thumbnail}
                   alt={`Image ${index}`}
-                  className="w-full h-full object-cover transition-opacity opacity-100 hover:opacity-0 absolute inset-0 cursor-pointer"
+                  className="w-full h-full object-cover transition-opacity opacity-100 hover:opacity-0 absolute inset-0 cursor-pointer z-60"
                   onClick={() => handleImageClick(image, index)}
                 />
                 <img
