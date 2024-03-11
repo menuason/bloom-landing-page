@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { FilterSection } from "../../components/FilterSection";
 
