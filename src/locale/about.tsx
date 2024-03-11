@@ -11,7 +11,7 @@ const AboutUsPageTranslation = {
         p1: "Bloom House is a gerbera greenhouse founded in 2022 with the unique mission " +
           "of cultivating the best gerberas, sourcing the seedlings directly from Holland.",
         p2: "All catalogue-flowers  at Bloom House meet the required quality standards, confirming and reinforcing our commitment to excellence.",
-        p3: "Our greenhouse is thoughtfully designed to provide an optimal environment for growing gerberas all year round." +
+        p3: "Our greenhouse is designed to provide an optimal environment for growing gerberas all year round." +
           " The spacious area allows for the thorough and careful cultivation of catalogue-flowers, which flourish in an environment" +
           " adapted to their needs. The perfect conditions allow us to ensure the constant blooming of bright colors and elegant catalogue-flowers.",
         p4: "This unique environment enables us to offer a collection of over 43 different gerberas, each representing" +
@@ -23,8 +23,7 @@ const AboutUsPageTranslation = {
     },
     gallerySection: {
       title: "Bloom House Gallery",
-      text: "Discover the charm of Bloom House through our carefully curated gallery, where each image tells a " +
-        "story of nature's elegance.",
+      text: "Explore every corner of Bloom House through our featured gallery.",
       imgTextOne: "Our Aesthetics",
       imgTextTwo: "Heating System",
       imgTextThree: "Environment",
@@ -32,7 +31,7 @@ const AboutUsPageTranslation = {
       more: "See more",
     },
     interiorSection: {
-      title: "Harmony in the interior",
+      title: "\"Our Beautiful And Harmonious Environment\"",
       p1: "We provide a comfortable, harmonious work space, promoting a positive and productive environment.",
       p2: "Our team at Bloom House work in an environment of the highest standards, where every employee contributes to the" +
         " collective effort to maintain the beauty of our greenhouse.",
@@ -54,7 +53,7 @@ const AboutUsPageTranslation = {
           " лучших гербер, закупая саженцы непосредственно из Голландии.",
         p2: "Все цветы в Bloom House соответствуют необходимым стандартам качества, что подтверждает и усиливает наше" +
           " стремление к совершенству.",
-        p3: "Наша теплица продуманно спроектирована так, чтобы обеспечить оптимальные условия для выращивания гербер круглый год." +
+        p3: "Наша теплица спроектирована так, чтобы обеспечить оптимальные условия для выращивания гербер круглый год." +
           " Просторная территория позволяет тщательно и бережно выращивать цветы, которые цветут в среде, адаптированной к" +
           " их потребностям. Ид еальные условия позволяют нам обеспечить постоянное цветение ярких красок и элегантных цветов.",
         p4: "Эта уникальная среда позволяет нам предложить коллекцию из более чем 43 различных гербер, каждая из которых" +
@@ -66,8 +65,7 @@ const AboutUsPageTranslation = {
     },
     gallerySection: {
       title: "Галерея Блум Хауса",
-      text: "Откройте для себя очарование Bloom House в нашей тщательно подобранной галерее, где каждое изображение" +
-        "рассказывает историю элегантности природы.",
+      text: "Исследуйте каждый уголок Bloom House с помощью нашей избранной галереи.",
       imgTextOne: "Наша эстетика",
       imgTextTwo: "Солнечная энергия",
       imgTextThree: "Среда",
@@ -75,7 +73,7 @@ const AboutUsPageTranslation = {
       more: "Узнать больше",
     },
     interiorSection: {
-      title: "Гармония в интерьере",
+      title: "\"Наш Красивый И Гармоничный Окружающий Мир\"",
       p1: "Мы обеспечиваем комфортное, гармоничное рабочее пространство, способствующее позитивной и продуктивной атмосфере.",
       p2: "Наша команда Bloom House работает в среде самых высоких стандартов, где каждый сотрудник вносит свой вклад в" +
         " коллективные усилия по поддержанию красоты нашей теплицы.",
@@ -93,25 +91,24 @@ const AboutUsPageTranslation = {
     mainContent: {
       title: "«Մեր մասին» մենք ավելին ենք քան պարզապես ջերմոց",
       text: {
-        p1: "Bloom House-ը հերբերա ջերմոց է, որը հիմնադրվել է 2022 թվականին՝ լավագույն հերբերաները մշակելու եզակի առաքելությամբ՝" +
+        p1: "Bloom House-ը հերբերաների համար նախատեսված ջերմոց է, որը հիմնադրվել է 2022 թվականին՝ լավագույն հերբերաները մշակելու եզակի առաքելությամբ՝" +
           " սածիլները ձեռք բերելով անմիջապես Հոլանդիայից:",
         p2: "Bloom House-ի բոլոր ծաղիկները համապատասխանում են պահանջվող որակի չափանիշներին` հաստատելով և ամրապնդելով" +
           " գերազանցության հանդեպ մեր հավատարմությունը:",
-        p3: "Մեր ջերմոցը մտածված է նախագծված՝ ապահովելու օպտիմալ միջավայր գերբերաների աճեցման համար ողջ տարին:" +
+        p3: "Մեր ջերմոցը է նախագծված՝ ապահովելու օպտիմալ միջավայր գերբերաների աճեցման համար ողջ տարին:" +
           " Ընդարձակ տարածքը թույլ է տալիս մանրակրկիտ և զգույշ մշակել ծաղիկները, որոնք ծաղկում են իրենց կարիքներին " +
           "հարմարեցված միջավայրում: Կատարյալ պայմանները թույլ են տալիս ապահովել վառ գույների և էլեգանտ ծաղիկների մշտական ծաղկումը:",
         p4: "Այս յուրահատուկ միջավայրը մեզ հնարավորություն է տալիս առաջարկել ավելի քան 43 տարբեր հերբերաների հավաքածու," +
           " որոնցից յուրաքանչյուրը ներկայացնում է տարբեր ձևեր և տեսակներ",
         p5: "Մենք մեծ ուշադրություն ենք դարձնում յուրաքանչյուր հերբերայի մանրակրկիտ տեսակավորմանն ու փաթեթավորմանը։" +
-          "Յուրաքանչյուր ծաղիկ ենթարկվում է մանրակրկիտ ընտրության և մանրակրկիտ փաթեթավորման՝ ապահովելով, որ այն հասնի իր" +
+          "Յուրաքանչյուր ծաղիկ ենթարկվում է մանրակրկիտ ընտրության և փաթեթավորման՝ ապահովելով, որ այն հասնի իր" +
           " նպատակակետին կատարյալ վիճակում:",
       },
       button: "Կարդալ ավելին",
     },
     gallerySection: {
       title: "Bloom House-ի պատկերասրահ",
-      text: "Բացահայտեք Bloom House-ի հմայքը մեր խնամքով մշակված պատկերասրահի միջոցով, որտեղ յուրաքանչյուր պատկեր " +
-        "պատմում է բնության նրբագեղության մասին:",
+      text: "Բացահայտեք Bloom House-ի բոլոր անկյունները մեր ցուցադրված պատկերասրահի միջոցով:",
       imgTextOne: "Մեր էսթետիկան",
       imgTextTwo: "Ջեռուցման Համակարգ",
       imgTextThree: "Միջավայր",
@@ -119,7 +116,7 @@ const AboutUsPageTranslation = {
       more: "Տեսնել ավելին",
     },
     interiorSection: {
-      title: "Ներդաշնակությունը ինտերիերում ",
+      title: "«Մեր Գեղեցիկ և Ներդաշնակ Միջավայրը»",
       p1: "Մենք ստեղծում ենք հարմարավետ, ներդաշնակ աշխատանքային տարածք՝ նպաստելով դրական և արդյունավետ միջավայրին:",
       p2: "Bloom House-ի մեր թիմն աշխատում է ամենաբարձր չափանիշներին համապատասխան միջավայրում, որտեղ յուրաքանչյուր" +
         " աշխատակից նպաստում է մեր ջերմոցի գեղեցկությունը պահպանելու հավաքական ջանքերին:",
