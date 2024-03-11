@@ -3,9 +3,10 @@ import arrowDown from "../../assets/icons/arrowDown/arrowDown.svg";
 import FilterItem from "./FilterItem";
 import { useTranslation } from "react-i18next";
 import { Separator } from "@radix-ui/react-separator";
+import { Colors } from "../../components/FilterSection";
 
 interface CatalogueFilterProps {
-  colors: string[];
+  colors: Colors;
   brands: string[];
   onChange: (
     checked: string | boolean,
@@ -51,7 +52,7 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({
           }`}
         >
           <FilterItem
-            items={colors}
+            colorItems={colors}
             onChange={(checked, label) => onChange(checked, label, "color")}
           />
         </div>

@@ -27,8 +27,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
   const { name, color, brand, size } = selectedFlower;
 
   const handleNext = () => {
-    const nextInd =
-      selectedFlowerInd === flowers.length - 1 ? 0 : selectedFlowerInd + 1;
+    const nextInd = selectedFlowerInd === flowers.length - 1 ? 0 : selectedFlowerInd + 1;
     setSelectedFlowerInd(nextInd);
   };
 
@@ -41,15 +40,14 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
     <Dialog.Root>
       <Dialog.Trigger>
         {children}
-        </Dialog.Trigger>
+      </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay
-        className="bg-black/[0.3] data-[state=open]:animate-overlayShow fixed inset-0" />
+        <Dialog.Overlay className="bg-black/[0.3] data-[state=open]:animate-overlayShow fixed inset-0" />
         <Dialog.Content
           className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white
             lg:h-[554px] lg:w-[1024px] lg:p-9
             md:h-[802px] md:w-[656px] md:p-9
-            xs:w-[328px] xs:h-[532px] xs:p-2 xs:mb-[52px]
+            xs:w-[328px] xs:h-[550px] xs:p-2 xs:mt-6
           "
         >
           <Dialog.Close asChild>
