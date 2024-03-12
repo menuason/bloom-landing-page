@@ -25,7 +25,7 @@ export const ValuesSection = () => {
 
   return (
     <PageSection
-      isMissionPageSmallSize
+      isPageSmallSize
       isImageFirst={false}
       image="/src/assets/mission-and-vision-photos/values.png"
     >

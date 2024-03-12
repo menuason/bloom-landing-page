@@ -88,7 +88,7 @@ export const AboutUsGallerySection = () => {
 
         <div className="flex justify-center">
           <p className="font-normal text-[#323232]
-              lg:text-base lg:w-2/3 lg:text-center
+              lg:text-base
               md:text-sm
               xs:text-sm
             "

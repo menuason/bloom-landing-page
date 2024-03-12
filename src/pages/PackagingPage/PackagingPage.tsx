@@ -46,21 +46,22 @@ const PackagingPage = () => {
         xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
        "
       >
+        <PackagingFullScreenVideo>
         <div className="relative">
           <img
             alt="Bloom House"
             src="/src/assets/packaging-page-photos/mainPic.png"
             className="w-full h-full"
           />
-          <PackagingFullScreenVideo>
+
             <PlayIcon
               width={60}
               height={60}
               color="white"
               className="lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             />
-          </PackagingFullScreenVideo>
         </div>
+        </PackagingFullScreenVideo>
 
         <div
           className="flex flex-col text-gray-950 justify-center

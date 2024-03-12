@@ -37,7 +37,7 @@ const ContactUsForm = () => {
 
   return (
     <div className="flex flex-col pr-[104px] gap-8">
-      <div className="text-lg font-normal lg:w-[513px] md:w-[513px] xs:w-[295px]">
+      <div className="text-lg font-normal lg:w-[580px] md:w-[580px] xs:w-[295px]">
         <p>{t("contactUsPage.form.title")}</p>
       </div>
 

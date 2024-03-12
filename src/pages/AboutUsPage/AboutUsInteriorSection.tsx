@@ -60,8 +60,10 @@ export const AboutUsInteriorSection = () => {
                 md:flex md:flex-col
                "
             >
-              <p>{t("aboutUsPage.interiorSection.p3")}</p>
-              <p>{t("aboutUsPage.interiorSection.p4")}</p>
+              <div className="flex flex-col lg:gap-6">
+                <p>{t("aboutUsPage.interiorSection.p3")}</p>
+                <p>{t("aboutUsPage.interiorSection.p4")}</p>
+              </div>
             </div>
           </div>
         </div>
