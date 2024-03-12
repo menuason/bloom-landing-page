@@ -7,6 +7,7 @@ interface IconsForChooseUs {
   icon: string;
   text: string;
 }
+
 interface InfoForChooseUs {
   number: number;
   header: string;
@@ -55,34 +56,32 @@ export const WhyChooseUs = () => {
         lg:flex-col lg:items-center lg:gap-1 lg:px-20
         md:flex-col md:items-center md:px-8
         xs:flex-col xs:items-center xs:px-4
-      "
-    >
-      <div
-        className="flex gap-2
-          lg:flex-col lg:items-center lg:justify-center
-          md:flex-col md:items-center md:justify-center
-          xs:flex-col  xs:items-start
-        "
+      ">
+      <div className="flex flex-col text-gray-950 justify-center
+          lg:gap-6 lg:self-center
+          md:gap-6 md:text-center
+          xs:gap-3 xs:text-start
+         "
       >
-        <h1
-          className=" text-gray-950
-            lg:font-normal lg:text-5xl
-            md:font-medium md:text-2xl
-            xs:font-medium xs:text-2xl
-          "
+        <p className="text-gray-950 items-center font-medium w-full
+             lg:text-3xl
+             md:text-2xl
+             xs:text-2xl
+            "
         >
           {t("homePage.whyChooseUs.whyChooseUsTitle")}
-        </h1>
-
-        <p
-          className="text-gray-950 font-normal
-            lg:w-8/12 lg:text-base lg:text-center
-            md:text-sm
-            xs:text-sm xs:w-full
-          "
-        >
-          {t("homePage.whyChooseUs.whyChooseDescription")}
         </p>
+        <div className="font-normal
+              lg:text-base
+              md:text-sm
+              xs:text-sm
+            "
+        >
+          <p>
+            {t("homePage.whyChooseUs.whyChooseDescription")}
+          </p>
+        </div>
+
       </div>
       <div className="flex mt-9 lg:flex-row md:flex-col xs:flex-col">
         <div className="flex flex-col m-0">
@@ -96,7 +95,7 @@ export const WhyChooseUs = () => {
                   key={index}
                   className="w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
                 >
-                  <img src={item.icon} alt="Bloom House"/>
+                  <img src={item.icon} alt="Bloom House" />
                   <p
                     className="w-1/2 text-center font-normal
                       lg:text-base

@@ -40,20 +40,20 @@ export const Assortment = () => {
   return (
     <div className="flex flex-col items-center lg:gap-1 lg:px-20 md:px-8 md:my-6 xs:pl-4 xs:gap-4">
       <div className="flex flex-col justify-center lg:items-center lg:gap-4 md:items-center md:gap-1 xs:gap-2">
-        <h1
-          className="text-gray-950
-            lg:font-normal lg:text-5xl
-            md:font-medium md:text-2xl
-            xs:font-medium xs:text-2xl
+        <p
+          className="text-gray-950 font-medium
+            lg:text-3xl lg:text-center
+             md:text-2xl md:text-center
+             xs:text-2xl xs:text-start
           "
         >
           {t("homePage.assortment.assortmentSectionTitle")}
-        </h1>
+        </p>
 
         <p
-          className="text-gray-950 lg:w-10/12 font-normal
+          className="text-gray-950 lg:w-3/5 font-normal
             lg:text-base lg:text-center
-            md:text-sm  md:text-center
+            md:text-sm md:text-center
             xs:text-sm xs:items-start
           "
         >

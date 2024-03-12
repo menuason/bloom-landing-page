@@ -3,8 +3,8 @@ const HomePageTranslation = {
     videoNotSupported: "Your browser does not support the video tag.",
     assortment: {
       assortmentSectionTitle: "Our Unique Assortment",
-      assortmentSectionDescription:
-        "Discover gerberas that stand out for their uniqueness. Each petal ismeticulously groomed, and every flower narrates a story of color andelegance.",
+      aboutBloomHouseDescriptionOne: "Gerberas stand out for their uniqueness. Each petal is meticulously cared for, standing " +
+        "out for its color and elegance."
     },
     flowers: {
       mondello: {
@@ -25,21 +25,20 @@ const HomePageTranslation = {
       },
     },
     aboutBloomHouse: {
-      aboutBloomHouseTitle: "“About Us” We Are More Than Just A Greenhouse",
-      aboutBloomHouseDescriptionBulletOne:
-        "Bloom House is a gerbera greenhouse farm established in 2022 withthe unique mission of cultivating the best gerberas, sourcing theirseedlings directly from Holland.",
-      aboutBloomHouseDescriptionBulletTwo:
-        "We pay great attention to the careful sorting and packaging of eachgerbera.",
-      aboutBloomHouseDescriptionBulletThree:
-        "Each flower undergoes careful selection and careful packaging, ensuring that it reaches its destination in perfect condition.",
-      aboutBloomHouseDescriptionBulletFour:
-        "In the greenhouse industry, we aim to set an example by setting new standards that reiterate our commitment to creating a harmonious balance of quality and beauty.",
+      aboutBloomHouseTitle: "Explore Our Greenhouse!",
+      aboutBloomHouseDescription: "All of our flowers meet the required quality standards, confirming \n" +
+        "and reinforcing our commitment to excellence. In the greenhouse industry, \n" +
+        "we aim to set an example by setting new standards that reaffirm our commitment to creating a harmonious balance of quality and beauty.",
+      aboutBloomHouseDescriptionOne:
+       "All of our flowers meet the required quality standards, confirming and reinforcing our commitment to excellence.",
+      aboutBloomHouseDescriptionTwo: "In the greenhouse industry, we aim to set an example by setting new standards that " +
+        "reaffirm our commitment to creating a harmonious balance of quality and beauty.",
       aboutBloomHouseButton: "See More",
     },
     whyChooseUs: {
       whyChooseUsTitle: "Why choose us?",
       whyChooseDescription:
-        "Our greenhouses are meticulously crafted to provide the optimal environment for year-round gerbera cultivation, ensuring a constant bloom of vibrant colors and exquisite blossoms.",
+        "Our greenhouse provides optimal conditions for cultivating gerberas.",
       reasons: {
         icons: {
           seedling: "Best Seedlings",
@@ -65,7 +64,7 @@ const HomePageTranslation = {
     assortment: {
       assortmentSectionTitle: "Наш уникальный ассортимент",
       assortmentSectionDescription:
-        "Откройте для себя герберы, которые выделяются своей уникальностью. Каждый лепесток тщательно ухожен, и каждый цветок рассказывает историю цвета и элегантности.",
+        "Герберы выделяются своей уникальностью. Каждый лепесток тщательно ухаживается, выделяясь своим цветом и элегантностью."
     },
     flowers: {
       mondello: {
@@ -86,21 +85,19 @@ const HomePageTranslation = {
       },
     },
     aboutBloomHouse: {
-      aboutBloomHouseTitle: "«О Нас» Мы Больше Чем Просто Теплица",
-      aboutBloomHouseDescriptionBulletOne:
-        "Bloom House — это тепличная ферма по выращиванию гербер, основанная в 2022 году с уникальной миссией по выращиванию лучших гербер, закупая саженцы непосредственно из Голландии.",
-      aboutBloomHouseDescriptionBulletTwo:
-        "Мы уделяем большое внимание тщательной сортировке и упаковке каждой герберы.",
-      aboutBloomHouseDescriptionBulletThree:
-        "Каждый цветок проходит тщательный отбор и тщательную упаковку, благодаря чему он доставляется по назначению в идеальном состоянии.",
-      aboutBloomHouseDescriptionBulletFour:
-        "В тепличной отрасли мы стремимся подать пример, устанавливая новые стандарты, которые подтверждают нашу приверженность созданию гармоничного баланса качества и красоты.",
+      aboutBloomHouseTitle: "Исследуйте Наш Тепличный!",
+      aboutBloomHouseDescription: "Все наши цветы соответствуют необходимым стандартам качества, что подтверждает и усиливает" +
+        " наше стремление к совершенству. В тепличной отрасли мы стремимся подать пример, устанавливая новые стандарты," +
+        " которые подтверждают нашу приверженность созданию гармоничного баланса качества и красоты.",
+      aboutBloomHouseDescriptionOne: "Все наши цветы соответствуют необходимым стандартам качества, что подтверждает и" +
+        " усиливает наше стремление к совершенству.",
+      aboutBloomHouseDescriptionTwo:" В тепличной отрасли мы стремимся подать пример, устанавливая новые стандарты которые" +
+        " подтверждают нашу приверженность созданию гармоничного баланса качества и красоты.",
       aboutBloomHouseButton: "Узнать Больше",
     },
     whyChooseUs: {
       whyChooseUsTitle: "Почему выбрали нас?",
-      whyChooseDescription:
-        "Наши теплицы тщательно спроектированы, чтобы обеспечить оптимальные условия для круглогодичного выращивания гербер, гарантируя постоянное цветение ярких цветов и изысканных цветов.",
+      whyChooseDescription: "В нашей теплице созданы оптимальные условия для выращивания гербер.",
       reasons: {
         icons: {
           seedling: "Лучшие Саженцы",
@@ -125,8 +122,8 @@ const HomePageTranslation = {
     videoNotSupported: "Ձեր զննարկիչը չի աջակցում տեսանյութի պիտակը:",
     assortment: {
       assortmentSectionTitle: "Մեր Յուրահատուկ Տեսականին",
-      assortmentSectionDescription:
-        "Բացահայտեք հերբերաները, որոնք աչքի են ընկնում իրենց յուրահատկությամբ: Յուրաքանչյուր ծաղկաթերթը մանրակրկիտ խնամված է, և յուրաքանչյուր ծաղիկ պատմում է գույնի ու էլեգանտության մասին:",
+      assortmentSectionDescription: "հերբերաները աչքի են ընկնում իրենց յուրահատկությամբ: Յուրաքանչյուր ծաղկաթերթ մանրակրկիտ " +
+        "խնամված է, և առանձնանում իր գույնով և էլեգանտությամբ:",
     },
     flowers: {
       mondello: {
@@ -148,21 +145,19 @@ const HomePageTranslation = {
     },
     aboutBloomHouse: {
       aboutBloomHouseTitle:
-        "«Մեր Մասին» Մենք Ավելին Ենք Քան Պարզապես Ջերմոց",
-      aboutBloomHouseDescriptionBulletOne:
-        "Bloom House-ը հերբերաների ջերմոցային տնտեսություն է, որը հիմնադրվել է 2022 թվականին՝ լավագույն հերբերաները մշակելու եզակի առաքելությամբ՝ սածիլները ձեռք բերելով անմիջապես Հոլանդիայից:",
-      aboutBloomHouseDescriptionBulletTwo:
-        "Մենք մեծ ուշադրություն ենք դարձնում յուրաքանչյուր հերբերայի մանրակրկիտ տեսակավորմանն ու փաթեթավորմանը։",
-      aboutBloomHouseDescriptionBulletThree:
-        "Յուրաքանչյուր ծաղիկ ենթարկվում է մանրակրկիտ ընտրության և մանրակրկիտ փաթեթավորման՝ ապահովելով, որ այն հասնի իր նպատակակետին կատարյալ վիճակում:",
-      aboutBloomHouseDescriptionBulletFour:
-        "Ջերմոցային արդյունաբերության մեջ մենք նպատակ ունենք օրինակ ծառայել՝ սահմանելով նոր չափանիշներ, որոնք վերահաստատում են որակի և գեղեցկության ներդաշնակ հավասարակշռություն ստեղծելու մեր հանձնառությունը:",
+        "Բացահայտեք Մեր Ջերմոցը!",
+      aboutBloomHouseDescriptionOne: "Մեր բոլոր ծաղիկները համապատասխանում են պահանջվող որակի չափանիշներին` հաստատելով և" +
+        " ամրապնդելով գերազանցության հանդեպ մեր հավատարմությունը:",
+      aboutBloomHouseDescriptionTwo: " Ջերմոցային արդյունաբերության մեջ մենք նպատակ ունենք օրինակ ծառայել՝ սահմանելով նոր չափանիշներ,որոնք վերահաստատում են որակի և գեղեցկության ներդաշնակ հավասարակշռություն" +
+        " ստեղծելու մեր հանձնառությունը:",
+      aboutBloomHouseDescription: "Մեր բոլոր ծաղիկները համապատասխանում են պահանջվող որակի չափանիշներին` հաստատելով և ամրապնդելով գերազանցության \n" +
+        "հանդեպ մեր հավատարմությունը: Ջերմոցային արդյունաբերության մեջ մենք նպատակ ունենք օրինակ ծառայել՝ սահմանելով նոր չափանիշներ, \n" +
+        "որոնք վերահաստատում են որակի և գեղեցկության ներդաշնակ հավասարակշռություն ստեղծելու մեր հանձնառությունը:",
       aboutBloomHouseButton: "Տեսնել ավելին",
     },
     whyChooseUs: {
       whyChooseUsTitle: "Ինչու՞ Ընտրել Մեզ",
-      whyChooseDescription:
-        "Մեր ջերմոցները մանրակրկիտ մշակված են՝ ապահովելու օպտիմալ միջավայր հերբերայի ամբողջ տարվա մշակման համար՝ ապահովելով վառ գույների և նրբագեղ ծաղիկների մշտական ծաղկում:",
+      whyChooseDescription: "Մեր ջերմոցը ապահովում է օպտիմալ պայմաններ հերբերաների մշակման  համար:",
       reasons: {
         icons: {
           seedling: "Լավագույն Սածիլները",

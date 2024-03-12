@@ -32,7 +32,7 @@ export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({ image, t
           >
             {title}
           </h2>
-          <div className="flex items-center gap-3 justify-center font-normal">
+          <div className="flex items-center gap-3 justify-center font-light">
             <a href={`/home/${i18n.language}`}>
               <p className="cursor-pointer hover:text-[#C0C0C0]">{t("systemPage.system.nav1")}</p>
             </a>

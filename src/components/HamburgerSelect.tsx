@@ -29,7 +29,7 @@ const HamburgerSelect = () => {
     },
     {
       title: t("header.about.partners"),
-      href: '',
+      href: `/${i18n.language}`,
     },
     {
       title: t("header.contact"),

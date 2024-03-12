@@ -4,7 +4,7 @@ interface PageSection {
   isImageFirst: boolean;
   children: ReactNode;
   imageClassName?: string;
-  isMissionPageSmallSize?: boolean
+  isPageSmallSize?: boolean
 }
 
 export const PageSection: FC<PropsWithChildren<PageSection>> = ({
@@ -12,13 +12,13 @@ export const PageSection: FC<PropsWithChildren<PageSection>> = ({
   image,
   imageClassName,
   children,
-  isMissionPageSmallSize,
+  isPageSmallSize,
 }) => {
   return (
     <div className={`flex
       lg:flex-row lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:mb-[124px]
-      ${isMissionPageSmallSize ? 'md:flex-col-reverse' : 'md:flex-col'} md:gap-6 md:px-8 md:mt-12 md:mb-6
-      ${isMissionPageSmallSize ? 'xs:flex-col-reverse' : 'xs:flex-col'} xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
+      ${isPageSmallSize ? 'md:flex-col-reverse' : 'md:flex-col'} md:gap-6 md:px-8 md:mt-12 md:mb-6
+      ${isPageSmallSize ? 'xs:flex-col-reverse' : 'xs:flex-col'} xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
     `}
     >
       {isImageFirst ? (
