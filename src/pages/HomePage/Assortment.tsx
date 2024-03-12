@@ -12,26 +12,26 @@ export const Assortment = () => {
 
   const flowersArr: FlowersArr[] = [
     {
-      img: "/src/assets/flowers/5P4A32631-1.png",
-      hoverImg: "/src/assets/flowers/5P4A32631-2.png",
+      img: "/src/assets/home-page-flowers/5P4A32631-1.png",
+      hoverImg: "/src/assets/home-page-flowers/5P4A32631-2.png",
       name: t("homePage.flowers.mondello.name"),
       author: t("homePage.flowers.mondello.author"),
     },
     {
-      img: "/src/assets/flowers/5P4A3265-1.png",
-      hoverImg: "/src/assets/flowers/5P4A3265-2.png",
+      img: "/src/assets/home-page-flowers/5P4A3265-1.png",
+      hoverImg: "/src/assets/home-page-flowers/5P4A3265-2.png",
       name: t("homePage.flowers.snowKing.name"),
       author: t("homePage.flowers.snowKing.author"),
     },
     {
-      img: "/src/assets/flowers/5P4A3260-1.png",
-      hoverImg: "/src/assets/flowers/5P4A3260-2.png",
+      img: "/src/assets/home-page-flowers/5P4A3260-1.png",
+      hoverImg: "/src/assets/home-page-flowers/5P4A3260-2.png",
       name: t("homePage.flowers.mariatta.name"),
       author: t("homePage.flowers.mariatta.author"),
     },
     {
-      img: "/src/assets/flowers/5P4A3269-1.png",
-      hoverImg: "/src/assets/flowers/5P4A3269-2.png",
+      img: "/src/assets/home-page-flowers/5P4A3269-1.png",
+      hoverImg: "/src/assets/home-page-flowers/5P4A3269-2.png",
       name: t("homePage.flowers.briliance.name"),
       author: t("homePage.flowers.briliance.author"),
     },
@@ -39,7 +39,7 @@ export const Assortment = () => {
 
   return (
     <div className="flex flex-col items-center lg:gap-1 lg:px-20 md:px-8 md:my-6 xs:pl-4 xs:gap-4">
-      <div className="flex flex-col justify-center items-center lg:gap-2 md:gap-1 xs:gap-2">
+      <div className="flex flex-col justify-center lg:items-center lg:gap-4 md:items-center md:gap-1 xs:gap-2">
         <h1
           className="text-gray-950
             lg:font-normal lg:text-5xl
@@ -61,9 +61,9 @@ export const Assortment = () => {
         </p>
       </div>
       <div
-        className="flex flex-row gap-4 mt-9
-            lg:h-96 lg:overflow-hidden
-            md:h-52 md:overflow-hidden
+        className="flex items-center gap-2 mt-9 w-full
+            lg:h-96 lg:overflow-visible
+            md:h-52 md:overflow-visible
             xs:h-52 xs:overflow-x-auto xs:whitespace-nowrap
           "
       >
@@ -71,20 +71,31 @@ export const Assortment = () => {
           return (
             <div
               key={index}
-              className="lg:w-1/4 lg:xs:shrink-1 relative h-full md:w-1/4 md:felx-1 xs:w-1/2 xs:shrink-0"
+              className="
+                relative h-full flex-1
+                lg:flex-1 md:flex-1
+                xs:min-w-40 xs:flex-1
+              "
             >
               <img
                 alt="Bloom House"
                 src={item.img}
-                className="w-full h-full object-cover transition-opacity opacity-100 hover:opacity-0 absolute inset-0 cursor-pointer"
+                className="w-full h-full object-cover transition-opacity opacity-100 hover:opacity-0 absolute inset-0"
               />
               <img
                 src={item.hoverImg}
                 alt={`Image ${item.name}`}
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-full object-cover"
               />
-              <div className="w-full lg:h-1/5 bg-[#23242759] text-white flex items-start justify-center flex-col px-4 absolute bottom-0 left-0 opacity-1 md:h-1/4 xs:h-1/4">
-                <h4 className="font-medium lg:text-2xl md:text-base xs:text-base">
+              <div
+                className="
+                  w-full bg-[#23242759] text-white flex items-start justify-center flex-col px-4 absolute bottom-0 left-0 opacity-1
+                  lg:h-1/5
+                  md:h-1/4
+                  xs:h-1/4
+                "
+              >
+                <h4 className="font-medium lg:text-2xl md:text-base xs:text-sm">
                   {item.name}
                 </h4>
                 <p className="font-extralight text-xs">{item.author}</p>
