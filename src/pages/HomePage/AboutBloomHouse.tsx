@@ -18,7 +18,7 @@ export const AboutBloomHouse = () => {
           xs:gap-3
          "
         >
-          <p className="text-gray-950 items-center font-medium
+          <p className="text-gray-950 items-center font-medium w-full
              lg:text-3xl lg:self-start lg:text-start
              md:w-[350px] md:text-2xl md:text-center md:self-center
              xs:text-2xl xs:text-start

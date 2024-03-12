@@ -6,7 +6,6 @@ import CatalogueFlowersList from "../pages/Catalogue/CatalogueFlowersList";
 import { CatalogueFlower } from "../pages/Catalogue/CataloguePage";
 import Pagination from "../pages/Catalogue/Pagination";
 
-
 const catalogueFlowers: CatalogueFlower[] = [
   {
     image: "/src/assets/catalogue-page-photos/catalogue-flowers/Alcantara.svg",

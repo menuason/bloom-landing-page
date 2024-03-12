@@ -50,7 +50,7 @@ const PackagingPage = () => {
           <img
             alt="Bloom House"
             src="/src/assets/packaging-page-photos/mainPic.png"
-            className="w-full"
+            className="w-full h-full"
           />
           <PackagingFullScreenVideo>
             <PlayIcon

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import { ImageSlider } from "./ImageSlider";
-import { MoreIcon } from "../assets/icons/more/more";
 import { useTranslation } from "react-i18next";
+import { ImageSlider } from "./ImageSlider";
+import { SeeMoreIcon } from "../assets/icons/seeMore/seeMore";
 
 interface SliderImage {
   title?: string;
@@ -83,7 +83,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
 
   return (
     <>
-      <div className="flex gap-4 cursor-pointer
+      <div style={{ width: "100%" }} className="flex gap-4 cursor-pointer
         lg:w-full lg:h-full
         md:w-full md:h-full
         xs:w-[350px] xs:h-[210px] xs:overflow-x-auto xs:overflow-y-hidden
@@ -116,21 +116,27 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
               />
               {
                 image.sliderImages?.title && (
-                  <div className="w-full bg-[#23242759] cursor-auto text-white flex items-start justify-center flex-col px-4 absolute bottom-0 left-0 opacity-1
-                   lg:h-1/5
-                   md:h-1/4 xs:h-1/4
+                  <div className="w-full bg-[#23242759] cursor-auto text-white flex items-start justify-center flex-col absolute bottom-0 left-0 opacity-1
+                   lg:h-1/5 lg:px-4
+                   md:h-1/4 md:px-2
+                   xs:h-1/4 xs:px-2
                   "
                   >
                     <div className="flex items-center justify-between w-full">
                       <div>
-                        <h4 className="font-medium lg:text-xl md:text-sm xs:text-sm">
+                        <h4 className="lg:text-lg md:text-sm xs:text-xs">
                           {image.sliderImages?.title}
                         </h4>
                         <p className="font-light text-xs">
                           {t("aboutUsPage.gallerySection.more")}
                         </p>
                       </div>
-                      <MoreIcon className="cursor-pointer" onClick={() => handleImageClick(image, index)} />
+                      <SeeMoreIcon
+                        height={16}
+                        width={16}
+                        className="cursor-pointer"
+                        onClick={() => handleImageClick(image, index)}
+                      />
                     </div>
                   </div>
                 )

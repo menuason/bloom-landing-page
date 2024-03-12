@@ -56,13 +56,13 @@ export const AboutUsSection = () => {
                 {t("aboutUsPage.mainContent.text.p5")}
               </p>
             </div>
+
             <Button
               link={`/mission-and-vision/${i18n.language}`}
               type="outlined"
               endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
             >
               {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
-
             </Button>
           </div>
         </div>

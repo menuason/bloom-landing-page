@@ -1,11 +1,30 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { CloseIcon } from "../assets/icons/close/close";
 import ReactPlayer from "react-player";
 
 export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) => {
+  useEffect(() => {
+    const body = document.body;
+    const originalOverflow = body.style.overflow;
+
+    return () => {
+      body.style.overflow = originalOverflow;
+    };
+  }, []);
+
+  const handleOpen = () => {
+    const body = document.body;
+    body.style.overflow = "hidden";
+  };
+
+  const handleClose = () => {
+    const body = document.body;
+    body.style.overflow = "auto";
+  };
+
   return (
-    <Dialog.Root>
+    <Dialog.Root onOpenChange={(open) => (open ? handleOpen() : handleClose())}>
       <Dialog.Trigger>
         {children}
       </Dialog.Trigger>

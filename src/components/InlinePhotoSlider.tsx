@@ -39,7 +39,7 @@ const InlinePhotoSlider: FC<PhotoSliderProps> = ({ images }) => {
 
   return (
     <div className="flex lg:w-full xs:justify-center md:justify-center relative">
-      <button onClick={handleNext} className="z-50 p-5">
+      <button onClick={handleNext} className="z-10 p-5">
         <ArrowLeftIcon color="black" width={8} height={12} />
       </button>
       <img
@@ -51,7 +51,7 @@ const InlinePhotoSlider: FC<PhotoSliderProps> = ({ images }) => {
         <ImageList images={INTERIOR_PHOTOS} className="opacity-0" />
       </div>
 
-      <button onClick={handleBack}  className="z-50 p-5">
+      <button onClick={handleBack}  className="z-10 p-5">
         <ArrowRightIcon color="black" width={8} height={12} />
       </button>
     </div>

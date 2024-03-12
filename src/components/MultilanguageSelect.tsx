@@ -64,7 +64,7 @@ const MultiLanguageSelect = () => {
             <div key={item}>
               <DropdownMenu.Item
                 onSelect={() => changeLanguage(`${item}`)}
-                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-medium hover:text-green-600"
+                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-notmal hover:text-green-600"
               >
                 {languages[item].shortName}
               </DropdownMenu.Item>
