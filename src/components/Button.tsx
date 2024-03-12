@@ -21,7 +21,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
   type = "outlined",
 }) => {
   const getButtonClasses = (): string => {
-    let buttonClass = "flex w-fit gap-1.5 items-center px-4 " +
+    let buttonClass = "flex gap-1.5 items-center px-4 " +
       "lg:py-3 lg:text-base lg:self-start" +
       " md:py-3 md:text-sm md:self-center " +
       " xs:text-sm xs:py-2 xs:self-start ";

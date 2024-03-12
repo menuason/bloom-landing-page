@@ -7,14 +7,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col gap-4 lg:mb-[156px] md:mb-24 xs:mb-14 pt-20">
       <div className="relative">
-        <video
-          controls
-          width="100%"
-          height="100%"
-          autoPlay
-          muted
-          loop
-        >
+        <video controls width="100%" height="100%" autoPlay muted loop>
           <source src="/src/assets/videos/Bloom House.mp4" type="video/mp4" />
           {t("homePage.videoNotSupported")}
         </video>
