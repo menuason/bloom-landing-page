@@ -50,7 +50,7 @@ const Header = () => {
         <img src={logo} alt="logo" />
       </a>
       <div className="flex items-center gap-12 cursor-pointer text-bloomBlack">
-        <div className="hidden lg:flex gap-12 items-center font-medium">
+        <div className="hidden lg:flex gap-12 items-center font-normal">
           {
             NAV_BAR_ITEMS_WEB.map((item) => (
               <a
