@@ -40,7 +40,7 @@ const ContactUsPageTranslation = {
       inputThree: "Электронная почта::",
       inputFour: "Телефон:",
       textarea: "Введите ваше сообщение:",
-      button: "Отправлять",
+      button: "Отправить",
     },
   },
   hy: {
