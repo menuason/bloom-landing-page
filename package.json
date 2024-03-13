@@ -1,5 +1,4 @@
 {
-  "homepage": "https://menuason.github.io/bloom-landing-page",
   "name": "bloom-landing-page",
   "private": true,
   "version": "0.0.0",
@@ -8,9 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build:css": "tailwindcss build src/styles.css -o output.css",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
