@@ -58,9 +58,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
             </div>
           </Dialog.Close>
 
-          <div
-            className={`flex justify-center items-center h-[${previewContentSize}]`}
-          >
+          <div className={`flex justify-center lg:gap-8 md:gap-4 items-center h-[${previewContentSize}]`}>
             <button onClick={handleBack}>
               <ArrowLeftIcon
                 color="black"
