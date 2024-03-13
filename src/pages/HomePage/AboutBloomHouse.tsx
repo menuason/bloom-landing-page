@@ -14,8 +14,8 @@ export const AboutBloomHouse = () => {
         "
       >
         <div className="flex flex-col text-gray-950 justify-center
-          lg:gap-6 lg:text-center
-          md:gap-6 md:text-center
+          lg:gap-6 lg:text-start
+          md:gap-4 md:text-center
           xs:gap-4 xs:text-start
          "
         >
@@ -28,7 +28,7 @@ export const AboutBloomHouse = () => {
             {t("homePage.aboutBloomHouse.aboutBloomHouseTitle")}
           </p>
           <div className="font-normal
-            lg:text-base lg:text-center
+            lg:text-base lg:text-start
             md:text-sm md:text-center
             xs:text-sm xs:text-start
            "
@@ -47,7 +47,7 @@ export const AboutBloomHouse = () => {
             link={`/about-us/${i18n.language}`}
             endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
             type="outlined"
-            className="lg:mx-auto lg:flex md:mx-auto md:hidden xs:hidden"
+            className="lg:flex lg:mx-0 md:mx-auto md:hidden xs:hidden"
           >
             {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
           </Button>
