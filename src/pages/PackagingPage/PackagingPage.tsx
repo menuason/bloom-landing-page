@@ -58,7 +58,7 @@ const PackagingPage = () => {
               width={60}
               height={60}
               color="white"
-              className="lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="flex items-center justify-center bg-black/[.2] w-full h-full lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             />
           </div>
         </PackagingFullScreenVideo>

@@ -52,16 +52,15 @@ export const WhyChooseUs = () => {
 
   return (
     <div
-      className="flex
-        lg:flex-col lg:items-center lg:gap-1 lg:px-20
-        md:flex-col md:items-center md:px-8
-        xs:flex-col xs:items-center xs:px-4
+      className="flex items-center
+        lg:flex-col lg:gap-1 lg:px-20
+        md:flex-col md:px-8
+        xs:flex-col xs:px-4
       "
     >
-      <div
-        className="flex flex-col text-gray-950 justify-center
+      <div className="flex flex-col text-gray-950 justify-center
           lg:gap-6 lg:self-center
-          md:gap-6 md:text-center
+          md:gap-6 md:text-center md:self-center
           xs:gap-3 xs:text-start
          "
       >

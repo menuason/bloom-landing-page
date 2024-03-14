@@ -83,12 +83,15 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
 
   return (
     <>
-      <div style={{ width: "100%" }} className="flex gap-4 cursor-pointer
+      <div
+        style={{ width: "100%" }}
+        className="flex gap-4 cursor-pointer
         lg:w-full lg:h-full
         md:w-full md:h-full
         xs:w-[350px] xs:h-[210px] xs:overflow-x-auto xs:overflow-y-hidden
       "
       >
+
         {images.map((image, index) =>
           image.hoverImg ? (
             (
@@ -127,7 +130,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
                         <h4 className="lg:text-lg md:text-sm xs:text-xs">
                           {image.sliderImages?.title}
                         </h4>
-                        <p className="font-light text-xs">
+                        <p className="font-light text-sm">
                           {t("aboutUsPage.gallerySection.more")}
                         </p>
                       </div>

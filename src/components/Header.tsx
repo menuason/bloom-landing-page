@@ -50,20 +50,20 @@ const Header = () => {
         <img src={logo} alt="logo" />
       </a>
       <div className="flex items-center gap-12 cursor-pointer text-bloomBlack">
-        <div className="hidden lg:flex gap-12 items-center font-normal">
+        <div className="hidden lg:flex gap-12 items-center font-normal mt-3">
           {
             NAV_BAR_ITEMS_WEB.map((item) => (
               <a
                 key={item.title}
                 href={item.href}
-                className="hover:text-green-600"
+                className="hover:text-[#7E7E7E]"
               >
                 {item?.component ?? item.title}
               </a>
             ))
           }
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <MultiLanguageSelect />
           <div className="flex items-center cursor-pointer lg:hidden">
             <HamburgerSelect />

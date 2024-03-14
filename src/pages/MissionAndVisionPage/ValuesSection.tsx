@@ -54,7 +54,7 @@ export const ValuesSection = () => {
 
             {
               CORE_VALUES.map((item) => (
-                <div key={item.value} className="flex border-b border-[#B0B4C0] outline-none py-6 last:border-0">
+                <div key={item.value} className="flex border-b border-[#B0B4C0] outline-none py-6 first:pt-0 last:border-0">
                   <div className="px-2 text-xl">•</div>
                   <div>
                     <b>{item.value}</b>
