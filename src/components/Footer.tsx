@@ -9,13 +9,13 @@ const Footer: FC = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="bg-[#1F2023] text-white w-full flex flex-col bottom-0">
+    <div className="bg-[#232427] text-white w-full flex flex-col bottom-0">
       <div
         className="
         flex items-center justify-between
-        lg:flex-row lg:mt-14 lg:mb-6 lg:px-20
-        md:flex-col md:items-start md:mt-14 md:mb-6 md:pl-8 md:gap-6
-        xs:flex-col xs:items-start xs:mt-14 xs:mb-6 xs:pl-4 sm:gap-6
+        lg:flex-row lg:mt-8 lg:mb-6 lg:px-20
+        md:flex-col md:items-start md:mt-8 md:mb-6 md:pl-8 md:gap-6
+        xs:flex-col xs:items-start xs:mt-8 xs:mb-6 xs:pl-4 sm:gap-6
         "
       >
         <div
@@ -47,23 +47,35 @@ const Footer: FC = () => {
         <div className="mt-4 flex flex-col gap-3 items-baseline">
           <p className="mb-2 text-sm">{t("footer.usefulLinks.links")}</p>
           <div className="flex flex-col gap-3">
-            <a href={`/catalogue/${i18n.language}`} className="text-white hover:text-gray-400">
+            <a
+              href={`/catalogue/${i18n.language}`}
+              className="text-white hover:text-gray-400"
+            >
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.catalogue")}
               </span>
             </a>
 
-            <a href={`/packaging/${i18n.language}`} className="text-white hover:text-gray-400">
+            <a
+              href={`/packaging/${i18n.language}`}
+              className="text-white hover:text-gray-400"
+            >
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.packaging")}
               </span>
             </a>
-            <a href={`/about-us/${i18n.language}`} className="text-white hover:text-gray-400">
+            <a
+              href={`/about-us/${i18n.language}`}
+              className="text-white hover:text-gray-400"
+            >
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.aboutUs")}
               </span>
             </a>
-            <a href={`/contact-us/${i18n.language}`} className="text-white hover:text-gray-400">
+            <a
+              href={`/contact-us/${i18n.language}`}
+              className="text-white hover:text-gray-400"
+            >
               <span className="text-sm/[16px] font-thin leading-6">
                 {t("footer.usefulLinks.contact")}
               </span>
@@ -109,7 +121,7 @@ const Footer: FC = () => {
           </div>
         </div>
       </div>
-      <div className="text-center border-t-neutral-500 border-t border-gray-600 py-3">
+      <div className="text-center border-t border-t-[#323232] py-3">
         <span className="text-sm/[16px] font-thin leading-6">
           &copy; 2024 Bloom House. All rights reserved
         </span>

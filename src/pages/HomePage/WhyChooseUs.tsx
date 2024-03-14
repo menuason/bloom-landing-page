@@ -56,14 +56,17 @@ export const WhyChooseUs = () => {
         lg:flex-col lg:items-center lg:gap-1 lg:px-20
         md:flex-col md:items-center md:px-8
         xs:flex-col xs:items-center xs:px-4
-      ">
-      <div className="flex flex-col text-gray-950 justify-center
+      "
+    >
+      <div
+        className="flex flex-col text-gray-950 justify-center
           lg:gap-6 lg:self-center
           md:gap-6 md:text-center
           xs:gap-3 xs:text-start
          "
       >
-        <p className="text-gray-950 items-center font-medium w-full
+        <p
+          className="text-gray-950 items-center font-medium w-full
              lg:text-3xl
              md:text-2xl
              xs:text-2xl
@@ -71,23 +74,22 @@ export const WhyChooseUs = () => {
         >
           {t("homePage.whyChooseUs.whyChooseUsTitle")}
         </p>
-        <div className="font-normal
+        <div
+          className="font-normal
               lg:text-base
               md:text-sm
               xs:text-sm
             "
         >
-          <p>
-            {t("homePage.whyChooseUs.whyChooseDescription")}
-          </p>
+          <p>{t("homePage.whyChooseUs.whyChooseDescription")}</p>
         </div>
-
       </div>
       <div className="flex mt-9 lg:flex-row md:flex-col xs:flex-col">
         <div className="flex flex-col m-0">
           <img
             alt="Bloom House"
-            src="/src/assets/home-page-photos/5P4A3279.png" />
+            src="/src/assets/home-page-photos/5P4A3279.png"
+          />
           <div className="h-40 w-640 flex items-center justify-between">
             {iconsForChooseUs.map((item, index) => {
               return (
@@ -115,7 +117,7 @@ export const WhyChooseUs = () => {
             return (
               <div
                 key={index}
-                className="h-fit min-h-40 flex gap-2 first:border-b first:border-[#b0b4c0] p-6 last:bg-[#191A1C] last:text-white
+                className="h-fit min-h-40 flex gap-2 first:border-b first:border-[#b0b4c0] p-6 last:bg-[#232427] last:text-white
                   lg:first:border-t-0
                   md:first:border-t
                   xs:first:border-t

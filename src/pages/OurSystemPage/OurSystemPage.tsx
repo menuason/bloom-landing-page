@@ -41,13 +41,15 @@ const OurSystemPage = () => {
         isImageFirst
         image="/src/assets/our-system-page-photos/mainPic.png"
       >
-        <div className="flex flex-col text-gray-950 justify-center
+        <div
+          className="flex flex-col text-gray-950 justify-center
           lg:gap-6
           md:gap-3
           xs:gap-3
          "
         >
-          <p className="text-4xl text-gray-950 items-center font-medium
+          <p
+            className="text-4xl text-gray-950 items-center font-medium
              lg:text-3xl lg:self-start
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
@@ -55,7 +57,8 @@ const OurSystemPage = () => {
           >
             {t("systemPage.mainContent.title")}
           </p>
-          <div className="font-normal
+          <div
+            className="font-normal
               lg:text-base
               md:text-sm
               xs:text-sm
@@ -81,19 +84,22 @@ const OurSystemPage = () => {
         </div>
       </PageSection>
 
-      <div className="flex flex-col gap-9
-          lg:mt-8 lg:mb-40 lg:px-20 lg:gap-8
+      <div
+        className="flex flex-col gap-9
+          lg:mt-8 lg:mb-[156px] lg:px-20 lg:gap-8
           md:mt-6 md:mb-[72px] md:px-8 md:gap-6
-          xs:mt-6 xs:mb-[72px] xs:px-4 xs:gap-4
+          xs:mt-6 xs:mb-14 xs:pl-4 xs:gap-4
         "
       >
-        <div className="flex flex-col items-center gap-2 text-gray-950 justify-center
+        <div
+          className="flex flex-col items-center gap-2 text-gray-950 justify-center
             lg:self-center
             md:self-center
             xs:self-start
           "
         >
-          <p className="font-medium
+          <p
+            className="font-medium
              lg:text-3xl lg:self-center
              md:text-2xl md:self-center
              xs:text-2xl  xs:self-start
@@ -101,7 +107,8 @@ const OurSystemPage = () => {
           >
             {t("systemPage.gallerySection.title")}
           </p>
-          <p className="font-normal text-[#323232]
+          <p
+            className="font-normal text-[#323232]
               lg:text-base
               md:text-sm
               xs:text-sm

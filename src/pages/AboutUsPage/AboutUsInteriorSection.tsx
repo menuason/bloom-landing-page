@@ -21,9 +21,9 @@ export const AboutUsInteriorSection = () => {
   return (
     <div
       className="flex
-        lg:flex-row lg:px-20 lg:mt-[72px] lg:mb-[124px]
-        md:flex-col md:gap-6 md:px-8 md:mt-12 md:mb-6
-        xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
+        lg:flex-row lg:px-20 lg:mt-[72px] lg:mb-[156px]
+        md:flex-col md:gap-6 md:px-8 md:mt-12 md:mb-14
+        xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-14
      "
     >
       <div

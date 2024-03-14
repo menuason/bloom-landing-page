@@ -20,8 +20,8 @@ export const CheckboxBloom: FC<CheckboxBloomProps> = ({
         className="flex items-center justify-center border-2 border-bloomBlack rounded-sm h-4 w-4"
         onCheckedChange={(checked) => onChange(checked, label)}
       >
-        <Checkbox.Indicator className="text-violet11">
-          <CheckIcon />
+        <Checkbox.Indicator>
+          <CheckIcon style={{ strokeWidth: 1, stroke: "black" }} />
         </Checkbox.Indicator>
       </Checkbox.Root>
       <label className="flex items-center">{label}</label>
