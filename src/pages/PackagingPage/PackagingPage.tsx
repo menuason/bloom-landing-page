@@ -47,12 +47,12 @@ const PackagingPage = () => {
        "
       >
         <PackagingFullScreenVideo>
-        <div className="relative">
-          <img
-            alt="Bloom House"
-            src="/src/assets/packaging-page-photos/mainPic.png"
-            className="w-full h-full"
-          />
+          <div className="relative">
+            <img
+              alt="Bloom House"
+              src="/src/assets/packaging-page-photos/mainPic.png"
+              className="w-full h-full"
+            />
 
             <PlayIcon
               width={60}
@@ -60,7 +60,7 @@ const PackagingPage = () => {
               color="white"
               className="lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             />
-        </div>
+          </div>
         </PackagingFullScreenVideo>
 
         <div
@@ -79,7 +79,8 @@ const PackagingPage = () => {
           >
             {t("packagingPage.mainContent.title")}
           </p>
-          <div className="font-normal
+          <div
+            className="font-normal
             lg:text-base
             md:text-sm
             xs:text-sm
@@ -90,9 +91,7 @@ const PackagingPage = () => {
             <p>{t("packagingPage.mainContent.text.p3")}</p>
 
             <div className="flex flex-col lg:gap-8 lg:mt-3">
-              <p>
-                {t("packagingPage.mainContent.text.p4")}
-              </p>
+              <p>{t("packagingPage.mainContent.text.p4")}</p>
 
               <PackagingFullScreenVideo>
                 <Button
@@ -103,25 +102,27 @@ const PackagingPage = () => {
                   {t("packagingPage.mainContent.button.text")}
                 </Button>
               </PackagingFullScreenVideo>
-
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-9
-          lg:mt-8 lg:mb-40 lg:px-20 lg:gap-8
-          md:mt-6 md:mb-[72px] md:px-8 md:gap-6
-          xs:mt-6 xs:mb-[72px] xs:px-4 xs:gap-4
+      <div
+        className="flex flex-col gap-9
+          lg:mt-8 lg:px-20 lg:gap-8
+          md:mt-6 md:px-8 md:gap-6
+          xs:mt-6 xs:px-4 xs:gap-4
         "
       >
-        <div className="flex flex-col items-center gap-2 text-gray-950 justify-center
+        <div
+          className="flex flex-col items-center gap-2 text-gray-950 justify-center
           lg:self-center
           md:self-center
           xs:self-start
         "
         >
-          <p className="
+          <p
+            className="
              lg:text-3xl lg:self-center
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
@@ -139,6 +140,13 @@ const PackagingPage = () => {
             {t("packagingPage.gallerySection.text")}
           </p>
         </div>
+      </div>
+      <div
+        className=" lg:mt-8 lg:mb-[156px] lg:px-20 lg:gap-8
+          md:mt-6 md:mb-[72px] md:px-8 md:gap-6
+          xs:mt-6 xs:mb-[72px] xs:pl-4 xs:gap-4
+        "
+      >
         <ImageList images={PACKAGING_IMAGE_LIST} />
       </div>
     </>

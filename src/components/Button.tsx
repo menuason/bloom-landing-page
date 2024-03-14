@@ -21,9 +21,10 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
   type = "outlined",
 }) => {
   const getButtonClasses = (): string => {
-    let buttonClass = "flex gap-1.5 items-center px-4 " +
-      "lg:py-3 lg:text-base lg:self-start" +
-      " md:py-3 md:text-sm md:self-center " +
+    let buttonClass =
+      "flex gap-1.5 items-center px-4 " +
+      " lg:h-[46px] lg:py-3 lg:text-base lg:self-start " +
+      " md:h-[46px] md:py-3 md:text-sm md:self-center " +
       " xs:text-sm xs:py-2 xs:self-start ";
 
     if (type === "outlined") {
@@ -36,24 +37,21 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 
   return (
     <>
-      {
-        link ? (
-          <Link to={link} className="contents">
-            <button className={getButtonClasses()} onClick={onButtonClick}>
-              {startIcon}
-              {children}
-              {endIcon}
-            </button>
-          </Link>
-        ) : (
+      {link ? (
+        <Link to={link} className="contents">
           <button className={getButtonClasses()} onClick={onButtonClick}>
             {startIcon}
             {children}
             {endIcon}
           </button>
-        )
-      }
+        </Link>
+      ) : (
+        <button className={getButtonClasses()} onClick={onButtonClick}>
+          {startIcon}
+          {children}
+          {endIcon}
+        </button>
+      )}
     </>
   );
 };
-

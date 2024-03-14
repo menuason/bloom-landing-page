@@ -74,7 +74,7 @@ export const Assortment = () => {
               className="
                 relative h-full flex-1
                 lg:flex-1 md:flex-1
-                xs:min-w-40 xs:flex-1
+                xs:min-w-[164px] xs:flex-1
               "
             >
               <img

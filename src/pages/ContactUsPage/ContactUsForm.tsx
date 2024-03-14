@@ -144,10 +144,10 @@ const ContactUsForm = () => {
           <div>
             <Button
               className="
-                      w-[150px] h-12 flex items-center justify-center
-                      md:w-[134px] md:h-12
-                      xs:w-[134px] xs:h-9
-                    "
+                w-[150px] h-12 flex items-center justify-center bg-[#232427]
+                md:w-[134px] md:h-12
+                xs:w-[134px] xs:h-9
+              "
               type="filled"
             >
               {t("contactUsPage.form.button")}
