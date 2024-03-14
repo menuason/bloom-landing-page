@@ -62,7 +62,7 @@ export const AboutUsSection = () => {
               type="outlined"
               endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
             >
-              {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
+              {t("aboutUsPage.mainContent.button")}
             </Button>
           </div>
         </div>

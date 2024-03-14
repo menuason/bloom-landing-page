@@ -14,14 +14,16 @@ type Languages = {
 };
 
 const languages: Languages = {
-  hy: { shortName: "հայ", fullName: "հայերեն" },
-  ru: { shortName: "Рус", fullName: "Русский" },
   en: { shortName: "Eng", fullName: "English" },
+  ru: { shortName: "Рус", fullName: "Русский" },
+  hy: { shortName: "հայ", fullName: "հայերեն" },
 };
 
 const MultiLanguageSelect = () => {
   const location = useLocation();
   const { pathname } = location;
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const { i18n } = useTranslation();
   const { lang } = useParams();
@@ -46,25 +48,28 @@ const MultiLanguageSelect = () => {
 
   return (
     <>
-      <DropdownMenu.Root>
+      <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
         <DropdownMenu.Trigger
-          className="flex items-center cursor-pointer text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
-          <div className="flex gap-2 hover:text-green-600 focus:text-green-600">
+          className="flex items-center cursor-pointer mt-3 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
+          <div className="flex gap-2 hover:text-[#7E7E7E] focus:text-green-600">
             {languages[selectedLanguage].shortName}
 
-            <img src={arrowDown} alt="Arrow Down" className="mt-0.5" />
+            <img
+              src={arrowDown} alt="Arrow Down"
+              className={`mt-0.5 transition-transform ${isMenuOpen ? "rotate-180" : " "}`}
+            />
           </div>
         </DropdownMenu.Trigger>
         <DropdownMenu.Content
           align="start"
-          className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 px-4"
+          className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 pt-0 mt-5 px-5 -ml-4 shadow-md"
         >
 
           {Object.keys(languages).map((item) => (
             <div key={item}>
               <DropdownMenu.Item
                 onSelect={() => changeLanguage(`${item}`)}
-                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-notmal hover:text-green-600"
+                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-notmal hover:text-[#7E7E7E]"
               >
                 {languages[item].shortName}
               </DropdownMenu.Item>

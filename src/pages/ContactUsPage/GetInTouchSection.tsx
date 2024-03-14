@@ -62,13 +62,15 @@ export const GetInTouchSection = () => {
           {CONTACT_US_ICONS.map((item) => (
             <div key={item.name} className="flex gap-4 items-center tracking-wider">
               {item.icon}
-              <a href={item.link.tel1}>
-                <span>+374 77103567</span>
-              </a>
-              <span className="text-sm/[16px] font-thin leading-6">|</span>
-              <a href={item.link.tel2}>
-                <span>+910 7103567</span>
-              </a>
+              <div className="flex gap-1 items-center tracking-wider">
+                <a href={item.link.tel1}>
+                  <span>+374 77103567</span>
+                </a>
+                <span className="text-sm/[16px] font-thin leading-6">|</span>
+                <a href={item.link.tel2}>
+                  <span>+910 7103567</span>
+                </a>
+              </div>
             </div>
           ))}
         </div>

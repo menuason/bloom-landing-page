@@ -52,7 +52,7 @@ const HamburgerSelect = () => {
   return (
     <>
       <button
-        className="border-none hover:outline-none hover:border-none "
+        className="border-none hover:outline-none hover:border-none mt-4"
         onClick={handleHamburgerToggle}
       >
         <img

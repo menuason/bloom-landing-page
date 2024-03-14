@@ -30,30 +30,31 @@ export const AboutBloomHouse = () => {
           >
             {t("homePage.aboutBloomHouse.aboutBloomHouseTitle")}
           </p>
-          <div
+          <div className="flex flex-col gap-8">
+            <div
             className="font-normal
             lg:text-base lg:text-start
             md:text-sm md:text-center
             xs:text-sm xs:text-start
            "
-          >
-            <div className="lg:flex md:hidden xs:hidden">
-              {t("homePage.aboutBloomHouse.aboutBloomHouseDescription")}
+            >
+              <div className="lg:flex md:hidden xs:hidden">
+                {t("homePage.aboutBloomHouse.aboutBloomHouseDescription")}
+              </div>
+
+              <p className="lg:hidden md:block xs:block">
+                {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionOne")}
+              </p>
             </div>
-
-            <p className="lg:hidden md:block xs:block">
-              {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionOne")}
-            </p>
+            <Button
+              link={`/about-us/${i18n.language}`}
+              endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
+              type="outlined"
+              className="lg:flex lg:mx-0 md:mx-auto md:h-[46px]md:hidden xs:hidden"
+            >
+              {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
+            </Button>
           </div>
-
-          <Button
-            link={`/about-us/${i18n.language}`}
-            endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
-            type="outlined"
-            className="lg:flex lg:mx-0 md:mx-auto md:h-[46px] md:hidden xs:hidden"
-          >
-            {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
-          </Button>
         </div>
 
         <img

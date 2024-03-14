@@ -57,7 +57,7 @@ export const Assortment = () => {
             xs:text-sm xs:items-start
           "
         >
-          {t("homePage.assortment.assortmentSectionDescription")}
+          {t("homePage.assortment.aboutBloomHouseDescriptionOne")}
         </p>
       </div>
       <div
@@ -98,7 +98,7 @@ export const Assortment = () => {
                 <h4 className="font-medium lg:text-2xl md:text-base xs:text-sm">
                   {item.name}
                 </h4>
-                <p className="font-extralight text-xs">{item.author}</p>
+                <p className="font-light text-sm">{item.author}</p>
               </div>
             </div>
           );
