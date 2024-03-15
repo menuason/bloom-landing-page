@@ -10,7 +10,7 @@ export const AboutUsSection = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="/src/assets/about-us-page-photos/aboutUs.png"
+        image="gs://bloom-landing-page.appspot.com/aboutUs.png"
         title={t("aboutUsPage.about.title")}
         navOne={t("aboutUsPage.about.nav2")}
       />
