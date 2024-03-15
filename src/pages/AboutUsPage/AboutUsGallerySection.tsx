@@ -7,22 +7,23 @@ export const AboutUsGallerySection = () => {
   const ABOUT_US_IMAGE_LIST = [
     {
       thumbnail:
-        "/src/assets/about-us-pagehttps://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest.png?alt=media&token=d0d7e0ec-d32a-4716-9d9b-1b2fb3c25afa-photos/aest/aest.png",
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextOne"),
         images: [
-          "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest1.png?alt=media&token=81a16df2-0cd0-43a5-8ab8-f1aed82bd20a",
-          "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest2.png?alt=media&token=3ae7a484-99bd-4ff6-819e-f9dede87b2c9",
-          "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest7.png?alt=media&token=25130920-4b2e-456c-9b1d-0f0d8c16e46e",
-          "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest3.png?alt=media&token=1638a863-f6c2-4a17-845d-3eafe2e2166c",
-          "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest4.png?alt=media&token=c7088fb6-48e4-4c24-a0dd-55b03b9c4e6e",
-          "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest5.png?alt=media&token=9a58477d-b8f9-467b-8cf5-a777593485c8",
-          "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Faest%2Faest6.png?alt=media&token=b8cede76-9009-4048-8084-c81aa2965293",
+          `https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de`,
+          `https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de`,
+          `https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de`,
+          `https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de`,
+          `https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de`,
+          `https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de`,
+          `https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de`,
         ],
       },
     },
     {
-      thumbnail: "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Fheating%2Fheat.png?alt=media&token=64919802-8bc4-423e-b716-ccebd5d3c21e",
+      thumbnail:
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Fheating%2Fheat.png?alt=media&token=64919802-8bc4-423e-b716-ccebd5d3c21e",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextTwo"),
         images: [
@@ -36,7 +37,8 @@ export const AboutUsGallerySection = () => {
       },
     },
     {
-      thumbnail: "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Fenv%2Fenv.png?alt=media&token=dffdd80f-55e7-46fe-8cf2-c137ea9315a4",
+      thumbnail:
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Fenv%2Fenv.png?alt=media&token=dffdd80f-55e7-46fe-8cf2-c137ea9315a4",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextThree"),
         images: [
@@ -50,7 +52,8 @@ export const AboutUsGallerySection = () => {
       },
     },
     {
-      thumbnail: "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Fpackaging%2Fpac-3.png?alt=media&token=d709bac8-6a79-4d0b-95b8-2aa4cec1da2e",
+      thumbnail:
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Fpackaging%2Fpac-3.png?alt=media&token=d709bac8-6a79-4d0b-95b8-2aa4cec1da2e",
       sliderImages: {
         title: t("aboutUsPage.gallerySection.imgTextFour"),
         images: [
