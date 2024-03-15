@@ -10,7 +10,7 @@ export const AboutUsSection = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUs.png?alt=media&token=055faf2c-841f-4cd9-b81e-f75c9f3dda5c"
+        image="https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2FmainPic1.png?alt=media&token=61ae3cf3-d714-444f-994b-407fa7e6b3de"
         title={t("aboutUsPage.about.title")}
         navOne={t("aboutUsPage.about.nav2")}
       />
