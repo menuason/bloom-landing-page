@@ -5,13 +5,13 @@ import { Image, ImageList } from "./ImageList";
 
 const INTERIOR_PHOTOS = [
   {
-    thumbnail: "/src/assets/about-us-page-photos/interior/interior-1.png",
+    thumbnail: "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Finterior-1.png?alt=media&token=0123189a-bb7d-4942-a69c-297a0890d500",
     sliderImages: {
       images: [
-        "/src/assets/about-us-page-photos/interior/interior-1.png",
-        "/src/assets/about-us-page-photos/interior/interior-2.png",
-        "/src/assets/about-us-page-photos/interior/interior-3.png",
-        "/src/assets/about-us-page-photos/interior/interior-4.png",
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Finterior-1.png?alt=media&token=0123189a-bb7d-4942-a69c-297a0890d500",
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Finterior-2.png?alt=media&token=67c84f54-4ac7-4b44-94ab-a709ffa72c76",
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Finterior-3.png?alt=media&token=fc888687-9b18-4781-bcc8-59ccd0b9c2de",
+        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Finterior-4.png?alt=media&token=efaf2884-5b65-462d-ac48-a0ebddfc4e12",
       ],
     },
   },

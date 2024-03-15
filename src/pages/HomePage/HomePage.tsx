@@ -24,7 +24,7 @@ const HomePage = () => {
           loop
         >
           <source
-            src="/src/assets/videos/Bloom House.mp4"
+            src="https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/Bloom%20House.mp4?alt=media&token=d2e00a15-cbfb-40ab-989e-7340a1a91905"
             type="video/mp4"
           />
           {t("homePage.videoNotSupported")}
