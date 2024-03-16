@@ -4,40 +4,69 @@ import { PlayIcon } from "../../assets/icons/roundArrowRight/play";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { Button } from "../../components/Button";
 import { PackagingFullScreenVideo } from "../../components/PackagingFullScreenVideo";
-import { FC } from "react";
+import { FC, useState } from "react";
+import { getImageUrl } from "../../firebase";
 
-const PACKAGING_IMAGE_LIST = [
-  {
-    thumbnail: "/src/assets/packaging-page-photos/pic-1.png",
-    hoverImg: "/src/assets/packaging-page-photos/pic1-2.png",
-    sliderImg: "/src/assets/packaging-page-photos/pic-1-dialog.png",
-  },
-  {
-    thumbnail: "/src/assets/packaging-page-photos/pic-2.png",
-    hoverImg: "/src/assets/packaging-page-photos/pic2-2.png",
-    sliderImg: "/src/assets/packaging-page-photos/pic-2-dialog.png",
-  },
-  {
-    thumbnail: "/src/assets/packaging-page-photos/pic-3.png",
-    hoverImg: "/src/assets/packaging-page-photos/pic3-2.png",
-    sliderImg: "/src/assets/packaging-page-photos/pic-3-dialog.png",
-  },
-  {
-    thumbnail: "/src/assets/packaging-page-photos/pic-4.png",
-    hoverImg: "/src/assets/packaging-page-photos/pic4-2.png",
-    sliderImg: "/src/assets/packaging-page-photos/pic-4-dialog.png",
-  },
-];
+
 
 interface PackagingPageProps {}
 
 const PackagingPage:FC<PackagingPageProps> = () => {
   const { t } = useTranslation();
 
+  const [imagesList, setImagesList] = useState<string[]>([]);
+  const [mainPic, setMainPic] = useState("");
+  const [headerPic, setHeaderPic] = useState("");
+
+  getImageUrl('packaging-page/mainPic.png').then((url) => setMainPic(url));
+  getImageUrl('packaging-page/packaging.png').then((url) => setHeaderPic(url));
+
+  const ImagePathsFromFirebase = [
+    "packaging-page/pic-1.png",
+    "packaging-page/pic1-2.png",
+    "packaging-page/pic-1-dialog.png",
+    "packaging-page/pic-2.png",
+    "packaging-page/pic2-2.png",
+    "packaging-page/pic-2-dialog.png",
+    "packaging-page/pic-3.png",
+    "packaging-page/pic3-2.png",
+    "packaging-page/pic-3-dialog.png",
+    "packaging-page/pic-4.png",
+    "packaging-page/pic4-2.png",
+    "packaging-page/pic-4-dialog.png",
+  ];
+
+  Promise.all(
+    ImagePathsFromFirebase.map((img) => getImageUrl(img)),
+  ).then((urls) => setImagesList(urls));
+
+  const PACKAGING_IMAGE_LIST = [
+    {
+      thumbnail: imagesList[0],
+      hoverImg: imagesList[1],
+      sliderImg: imagesList[2],
+    },
+    {
+      thumbnail: imagesList[3],
+      hoverImg: imagesList[4],
+      sliderImg: imagesList[5],
+    },
+    {
+      thumbnail: imagesList[6],
+      hoverImg: imagesList[7],
+      sliderImg: imagesList[8],
+    },
+    {
+      thumbnail: imagesList[9],
+      hoverImg: imagesList[10],
+      sliderImg: imagesList[11],
+    },
+  ];
+
   return (
     <>
       <PageDescriptionHeader
-        image="/src/assets/packaging-page-photos/packaging.png"
+        image={headerPic}
         title={t("systemPage.system.title")}
         navOne={t("packagingPage.packaging.nav2")}
       />
@@ -53,7 +82,7 @@ const PackagingPage:FC<PackagingPageProps> = () => {
           <div className="relative">
             <img
               alt="Bloom House"
-              src="/src/assets/packaging-page-photos/mainPic.png"
+              src={mainPic}
               className="w-full h-full"
             />
 

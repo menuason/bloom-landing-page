@@ -41,7 +41,7 @@ export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) =>
           <div className="bg-black bg-opacity-75 absolute inset-0"></div>
 
           <ReactPlayer
-            url="/src/assets/videos/Bloom House Packaging.mp4"
+            url="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/packaging-page%2FBloom%20House%20Packaging.mp4?alt=media&token=67d9613d-cbe7-4311-b184-4450e4106837"
             width="100%"
             height="100%"
             controls

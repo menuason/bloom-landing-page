@@ -10,10 +10,8 @@ const HomePage = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const [thumbnail, setThumbnail] = useState('');
-  // const [videoPath, setVideoPath] = useState('');
 
   getImageUrl('home-page/thumbnail.png').then((url) => setThumbnail(url));
-  // getImageUrl('home-page/Bloom House.mp4').then((url) => setVideoPath(url));
 
   const scrollDown = () => {
     window.scrollTo({
@@ -72,9 +70,7 @@ const HomePage = () => {
             <div className="relative lg:hidden md:hidden xs:block">
               <img
                 alt="Bloom House"
-                //to be changed
                 src={thumbnail}
-                // src="/src/assets/home-page-photos/thumbnail.png"
                 className="w-full h-full"
               />
 
