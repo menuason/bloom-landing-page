@@ -4,10 +4,8 @@ import { PlayIcon } from "../../assets/icons/roundArrowRight/play";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { Button } from "../../components/Button";
 import { PackagingFullScreenVideo } from "../../components/PackagingFullScreenVideo";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { getImageUrl } from "../../firebase";
-
-
 
 interface PackagingPageProps {}
 
@@ -18,27 +16,32 @@ const PackagingPage:FC<PackagingPageProps> = () => {
   const [mainPic, setMainPic] = useState("");
   const [headerPic, setHeaderPic] = useState("");
 
-  getImageUrl('packaging-page/mainPic.png').then((url) => setMainPic(url));
-  getImageUrl('packaging-page/packaging.png').then((url) => setHeaderPic(url));
+  useEffect(() => {
+    getImageUrl('packaging-page/mainPic.png').then((url) => setMainPic(url));
+    getImageUrl('packaging-page/packaging.png').then((url) => setHeaderPic(url));
 
-  const ImagePathsFromFirebase = [
-    "packaging-page/pic-1.png",
-    "packaging-page/pic1-2.png",
-    "packaging-page/pic-1-dialog.png",
-    "packaging-page/pic-2.png",
-    "packaging-page/pic2-2.png",
-    "packaging-page/pic-2-dialog.png",
-    "packaging-page/pic-3.png",
-    "packaging-page/pic3-2.png",
-    "packaging-page/pic-3-dialog.png",
-    "packaging-page/pic-4.png",
-    "packaging-page/pic4-2.png",
-    "packaging-page/pic-4-dialog.png",
-  ];
+    const ImagePathsFromFirebase = [
+      "packaging-page/pic-1.png",
+      "packaging-page/pic1-2.png",
+      "packaging-page/pic-1-dialog.png",
+      "packaging-page/pic-2.png",
+      "packaging-page/pic2-2.png",
+      "packaging-page/pic-2-dialog.png",
+      "packaging-page/pic-3.png",
+      "packaging-page/pic3-2.png",
+      "packaging-page/pic-3-dialog.png",
+      "packaging-page/pic-4.png",
+      "packaging-page/pic4-2.png",
+      "packaging-page/pic-4-dialog.png",
+    ];
 
-  Promise.all(
-    ImagePathsFromFirebase.map((img) => getImageUrl(img)),
-  ).then((urls) => setImagesList(urls));
+    Promise.all(ImagePathsFromFirebase.map((img) => getImageUrl(img)))
+      .then((urls) => setImagesList(urls))
+      .catch((error) => {
+        console.error("Error fetching images:", error);
+      });
+  }, []);
+
 
   const PACKAGING_IMAGE_LIST = [
     {
