@@ -10,10 +10,10 @@ const HomePage = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const [thumbnail, setThumbnail] = useState('');
-  const [videoPath, setVideoPath] = useState('');
+  // const [videoPath, setVideoPath] = useState('');
 
   getImageUrl('home-page/thumbnail.png').then((url) => setThumbnail(url));
-  getImageUrl('home-page/Bloom House.mp4').then((url) => setVideoPath(url));
+  // getImageUrl('home-page/Bloom House.mp4').then((url) => setVideoPath(url));
 
   const scrollDown = () => {
     window.scrollTo({
@@ -40,7 +40,9 @@ const HomePage = () => {
               loop
               onClick={toggleVideoPlay}
             >
-              <source src={videoPath} type="video/mp4" />
+              <source
+                src="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/home-page%2FBloom%20House.mp4?alt=media&token=972a318b-397f-4e87-ab65-bc55521a08a8" type="video/mp4"
+              />
               {t('homePage.videoNotSupported')}
             </video>
           </div>
@@ -56,7 +58,7 @@ const HomePage = () => {
                 loop
               >
                 <source
-                  src={videoPath}
+                  src="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/home-page%2FBloom%20House.mp4?alt=media&token=972a318b-397f-4e87-ab65-bc55521a08a8"
                   type="video/mp4" />
                 {t('homePage.videoNotSupported')}
               </video>
