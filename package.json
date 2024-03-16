@@ -1,5 +1,5 @@
 {
-  "homepage":"http://menuason.github.io/bloom-landing-page",
+  "homepage": "http://menuason.github.io/bloom-landing-page",
   "name": "bloom-landing-page",
   "private": true,
   "version": "0.0.0",
@@ -32,6 +32,7 @@
     "react-responsive": "^9.0.2",
     "react-router-dom": "^6.22.1",
     "redux": "^5.0.1",
+    "styled-components": "^6.1.8",
     "tailwindcss": "^3.4.1",
     "uuid": "^9.0.1"
   },

@@ -51,6 +51,7 @@ export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) =>
                 attributes: {
                   autoPlay: true,
                   loop: true,
+                  muted: true,
                 },
               },
             }}

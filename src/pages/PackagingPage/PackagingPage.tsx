@@ -4,6 +4,7 @@ import { PlayIcon } from "../../assets/icons/roundArrowRight/play";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { Button } from "../../components/Button";
 import { PackagingFullScreenVideo } from "../../components/PackagingFullScreenVideo";
+import { FC } from "react";
 
 const PACKAGING_IMAGE_LIST = [
   {
@@ -28,7 +29,9 @@ const PACKAGING_IMAGE_LIST = [
   },
 ];
 
-const PackagingPage = () => {
+interface PackagingPageProps {}
+
+const PackagingPage:FC<PackagingPageProps> = () => {
   const { t } = useTranslation();
 
   return (
