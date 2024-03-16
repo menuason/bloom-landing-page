@@ -50,7 +50,7 @@ const Header = () => {
         <img src={logo} alt="logo" />
       </a>
       <div className="flex items-center gap-12 cursor-pointer text-bloomBlack">
-        <div className="hidden lg:flex gap-12 items-center font-normal mt-3">
+        <div className="hidden lg:flex gap-12 items-center font-normal mt-2">
           {
             NAV_BAR_ITEMS_WEB.map((item) => (
               <a
@@ -62,6 +62,7 @@ const Header = () => {
               </a>
             ))
           }
+
         </div>
         <div className="flex gap-4">
           <MultiLanguageSelect />

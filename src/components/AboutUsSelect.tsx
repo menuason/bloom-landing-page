@@ -7,7 +7,6 @@ const AboutUsSelect = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
   const ABOUT_US_ITEMS = [
     {
       menuItem: t("header.about.aboutUs"),
@@ -32,7 +31,9 @@ const AboutUsSelect = () => {
   ];
 
   return (
-    <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
+    <DropdownMenu.Root
+      onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}
+    >
       <DropdownMenu.Trigger
         className="
           flex items-center cursor-pointer text-bloomBlack border-none
@@ -52,24 +53,32 @@ const AboutUsSelect = () => {
       <DropdownMenu.Content
         align="start"
         className="
-            absolute text-bloomBlack bg-white z-10 w-[200px]
-            hover:outline-none px-4 pb-3 -ml-4 pt-0 mt-5 shadow-md
+            text-bloomBlack bg-white w-[100vw]
+            hover:outline-none px-20 pt-4 pb-4 shadow-inner
          "
+        sideOffset={22}
       >
-        {ABOUT_US_ITEMS.map((item) => (
-          <div key={item.name}>
-            <DropdownMenu.Item
-              className="
-                flex self-start py-2 my-0.5 cursor-pointer
-                hover:outline-none hover:text-[#7E7E7E]
-              "
-            >
-              <a href={item.href}>
-                {item.menuItem}
-              </a>
-            </DropdownMenu.Item>
+        <div className="flex justify-between">
+          <div className="flex flex-col gap-2">
+            <b>Bloom House</b>
+            {ABOUT_US_ITEMS.map((item) => (
+              <div key={item.name}>
+                <DropdownMenu.Item
+                  className="
+                  flex self-start py-2 my-0.5 cursor-pointer
+                  hover:outline-none hover:text-[#7E7E7E]
+                "
+                >
+                  <a href={item.href}>
+                    {item.menuItem}
+                  </a>
+                </DropdownMenu.Item>
+              </div>
+            ))}
           </div>
-        ))}
+          <img src="/src/assets/select.png" alt="Bloom House" className="h-[279px]" />
+        </div>
+
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   );

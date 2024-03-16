@@ -50,7 +50,7 @@ const MultiLanguageSelect = () => {
     <>
       <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
         <DropdownMenu.Trigger
-          className="flex items-center cursor-pointer mt-3 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
+          className="flex items-center cursor-pointer mt-2 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
           <div className="flex gap-2 hover:text-[#7E7E7E] focus:text-green-600">
             {languages[selectedLanguage].shortName}
 
@@ -60,22 +60,23 @@ const MultiLanguageSelect = () => {
             />
           </div>
         </DropdownMenu.Trigger>
+
         <DropdownMenu.Content
           align="start"
-          className="absolute text-bloomBlack bg-white z-10 hover:outline-none py-3 pt-0 mt-5 px-5 -ml-4 shadow-md"
+          className="absolute text-bloomBlack bg-white z-10 hover:outline-none pb-3 mt-4 px-5 -ml-4 shadow-md bg-green-400"
         >
-
           {Object.keys(languages).map((item) => (
             <div key={item}>
               <DropdownMenu.Item
                 onSelect={() => changeLanguage(`${item}`)}
-                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none font-notmal hover:text-[#7E7E7E]"
+                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none normal hover:text-[#7E7E7E]"
               >
                 {languages[item].shortName}
               </DropdownMenu.Item>
             </div>
           ))}
         </DropdownMenu.Content>
+
       </DropdownMenu.Root>
     </>
   );
