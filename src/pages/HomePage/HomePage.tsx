@@ -1,17 +1,24 @@
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { AboutBloomHouse, Assortment, WhyChooseUs } from ".";
-import { RoundedArrowDownIcon } from "../../assets/icons/roundedArrowDown/roundedArrowDown";
-import { PlayIcon } from "../../assets/icons/roundArrowRight/play";
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { AboutBloomHouse, Assortment, WhyChooseUs } from '.';
+import { RoundedArrowDownIcon } from '../../assets/icons/roundedArrowDown/roundedArrowDown';
+import { PlayIcon } from '../../assets/icons/roundArrowRight/play';
+import { getImageUrl } from '../../firebase.ts';
 
 const HomePage = () => {
   const { t } = useTranslation();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
+  const [thumbnail, setThumbnail] = useState('');
+  const [videoPath, setVideoPath] = useState('');
+
+  getImageUrl('home-page/thumbnail.png').then((url) => setThumbnail(url));
+  getImageUrl('home-page/Bloom House.mp4').then((url) => setVideoPath(url));
+
   const scrollDown = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -33,8 +40,8 @@ const HomePage = () => {
               loop
               onClick={toggleVideoPlay}
             >
-              <source src="/src/assets/videos/Bloom House.mp4" type="video/mp4" />
-              {t("homePage.videoNotSupported")}
+              <source src={videoPath} type="video/mp4" />
+              {t('homePage.videoNotSupported')}
             </video>
           </div>
         ) : (
@@ -48,8 +55,10 @@ const HomePage = () => {
                 muted
                 loop
               >
-                <source src="https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/Bloom%20House.mp4?alt=media&token=d2e00a15-cbfb-40ab-989e-7340a1a91905" type="video/mp4" />
-                {t("homePage.videoNotSupported")}
+                <source
+                  src={videoPath}
+                  type="video/mp4" />
+                {t('homePage.videoNotSupported')}
               </video>
 
               <div
@@ -61,7 +70,9 @@ const HomePage = () => {
             <div className="relative lg:hidden md:hidden xs:block">
               <img
                 alt="Bloom House"
-                src="/src/assets/home-page-photos/thumbnail.png"
+                //to be changed
+                src={thumbnail}
+                // src="/src/assets/home-page-photos/thumbnail.png"
                 className="w-full h-full"
               />
 
