@@ -27,7 +27,8 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
   const { name, color, brand, size } = selectedFlower;
 
   const handleNext = () => {
-    const nextInd = selectedFlowerInd === flowers.length - 1 ? 0 : selectedFlowerInd + 1;
+    const nextInd =
+      selectedFlowerInd === flowers.length - 1 ? 0 : selectedFlowerInd + 1;
     setSelectedFlowerInd(nextInd);
   };
 
@@ -38,9 +39,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger>
-        {children}
-      </Dialog.Trigger>
+      <Dialog.Trigger>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black/[0.3] data-[state=open]:animate-overlayShow fixed inset-0" />
         <Dialog.Content
@@ -58,8 +57,10 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
             </div>
           </Dialog.Close>
 
-          <div className={`flex justify-center lg:gap-8 md:gap-4 items-center h-[${previewContentSize}]`}>
-            <button onClick={handleBack}>
+          <div
+            className={`flex justify-center lg:gap-8 md:gap-4 items-center h-[${previewContentSize}]`}
+          >
+            <button autoFocus onClick={handleBack} onKeyDown={handleBack}>
               <ArrowLeftIcon
                 color="black"
                 width={11}
@@ -118,7 +119,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
                 </div>
               </div>
             </div>
-            <button onClick={handleNext}>
+            <button autoFocus onClick={handleNext} onKeyDown={handleNext}>
               <ArrowRightIcon
                 color="black"
                 width={11}

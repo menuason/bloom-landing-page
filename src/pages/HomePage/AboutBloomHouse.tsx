@@ -1,14 +1,14 @@
-import { useTranslation } from 'react-i18next';
-import { ArrowRightIcon } from '../../assets/icons/arrowRight/arrowRight';
-import { Button } from '../../components/Button';
-import { useState } from 'react';
-import { getImageUrl } from '../../firebase.ts';
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Button } from "../../components/Button";
+import { getImageUrl } from "../../firebase.ts";
+import { ArrowIcon } from "../../assets/arrow/arrowIcon.tsx";
 
 export const AboutBloomHouse = () => {
   const { t, i18n } = useTranslation();
-  const [img, setImg] = useState('');
+  const [img, setImg] = useState("");
 
-  getImageUrl('home-page/5P4A3419.png').then((url) => setImg(url));
+  getImageUrl("home-page/5P4A3419.png").then((url) => setImg(url));
 
   return (
     <>
@@ -33,7 +33,7 @@ export const AboutBloomHouse = () => {
             xs:text-2xl
            "
           >
-            {t('homePage.aboutBloomHouse.aboutBloomHouseTitle')}
+            {t("homePage.aboutBloomHouse.aboutBloomHouseTitle")}
           </p>
           <div className="flex flex-col gap-8">
             <div
@@ -44,20 +44,20 @@ export const AboutBloomHouse = () => {
            "
             >
               <div className="lg:flex md:hidden xs:hidden">
-                {t('homePage.aboutBloomHouse.aboutBloomHouseDescription')}
+                {t("homePage.aboutBloomHouse.aboutBloomHouseDescription")}
               </div>
 
               <p className="lg:hidden md:block xs:block">
-                {t('homePage.aboutBloomHouse.aboutBloomHouseDescriptionOne')}
+                {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionOne")}
               </p>
             </div>
             <Button
               link={`/about-us/${i18n.language}`}
-              endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
+              endIcon={<ArrowIcon color="black" width={24} height={24} />}
               type="outlined"
               className="lg:flex lg:mx-0 md:mx-auto md:h-[46px]md:hidden xs:hidden"
             >
-              {t('homePage.aboutBloomHouse.aboutBloomHouseButton')}
+              {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
             </Button>
           </div>
         </div>
@@ -80,15 +80,15 @@ export const AboutBloomHouse = () => {
            md:block md:text-center
            xs:block xs:text-start"
           >
-            {t('homePage.aboutBloomHouse.aboutBloomHouseDescriptionTwo')}
+            {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionTwo")}
           </p>
           <Button
             link={`/about-us/${i18n.language}`}
-            endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
+            endIcon={<ArrowIcon color="black" width={24} height={24} />}
             type="outlined"
             className="lg:mx-auto lg:hidden md:mx-auto md:flex md:self-center xs:flex xs:self-start"
           >
-            {t('homePage.aboutBloomHouse.aboutBloomHouseButton')}
+            {t("homePage.aboutBloomHouse.aboutBloomHouseButton")}
           </Button>
         </div>
       </div>

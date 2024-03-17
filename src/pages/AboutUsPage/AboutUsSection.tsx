@@ -1,8 +1,8 @@
-import { ArrowRightIcon } from '../../assets/icons/arrowRight/arrowRight';
-import { useTranslation } from 'react-i18next';
-import { PageDescriptionHeader } from '../../components/PageDescriptionHeader';
-import { PageSection } from '../../components/PageSection';
-import { Button } from '../../components/Button';
+import { useTranslation } from "react-i18next";
+import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
+import { PageSection } from "../../components/PageSection";
+import { Button } from "../../components/Button";
+import { ArrowIcon } from "../../assets/arrow/arrowIcon";
 
 // import { getDownloadURL } from 'firebase/storage';
 // import { imageRef } from "../../firebase";
@@ -29,8 +29,8 @@ export const AboutUsSection = () => {
     <>
       <PageDescriptionHeader
         image="/src/assets/about-us-page-photos/aboutUs.png"
-        title={t('aboutUsPage.about.title')}
-        navOne={t('aboutUsPage.about.nav2')}
+        title={t("aboutUsPage.about.title")}
+        navOne={t("aboutUsPage.about.nav2")}
       />
       <PageSection
         isImageFirst
@@ -51,7 +51,7 @@ export const AboutUsSection = () => {
              xs:text-2xl xs:self-start
            "
           >
-            {t('aboutUsPage.mainContent.title')}
+            {t("aboutUsPage.mainContent.title")}
           </p>
           <div className="flex flex-col gap-8">
             <div
@@ -61,19 +61,19 @@ export const AboutUsSection = () => {
               xs:text-sm
              "
             >
-              <p>{t('aboutUsPage.mainContent.text.p1')}</p>
-              <p>{t('aboutUsPage.mainContent.text.p2')}</p>
-              <p>{t('aboutUsPage.mainContent.text.p3')}</p>
-              <p>{t('aboutUsPage.mainContent.text.p4')}</p>
-              <p>{t('aboutUsPage.mainContent.text.p5')}</p>
+              <p>{t("aboutUsPage.mainContent.text.p1")}</p>
+              <p>{t("aboutUsPage.mainContent.text.p2")}</p>
+              <p>{t("aboutUsPage.mainContent.text.p3")}</p>
+              <p>{t("aboutUsPage.mainContent.text.p4")}</p>
+              <p>{t("aboutUsPage.mainContent.text.p5")}</p>
             </div>
 
             <Button
               link={`/mission-and-vision/${i18n.language}`}
               type="outlined"
-              endIcon={<ArrowRightIcon color="black" width={12} height={12} />}
+              endIcon={<ArrowIcon color="black" width={24} height={24} />}
             >
-              {t('aboutUsPage.mainContent.button')}
+              {t("aboutUsPage.mainContent.button")}
             </Button>
           </div>
         </div>
