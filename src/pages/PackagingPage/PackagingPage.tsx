@@ -1,10 +1,10 @@
-import { ImageList } from "../../components/ImageList";
+import { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ImageList } from "../../components/ImageList";
 import { PlayIcon } from "../../assets/icons/roundArrowRight/play";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { Button } from "../../components/Button";
 import { PackagingFullScreenVideo } from "../../components/PackagingFullScreenVideo";
-import { FC, useEffect, useState } from "react";
 import { getImageUrl } from "../../firebase";
 
 interface PackagingPageProps {}
