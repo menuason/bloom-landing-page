@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import hamburger from '../assets/icons/hamburger/hamburger.svg';
+import { useState } from "react";
+import hamburger from "../assets/icons/hamburger/hamburger.svg";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 
@@ -43,16 +43,16 @@ const HamburgerSelect = () => {
     setShow(!show);
 
     if (!show) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   };
 
   return (
     <>
       <button
-        className="border-none hover:outline-none hover:border-none mt-4"
+        className="border-none hover:outline-none hover:border-none mt-2"
         onClick={handleHamburgerToggle}
       >
         <img
@@ -78,7 +78,7 @@ const HamburgerSelect = () => {
                     <a href={item.href} key={item.title} className="flex self-center py-3 px-4 -mx-4 border-b border-gray-100">
                       {item.title}
                     </a>
-                  );
+                  )
                 })
               }
             </div>

@@ -75,7 +75,7 @@ export const GetInTouchSection = () => {
           ))}
         </div>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col lg:gap-6 md:gap-4 xs:gap-6">
           <div className="font-medium text-lg w-fit border-b border-bloomBlack">
             <p>{t("contactUsPage.mainContent.subTitleTwo")}</p>
           </div>

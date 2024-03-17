@@ -6,7 +6,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 type LanguageInfo = {
   shortName: string;
-  fullName: string;
+  flagPath: string;
 };
 
 type Languages = {
@@ -14,9 +14,9 @@ type Languages = {
 };
 
 const languages: Languages = {
-  en: { shortName: "Eng", fullName: "English" },
-  ru: { shortName: "Рус", fullName: "Русский" },
-  hy: { shortName: "հայ", fullName: "հայերեն" },
+  en: { shortName: "EN", flagPath: "/src/assets/icons/flags/en.svg" },
+  ru: { shortName: "РУ", flagPath: "/src/assets/icons/flags/ru.svg" },
+  hy: { shortName: "հԱ", flagPath: "/src/assets/icons/flags/hy.svg" },
 };
 
 const MultiLanguageSelect = () => {
@@ -51,8 +51,14 @@ const MultiLanguageSelect = () => {
       <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
         <DropdownMenu.Trigger
           className="flex items-center cursor-pointer mt-2 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
-          <div className="flex gap-2 hover:text-[#7E7E7E] focus:text-green-600">
-            {languages[selectedLanguage].shortName}
+          <div className="flex gap-2 hover:text-[#7E7E7E]">
+            <div className="flex gap-4">
+              <div className="lg:block md:hidden xs:hidden">|</div>
+              <div className="flex gap-2">
+                <span>{languages[selectedLanguage].shortName.toUpperCase()}</span>
+                <img src={languages[selectedLanguage].flagPath} alt="logo" />
+              </div>
+            </div>
 
             <img
               src={arrowDown} alt="Arrow Down"
@@ -62,21 +68,20 @@ const MultiLanguageSelect = () => {
         </DropdownMenu.Trigger>
 
         <DropdownMenu.Content
-          align="start"
-          className="absolute text-bloomBlack bg-white z-10 hover:outline-none pb-3 mt-4 px-5 -ml-4 shadow-md bg-green-400"
+          align="center"
+          className="text-bloomBlack bg-white z-10 hover:outline-none shadow-md lg:-mr-5 pl-[10px] pr-6 pb-2 pt-0 mt-0"
         >
           {Object.keys(languages).map((item) => (
-            <div key={item}>
-              <DropdownMenu.Item
-                onSelect={() => changeLanguage(`${item}`)}
-                className="flex self-start py-2 my-0.5 cursor-pointer hover:outline-none normal hover:text-[#7E7E7E]"
-              >
-                {languages[item].shortName}
-              </DropdownMenu.Item>
-            </div>
+            <DropdownMenu.Item
+              key={item}
+              onSelect={() => changeLanguage(`${item}`)}
+              className="flex justify-between gap-2 py-2 tracking-wide cursor-pointer hover:outline-none normal hover:text-[#7E7E7E]"
+            >
+              <span>{languages[item].shortName.toUpperCase()}</span>
+              <img src={languages[item].flagPath} alt="logo" />
+            </DropdownMenu.Item>
           ))}
         </DropdownMenu.Content>
-
       </DropdownMenu.Root>
     </>
   );
