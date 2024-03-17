@@ -1,6 +1,6 @@
 const HeaderTranslation = {
   en: {
-    home: "Home",
+    home: "HOME",
     catalogue: "Catalogue",
     packaging: "Packaging",
     about: {

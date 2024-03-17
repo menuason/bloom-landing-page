@@ -42,7 +42,7 @@ const AboutUsSelect = () => {
         "
       >
         <div className="flex gap-2 hover:text-[#7E7E7E]">
-          {t("header.about.aboutUs")}
+          {t("header.about.aboutUs").toUpperCase()}
           <img
             src={arrowDown}
             alt="Arrow Down"
@@ -70,7 +70,7 @@ const AboutUsSelect = () => {
                 "
                 >
                   <a href={item.href}>
-                    {item.menuItem}
+                    {item.menuItem.toUpperCase()}
                   </a>
                 </DropdownMenu.Item>
               </div>

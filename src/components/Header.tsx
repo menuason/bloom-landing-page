@@ -9,24 +9,24 @@ const Header = () => {
 
   const NAV_BAR_ITEMS_WEB = [
     {
-      title: t("header.home"),
+      title: t("header.home").toUpperCase(),
       href: `/home/${i18n.language}`,
     },
     {
-      title: t("header.catalogue"),
+      title: t("header.catalogue").toUpperCase(),
       href: `/catalogue/${i18n.language}`,
     },
     {
-      title: t("header.packaging"),
+      title: t("header.packaging").toUpperCase(),
       href: `/packaging/${i18n.language}`,
     },
     {
-      title: t("header.about.aboutUs"),
+      title: t("header.about.aboutUs").toUpperCase(),
       href: "",
       component: <AboutUsSelect />,
     },
     {
-      title: t("header.contact"),
+      title: t("header.contact").toUpperCase(),
       href: `/contact-us/${i18n.language}`,
     },
   ];
@@ -64,11 +64,11 @@ const Header = () => {
           }
 
         </div>
-        <div className="flex gap-4">
-          <MultiLanguageSelect />
-          <div className="flex items-center cursor-pointer lg:hidden">
-            <HamburgerSelect />
-          </div>
+      </div>
+      <div className="flex gap-4">
+        <MultiLanguageSelect />
+        <div className="flex items-center cursor-pointer lg:hidden">
+          <HamburgerSelect />
         </div>
       </div>
     </div>
