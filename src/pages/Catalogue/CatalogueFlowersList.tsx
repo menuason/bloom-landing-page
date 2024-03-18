@@ -21,36 +21,37 @@ const CatalogueFlowersList: FC<CatalogueFlowersListProps> = ({
   const currentFlowers = flowers.slice(indexOfFirstFlower, indexOfLastFlower);
 
   return (
-    <div
-      className="
-        w-full h-full mt-9 flex flex-wrap gap-4
-        lg:px-0
-        md:px-12
-        xs:px-4
+    <>
+      <div
+        className="
+      w-full
+        mt-9
+        px-4
+        grid
+        grid-cols-2
+        gap-5
+        md:grid-cols-3
     "
-    >
-      {currentFlowers.map((flower, index) => {
-        return (
-          <div
-            className="flex flex-col gap-3 items-center justify-center bg-[#F6F6F7]"
-            key={index}
-          >
+      >
+        {currentFlowers.map((flower, index) => {
+          return (
             <FlowerPreview flowers={flowers} key={flower.id} id={flower.id}>
               <CatalogueFlowerCard key={index} flower={flower} />
             </FlowerPreview>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+
       {pagination && (
         <div
           className="
-              md:w-full md:flex md:justify-end md:mt-4
-              xs:w-full xs:flex xs:justify-end xs:mt-4"
+                  md:w-full md:flex md:justify-end md:mt-4
+                  xs:w-full xs:flex xs:justify-end xs:mt-4"
         >
           {pagination}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
