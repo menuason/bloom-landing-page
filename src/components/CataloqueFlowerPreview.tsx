@@ -39,7 +39,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger>{children}</Dialog.Trigger>
+      <Dialog.Trigger className="flex flex-col items-center justify-center">{children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black/[0.3] data-[state=open]:animate-overlayShow fixed inset-0" />
         <Dialog.Content

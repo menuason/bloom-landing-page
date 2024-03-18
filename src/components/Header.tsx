@@ -41,7 +41,7 @@ const Header = () => {
     >
       <a
         href={`/home/${i18n.language}`}
-        className="self-center cursor-pointer
+        className="self-center cursor-pointer flex justify-center
           lg:h-14 lg:w-[105px]
           md:h-12 md:w-[95px]
           xs:h-12 xs:w-[90px]

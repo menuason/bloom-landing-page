@@ -485,7 +485,7 @@ export const FilterSection = () => {
       flex mb-20
       lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:flex lg:mb-[156px] lg:flex-row
       md:mb-24 md:px-8 md:flex-col
-      xs:mb-14 xs:flex-col xs:px-8 xs:py-6">
+      xs:mb-14 xs:flex-col xs:px-4 xs:py-6">
       <button
         className="lg:hidden md:flex xs:flex flex border-none hover:outline-none hover:border-none "
         onClick={handleToggle}
@@ -497,7 +497,7 @@ export const FilterSection = () => {
       </button>
 
       <div
-        className={`fixed flex items-center justify-center overflow-hidden 
+        className={`fixed flex items-center justify-center overflow-hidden
         ${showFilter && "bg-black bg-opacity-50 z-10 inset-0 w-full h-full"}`}
         onClick={handleToggle}
       >
