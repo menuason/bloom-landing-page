@@ -19,27 +19,33 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
   const previewContentSize = "calc(100% - 50px)";
   const { t } = useTranslation();
 
-  const [selectedFlowerInd, setSelectedFlowerInd] = useState(
-    flowers.findIndex((item) => item.id === id)
-  );
+  const [selectedFlowerInd, setSelectedFlowerInd] = useState(0);
+  const [selectedFlower, setSelectedFlower] = useState<CatalogueFlower>();
 
-  const selectedFlower = flowers[selectedFlowerInd];
-  const { name, color, brand, size } = selectedFlower;
+  const handleSelectFlower = () => {
+    const a = flowers.findIndex((item) => item.id === id);
+    setSelectedFlowerInd(a);
+    const selectedFlower = flowers[a];
+    setSelectedFlower(selectedFlower);
+  };
 
   const handleNext = () => {
     const nextInd =
       selectedFlowerInd === flowers.length - 1 ? 0 : selectedFlowerInd + 1;
     setSelectedFlowerInd(nextInd);
+    setSelectedFlower(flowers[nextInd])
   };
 
   const handleBack = () => {
     const prevInd = (selectedFlowerInd - 1 + flowers.length) % flowers.length;
     setSelectedFlowerInd(prevInd);
+    setSelectedFlower(flowers[prevInd])
   };
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="flex flex-col items-center justify-center">{children}</Dialog.Trigger>
+      <Dialog.Trigger className="flex flex-col items-center justify-center"
+                      onClick={handleSelectFlower}>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black/[0.3] data-[state=open]:animate-overlayShow fixed inset-0" />
         <Dialog.Content
@@ -84,8 +90,8 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
                "
               >
                 <img
-                  src={selectedFlower.image}
-                  alt={`Flower ${selectedFlower.name}`}
+                  src={selectedFlower?.image}
+                  alt={`Flower ${selectedFlower?.name}`}
                   className="w-full"
                 />
               </div>
@@ -95,27 +101,27 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
                   <span className="font-normal min-w-16">
                     {t("cataloguePage.previewItems.name")}:
                   </span>
-                  <span className="font-medium">{name}</span>
+                  <span className="font-medium">{selectedFlower?.name}</span>
                 </div>
                 <div className="text-sm flex gap-2 py-3 px-4">
                   <span className="font-normal min-w-16">
                     {t("cataloguePage.filterType.colour")}:
                   </span>
                   <span className="font-medium">
-                    {t(`cataloguePage.filterType.colourType.${color}`)}
+                    {t(`cataloguePage.filterType.colourType.${selectedFlower?.color}`)}
                   </span>
                 </div>
                 <div className="text-sm flex gap-2 py-3 px-4 bg-[#F6F6F7]">
                   <span className="font-normal min-w-16">
                     {t("cataloguePage.previewItems.brand")}:
                   </span>
-                  <span className="font-medium">{brand}</span>
+                  <span className="font-medium">{selectedFlower?.brand}</span>
                 </div>
                 <div className="text-sm flex gap-2 py-3 px-4">
                   <span className="font-normal min-w-16">
                     {t("cataloguePage.previewItems.size")}:
                   </span>
-                  <span className="font-medium">{size}</span>
+                  <span className="font-medium">{selectedFlower?.size}</span>
                 </div>
               </div>
             </div>

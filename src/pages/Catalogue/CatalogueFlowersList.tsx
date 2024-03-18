@@ -22,17 +22,7 @@ const CatalogueFlowersList: FC<CatalogueFlowersListProps> = ({
 
   return (
     <>
-      <div
-        className="
-      w-full
-        mt-9
-        px-4
-        grid
-        grid-cols-2
-        gap-5
-        md:grid-cols-3
-    "
-      >
+      <div className="w-full mt-9 px-4 grid grid-cols-2 gap-5 md:grid-cols-3">
         {currentFlowers.map((flower, index) => {
           return (
             <FlowerPreview flowers={flowers} key={flower.id} id={flower.id}>
