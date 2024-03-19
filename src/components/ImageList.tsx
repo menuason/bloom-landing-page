@@ -1,7 +1,8 @@
 import { FC, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ImageSlider } from "./ImageSlider";
-import { SeeMoreIcon } from "../assets/icons/seeMore/seeMore";
+import { SeeMoreIcon } from "../../public/icons/seeMore/seeMore";
+
 
 interface SliderImage {
   title?: string;

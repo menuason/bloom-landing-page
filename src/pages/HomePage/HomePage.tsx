@@ -1,17 +1,12 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AboutBloomHouse, Assortment, WhyChooseUs } from '.';
-import { RoundedArrowDownIcon } from '../../assets/icons/roundedArrowDown/roundedArrowDown';
-import { PlayIcon } from '../../assets/icons/roundArrowRight/play';
-import { getImageUrl } from '../../firebase.ts';
+import { RoundedArrowDownIcon } from '../../../public/icons/roundedArrowDown/roundedArrowDown.tsx';
+import { PlayIcon } from '../../../public/icons/roundArrowRight/play.tsx';
 
 const HomePage = () => {
   const { t } = useTranslation();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
-  const [thumbnail, setThumbnail] = useState('');
-
-  getImageUrl('home-page/thumbnail.png').then((url) => setThumbnail(url));
 
   const scrollDown = () => {
     window.scrollTo({
@@ -39,7 +34,8 @@ const HomePage = () => {
               onClick={toggleVideoPlay}
             >
               <source
-                src="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/home-page%2FBloom%20House.mp4?alt=media&token=972a318b-397f-4e87-ab65-bc55521a08a8" type="video/mp4"
+                src="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/home-page%2FBloom%20House.mp4?alt=media&token=972a318b-397f-4e87-ab65-bc55521a08a8"
+                type="video/mp4"
               />
               {t('homePage.videoNotSupported')}
             </video>
@@ -57,7 +53,8 @@ const HomePage = () => {
               >
                 <source
                   src="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/home-page%2FBloom%20House.mp4?alt=media&token=972a318b-397f-4e87-ab65-bc55521a08a8"
-                  type="video/mp4" />
+                  type="video/mp4"
+                />
                 {t('homePage.videoNotSupported')}
               </video>
 
@@ -70,7 +67,7 @@ const HomePage = () => {
             <div className="relative lg:hidden md:hidden xs:block">
               <img
                 alt="Bloom House"
-                src={thumbnail}
+                src="../../home-page-photos/thumbnail.png"
                 className="w-full h-full"
               />
 

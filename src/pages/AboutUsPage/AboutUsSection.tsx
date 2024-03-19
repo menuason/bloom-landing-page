@@ -4,38 +4,20 @@ import { PageSection } from "../../components/PageSection";
 import { Button } from "../../components/Button";
 import { ArrowIcon } from "../../assets/arrow/arrowIcon";
 
-// import { getDownloadURL } from 'firebase/storage';
-// import { imageRef } from "../../firebase";
-// import { useState } from 'react';
-
 export const AboutUsSection = () => {
   const { t, i18n } = useTranslation();
-  // const [imageUrl, setImageUrl] = useState("");
-
-  // getDownloadURL(imageRef);
-  // .then((url) => {
-  //   console.log(url);
-  //   setImageUrl(url);
-  //   // Use the image URL in your Vite project
-  //   // const imgElement = document.createElement("img");
-  //   // imgElement.src = url;
-  //   // document.body.appendChild(imgElement);
-  // })
-  // .catch((error) => {
-  //   console.error("Error getting download URL:", error);
-  // });
 
   return (
     <>
       <PageDescriptionHeader
-        image="/src/assets/about-us-page-photos/aboutUs.png"
+        image="../../about-us-page-photos/aboutUs.png"
         title={t("aboutUsPage.about.title")}
         navOne={t("aboutUsPage.about.nav2")}
       />
       <PageSection
         isImageFirst
         imageClassName="w-full"
-        image="/src/assets/about-us-page-photos/mainPic1.png"
+        image="../../about-us-page-photos/mainPic1.png"
       >
         <div
           className="flex flex-col text-gray-950 justify-center

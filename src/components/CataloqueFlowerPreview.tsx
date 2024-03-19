@@ -2,9 +2,10 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { FC, PropsWithChildren, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CatalogueFlower } from "../pages/Catalogue/CataloguePage";
-import { CloseIcon } from "../assets/icons/close/close";
-import { ArrowLeftIcon } from "../assets/icons/arrowLeft/arrowLeft";
-import { ArrowRightIcon } from "../assets/icons/arrowRight/arrowRight";
+import { CloseIcon } from "../../public/icons/close/close";
+import { ArrowLeftIcon } from "../../public/icons/arrowLeft/arrowLeft";
+import { ArrowRightIcon } from "../../public/icons/arrowRight/arrowRight";
+
 
 interface DialogDemoProps {
   id: string;
@@ -33,19 +34,23 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
     const nextInd =
       selectedFlowerInd === flowers.length - 1 ? 0 : selectedFlowerInd + 1;
     setSelectedFlowerInd(nextInd);
-    setSelectedFlower(flowers[nextInd])
+    setSelectedFlower(flowers[nextInd]);
   };
 
   const handleBack = () => {
     const prevInd = (selectedFlowerInd - 1 + flowers.length) % flowers.length;
     setSelectedFlowerInd(prevInd);
-    setSelectedFlower(flowers[prevInd])
+    setSelectedFlower(flowers[prevInd]);
   };
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="flex flex-col items-center justify-center"
-                      onClick={handleSelectFlower}>{children}</Dialog.Trigger>
+      <Dialog.Trigger
+        className="flex flex-col items-center justify-center"
+        onClick={handleSelectFlower}
+      >
+        {children}
+      </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black/[0.3] data-[state=open]:animate-overlayShow fixed inset-0" />
         <Dialog.Content
@@ -108,7 +113,9 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
                     {t("cataloguePage.filterType.colour")}:
                   </span>
                   <span className="font-medium">
-                    {t(`cataloguePage.filterType.colourType.${selectedFlower?.color}`)}
+                    {t(
+                      `cataloguePage.filterType.colourType.${selectedFlower?.color}`
+                    )}
                   </span>
                 </div>
                 <div className="text-sm flex gap-2 py-3 px-4 bg-[#F6F6F7]">

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import arrowDown from "../assets/icons/arrowDown/arrowDown.svg";
+// import arrowDown from "../assets/icons/arrowDown/arrowDown.svg";
+import arrowDown from "../../public/icons/arrowDown/arrowDown.svg";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 type LanguageInfo = {
@@ -14,9 +15,9 @@ type Languages = {
 };
 
 const languages: Languages = {
-  en: { shortName: "EN", flagPath: "/src/assets/icons/flags/en.svg" },
-  ru: { shortName: "РУ", flagPath: "/src/assets/icons/flags/ru.svg" },
-  hy: { shortName: "հԱ", flagPath: "/src/assets/icons/flags/hy.svg" },
+  en: { shortName: "EN", flagPath: "../../icons/flags/en.svg" },
+  ru: { shortName: "РУ", flagPath: "../../icons/flags/ru.svg" },
+  hy: { shortName: "հԱ", flagPath: "../../icons/flags/hy.svg" },
 };
 
 const MultiLanguageSelect = () => {
@@ -30,7 +31,7 @@ const MultiLanguageSelect = () => {
   const navigate = useNavigate();
 
   const [selectedLanguage, setSelectedLanguage] = useState(
-    lang || i18n.language,
+    lang || i18n.language
   );
 
   const changeLanguage = (language: string) => {
@@ -49,20 +50,24 @@ const MultiLanguageSelect = () => {
   return (
     <>
       <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
-        <DropdownMenu.Trigger
-          className="flex items-center cursor-pointer mt-2 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
+        <DropdownMenu.Trigger className="flex items-center cursor-pointer mt-2 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
           <div className="flex gap-2 hover:text-[#7E7E7E]">
             <div className="flex gap-4">
               <div className="lg:block md:hidden xs:hidden">|</div>
               <div className="flex gap-2">
-                <span>{languages[selectedLanguage].shortName.toUpperCase()}</span>
+                <span>
+                  {languages[selectedLanguage].shortName.toUpperCase()}
+                </span>
                 <img src={languages[selectedLanguage].flagPath} alt="logo" />
               </div>
             </div>
 
             <img
-              src={arrowDown} alt="Arrow Down"
-              className={`mt-0.5 transition-transform ${isMenuOpen ? "rotate-180" : " "}`}
+              src={arrowDown}
+              alt="Arrow Down"
+              className={`mt-0.5 transition-transform ${
+                isMenuOpen ? "rotate-180" : " "
+              }`}
             />
           </div>
         </DropdownMenu.Trigger>

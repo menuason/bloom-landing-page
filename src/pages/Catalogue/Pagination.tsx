@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { ArrowLeftIcon } from "../../assets/icons/arrowLeft/arrowLeft";
-import { ArrowRightIcon } from "../../assets/icons/arrowRight/arrowRight";
+import { ArrowLeftIcon } from "../../../public/icons/arrowLeft/arrowLeft";
+import { ArrowRightIcon } from "../../../public/icons/arrowRight/arrowRight";
+
 
 interface PaginationProps {
   itemsPerPage: number;

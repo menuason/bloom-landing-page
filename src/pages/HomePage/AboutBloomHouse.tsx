@@ -1,14 +1,9 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/Button";
-import { getImageUrl } from "../../firebase.ts";
 import { ArrowIcon } from "../../assets/arrow/arrowIcon.tsx";
 
 export const AboutBloomHouse = () => {
   const { t, i18n } = useTranslation();
-  const [img, setImg] = useState("");
-
-  getImageUrl("home-page/5P4A3419.png").then((url) => setImg(url));
 
   return (
     <>
@@ -64,8 +59,7 @@ export const AboutBloomHouse = () => {
 
         <img
           alt="Bloom House"
-          // src="/src/assets/home-page-photos/5P4A3419.png"
-          src={img}
+          src="../../home-page-photos/5P4A3419.png"
         />
 
         <div

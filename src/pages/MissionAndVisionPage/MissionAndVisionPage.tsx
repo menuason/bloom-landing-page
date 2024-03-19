@@ -11,7 +11,7 @@ const MissionAndVisionPage = () => {
   return (
     <>
       <PageDescriptionHeader
-        image="/src/assets/about-us-page-photos/aboutUs.png"
+        image="../../about-us-page-photos/aboutUs.png"
         title={t("missionAndVisionPage.description.title")}
         navOne={t("missionAndVisionPage.description.nav2")}
         navTwo={t("missionAndVisionPage.description.nav3")}

@@ -1,9 +1,10 @@
 import { FC } from "react";
 import logoLight from "../assets/logo/logo-light.svg";
 import { useTranslation } from "react-i18next";
-import { MailFilledIcon } from "../assets/icons/mail/mail-filled";
-import { LocationFilledIcon } from "../assets/icons/location/location-filled";
-import { PhoneFilledIcon } from "../assets/icons/phone/phone-filled";
+import { PhoneFilledIcon } from "../../public/icons/phone/phone-filled";
+import { MailFilledIcon } from "../../public/icons/mail/mail-filled";
+import { LocationFilledIcon } from "../../public/icons/location/location-filled";
+
 
 const Footer: FC = () => {
   const { t, i18n } = useTranslation();

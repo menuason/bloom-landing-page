@@ -1,9 +1,7 @@
-import { useTranslation } from 'react-i18next';
-import precisionCultivation from '../../assets/icons/iconsForChoosUs/precisionCultivation.svg';
-import temperature from '../../assets/icons/iconsForChoosUs/Temperature.svg';
-import timeCosuming from '../../assets/icons/iconsForChoosUs/timeCosuming.svg';
-import { useState } from 'react';
-import { getImageUrl } from '../../firebase.ts';
+import { useTranslation } from "react-i18next";
+import precisionCultivation from "../../../public/icons/iconsForChoosUs/precisionCultivation.svg";
+import temperature from "../../../public/icons/iconsForChoosUs/Temperature.svg";
+import timeCosuming from "../../../public/icons/iconsForChoosUs/timeCosuming.svg";
 
 interface IconsForChooseUs {
   icon: string;
@@ -19,40 +17,36 @@ interface InfoForChooseUs {
 export const WhyChooseUs = () => {
   const { t } = useTranslation();
 
-  const [img, setImg] = useState('');
-
-  getImageUrl('home-page/5P4A3279.png').then((url) => setImg(url));
-
   const iconsForChooseUs: IconsForChooseUs[] = [
     {
       icon: timeCosuming,
-      text: t('homePage.whyChooseUs.reasons.icons.seedling'),
+      text: t("homePage.whyChooseUs.reasons.icons.seedling"),
     },
     {
       icon: precisionCultivation,
-      text: t('homePage.whyChooseUs.reasons.icons.cultivation'),
+      text: t("homePage.whyChooseUs.reasons.icons.cultivation"),
     },
     {
       icon: temperature,
-      text: t('homePage.whyChooseUs.reasons.icons.temperature'),
+      text: t("homePage.whyChooseUs.reasons.icons.temperature"),
     },
   ];
 
   const infoForChooseUs: InfoForChooseUs[] = [
     {
       number: 1,
-      header: t('homePage.whyChooseUs.reasons.numbers.oneTitle'),
-      description: t('homePage.whyChooseUs.reasons.numbers.oneDescription'),
+      header: t("homePage.whyChooseUs.reasons.numbers.oneTitle"),
+      description: t("homePage.whyChooseUs.reasons.numbers.oneDescription"),
     },
     {
       number: 2,
-      header: t('homePage.whyChooseUs.reasons.numbers.twoTitle'),
-      description: t('homePage.whyChooseUs.reasons.numbers.twoDescription'),
+      header: t("homePage.whyChooseUs.reasons.numbers.twoTitle"),
+      description: t("homePage.whyChooseUs.reasons.numbers.twoDescription"),
     },
     {
       number: 3,
-      header: t('homePage.whyChooseUs.reasons.numbers.threeTitle'),
-      description: t('homePage.whyChooseUs.reasons.numbers.threeDescription'),
+      header: t("homePage.whyChooseUs.reasons.numbers.threeTitle"),
+      description: t("homePage.whyChooseUs.reasons.numbers.threeDescription"),
     },
   ];
 
@@ -64,7 +58,8 @@ export const WhyChooseUs = () => {
         xs:flex-col xs:px-4
       "
     >
-      <div className="flex flex-col text-gray-950 justify-center
+      <div
+        className="flex flex-col text-gray-950 justify-center
           lg:gap-6 lg:self-center
           md:gap-6 md:text-center md:self-center
           xs:gap-3 xs:text-start
@@ -77,7 +72,7 @@ export const WhyChooseUs = () => {
              xs:text-2xl
             "
         >
-          {t('homePage.whyChooseUs.whyChooseUsTitle')}
+          {t("homePage.whyChooseUs.whyChooseUsTitle")}
         </p>
         <div
           className="font-normal
@@ -86,16 +81,12 @@ export const WhyChooseUs = () => {
               xs:text-sm
             "
         >
-          <p>{t('homePage.whyChooseUs.whyChooseDescription')}</p>
+          <p>{t("homePage.whyChooseUs.whyChooseDescription")}</p>
         </div>
       </div>
       <div className="flex mt-9 lg:flex-row md:flex-col xs:flex-col">
         <div className="flex flex-col m-0">
-          <img
-            alt="Bloom House"
-            // src="/src/assets/home-page-photos/5P4A3279.png"
-            src={img}
-          />
+          <img alt="Bloom House" src="../../home-page-photos/5P4A3279.png" />
           <div className="h-40 w-640 flex items-center justify-between">
             {iconsForChooseUs.map((item, index) => {
               return (

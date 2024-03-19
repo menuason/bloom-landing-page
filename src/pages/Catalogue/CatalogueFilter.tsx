@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
-import arrowDown from "../../assets/icons/arrowDown/arrowDown.svg";
+// import arrowDown from "../../assets/icons/arrowDown/arrowDown.svg";
+import arrowDown from "../../../public/icons/arrowDown/arrowDown.svg";
 import FilterItem from "./FilterItem";
 import { useTranslation } from "react-i18next";
 import { Separator } from "@radix-ui/react-separator";

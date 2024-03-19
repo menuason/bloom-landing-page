@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
-import { ArrowRightIcon } from "../assets/icons/arrowRight/arrowRight";
 import i18n from "i18next";
+import { useTranslation } from "react-i18next";
+import { ArrowRightIcon } from "../../public/icons/arrowRight/arrowRight";
 
 interface PageDescriptionHeaderProps {
   image: string;

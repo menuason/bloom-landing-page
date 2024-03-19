@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import { ErrorIcon } from "../../assets/icons/error/error";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/Button";
+import { ErrorIcon } from "../../../public/icons/error/error";
 
 type ContactUsFormInputs = {
   name: string;

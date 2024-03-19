@@ -1,5 +1,6 @@
 import { useState } from "react";
-import hamburger from "../assets/icons/hamburger/hamburger.svg";
+// import hamburger from "../assets/icons/hamburger/hamburger.svg";
+import hamburger from "../../public/icons/hamburger/hamburger.svg"
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 

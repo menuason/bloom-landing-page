@@ -1,6 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { useState } from 'react';
-import { getImageUrl } from '../../firebase.ts';
 
 interface FlowersArr {
   img: string;
@@ -12,45 +10,28 @@ interface FlowersArr {
 export const Assortment = () => {
   const { t } = useTranslation();
 
-  const [images, setImages] = useState<string[]>([])
-
-  const ImagePathsFromFirebase = [
-    "home-page/5P4A32631-1.png",
-    "home-page/5P4A32631-2.png",
-    "home-page/5P4A3265-1.png",
-    "home-page/5P4A3265-2.png",
-    "home-page/5P4A3260-1.png",
-    "home-page/5P4A3260-2.png",
-    "home-page/5P4A3269-1.png",
-    "home-page/5P4A3269-2.png",
-  ];
-
-  Promise.all(
-    ImagePathsFromFirebase.map((img) => getImageUrl(img))
-  ).then((urls) => setImages(urls));
-
   const flowersArr: FlowersArr[] = [
     {
-      img: images[0],
-      hoverImg: images[1],
+      img: "../../home-page-photos/5P4A32631-1.png",
+      hoverImg: "../../home-page-photos/5P4A32631-2.png",
       name: t("homePage.flowers.mondello.name"),
       author: t("homePage.flowers.mondello.author"),
     },
     {
-      img: images[2],
-      hoverImg: images[3],
+      img: "../../home-page-photos/5P4A3265-1.png",
+      hoverImg: "../../home-page-photos/5P4A3265-2.png",
       name: t("homePage.flowers.snowKing.name"),
       author: t("homePage.flowers.snowKing.author"),
     },
     {
-      img: images[4],
-      hoverImg: images[5],
+      img: "../../home-page-photos/5P4A3260-1.png",
+      hoverImg: "../../home-page-photos/5P4A3260-2.png",
       name: t("homePage.flowers.mariatta.name"),
       author: t("homePage.flowers.mariatta.author"),
     },
     {
-      img: images[6],
-      hoverImg: images[7],
+      img: "../../home-page-photos/5P4A3269-1.png",
+      hoverImg: "../../home-page-photos/5P4A3269-2.png",
       name: t("homePage.flowers.briliance.name"),
       author: t("homePage.flowers.briliance.author"),
     },
@@ -76,7 +57,7 @@ export const Assortment = () => {
             xs:text-sm xs:items-start
           "
         >
-          {t("homePage.assortment.aboutBloomHouseDescriptionOne")}
+          {t("homePage.assortment.assortmentSectionDescription")}
         </p>
       </div>
       <div

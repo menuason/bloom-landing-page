@@ -1,5 +1,6 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import arrowDown from "../assets/icons/arrowDown/arrowDown.svg";
+// import arrowDown from "../../assets/icons/arrowDown/arrowDown.svg";
+import arrowDown from "../../public/icons/arrowDown/arrowDown.svg";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
@@ -31,9 +32,7 @@ const AboutUsSelect = () => {
   ];
 
   return (
-    <DropdownMenu.Root
-      onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}
-    >
+    <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
       <DropdownMenu.Trigger
         className="
           flex items-center cursor-pointer text-bloomBlack border-none
@@ -46,7 +45,9 @@ const AboutUsSelect = () => {
           <img
             src={arrowDown}
             alt="Arrow Down"
-            className={`mt-0.5 transition-transform ${isMenuOpen ? "rotate-180" : " "}`}
+            className={`mt-0.5 transition-transform ${
+              isMenuOpen ? "rotate-180" : " "
+            }`}
           />
         </div>
       </DropdownMenu.Trigger>
@@ -69,16 +70,13 @@ const AboutUsSelect = () => {
                   hover:outline-none hover:text-[#7E7E7E]
                 "
                 >
-                  <a href={item.href}>
-                    {item.menuItem.toUpperCase()}
-                  </a>
+                  <a href={item.href}>{item.menuItem.toUpperCase()}</a>
                 </DropdownMenu.Item>
               </div>
             ))}
           </div>
-          <img src="/src/assets/select.png" alt="Bloom House" className="h-[279px]" />
+          <img src="../../select.png" alt="Bloom House" className="h-[279px]" />
         </div>
-
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   );

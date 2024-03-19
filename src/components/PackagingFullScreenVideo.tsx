@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { CloseIcon } from "../assets/icons/close/close";
 import ReactPlayer from "react-player";
+import { CloseIcon } from "../../public/icons/close/close";
 
 export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {

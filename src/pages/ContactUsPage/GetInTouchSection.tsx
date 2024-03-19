@@ -1,9 +1,10 @@
-import { MailFilledIcon } from "../../assets/icons/mail/mail-filled";
-import { LocationFilledIcon } from "../../assets/icons/location/location-filled";
-import { PhoneFilledIcon } from "../../assets/icons/phone/phone-filled";
-import { TelegramIcon } from "../../assets/icons/telegram/telegram";
-import { WhatsappIcon } from "../../assets/icons/whatsapp/whatsapp";
+
 import { useTranslation } from "react-i18next";
+import { PhoneFilledIcon } from "../../../public/icons/phone/phone-filled";
+import { TelegramIcon } from "../../../public/icons/telegram/telegram";
+import { WhatsappIcon } from "../../../public/icons/whatsapp/whatsapp";
+import { MailFilledIcon } from "../../../public/icons/mail/mail-filled";
+import { LocationFilledIcon } from "../../../public/icons/location/location-filled";
 
 const CONTACT_US_ICONS = [
   {

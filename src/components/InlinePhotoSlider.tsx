@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import { ArrowLeftIcon } from "../assets/icons/arrowLeft/arrowLeft";
-import { ArrowRightIcon } from "../assets/icons/arrowRight/arrowRight";
 import { Image, ImageList } from "./ImageList";
+import { ArrowLeftIcon } from "../../public/icons/arrowLeft/arrowLeft";
+import { ArrowRightIcon } from "../../public/icons/arrowRight/arrowRight";
 
 const INTERIOR_PHOTOS = [
   {

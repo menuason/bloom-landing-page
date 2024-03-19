@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { ArrowLeftIcon } from "../assets/icons/arrowLeft/arrowLeft";
-import { CloseIcon } from "../assets/icons/close/close";
-import { ArrowRightIcon } from "../assets/icons/arrowRight/arrowRight";
 import { Image } from "./ImageList";
+import { ArrowLeftIcon } from "../../public/icons/arrowLeft/arrowLeft";
+import { CloseIcon } from "../../public/icons/close/close";
+import { ArrowRightIcon } from "../../public/icons/arrowRight/arrowRight";
 
 interface ImageSliderProps {
   image: Image | null;

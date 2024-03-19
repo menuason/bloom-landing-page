@@ -3,13 +3,13 @@ import InlinePhotoSlider from "../../components/InlinePhotoSlider";
 
 const INTERIOR_PHOTOS_INLINE = [
   {
-    thumbnail: "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Finterior.png?alt=media&token=9ee3246e-6f61-4b50-8306-1a074c9d1c65",
+    thumbnail: "../../about-us-page-photos/interior/interior.png",
     sliderImages: {
       images: [
-        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Finterior.png?alt=media&token=9ee3246e-6f61-4b50-8306-1a074c9d1c65",
-        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Fslider-1.png?alt=media&token=07390958-a7f0-4533-8d69-4f3d99dda912",
-        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Fslider-2.png?alt=media&token=05aafbd4-b802-47e1-a4cf-50655d850c10",
-        "https://firebasestorage.googleapis.com/v0/b/bloom-landing-page.appspot.com/o/aboutUsPhotos%2Finterior%2Fslider-3.png?alt=media&token=0eb5aa46-dff8-4d23-83bd-47861d9ff827",
+        "../../about-us-page-photos/interior/interior.png",
+        "../../about-us-page-photos/interior/slider-1.png",
+        "../../about-us-page-photos/interior/slider-2.png",
+        "../../about-us-page-photos/interior/slider-3.png",
       ],
     },
   },
