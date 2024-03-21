@@ -3,7 +3,6 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { useTranslation } from "react-i18next";
 import { RootComponent } from "./components/RootComponent";
-// import { BarLoader } from "react-spinners";
 
 const HomePage = React.lazy(() => import("./pages/HomePage/HomePage"));
 const PackagingPage = React.lazy(() => import("./pages/PackagingPage/PackagingPage"));
