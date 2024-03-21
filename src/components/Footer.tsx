@@ -84,7 +84,7 @@ const Footer: FC = () => {
         </div>
 
         <div className="w-72 mt-4 flex flex-col justify-center items-baseline flex-wrap gap-4">
-          <p className="mb-2 text-sm">{t("footer.contactInfo.contact")}</p>
+          <p className="mb-2 text-sm">{t("footer.contactInfo.information")}</p>
           <div className="flex items-center gap-2 text-white">
             <PhoneFilledIcon color={"white"} />
             <a href="tel:+374 77103567">

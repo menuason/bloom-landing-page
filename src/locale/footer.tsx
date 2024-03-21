@@ -9,7 +9,7 @@ const FooterTranslation = {
       contact: "Contact",
     },
     contactInfo: {
-      contact: "Contact",
+      information: "Information",
       location: "Marmarashen village Yerevan-Ararat highway 136/1",
     },
   },
@@ -23,7 +23,7 @@ const FooterTranslation = {
       contact: "Контакт",
     },
     contactInfo: {
-      contact: "Контакт",
+      information: "Информация",
       location: "Село Мармарашен шоссе Ереван-Арарат 136/1",
     },
   },
@@ -37,7 +37,7 @@ const FooterTranslation = {
       contact: "Կապ",
     },
     contactInfo: {
-      contact: "Կապ",
+      information: "Տեղեկություն",
       location: "Գյուղ Մարմարաշեն Երևան-Արարատ խճուղի 136/1",
     },
   },
