@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-// import arrowDown from "../assets/icons/arrowDown/arrowDown.svg";
-import arrowDown from "../../public/icons/arrowDown/arrowDown.svg";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { ArrowDownIcon } from "../../public/icons/arrowDown/arrowDownIcon";
 
 type LanguageInfo = {
   shortName: string;
@@ -31,7 +30,7 @@ const MultiLanguageSelect = () => {
   const navigate = useNavigate();
 
   const [selectedLanguage, setSelectedLanguage] = useState(
-    lang || i18n.language
+    lang || i18n.language,
   );
 
   const changeLanguage = (language: string) => {
@@ -50,11 +49,12 @@ const MultiLanguageSelect = () => {
   return (
     <>
       <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
-        <DropdownMenu.Trigger className="flex items-center cursor-pointer mt-2 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
+        <DropdownMenu.Trigger
+          className="flex items-center cursor-pointer mt-2 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
           <div className="flex gap-2 hover:text-[#7E7E7E]">
             <div className="flex gap-4">
-              <div className="lg:block md:hidden xs:hidden">|</div>
-              <div className="flex gap-2">
+              <div className="lg:block md:hidden xs:hidden text-[#7E7E7E]">|</div>
+              <div className="flex gap-2 font-medium hover:text-[#7E7E7E]">
                 <span>
                   {languages[selectedLanguage].shortName.toUpperCase()}
                 </span>
@@ -62,13 +62,7 @@ const MultiLanguageSelect = () => {
               </div>
             </div>
 
-            <img
-              src={arrowDown}
-              alt="Arrow Down"
-              className={`mt-0.5 transition-transform ${
-                isMenuOpen ? "rotate-180" : " "
-              }`}
-            />
+            <ArrowDownIcon className={`flex items-center transition-transform ${isMenuOpen ? "rotate-180" : " "}`} />
           </div>
         </DropdownMenu.Trigger>
 
@@ -80,7 +74,7 @@ const MultiLanguageSelect = () => {
             <DropdownMenu.Item
               key={item}
               onSelect={() => changeLanguage(`${item}`)}
-              className="flex justify-between gap-2 py-2 tracking-wide cursor-pointer hover:outline-none normal hover:text-[#7E7E7E]"
+              className="flex font-medium justify-between gap-2 py-2 tracking-wide cursor-pointer hover:outline-none normal hover:text-[#7E7E7E]"
             >
               <span>{languages[item].shortName.toUpperCase()}</span>
               <img src={languages[item].flagPath} alt="logo" />

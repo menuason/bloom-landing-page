@@ -49,7 +49,7 @@ const OurSystemPage = () => {
          "
         >
           <p
-            className="text-4xl text-gray-950 items-center font-medium
+            className="text-4xl text-bloomTitle items-center font-medium
              lg:text-3xl lg:self-start
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
@@ -58,10 +58,10 @@ const OurSystemPage = () => {
             {t("systemPage.mainContent.title")}
           </p>
           <div
-            className="font-normal
+            className="font-normal text-bloomBody
               lg:text-base
               md:text-sm
-              xs:text-base
+              xs:text-base xs:leading-6
             "
           >
             <p>
@@ -99,7 +99,7 @@ const OurSystemPage = () => {
           "
         >
           <p
-            className="font-medium
+            className="font-medium text-bloomTitle
              lg:text-3xl lg:self-center
              md:text-2xl md:self-center
              xs:text-2xl  xs:self-start
@@ -108,7 +108,7 @@ const OurSystemPage = () => {
             {t("systemPage.gallerySection.title")}
           </p>
           <p
-            className="font-normal text-[#323232]
+            className="font-normal text-bloomBody
               lg:text-base
               md:text-sm
               xs:text-base

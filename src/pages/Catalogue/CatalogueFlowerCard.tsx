@@ -26,10 +26,10 @@ const CatalogueFlowerCard: FC<CatalogueFlowerCardProps> = ({ flower }) => {
         />
       </div>
       <div className="flex flex-col py-3 gap-1 bg-white w-full items-start">
-        <span className="font-medium text-base lg:text-base md:text-base xs:text-xs">
+        <span className="font-medium text-base text-start lg:text-lg md:text-base xs:text-xs">
           {flower.name}
         </span>
-        <span className="font-light text-sm lg:text-sm md:text-sm xs:text-xs">
+        <span className="font-light text-sm text-start lg:text-sm md:text-sm xs:text-xs">
           {flower.brand}
         </span>
       </div>

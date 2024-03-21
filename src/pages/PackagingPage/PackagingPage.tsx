@@ -31,14 +31,14 @@ const PACKAGING_IMAGE_LIST = [
 
 interface PackagingPageProps {}
 
-const PackagingPage:FC<PackagingPageProps> = () => {
+const PackagingPage: FC<PackagingPageProps> = () => {
   const { t } = useTranslation();
 
   return (
     <>
       <PageDescriptionHeader
         image="../../packaging-page-photos/packaging.png"
-        title={t("systemPage.system.title")}
+        title={t("packagingPage.packaging.title")}
         navOne={t("packagingPage.packaging.nav2")}
       />
 
@@ -49,22 +49,22 @@ const PackagingPage:FC<PackagingPageProps> = () => {
         xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
        "
       >
-        <PackagingFullScreenVideo>
-          <div className="relative">
-            <img
-              alt="Bloom House"
-              src="../../packaging-page-photos/mainPic.png"
-              className="w-full h-full"
-            />
+        <div className="flex relative">
+          <img
+            alt="Bloom House"
+            src="../../packaging-page-photos/mainPic.png"
+            className="w-full h-full"
 
+          />
+          <PackagingFullScreenVideo>
             <PlayIcon
               width={60}
               height={60}
               color="white"
               className="flex items-center justify-center bg-black/[.2] w-full h-full lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             />
-          </div>
-        </PackagingFullScreenVideo>
+          </PackagingFullScreenVideo>
+        </div>
 
         <div
           className="flex flex-col text-gray-950 justify-center
@@ -74,7 +74,7 @@ const PackagingPage:FC<PackagingPageProps> = () => {
          "
         >
           <p
-            className="text-4xl text-gray-950
+            className="text-4xl text-bloomTitle font-medium
              lg:text-3xl lg:self-start
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
@@ -83,10 +83,10 @@ const PackagingPage:FC<PackagingPageProps> = () => {
             {t("packagingPage.mainContent.title")}
           </p>
           <div
-            className="font-normal
+            className="font-normal text-bloomBody
             lg:text-base
             md:text-sm
-            xs:text-base
+            xs:text-base xs:leading-6
            "
           >
             <p>{t("packagingPage.mainContent.text.p1")}</p>
@@ -118,14 +118,14 @@ const PackagingPage:FC<PackagingPageProps> = () => {
         "
       >
         <div
-          className="flex flex-col items-center gap-2 text-gray-950 justify-center
+          className="flex flex-col items-center gap-2 text-bloomTitle justify-center
           lg:self-center
           md:self-center
           xs:self-start
         "
         >
           <p
-            className="
+            className="font-medium
              lg:text-3xl lg:self-center
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
@@ -134,7 +134,7 @@ const PackagingPage:FC<PackagingPageProps> = () => {
             {t("packagingPage.gallerySection.title")}
           </p>
           <p
-            className="font-normal text-[#323232]
+            className="font-normal text-bloomBody
             lg:text-base
             md:text-sm
             xs:text-base

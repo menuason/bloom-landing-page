@@ -1,10 +1,9 @@
 import { FC, useState } from "react";
-// import arrowDown from "../../assets/icons/arrowDown/arrowDown.svg";
-import arrowDown from "../../../public/icons/arrowDown/arrowDown.svg";
 import FilterItem from "./FilterItem";
 import { useTranslation } from "react-i18next";
 import { Separator } from "@radix-ui/react-separator";
 import { Colors } from "../../components/FilterSection";
+import { ArrowDownIcon } from "../../../public/icons/arrowDown/arrowDownIcon";
 
 interface CatalogueFilterProps {
   colors: Colors;
@@ -44,7 +43,7 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({
         >
           {t("cataloguePage.filterType.colour")}
           <span className={`transform ${isColorsOpen ? "rotate-180" : " "}`}>
-            <img src={arrowDown} alt="Arrow Down" />
+            <ArrowDownIcon />
           </span>
         </button>
         <div
@@ -68,7 +67,7 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({
         >
           {t("cataloguePage.filterType.brand")}
           <span className={`transform ${isBrandsOpen ? "rotate-180" : " "}`}>
-            <img src={arrowDown} alt="Arrow Down" />
+           <ArrowDownIcon />
           </span>
         </button>
         <div

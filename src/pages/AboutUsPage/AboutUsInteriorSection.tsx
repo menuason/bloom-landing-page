@@ -34,7 +34,7 @@ export const AboutUsInteriorSection = () => {
        "
       >
         <p
-          className="text-4xl text-gray-950 font-normal
+          className="text-4xl text-bloomTitle font-medium
            lg:text-3xl lg:self-start
            md:text-2xl md:self-center
            xs:text-2xl xs:self-start
@@ -43,13 +43,13 @@ export const AboutUsInteriorSection = () => {
           {t("aboutUsPage.interiorSection.title")}
         </p>
         <div
-          className="flex flex-col gap-8 font-normal
+          className="flex flex-col gap-8 font-normal text-bloomBody
           lg:text-base
           md:text-sm
           xs:text-base
          "
         >
-          <div className="flex flex-col w-full lg:gap-6">
+          <div className="flex flex-col w-full lg:gap-6 xs:leading-6">
             <div className="flex flex-col">
               <p>{t("aboutUsPage.interiorSection.p1")}</p>
               <p>{t("aboutUsPage.interiorSection.p2")}</p>
@@ -60,7 +60,7 @@ export const AboutUsInteriorSection = () => {
                 md:flex md:flex-col
                "
             >
-              <div className="flex flex-col lg:gap-6">
+              <div className="flex flex-col lg:gap-6 xs:leading-6">
                 <p>{t("aboutUsPage.interiorSection.p3")}</p>
                 <p>{t("aboutUsPage.interiorSection.p4")}</p>
               </div>
@@ -73,7 +73,7 @@ export const AboutUsInteriorSection = () => {
         <div className="w-full h-full">
           <InlinePhotoSlider images={INTERIOR_PHOTOS_INLINE} />
         </div>
-        <div className="hidden lg:hidden md:hidden xs:block xs:text-base ">
+        <div className="hidden lg:hidden md:hidden xs:block xs:text-base text-bloomBody xs:leading-6">
           <p>{t("aboutUsPage.interiorSection.p3")}</p>
           <p>{t("aboutUsPage.interiorSection.p4")}</p>
         </div>

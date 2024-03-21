@@ -503,7 +503,7 @@ export const FilterSection = () => {
     <div
       className="
         flex mb-20 justify-start
-        lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:flex lg:mb-[156px] lg:flex-row
+        lg:gap-[72px] lg:px-20 lg:mt-10 lg:flex lg:mb-[156px] lg:flex-row
         md:mb-24 md:px-8 md:mt-8 md:flex-col
         xs:mb-14 xs:flex-col xs:px-4 xs:mt-8
       "

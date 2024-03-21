@@ -3,9 +3,8 @@ const HomePageTranslation = {
     videoNotSupported: "Your browser does not support the video tag.",
     assortment: {
       assortmentSectionTitle: "Our Unique Assortment",
-      aboutBloomHouseDescriptionOne:
-        "Gerberas stand out for their uniqueness. Each petal is meticulously cared for, standing " +
-        "out for its color and elegance.",
+      assortmentSectionDescription: "Gerberas stand out for their uniqueness. Each petal is meticulously cared for, standing " +
+        "out for its color and elegance."
     },
     flowers: {
       mondello: {
@@ -27,19 +26,17 @@ const HomePageTranslation = {
     },
     aboutBloomHouse: {
       aboutBloomHouseTitle: "Explore Our Greenhouse!",
-      aboutBloomHouseDescription:
-        "All of our flowers meet the required quality standards, confirming \n" +
+      aboutBloomHouseDescription: "All of our flowers meet the required quality standards, confirming \n" +
         "and reinforcing our commitment to excellence. In the greenhouse industry, \n" +
         "we aim to set an example by setting new standards that reaffirm our commitment to creating a harmonious balance of quality and beauty.",
       aboutBloomHouseDescriptionOne:
-        "All of our flowers meet the required quality standards, confirming and reinforcing our commitment to excellence.",
-      aboutBloomHouseDescriptionTwo:
-        "In the greenhouse industry, we aim to set an example by setting new standards that " +
+       "All of our flowers meet the required quality standards, confirming and reinforcing our commitment to excellence.",
+      aboutBloomHouseDescriptionTwo: "In the greenhouse industry, we aim to set an example by setting new standards that " +
         "reaffirm our commitment to creating a harmonious balance of quality and beauty.",
       aboutBloomHouseButton: "See More",
     },
     whyChooseUs: {
-      whyChooseUsTitle: "Why choose us?",
+      whyChooseUsTitle: "Why Choose Us?",
       whyChooseDescription:
         "Our greenhouse provides optimal conditions for cultivating gerberas.",
       reasons: {
@@ -92,20 +89,17 @@ const HomePageTranslation = {
     },
     aboutBloomHouse: {
       aboutBloomHouseTitle: "Исследуйте Наш Тепличный!",
-      aboutBloomHouseDescription:
-        "Все наши цветы соответствуют необходимым стандартам качества, что подтверждает и усиливает" +
+      aboutBloomHouseDescription: "Все наши цветы соответствуют необходимым стандартам качества, что подтверждает и усиливает" +
         " наше стремление к совершенству. В тепличной отрасли мы стремимся подать пример, устанавливая новые стандарты," +
         " которые подтверждают нашу приверженность созданию гармоничного баланса качества и красоты.",
-      aboutBloomHouseDescriptionOne:
-        "Все наши цветы соответствуют необходимым стандартам качества, что подтверждает и" +
+      aboutBloomHouseDescriptionOne: "Все наши цветы соответствуют необходимым стандартам качества, что подтверждает и" +
         " усиливает наше стремление к совершенству.",
-      aboutBloomHouseDescriptionTwo:
-        " В тепличной отрасли мы стремимся подать пример, устанавливая новые стандарты которые" +
+      aboutBloomHouseDescriptionTwo:" В тепличной отрасли мы стремимся подать пример, устанавливая новые стандарты которые" +
         " подтверждают нашу приверженность созданию гармоничного баланса качества и красоты.",
       aboutBloomHouseButton: "Узнать Больше",
     },
     whyChooseUs: {
-      whyChooseUsTitle: "Почему выбрали нас?",
+      whyChooseUsTitle: "Почему Выбрали Нас?",
       whyChooseDescription:
         "В нашей теплице созданы оптимальные условия для выращивания гербер.",
       reasons: {

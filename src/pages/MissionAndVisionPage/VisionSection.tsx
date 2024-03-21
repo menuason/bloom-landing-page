@@ -15,7 +15,7 @@ export const VisionSection = () => {
         xs:gap-3
        "
       >
-        <p className="text-4xl text-gray-950 font-medium
+        <p className="text-4xl text-bloomTitle font-medium
            lg:text-3xl lg:text-start
            md:text-2xl md:text-center
            xs:text-2xl xs:text-start
@@ -24,10 +24,10 @@ export const VisionSection = () => {
           {t("missionAndVisionPage.vision.title")}
         </p>
 
-        <div className="flex flex-col font-normal
+        <div className="flex flex-col font-normal text-bloomBody
           lg:text-base lg:pr-5
           md:text-sm
-          xs:text-base
+          xs:text-base xs:leading-6
          "
         >
           <p>{t("missionAndVisionPage.vision.texts.p1")}</p>

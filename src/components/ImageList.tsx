@@ -97,10 +97,9 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
         className="flex gap-4 cursor-pointer
         lg:w-full lg:h-full
         md:w-full md:h-full
-        xs:w-[350px] xs:h-[210px] xs:overflow-x-auto xs:overflow-y-hidden
+         xs:h-[210px] xs:overflow-x-auto xs:overflow-y-hidden
       "
       >
-
         {images.map((image, index) =>
           image.hoverImg ? (
             (

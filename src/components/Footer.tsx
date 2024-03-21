@@ -5,12 +5,11 @@ import { PhoneFilledIcon } from "../../public/icons/phone/phone-filled";
 import { MailFilledIcon } from "../../public/icons/mail/mail-filled";
 import { LocationFilledIcon } from "../../public/icons/location/location-filled";
 
-
 const Footer: FC = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="bg-[#232427] text-white w-full flex flex-col bottom-0">
+    <div className="bg-[#232427] text-white w-full flex flex-col bottom-0 ">
       <div
         className="
         flex items-center justify-between
@@ -111,7 +110,7 @@ const Footer: FC = () => {
           <div className="flex gap-2 text-white">
             <LocationFilledIcon color={"white"} />
             <a
-              href="https://maps.google.com?q=Marmarashen+village+Yerevan-Ararat+highway+136/1"
+              href="https://www.google.com/maps/place/46th+St,+0815/@40.0488,44.4698,17z/data=!4m6!3m5!1s0x406ac7dd852d1143:0xfda2d06cdeba888!8m2!3d40.0487835!4d44.4721143!16s%2Fg%2F11f7r131dm?hl=en&entry=ttu"
               target="_blank"
               rel="noopener noreferrer"
             >
