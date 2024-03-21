@@ -158,7 +158,7 @@ export const AboutUsGallerySection = () => {
             className="font-normal text-[#323232]
               lg:text-base
               md:text-sm
-              xs:text-sm
+              xs:text-base
             "
           >
             {t("aboutUsPage.gallerySection.text")}

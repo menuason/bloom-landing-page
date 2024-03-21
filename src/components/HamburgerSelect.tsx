@@ -1,8 +1,7 @@
-import { useState } from "react";
-// import hamburger from "../assets/icons/hamburger/hamburger.svg";
-import hamburger from "../../public/icons/hamburger/hamburger.svg"
-import { useTranslation } from "react-i18next";
+import { SyntheticEvent, useState } from "react";
 import i18n from "i18next";
+import { useTranslation } from "react-i18next";
+import hamburger from "../../public/icons/hamburger/hamburger.svg";
 
 const HamburgerSelect = () => {
   const { t } = useTranslation();
@@ -40,9 +39,10 @@ const HamburgerSelect = () => {
 
   const [show, setShow] = useState(false);
 
-  const handleHamburgerToggle = () => {
-    setShow(!show);
+  const handleHamburgerToggle = (e: SyntheticEvent) => {
+    e.stopPropagation();
 
+    setShow(!show);
     if (!show) {
       document.body.style.overflow = "hidden";
     } else {
@@ -65,23 +65,25 @@ const HamburgerSelect = () => {
 
       {show && (
         <div
-          className="fixed top-0 right-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-10"
+          className="fixed top-0 right-0 h-full bg-black bg-opacity-50 z-10 w-full"
           onClick={handleHamburgerToggle}
         >
           <div
-            className="flex flex-col gap-3 absolute top-0 left-0 w-[337px] h-full py-8 px-4 bg-white"
-            onClick={(e) => e.stopPropagation()}
+            className={`flex flex-col gap-3 top-0 left-0 h-full py-8 pl-4 bg-white z-10 items-start md:w-[377px] xs:w-9/12
+            animate-fade-right animate-once animate-duration-300 overflow-hidden`}
           >
-            <div>
-              {
-                NAV_BAR_ITEMS_MOB.map((item) => {
-                  return (
-                    <a href={item.href} key={item.title} className="flex self-center py-3 px-4 -mx-4 border-b border-gray-100">
-                      {item.title}
-                    </a>
-                  )
-                })
-              }
+            <div className="w-full">
+              {NAV_BAR_ITEMS_MOB.map((item) => {
+                return (
+                  <a
+                    href={item.href}
+                    key={item.title}
+                    className="flex self-center py-3 px-4 -mx-4 border-b border-gray-100 uppercase"
+                  >
+                    {item.title}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

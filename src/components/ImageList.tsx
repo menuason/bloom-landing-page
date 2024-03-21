@@ -82,6 +82,14 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === "ArrowLeft") {
+      handleBack();
+    } else if (e.key === "ArrowRight") {
+      handleNext();
+    }
+  };
+
   return (
     <>
       <div
@@ -153,6 +161,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
           onClose={handleDialogClose}
           onBack={handleBack}
           onNext={handleNext}
+          handleKeyDown={handleKeyDown}
         />
       </div>
     </>

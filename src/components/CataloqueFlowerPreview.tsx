@@ -6,7 +6,6 @@ import { CloseIcon } from "../../public/icons/close/close";
 import { ArrowLeftIcon } from "../../public/icons/arrowLeft/arrowLeft";
 import { ArrowRightIcon } from "../../public/icons/arrowRight/arrowRight";
 
-
 interface DialogDemoProps {
   id: string;
   flowers: CatalogueFlower[];
@@ -43,6 +42,14 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
     setSelectedFlower(flowers[prevInd]);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === "ArrowLeft") {
+      handleBack();
+    } else if (e.key === "ArrowRight") {
+      handleNext();
+    }
+  };
+
   return (
     <Dialog.Root>
       <Dialog.Trigger
@@ -57,7 +64,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
           className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white
             lg:h-[554px] lg:w-[1024px] lg:p-9
             md:h-[802px] md:w-[656px] md:p-9
-            xs:w-[328px] xs:h-[550px] xs:p-2 xs:mt-6
+            xs:w-[328px] xs:h-[492px] xs:px-2 xs:mt-6
           "
         >
           <Dialog.Close asChild>
@@ -71,7 +78,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
           <div
             className={`flex justify-center lg:gap-8 md:gap-4 items-center h-[${previewContentSize}]`}
           >
-            <button autoFocus onClick={handleBack} onKeyDown={handleBack}>
+            <button autoFocus onClick={handleBack} onKeyDown={handleKeyDown}>
               <ArrowLeftIcon
                 color="black"
                 width={11}
@@ -84,7 +91,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
               className="flex items-center
               lg:flex-row lg:gap-10
               md:flex-col md:gap-8
-              xs:flex-col xs:gap-[52px] xs:p-2
+              xs:flex-col xs:gap-4 xs:p-2
              "
             >
               <div
@@ -132,7 +139,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
                 </div>
               </div>
             </div>
-            <button autoFocus onClick={handleNext} onKeyDown={handleNext}>
+            <button autoFocus onClick={handleNext} onKeyDown={handleKeyDown}>
               <ArrowRightIcon
                 color="black"
                 width={11}

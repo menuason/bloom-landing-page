@@ -5,7 +5,8 @@ import timeCosuming from "../../../public/icons/iconsForChoosUs/timeCosuming.svg
 
 interface IconsForChooseUs {
   icon: string;
-  text: string;
+  textOne: string;
+  textTwo: string;
 }
 
 interface InfoForChooseUs {
@@ -20,15 +21,18 @@ export const WhyChooseUs = () => {
   const iconsForChooseUs: IconsForChooseUs[] = [
     {
       icon: timeCosuming,
-      text: t("homePage.whyChooseUs.reasons.icons.seedling"),
+      textOne: t("homePage.whyChooseUs.reasons.icons.seedling1"),
+      textTwo: t("homePage.whyChooseUs.reasons.icons.seedling2"),
     },
     {
       icon: precisionCultivation,
-      text: t("homePage.whyChooseUs.reasons.icons.cultivation"),
+      textOne: t("homePage.whyChooseUs.reasons.icons.cultivation1"),
+      textTwo: t("homePage.whyChooseUs.reasons.icons.cultivation2"),
     },
     {
       icon: temperature,
-      text: t("homePage.whyChooseUs.reasons.icons.temperature"),
+      textOne: t("homePage.whyChooseUs.reasons.icons.temperature1"),
+      textTwo: t("homePage.whyChooseUs.reasons.icons.temperature2"),
     },
   ];
 
@@ -78,7 +82,7 @@ export const WhyChooseUs = () => {
           className="font-normal
               lg:text-base
               md:text-sm
-              xs:text-sm
+              xs:text-base
             "
         >
           <p>{t("homePage.whyChooseUs.whyChooseDescription")}</p>
@@ -95,15 +99,26 @@ export const WhyChooseUs = () => {
                   className="w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
                 >
                   <img src={item.icon} alt="Bloom House" />
-                  <p
-                    className="w-1/2 text-center font-normal
+                  <span>
+                    <p
+                      className="text-center font-normal
                       lg:text-base
-                      md:text-sm md:w-2/6
-                      xs:text-sm xs:w-10/12
+                      md:text-sm
+                      xs:text-base
                     "
-                  >
-                    {item.text}
-                  </p>
+                    >
+                      {item.textOne}
+                    </p>
+                    <p
+                      className="text-center font-normal
+                      lg:text-base
+                      md:text-sm
+                      xs:text-base
+                    "
+                    >
+                      {item.textTwo}
+                    </p>
+                  </span>
                 </div>
               );
             })}

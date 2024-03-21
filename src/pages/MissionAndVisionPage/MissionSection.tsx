@@ -28,7 +28,7 @@ export const MissionSection = () => {
         <div className="flex flex-col font-normal
           lg:text-base
           md:text-sm
-          xs:text-sm
+          xs:text-base
          "
         >
           <p>

@@ -502,10 +502,11 @@ export const FilterSection = () => {
   return (
     <div
       className="
-      flex mb-20
-      lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:flex lg:mb-[156px] lg:flex-row
-      md:mb-24 md:px-8 md:flex-col
-      xs:mb-14 xs:flex-col xs:px-4 xs:py-6"
+        flex mb-20 justify-start
+        lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:flex lg:mb-[156px] lg:flex-row
+        md:mb-24 md:px-8 md:mt-8 md:flex-col
+        xs:mb-14 xs:flex-col xs:px-4 xs:mt-8
+      "
     >
       <button
         className="lg:hidden md:flex xs:flex flex border-none hover:outline-none hover:border-none "
@@ -518,17 +519,17 @@ export const FilterSection = () => {
       </button>
 
       <div
-        className={`fixed flex items-center justify-center overflow-hidden
+        className={`fixed flex items-center justify-start overflow-hidden
         ${showFilter && "bg-black bg-opacity-50 z-10 inset-0 w-full h-full"}`}
         onClick={handleToggle}
       >
         <div
           className={`overflow-hidden flex flex-col gap-3 absolute top-0 left-0 h-full  bg-white transform transition-transform ease-in-out duration-400
-             ${showFilter ? "w-[337px] py-8 px-4" : "w-0 p-0"}`}
+             ${showFilter ? "w-[337px] py-8 px-4 overflow-hidden" : "w-0 p-0"}`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col gap-3 ">
-            <p className="font-normal md:text-base md:text- xs:text-sm">
+            <p className="font-normal md:text-base md:text- xs:text-base">
               {t("cataloguePage.filterHeader.showing")} |
               {catalogueFlowers.length + " "}
               {t("cataloguePage.filterHeader.items")}
@@ -547,12 +548,16 @@ export const FilterSection = () => {
 
       <div
         className="
-            lg:flex
-            md:hidden
-            xs:hidden
-            flex flex-col gap-2 max-w-70"
+          lg:flex
+          md:hidden
+          xs:hidden
+          flex flex-col gap-2 max-w-70
+          sticky
+          top-[120px]
+          max-h-[100vh]
+        "
       >
-        <p className="font-normal md:text-base xs:text-sm">
+        <p className="font-normal md:text-base xs:text-base">
           {t("cataloguePage.filterHeader.showing")} |
           {catalogueFlowers.length + " "}
           {t("cataloguePage.filterHeader.items")}
