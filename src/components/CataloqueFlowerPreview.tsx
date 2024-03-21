@@ -53,7 +53,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
   return (
     <Dialog.Root>
       <Dialog.Trigger
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center"
         onClick={handleSelectFlower}
       >
         {children}
