@@ -36,18 +36,18 @@ export const GetInTouchSection = () => {
   return (
     <div
       className="flex flex-col gap-8
-        lg:pl-[104px] lg:mb-[137px]
+        lg:mb-[137px] md:px-4 xs:self-center md:w-full
     "
     >
-      <p className="lg:w-[200px] md:w-full xs:w-[200px] text-2xl font-medium">
+      <p className="lg:w-[200px] md:w-full xs:w-[200px] text-2xl font-medium text-bloomTitle xs:items-center">
         {t("contactUsPage.mainContent.title")}
       </p>
 
       <div
-        className="flex
-        lg:flex-col lg:gap-6
-        md:flex-row md:gap-[112px]
-        xs:flex-col xs:gap-6
+        className="flex w-full
+        lg:flex-col lg:gap-6 lg:items-start
+        md:flex-row md:gap-10 md:justify-between
+        xs:flex-col xs:gap-6 xs:items-center
       "
       >
         <div
@@ -57,11 +57,11 @@ export const GetInTouchSection = () => {
            xs:gap-6
         "
         >
-          <div className="font-medium text-lg w-fit border-b border-bloomBlack">
+          <div className="font-medium text-lg w-fit border-b border-bloomBody text-bloomBody">
             <p>{t("contactUsPage.mainContent.subTitleOne")}</p>
           </div>
           {CONTACT_US_ICONS.map((item) => (
-            <div key={item.name} className="flex gap-4 items-center tracking-wider">
+            <div key={item.name} className="flex gap-4 items-center tracking-wider text-bloomBody">
               {item.icon}
               <div className="flex gap-1 items-center tracking-wider">
                 <a href={item.link.tel1}>
@@ -77,11 +77,11 @@ export const GetInTouchSection = () => {
         </div>
 
         <div className="flex flex-col lg:gap-6 md:gap-4 xs:gap-6">
-          <div className="font-medium text-lg w-fit border-b border-bloomBlack">
+          <div className="font-medium text-lg w-fit border-b border-bloomBody text-bloomBody">
             <p>{t("contactUsPage.mainContent.subTitleTwo")}</p>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-bloomBody">
             <div className="flex gap-4 items-center tracking-wider">
               <MailFilledIcon color={"black"} />
               <a href="mailto:bloomhouse.arm@gmail.com">

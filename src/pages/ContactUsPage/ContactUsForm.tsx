@@ -36,13 +36,13 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div className="flex flex-col pr-[104px] gap-8">
-      <div className="text-lg font-normal lg:w-[580px] md:w-[580px] xs:w-[295px]">
-        <p>{t("contactUsPage.form.title")}</p>
-      </div>
+    <div className="flex flex-col gap-8 w-full xs:px-4 xs:items-center lg:items-end">
+      <form onSubmit={handleSubmit(onSubmit)} className="contents">
+        <div className="flex flex-col gap-8 w-fit lg:mt-2 md:w-full">
+          <div className="text-lg font-normal lg:w-[580px] md:w-[580px] xs:w-[295px] text-bloomTitle">
+            <p>{t("contactUsPage.form.title")}</p>
+          </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex flex-col gap-8 w-fit">
           <div
             className="flex gap-8
               lg:flex-row lg:justify-between
@@ -53,7 +53,7 @@ const ContactUsForm = () => {
             <div className="flex flex-col gap-2 font-normal">
               <label htmlFor="name">{t("contactUsPage.form.inputOne")}</label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
                 type="text"
                 id="name"
                 {...register("name", { required: "Name is required" })}
@@ -65,12 +65,12 @@ const ContactUsForm = () => {
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-2 font-normal">
+            <div className="flex flex-col gap-2 font-normal text-bloomBody">
               <label htmlFor="surname">
                 {t("contactUsPage.form.inputTwo")}
               </label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
                 type="text"
                 id="surname"
                 {...register("surname", { required: "Surname is required" })}
@@ -91,12 +91,12 @@ const ContactUsForm = () => {
               xs:flex-col
             "
           >
-            <div className="flex flex-col gap-2 font-normal">
+            <div className="flex flex-col gap-2 font-normal text-bloomBody">
               <label htmlFor="email">
                 {t("contactUsPage.form.inputThree")}
               </label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
                 type="email"
                 id="email"
                 {...register("email", { required: "Email is required" })}
@@ -108,10 +108,10 @@ const ContactUsForm = () => {
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-2 font-normal">
+            <div className="flex flex-col gap-2 font-normal text-bloomBody">
               <label htmlFor="phone">{t("contactUsPage.form.inputFour")}</label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBlack outline-none px-2"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
                 type="tel"
                 id="phone"
                 {...register("phone", { required: "Phone is required" })}
@@ -125,11 +125,11 @@ const ContactUsForm = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 font-normal">
+          <div className="flex flex-col gap-2 font-normal text-bloomBody">
             <label htmlFor="message">{t("contactUsPage.form.textarea")}</label>
             <textarea
               id="message"
-              className="border border-bloomBlack resize-none outline-none px-2"
+              className="border border-bloomBody resize-none outline-none px-2"
               rows={6}
               {...register("message", { required: "Message is required" })}
             ></textarea>
@@ -144,7 +144,7 @@ const ContactUsForm = () => {
           <div>
             <Button
               className="
-                w-[150px] h-12 flex items-center justify-center bg-[#232427]
+                w-[150px] h-12 flex items-center justify-center
                 md:w-[134px] md:h-12
                 xs:w-[134px] xs:h-9
               "

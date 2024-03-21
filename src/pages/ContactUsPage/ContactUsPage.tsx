@@ -15,7 +15,7 @@ const ContactUsPage = () => {
       />
       <div
         className="flex
-          lg:mt-[72px] lg:mb-[108px] lg:mx-20 lg:flex-row lg:justify-between
+          lg:mt-[72px] lg:mb-[108px] lg:mx-20 lg:flex-row lg:justify-between lg:px-[104px]
           md:mt-12 md:mb-[72px] md:mx-8 md:flex-col md:gap-12
           xs:mt-6 xs:mb-14 xs:mx-4 xs:flex-col xs:gap-8
         "

@@ -20,14 +20,14 @@ export const AboutUsSection = () => {
         image="../../about-us-page-photos/mainPic1.png"
       >
         <div
-          className="flex flex-col text-gray-950 justify-center
+          className="flex flex-col justify-center
           lg:gap-8
           md:gap-3
           xs:gap-3
          "
         >
           <p
-            className="text-4xl text-gray-950 font-medium
+            className="text-4xl font-medium text-bloomTitle
              lg:text-3xl lg:self-start
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
@@ -37,10 +37,10 @@ export const AboutUsSection = () => {
           </p>
           <div className="flex flex-col gap-8">
             <div
-              className="flex flex-col font-normal
+              className="flex flex-col font-normal text-bloomBody
               lg:text-base lg:gap-6
               md:text-sm
-              xs:text-base
+              xs:text-base xs:leading-6
              "
             >
               <p>{t("aboutUsPage.mainContent.text.p1")}</p>

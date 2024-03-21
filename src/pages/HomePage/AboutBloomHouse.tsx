@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/Button";
-import { ArrowIcon } from "../../assets/arrow/arrowIcon.tsx";
+import { ArrowIcon } from "../../assets/arrow/arrowIcon";
 
 export const AboutBloomHouse = () => {
   const { t, i18n } = useTranslation();
@@ -15,14 +15,14 @@ export const AboutBloomHouse = () => {
         "
       >
         <div
-          className="flex flex-col text-gray-950 justify-center
+          className="flex flex-col justify-center
           lg:gap-6 lg:text-start
           md:gap-4 md:text-center
           xs:gap-4 xs:text-start
          "
         >
           <p
-            className="text-gray-950 items-center font-medium w-full
+            className="text-bloomTitle items-center font-medium w-full
             lg:text-3xl
             md:text-2xl
             xs:text-2xl
@@ -32,10 +32,10 @@ export const AboutBloomHouse = () => {
           </p>
           <div className="flex flex-col gap-8">
             <div
-              className="font-normal
-                lg:text-base lg:text-start
-                md:text-sm md:text-center
-                xs:text-base xs:text-start
+              className="font-normal text-bloomBody
+              lg:text-base lg:text-start
+              md:text-sm md:text-center
+              xs:text-base xs:text-start xs:leading-6
               "
             >
               <div className="lg:flex md:hidden xs:hidden">
@@ -66,10 +66,11 @@ export const AboutBloomHouse = () => {
           xs:flex xs:gap-4 xs:text-start"
         >
           <p
-            className="text-sm
-           lg:hidden
-           md:block md:text-center
-           xs:block xs:text-start"
+            className="text-sm text-bloomBody
+             lg:hidden
+             md:block md:text-center
+             xs:block xs:text-start xs:leading-6
+            "
           >
             {t("homePage.aboutBloomHouse.aboutBloomHouseDescriptionTwo")}
           </p>

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 
 interface PlayIconProps {
   onClick?: () => void;
@@ -6,8 +6,6 @@ interface PlayIconProps {
 
 export const RoundedArrowDownIcon: FC<PlayIconProps> = ({ onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isBouncing, setIsBouncing] = useState(true);
-
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -16,19 +14,11 @@ export const RoundedArrowDownIcon: FC<PlayIconProps> = ({ onClick }) => {
     setIsHovered(false);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsBouncing(prevState => !prevState);
-    }, 600);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
-      className={`relative transition-transform duration-300 ease-linear transform ${isBouncing ? 'translate-y-0' : '-translate-y-3'}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={onClick}
+       onMouseEnter={handleMouseEnter}
+       onMouseLeave={handleMouseLeave}
+       onClick={onClick}
     >
       <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -44,3 +34,4 @@ export const RoundedArrowDownIcon: FC<PlayIconProps> = ({ onClick }) => {
     </div>
   );
 };
+

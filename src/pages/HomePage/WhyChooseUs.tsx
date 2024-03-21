@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import precisionCultivation from "../../../public/icons/iconsForChoosUs/precisionCultivation.svg";
 import temperature from "../../../public/icons/iconsForChoosUs/Temperature.svg";
-import timeCosuming from "../../../public/icons/iconsForChoosUs/timeCosuming.svg";
+import timeConsuming from "../../../public/icons/iconsForChoosUs/timeConsuming.svg";
 
 interface IconsForChooseUs {
   icon: string;
@@ -20,7 +20,7 @@ export const WhyChooseUs = () => {
 
   const iconsForChooseUs: IconsForChooseUs[] = [
     {
-      icon: timeCosuming,
+      icon: timeConsuming,
       textOne: t("homePage.whyChooseUs.reasons.icons.seedling1"),
       textTwo: t("homePage.whyChooseUs.reasons.icons.seedling2"),
     },
@@ -56,41 +56,44 @@ export const WhyChooseUs = () => {
 
   return (
     <div
-      className="flex items-center
-        lg:flex-col lg:gap-1 lg:px-20
-        md:flex-col md:px-8
-        xs:flex-col xs:px-4
+      className="flex
+      lg:flex-col lg:gap-1 lg:px-20
+      md:flex-col md:px-8
+      xs:flex-col xs:px-4 xs:gap-6
       "
     >
       <div
-        className="flex flex-col text-gray-950 justify-center
-          lg:gap-6 lg:self-center
-          md:gap-6 md:text-center md:self-center
-          xs:gap-3 xs:text-start
+        className="flex flex-col text-gray-950
+        lg:gap-6 lg:self-center
+        md:gap-6 md:text-center
+        xs:gap-3 xs:text-start
          "
       >
         <p
-          className="text-gray-950 items-center font-medium w-full
-             lg:text-3xl
-             md:text-2xl
-             xs:text-2xl
-            "
+          className="text-bloomTitle items-center font-medium w-full
+           lg:text-3xl
+           md:text-2xl
+           xs:text-2xl
+          "
         >
           {t("homePage.whyChooseUs.whyChooseUsTitle")}
         </p>
         <div
-          className="font-normal
-              lg:text-base
-              md:text-sm
-              xs:text-base
-            "
+          className="font-normal text-bloomBody
+          lg:text-base
+          md:text-sm
+          xs:text-base
+          "
         >
           <p>{t("homePage.whyChooseUs.whyChooseDescription")}</p>
         </div>
       </div>
-      <div className="flex mt-9 lg:flex-row md:flex-col xs:flex-col">
+      <div className="flex lg:mt-9 lg:flex-row md:flex-col xs:flex-col">
         <div className="flex flex-col m-0">
-          <img alt="Bloom House" src="../../home-page-photos/5P4A3279.png" />
+          <img
+            src="../../home-page-photos/5P4A3279.png"
+            alt="Bloom House"
+          />
           <div className="h-40 w-640 flex items-center justify-between">
             {iconsForChooseUs.map((item, index) => {
               return (
@@ -124,12 +127,13 @@ export const WhyChooseUs = () => {
             })}
           </div>
         </div>
+
         <div className="flex flex-col lg:w-1/2">
           {infoForChooseUs.map((item, index) => {
             return (
               <div
                 key={index}
-                className="h-fit min-h-40 flex gap-2 first:border-b first:border-[#b0b4c0] p-6 last:bg-[#232427] last:text-white
+                className="h-fit min-h-40 flex gap-2 text-bloomBody first:border-b first:border-[#b0b4c0] p-6 last:bg-[#232427] last:text-white
                   lg:first:border-t-0
                   md:first:border-t
                   xs:first:border-t
@@ -137,10 +141,12 @@ export const WhyChooseUs = () => {
               >
                 <h1 className="text-5xl text-[#529b3c]">{item.number}</h1>
                 <div className="flex flex-col ml-2 gap-2">
-                  <h4 className="font-normal lg:text-xl md:text-xl xs:text-lg">
+                  <h4 className="font-medium lg:text-xl md:text-xl xs:text-lg">
                     {item.header}
                   </h4>
-                  <p className="w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs">
+                  <p className={`w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs xs:leading-6
+                    ${index === infoForChooseUs.length - 1 ? "text-[#e2e2e2]" : ""}`}
+                  >
                     {item.description}
                   </p>
                 </div>
