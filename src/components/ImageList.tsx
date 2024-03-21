@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { ImageSlider } from "./ImageSlider";
 import { SeeMoreIcon } from "../../public/icons/seeMore/seeMore";
 
-
 interface SliderImage {
   title?: string;
   images: string[];
@@ -103,7 +102,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
         {images.map((image, index) =>
           image.hoverImg ? (
             (
-              <div key={index} className="relative xs:shrink-0 md:shrink">
+              <div key={index} className="relative xs:shrink-0 md:shrink lg:w-1/4">
                 <img
                   src={image.thumbnail}
                   alt={`Image ${index}`}
@@ -118,7 +117,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
                 />
               </div>
             )) : (
-            <div key={index} className="relative xs:shrink-0 md:shrink">
+            <div key={index} className="relative xs:shrink-0 md:shrink lg:w-1/4">
               <img
                 src={image.thumbnail}
                 alt={`Image ${index}`}
@@ -160,7 +159,7 @@ export const ImageList: FC<ImageListProps> = ({ images, className }) => {
           onClose={handleDialogClose}
           onBack={handleBack}
           onNext={handleNext}
-          handleKeyDown={handleKeyDown}
+          onKeydown={(ev) =>handleKeyDown(ev)}
         />
       </div>
     </>

@@ -9,7 +9,7 @@ interface ImageSliderProps {
   onClose?: () => void;
   onNext: () => void;
   onBack: () => void;
-  handleKeyDown: () => void;
+  onKeydown: (e: React.KeyboardEvent<HTMLElement>) => void;
 }
 
 export const ImageSlider: FC<ImageSliderProps> = ({
@@ -17,7 +17,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({
   onClose,
   onNext,
   onBack,
-  handleKeyDown,
+  onKeydown,
 }) => {
   return (
     image && (
@@ -29,7 +29,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({
             className="w-full cursor-auto self-center"
           />
           <div className="absolute my-auto top-1/2 left-0 transform -translate-y-1/2 lg:p-10 md:p-4 xs:p-2 ">
-            <button autoFocus onClick={onBack} onKeyDown={handleKeyDown}>
+            <button autoFocus onClick={onBack} onKeyDown={onKeydown}>
               <ArrowLeftIcon color="white" width={11} height={16} />
             </button>
           </div>
@@ -39,7 +39,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({
             </button>
           </div>
           <div className="absolute my-auto top-1/2 right-0 transform -translate-y-1/2 lg:p-10 md:p-4 xs:p-2">
-            <button autoFocus onClick={onNext} onKeyDown={handleKeyDown}>
+            <button autoFocus onClick={onNext} onKeyDown={onKeydown}>
               <ArrowRightIcon color="white" width={11} height={16} />
             </button>
           </div>

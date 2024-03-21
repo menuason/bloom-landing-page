@@ -50,6 +50,7 @@ const AboutUsSelect = () => {
           className="
             text-bloomBlack bg-white w-[100vw]
             hover:outline-none px-20 pt-4 pb-4 shadow-inner
+            animate-fade-down animate-once animate-duration-300 overflow-hidden
          "
           sideOffset={22}
         >

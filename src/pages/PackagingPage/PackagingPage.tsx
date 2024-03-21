@@ -49,13 +49,12 @@ const PackagingPage: FC<PackagingPageProps> = () => {
         xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
        "
       >
-        <div className="flex relative">
-          <img
-            alt="Bloom House"
-            src="../../packaging-page-photos/mainPic.png"
-            className="w-full h-full"
-
-          />
+        <div className="flex relative lg:w-1/2">
+            <img
+              alt="Bloom House"
+              src="../../packaging-page-photos/mainPic.png"
+              className="w-full h-full"
+            />
           <PackagingFullScreenVideo>
             <PlayIcon
               width={60}
