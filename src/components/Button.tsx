@@ -25,7 +25,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
       "flex gap-3 items-center px-4 " +
       " lg:h-[46px] lg:py-3 lg:text-base lg:self-start " +
       " md:h-[46px] md:py-3 md:text-sm md:self-center " +
-      " xs:text-sm xs:py-2 xs:self-start ";
+      " xs:text-base xs:py-2 xs:self-start ";
 
     if (type === "outlined") {
       buttonClass += "border border-bloomBlack text-bloomBlack ";

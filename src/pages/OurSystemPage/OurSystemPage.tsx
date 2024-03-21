@@ -61,7 +61,7 @@ const OurSystemPage = () => {
             className="font-normal
               lg:text-base
               md:text-sm
-              xs:text-sm
+              xs:text-base
             "
           >
             <p>
@@ -111,7 +111,7 @@ const OurSystemPage = () => {
             className="font-normal text-[#323232]
               lg:text-base
               md:text-sm
-              xs:text-sm
+              xs:text-base
             "
           >
             {t("systemPage.gallerySection.text")}

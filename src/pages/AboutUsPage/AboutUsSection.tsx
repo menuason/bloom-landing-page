@@ -40,7 +40,7 @@ export const AboutUsSection = () => {
               className="flex flex-col font-normal
               lg:text-base lg:gap-6
               md:text-sm
-              xs:text-sm
+              xs:text-base
              "
             >
               <p>{t("aboutUsPage.mainContent.text.p1")}</p>

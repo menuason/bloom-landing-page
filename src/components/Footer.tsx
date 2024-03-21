@@ -40,7 +40,7 @@ const Footer: FC = () => {
             />
           </a>
 
-          <span className="text-white text-sm/[16px] font-thin leading-6">
+          <span className="text-white text-sm/[16px] font-normal leading-6">
             {t("footer.info")}
           </span>
         </div>
@@ -52,7 +52,7 @@ const Footer: FC = () => {
               href={`/catalogue/${i18n.language}`}
               className="text-white hover:text-gray-400"
             >
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 {t("footer.usefulLinks.catalogue")}
               </span>
             </a>
@@ -61,7 +61,7 @@ const Footer: FC = () => {
               href={`/packaging/${i18n.language}`}
               className="text-white hover:text-gray-400"
             >
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 {t("footer.usefulLinks.packaging")}
               </span>
             </a>
@@ -69,7 +69,7 @@ const Footer: FC = () => {
               href={`/about-us/${i18n.language}`}
               className="text-white hover:text-gray-400"
             >
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 {t("footer.usefulLinks.aboutUs")}
               </span>
             </a>
@@ -77,7 +77,7 @@ const Footer: FC = () => {
               href={`/contact-us/${i18n.language}`}
               className="text-white hover:text-gray-400"
             >
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 {t("footer.usefulLinks.contact")}
               </span>
             </a>
@@ -89,13 +89,13 @@ const Footer: FC = () => {
           <div className="flex items-center gap-2 text-white">
             <PhoneFilledIcon color={"white"} />
             <a href="tel:+374 77103567">
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 +374 77103567
               </span>
             </a>
-            <span className="text-sm/[16px] font-thin leading-6">|</span>
+            <span className="text-sm/[16px] font-normal leading-6">|</span>
             <a href="tel: +910 7103567">
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 +910 7103567
               </span>
             </a>
@@ -103,7 +103,7 @@ const Footer: FC = () => {
           <div className="flex items-center gap-2 text-white">
             <MailFilledIcon color={"white"} />
             <a href="mailto:bloomhouse.arm@gmail.com">
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 bloomhouse.arm@gmail.com
               </span>
             </a>
@@ -115,7 +115,7 @@ const Footer: FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="text-sm/[16px] font-thin leading-6">
+              <span className="text-sm/[16px] font-normal leading-6">
                 {t("footer.contactInfo.location")}
               </span>
             </a>
@@ -123,7 +123,7 @@ const Footer: FC = () => {
         </div>
       </div>
       <div className="text-center border-t border-t-[#323232] py-3">
-        <span className="text-sm/[16px] font-thin leading-6">
+        <span className="text-sm/[16px] font-normal leading-6">
           &copy; 2024 Bloom House. All rights reserved
         </span>
       </div>

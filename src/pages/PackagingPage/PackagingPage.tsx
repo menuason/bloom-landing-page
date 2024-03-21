@@ -86,7 +86,7 @@ const PackagingPage:FC<PackagingPageProps> = () => {
             className="font-normal
             lg:text-base
             md:text-sm
-            xs:text-sm
+            xs:text-base
            "
           >
             <p>{t("packagingPage.mainContent.text.p1")}</p>
@@ -137,7 +137,7 @@ const PackagingPage:FC<PackagingPageProps> = () => {
             className="font-normal text-[#323232]
             lg:text-base
             md:text-sm
-            xs:text-sm
+            xs:text-base
            "
           >
             {t("packagingPage.gallerySection.text")}

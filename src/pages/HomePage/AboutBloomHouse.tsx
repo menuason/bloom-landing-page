@@ -33,10 +33,10 @@ export const AboutBloomHouse = () => {
           <div className="flex flex-col gap-8">
             <div
               className="font-normal
-            lg:text-base lg:text-start
-            md:text-sm md:text-center
-            xs:text-sm xs:text-start
-           "
+                lg:text-base lg:text-start
+                md:text-sm md:text-center
+                xs:text-base xs:text-start
+              "
             >
               <div className="lg:flex md:hidden xs:hidden">
                 {t("homePage.aboutBloomHouse.aboutBloomHouseDescription")}
@@ -57,10 +57,7 @@ export const AboutBloomHouse = () => {
           </div>
         </div>
 
-        <img
-          alt="Bloom House"
-          src="../../home-page-photos/5P4A3419.png"
-        />
+        <img alt="Bloom House" src="../../home-page-photos/5P4A3419.png" />
 
         <div
           className="flex flex-col

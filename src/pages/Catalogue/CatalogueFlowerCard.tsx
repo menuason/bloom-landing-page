@@ -25,7 +25,7 @@ const CatalogueFlowerCard: FC<CatalogueFlowerCardProps> = ({ flower }) => {
           className="object-cover cursor-pointer max-h-full max-w-full w-full h-full"
         />
       </div>
-      <div className="flex flex-col py-3 gap-1 bg-white w-full">
+      <div className="flex flex-col py-3 gap-1 bg-white w-full items-start">
         <span className="font-medium text-base lg:text-base md:text-base xs:text-xs">
           {flower.name}
         </span>

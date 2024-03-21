@@ -54,7 +54,7 @@ export const Assortment = () => {
           className="text-gray-950 lg:w-3/5 font-normal
             lg:text-base lg:text-center
             md:text-sm md:text-center
-            xs:text-sm xs:items-start
+            xs:text-base xs:items-start
           "
         >
           {t("homePage.assortment.assortmentSectionDescription")}
@@ -95,7 +95,7 @@ export const Assortment = () => {
                   xs:h-1/4
                 "
               >
-                <h4 className="font-medium lg:text-2xl md:text-base xs:text-sm">
+                <h4 className="font-medium lg:text-2xl md:text-base xs:text-base">
                   {item.name}
                 </h4>
                 <p className="font-light text-sm">{item.author}</p>

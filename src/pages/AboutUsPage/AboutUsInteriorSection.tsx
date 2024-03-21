@@ -46,7 +46,7 @@ export const AboutUsInteriorSection = () => {
           className="flex flex-col gap-8 font-normal
           lg:text-base
           md:text-sm
-          xs:text-sm
+          xs:text-base
          "
         >
           <div className="flex flex-col w-full lg:gap-6">
@@ -73,7 +73,7 @@ export const AboutUsInteriorSection = () => {
         <div className="w-full h-full">
           <InlinePhotoSlider images={INTERIOR_PHOTOS_INLINE} />
         </div>
-        <div className="hidden lg:hidden md:hidden xs:block xs:text-sm ">
+        <div className="hidden lg:hidden md:hidden xs:block xs:text-base ">
           <p>{t("aboutUsPage.interiorSection.p3")}</p>
           <p>{t("aboutUsPage.interiorSection.p4")}</p>
         </div>
