@@ -27,7 +27,7 @@ export const ValuesSection = () => {
     <PageSection
       isPageSmallSize
       isImageFirst={false}
-      image="../../mission-and-vision-photos/core.png"
+      image="../../mission-and-vision-photos/value.png"
     >
       <div className="flex flex-col text-gray-950 justify-center
         lg:gap-6 lg:w-1/2

@@ -1,15 +1,17 @@
-import React from "react";
-import { createBrowserRouter, Navigate,  RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
-import PackagingPage from "./pages/PackagingPage/PackagingPage";
-import CataloguePage from "./pages/Catalogue/CataloguePage";
-import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
-import OurSystemPage from "./pages/OurSystemPage/OurSystemPage";
-import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
-import MissionAndVisionPage from "./pages/MissionAndVisionPage/MissionAndVisionPage";
+import React, { Suspense, useEffect, useState } from "react";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { useTranslation } from "react-i18next";
 import { RootComponent } from "./components/RootComponent";
+// import { BarLoader } from "react-spinners";
+
+const HomePage = React.lazy(() => import("./pages/HomePage/HomePage"));
+const PackagingPage = React.lazy(() => import("./pages/PackagingPage/PackagingPage"));
+const CataloguePage = React.lazy(() => import("./pages/Catalogue/CataloguePage"));
+const ContactUsPage = React.lazy(() => import("./pages/ContactUsPage/ContactUsPage"));
+const OurSystemPage = React.lazy(() => import("./pages/OurSystemPage/OurSystemPage"));
+const AboutUsPage = React.lazy(() => import("./pages/AboutUsPage/AboutUsPage"));
+const MissionAndVisionPage = React.lazy(() => import("./pages/MissionAndVisionPage/MissionAndVisionPage"));
 
 function App() {
   const { i18n } = useTranslation();
@@ -20,8 +22,9 @@ function App() {
       element: <RootComponent />,
       errorElement: <ErrorBoundary />,
       children: [
-        { index: true,
-          element: <Navigate to={`/home/${i18n.language}`} replace />
+        {
+          index: true,
+          element: <Navigate to={`/home/${i18n.language}`} replace />,
         },
         {
           path: "/home/:lang",
@@ -55,9 +58,29 @@ function App() {
     },
   ]);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <Suspense fallback={
+        <div className="flex justify-center items-center h-screen">
+          <img
+            src="../../catalogue-page-photos/catalogue-flowers/Mandala.png"
+            alt="Bloom House"
+            className={`w-64 h-64 ${isLoading ? "animate-spin" : ""}`}
+          />
+        </div>
+      }>
+        <RouterProvider router={router} />
+      </Suspense>
     </React.StrictMode>
   );
 }
