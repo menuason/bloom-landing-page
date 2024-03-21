@@ -47,11 +47,6 @@ export const WhyChooseUs = () => {
       header: t("homePage.whyChooseUs.reasons.numbers.twoTitle"),
       description: t("homePage.whyChooseUs.reasons.numbers.twoDescription"),
     },
-    {
-      number: 3,
-      header: t("homePage.whyChooseUs.reasons.numbers.threeTitle"),
-      description: t("homePage.whyChooseUs.reasons.numbers.threeDescription"),
-    },
   ];
 
   return (
@@ -88,13 +83,20 @@ export const WhyChooseUs = () => {
           <p>{t("homePage.whyChooseUs.whyChooseDescription")}</p>
         </div>
       </div>
-      <div className="flex lg:mt-9 lg:flex-row md:flex-col xs:flex-col">
-        <div className="flex flex-col m-0">
-          <img
-            src="../../home-page-photos/5P4A3279.png"
-            alt="Bloom House"
-          />
-          <div className="h-40 w-640 flex items-center justify-between">
+
+
+      <div>
+
+        <div className="flex lg:mt-9 lg:flex-row md:flex-col xs:flex-col">
+          <div className="flex flex-col m-0 bg-green-200 lg:w-1/2">
+            <img
+              src="../../home-page-photos/choose.png"
+              alt="Bloom House"
+              className="h-full"
+            />
+          </div>
+
+          <div className="lg:hidden md:flex xs:flex h-40 w-640 items-center justify-between lg:w-1/2">
             {iconsForChooseUs.map((item, index) => {
               return (
                 <div
@@ -103,58 +105,110 @@ export const WhyChooseUs = () => {
                 >
                   <img src={item.icon} alt="Bloom House" />
                   <span>
-                    <p
-                      className="text-center font-normal
-                      lg:text-base
-                      md:text-sm
-                      xs:text-base
-                    "
-                    >
-                      {item.textOne}
+                 <p
+                   className="text-center font-normal
+                   lg:text-base
+                   md:text-sm
+                   xs:text-base
+                 "
+                 >
+                   {item.textOne}
+                 </p>
+                 <p
+                   className="text-center font-normal
+                   lg:text-base
+                   md:text-sm
+                   xs:text-base
+                 "
+                 >
+                   {item.textTwo}
+                 </p>
+               </span>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="flex flex-col lg:w-1/2">
+            {infoForChooseUs.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="h-fit min-h-40 flex gap-2 text-bloomBody first:border-b first:border-[#b0b4c0] p-6
+                  lg:first:border-t-0 lg:h-1/2
+                  md:first:border-t
+                  xs:first:border-t
+                "
+                >
+                  <h1 className="text-5xl text-[#529b3c]">{item.number}</h1>
+                  <div className="flex flex-col ml-2 gap-2">
+                    <h4 className="font-medium lg:text-xl md:text-xl xs:text-lg">
+                      {item.header}
+                    </h4>
+                    <p className={`w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs xs:leading-6`}>
+                      {item.description}
                     </p>
-                    <p
-                      className="text-center font-normal
-                      lg:text-base
-                      md:text-sm
-                      xs:text-base
-                    "
-                    >
-                      {item.textTwo}
-                    </p>
-                  </span>
+                  </div>
                 </div>
               );
             })}
           </div>
         </div>
 
-        <div className="flex flex-col lg:w-1/2">
-          {infoForChooseUs.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="h-fit min-h-40 flex gap-2 text-bloomBody first:border-b first:border-[#b0b4c0] p-6 last:bg-[#232427] last:text-white
-                  lg:first:border-t-0
-                  md:first:border-t
-                  xs:first:border-t
-                "
-              >
-                <h1 className="text-5xl text-[#529b3c]">{item.number}</h1>
-                <div className="flex flex-col ml-2 gap-2">
-                  <h4 className="font-medium lg:text-xl md:text-xl xs:text-lg">
-                    {item.header}
-                  </h4>
-                  <p className={`w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs xs:leading-6
-                    ${index === infoForChooseUs.length - 1 ? "text-[#e2e2e2]" : ""}`}
-                  >
-                    {item.description}
-                  </p>
+        <div className="flex">
+          <div className="lg:flex md:hidden xs:hidden h-40 w-640 flex items-center justify-between lg:w-1/2">
+            {iconsForChooseUs.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
+                >
+                  <img src={item.icon} alt="Bloom House" />
+                  <span>
+                 <p
+                   className="text-center font-normal
+                   lg:text-base
+                   md:text-sm
+                   xs:text-base
+                 "
+                 >
+                   {item.textOne}
+                 </p>
+                 <p
+                   className="text-center font-normal
+                   lg:text-base
+                   md:text-sm
+                   xs:text-base
+                 "
+                 >
+                   {item.textTwo}
+                 </p>
+               </span>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+
+          <div
+            className="h-fit min-h-40 flex gap-2 text-bloomBody first:border-b first:border-[#b0b4c0] p-6 bg-[#232427]
+          lg:first:border-t-0 lg:w-1/2
+          md:first:border-t
+          xs:first:border-t
+        "
+          >
+            <h1 className="text-5xl text-[#529b3c]">3</h1>
+            <div className="flex flex-col ml-2 gap-2">
+              <h4 className="font-medium lg:text-xl md:text-xl xs:text-lg text-white">
+                {t("homePage.whyChooseUs.reasons.numbers.threeTitle")}
+              </h4>
+              <p className="w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs xs:leading-6 text-[#E2E2E2]">
+                {t("homePage.whyChooseUs.reasons.numbers.threeDescription")}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   );
 };

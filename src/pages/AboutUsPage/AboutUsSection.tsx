@@ -21,7 +21,7 @@ export const AboutUsSection = () => {
       >
         <div
           className="flex flex-col justify-center
-          lg:gap-8
+          lg:gap-8 lg:w-1/2
           md:gap-3
           xs:gap-3
          "

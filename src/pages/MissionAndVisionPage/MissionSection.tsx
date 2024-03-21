@@ -11,7 +11,7 @@ export const MissionSection = () => {
       image="../../mission-and-vision-photos/mission.png"
     >
       <div className="flex flex-col text-gray-950 justify-center
-        lg:gap-6
+        lg:gap-6 lg:w-1/2
         md:gap-3
         xs:gap-3
        "

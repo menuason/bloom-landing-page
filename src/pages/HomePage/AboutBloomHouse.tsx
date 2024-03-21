@@ -57,7 +57,9 @@ export const AboutBloomHouse = () => {
           </div>
         </div>
 
-        <img alt="Bloom House" src="../../home-page-photos/5P4A3419.png" />
+        <div>
+          <img alt="Bloom House" src="../../home-page-photos/Home.png" />
+        </div>
 
         <div
           className="flex flex-col

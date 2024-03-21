@@ -10,7 +10,7 @@ export const MissionAndVisionUpperSection = () => {
       image="../../mission-and-vision-photos/productMain.png"
     >
       <div className="flex flex-col text-gray-950 justify-center
-        lg:gap-6
+        lg:gap-6 lg:w-1/2
         md:gap-3
         xs:gap-3
        "
