@@ -69,8 +69,8 @@ const HamburgerSelect = () => {
           onClick={handleHamburgerToggle}
         >
           <div
-            className={`flex flex-col gap-3 top-0 left-0 h-full py-8 pl-4 bg-white z-10 items-start md:w-[377px] xs:w-9/12
-            animate-fade-right animate-once animate-duration-300 overflow-hidden`}
+            className="flex flex-col gap-3 top-0 left-0 h-full py-8 pl-4 bg-white z-10 items-start md:w-[377px] xs:w-9/12
+            animate-fade-right animate-once animate-duration-300 overflow-hidden"
           >
             <div className="w-full">
               {NAV_BAR_ITEMS_MOB.map((item) => {

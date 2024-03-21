@@ -61,10 +61,10 @@ export const Assortment = () => {
         </p>
       </div>
       <div
-        className="flex items-center gap-4  w-full
+        className="flex items-center gap-4 w-full
             lg:h-96 lg:overflow-visible lg:mt-9
-            md:h-52 md:overflow-visible
-            xs:h-52 xs:overflow-x-auto xs:whitespace-nowrap
+            md:h-64 md:overflow-visible
+            xs:h-64 xs:overflow-x-auto xs:whitespace-nowrap
           "
       >
         {flowersArr.map((item, index) => {
@@ -73,8 +73,9 @@ export const Assortment = () => {
               key={index}
               className="
                 relative h-full flex-1
-                lg:flex-1 md:flex-1
-                xs:min-w-[164px] xs:flex-1
+                lg:flex-1
+                md:flex-1
+                xs:min-w-44 xs:flex-1
               "
             >
               <img
