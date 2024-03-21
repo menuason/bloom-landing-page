@@ -296,7 +296,7 @@ const catalogueFlowers: CatalogueFlower[] = [
     id: "120m",
   },
   {
-    image: "../../ca..e-page-photos/catalogue-flowers/Romesco.png",
+    image: "../../catalogue-page-photos/catalogue-flowers/Romesco.png",
     name: "Romesco",
     color: "Bicolor",
     brand: "By Schreurs",
