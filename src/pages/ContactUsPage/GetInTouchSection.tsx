@@ -1,4 +1,3 @@
-
 import { useTranslation } from "react-i18next";
 import { PhoneFilledIcon } from "../../../public/icons/phone/phone-filled";
 import { TelegramIcon } from "../../../public/icons/telegram/telegram";
@@ -61,7 +60,10 @@ export const GetInTouchSection = () => {
             <p>{t("contactUsPage.mainContent.subTitleOne")}</p>
           </div>
           {CONTACT_US_ICONS.map((item) => (
-            <div key={item.name} className="flex gap-4 items-center tracking-wider text-bloomBody">
+            <div
+              key={item.name}
+              className="flex gap-4 items-center tracking-wider text-bloomBody"
+            >
               {item.icon}
               <div className="flex gap-1 items-center tracking-wider">
                 <a href={item.link.tel1}>
@@ -84,10 +86,8 @@ export const GetInTouchSection = () => {
           <div className="flex flex-col gap-4 text-bloomBody">
             <div className="flex gap-4 items-center tracking-wider">
               <MailFilledIcon color={"black"} />
-              <a href="mailto:bloomhouse.arm@gmail.com">
-                <span className="text-base leading-6">
-                  bloomhouse.arm@gmail.com
-                </span>
+              <a href="mailto:info@bloomhouse.am">
+                <span className="text-base leading-6">info@bloomhouse.am</span>
               </a>
             </div>
 
@@ -99,7 +99,7 @@ export const GetInTouchSection = () => {
                 rel="noopener noreferrer"
               >
                 <span className="text-base leading-6">
-                 {t("contactUsPage.mainContent.address")}
+                  {t("contactUsPage.mainContent.address")}
                 </span>
               </a>
             </div>

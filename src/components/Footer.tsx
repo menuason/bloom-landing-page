@@ -101,9 +101,9 @@ const Footer: FC = () => {
           </div>
           <div className="flex items-center gap-2 text-white">
             <MailFilledIcon color={"white"} />
-            <a href="mailto:bloomhouse.arm@gmail.com">
+            <a href="mailto:info@bloomhouse.am">
               <span className="text-sm/[16px] font-normal leading-6">
-                bloomhouse.arm@gmail.com
+                info@bloomhouse.am
               </span>
             </a>
           </div>
