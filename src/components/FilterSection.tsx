@@ -455,6 +455,8 @@ export const FilterSection = () => {
     filterType === "color"
       ? filterColors(checked, label)
       : filterBrands(checked, label);
+
+    setCurrentPage(1);
   };
 
   const handlePageChange = (page: number) => {

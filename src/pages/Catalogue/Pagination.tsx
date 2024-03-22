@@ -2,7 +2,6 @@ import { FC } from "react";
 import { ArrowLeftIcon } from "../../../public/icons/arrowLeft/arrowLeft";
 import { ArrowRightIcon } from "../../../public/icons/arrowRight/arrowRight";
 
-
 interface PaginationProps {
   itemsPerPage: number;
   totalItems: number;
@@ -23,40 +22,29 @@ const Pagination: FC<PaginationProps> = ({
   );
 
   return (
-    <nav
-      className="
-        lg:hidden
-        md:flex md:items-center md:justify-end
-        xs:flex xs:items-center xs:justify-end"
-    >
-      <ul className="flex justify-end items-center gap-2">
+    <nav className="flex lg:hidden md:flex md:items-center md:justify-center xs:flex xs:items-center xs:justify-center">
+      <span className="flex justify-center items-center gap-3">
         <button
           disabled={currentPage === 1}
           onClick={() => onPageChange(currentPage - 1)}
+          className="text-bloomBody disabled:text-gray-400"
         >
-          <ArrowLeftIcon width={8} height={8} color={"black"} />
+          <ArrowLeftIcon width={15} height={15} color="#323232" />
         </button>
 
-        {pageNumbers.map((number, ind) => (
-          <li key={ind} className="page-item">
-            <button
-              onClick={() => onPageChange(number)}
-              className={`flex ${
-                currentPage === number ? "black" : "text-neutral-500"
-              }`}
-            >
-              {number}
-            </button>
-          </li>
-        ))}
+        <>
+          <p className="text-lg text-bloomBody">{currentPage}</p>
+          <p className="text-lg text-bloomBody"> of {pageNumbers.length}</p>
+        </>
 
         <button
-          disabled={currentPage === pageNumbers.length}
+          disabled={currentPage === totalPages}
           onClick={() => onPageChange(currentPage + 1)}
+          className="text-bloomBody disabled:text-gray-400"
         >
-          <ArrowRightIcon width={8} height={8} color={"black"} />
+          <ArrowRightIcon width={15} height={15} color="#323232" />
         </button>
-      </ul>
+      </span>
     </nav>
   );
 };

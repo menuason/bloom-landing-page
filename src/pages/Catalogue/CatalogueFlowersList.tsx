@@ -35,8 +35,8 @@ const CatalogueFlowersList: FC<CatalogueFlowersListProps> = ({
       {pagination && (
         <div
           className="
-          md:w-full md:flex md:justify-end md:mt-4
-          xs:w-full xs:flex xs:justify-end xs:mt-4"
+          md:w-full md:flex md:justify-center md:mt-6
+          xs:w-full xs:flex xs:justify-center xs:mt-6"
         >
           {pagination}
         </div>
