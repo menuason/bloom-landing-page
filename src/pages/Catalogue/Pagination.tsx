@@ -32,10 +32,9 @@ const Pagination: FC<PaginationProps> = ({
           <ArrowLeftIcon width={15} height={15} color="#323232" />
         </button>
 
-        <>
-          <p className="text-lg text-bloomBody">{currentPage}</p>
-          <p className="text-lg text-bloomBody"> of {pageNumbers.length}</p>
-        </>
+        <p className="text-lg text-bloomBody">
+          {currentPage} of {pageNumbers.length}
+        </p>
 
         <button
           disabled={currentPage === totalPages}
