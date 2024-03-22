@@ -69,7 +69,7 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
         >
           <Dialog.Close asChild>
             <div className="flex justify-end -mr-4">
-              <button  className="lg:px-4 lg:h-12 lg:rounded lg:hover:bg-black/[.04]">
+              <button  className="lg:px-4 lg:h-12 lg:rounded lg:hover:bg-black/[.04] xs:p-3 xs:mx-2">
                 <CloseIcon color="black" />
               </button>
             </div>
