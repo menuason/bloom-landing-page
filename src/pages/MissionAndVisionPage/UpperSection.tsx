@@ -15,8 +15,8 @@ export const MissionAndVisionUpperSection = () => {
         xs:gap-3
        "
       >
-        <p className="text-4xl text-bloomTitle font-medium
-         lg:text-4xl lg:text-start
+        <p className="text-bloomTitle font-medium
+         lg:text-4xl lg:text-start lg:leading-[3rem]
          md:text-2xl md:text-center md:font-semibold
          xs:text-2xl xs:text-start xs:font-semibold
          "

@@ -34,8 +34,8 @@ export const AboutUsInteriorSection = () => {
        "
       >
         <p
-          className="text-4xl text-bloomTitle font-medium
-           lg:text-4xl lg:self-start
+          className="text-bloomTitle font-medium
+           lg:text-4xl lg:self-start lg:leading-[3rem]
            md:text-2xl md:self-center md:font-semibold
            xs:text-2xl xs:self-start xs:font-semibold
           "

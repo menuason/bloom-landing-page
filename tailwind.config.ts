@@ -5,10 +5,10 @@ import * as tanimation from "tailwindcss-animated";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    fontSize: {
-      ss: ['36px', '48px'],
-    },
     extend: {
+      // lineHeight: {
+      //   'custom-title': '3rem',
+      // },
       fontFamily: {
         sans: ["Noto Sans", "sans-serif"],
       },

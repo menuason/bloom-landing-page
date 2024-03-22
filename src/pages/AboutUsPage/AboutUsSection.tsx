@@ -27,8 +27,8 @@ export const AboutUsSection = () => {
          "
         >
           <p
-            className="text-ss
-             lg:text-4xl lg:self-start
+            className="
+             lg:text-4xl lg:leading-[3rem] lg:self-start
              md:text-2xl md:self-center md:font-semibold
              xs:text-2xl xs:self-start xs:font-semibold
            "
