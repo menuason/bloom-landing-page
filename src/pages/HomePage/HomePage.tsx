@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AboutBloomHouse, Assortment, WhyChooseUs } from ".";
 import { RoundedArrowDownIcon } from "../../../public/icons/roundedArrowDown/roundedArrowDown";
@@ -8,6 +8,9 @@ const HomePage = () => {
   const { t } = useTranslation();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [width, setWidth] = useState<number>(window.innerWidth);
+
+  const videoForMobile = useRef<HTMLVideoElement>(null!);
+  const videoForWeb = useRef<HTMLVideoElement>(null!);
 
   const isMobile = width < 1000;
   const updateScreenSize = () => {
@@ -20,7 +23,11 @@ const HomePage = () => {
     return () => {
       window.removeEventListener("resize", updateScreenSize);
     };
-  }, []);
+  }, [width]);
+
+  useEffect(() => {
+    videoForMobile.current?.play();
+  })
 
   const scrollDown = () => {
     window.scrollTo({
@@ -29,8 +36,10 @@ const HomePage = () => {
     });
   };
 
+  const video = useRef<HTMLVideoElement>();
   const toggleVideoPlay = () => {
     setIsVideoPlaying(true);
+    video.current?.play();
   };
 
   return (
@@ -46,6 +55,7 @@ const HomePage = () => {
               muted
               loop
               onClick={toggleVideoPlay}
+              ref={videoForWeb}
             >
               <source
                 src={"../../videos/Bloom House.mp4"}
@@ -58,10 +68,10 @@ const HomePage = () => {
           <>
             <div className="relative w-full lg:block md:block xs:hidden">
               <video
+                ref={videoForMobile}
                 className="w-full md:h-screen object-cover"
                 width="100%"
                 height="100%"
-                autoPlay={!isMobile}
                 muted
                 loop
               >

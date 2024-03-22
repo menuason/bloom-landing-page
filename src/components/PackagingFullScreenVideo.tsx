@@ -32,9 +32,9 @@ export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) =>
         <Dialog.Content className="fixed inset-0 flex items-center justify-center w-full h-full z-10">
           <div className="absolute z-20 lg:top-8 lg:right-16 md:top-16 md:right-8 xs:top-16 xs:right-6">
             <Dialog.Close asChild>
-              <button>
+              <div>
                 <CloseIcon color="white" />
-              </button>
+              </div>
             </Dialog.Close>
           </div>
 
@@ -57,7 +57,6 @@ export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) =>
             }}
             style={{ position: "absolute", top: 0, left: 0 }}
           />
-
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
