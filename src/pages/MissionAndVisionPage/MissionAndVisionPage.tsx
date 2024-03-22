@@ -4,6 +4,7 @@ import { MissionAndVisionUpperSection } from "./UpperSection";
 import { MissionSection } from "./MissionSection";
 import { VisionSection } from "./VisionSection";
 import { ValuesSection } from "./ValuesSection";
+import i18n from "i18next";
 
 const MissionAndVisionPage = () => {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ const MissionAndVisionPage = () => {
         title={t("missionAndVisionPage.description.title")}
         navOne={t("missionAndVisionPage.description.nav2")}
         navTwo={t("missionAndVisionPage.description.nav3")}
-        navTwoLink="/about-us"
+        navTwoLink={`/about-us/${i18n.language}`}
       />
       <MissionAndVisionUpperSection />
       <MissionSection />
@@ -26,3 +27,6 @@ const MissionAndVisionPage = () => {
 };
 
 export default MissionAndVisionPage;
+
+
+//come here

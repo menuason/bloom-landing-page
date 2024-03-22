@@ -69,7 +69,7 @@ export const AboutUsGallerySection = () => {
       className="flex flex-col gap-9
         lg:mt-8 lg:mb-40 lg:px-20 lg:gap-8
         md:mt-6 md:mb-[72px] md:px-8 md:gap-6
-        xs:mt-6 xs:mb-6 xs:pl-4 xs:gap-4
+        xs:mt-8 xs:mb-12 xs:pl-4 xs:gap-4
        "
     >
       <div

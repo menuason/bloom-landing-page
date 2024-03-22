@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AboutBloomHouse, Assortment, WhyChooseUs } from ".";
 import { RoundedArrowDownIcon } from "../../../public/icons/roundedArrowDown/roundedArrowDown";
@@ -7,6 +7,20 @@ import { RoundPlayIcon } from "../../../public/icons/roundArrowRight/roundPlay";
 const HomePage = () => {
   const { t } = useTranslation();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  const isMobile = width < 1000;
+  const updateScreenSize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => {
+      window.removeEventListener("resize", updateScreenSize);
+    };
+  }, []);
 
   const scrollDown = () => {
     window.scrollTo({
@@ -28,13 +42,13 @@ const HomePage = () => {
               className="w-full md:h-screen object-cover"
               width="100%"
               height="100%"
-              autoPlay
+              autoPlay={!isMobile}
               muted
               loop
               onClick={toggleVideoPlay}
             >
               <source
-                src="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/home-page%2FBloom%20House.mp4?alt=media&token=972a318b-397f-4e87-ab65-bc55521a08a8"
+                src={"../../videos/Bloom House.mp4"}
                 type="video/mp4"
               />
               {t("homePage.videoNotSupported")}
@@ -47,12 +61,12 @@ const HomePage = () => {
                 className="w-full md:h-screen object-cover"
                 width="100%"
                 height="100%"
-                autoPlay
+                autoPlay={!isMobile}
                 muted
                 loop
               >
                 <source
-                  src="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/home-page%2FBloom%20House.mp4?alt=media&token=972a318b-397f-4e87-ab65-bc55521a08a8"
+                  src={"../../videos/Bloom House.mp4"}
                   type="video/mp4"
                 />
                 {t("homePage.videoNotSupported")}
@@ -66,7 +80,7 @@ const HomePage = () => {
             <div className="relative lg:hidden md:hidden xs:block">
               <img
                 alt="Bloom House"
-                src="../../home-page-photos/thumbnail.jpg"
+                src={"../../home-page-photos/thumbnail.jpg"}
               />
               <RoundPlayIcon
                 color="white"
