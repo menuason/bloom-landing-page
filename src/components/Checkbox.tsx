@@ -24,7 +24,7 @@ export const CheckboxBloom: FC<CheckboxBloomProps> = ({
           <CheckIcon style={{ strokeWidth: 1, stroke: "black" }} />
         </Checkbox.Indicator>
       </Checkbox.Root>
-      <label className="flex items-center">{label}</label>
+      <label className="flex items-center text-bloomBody">{label}</label>
     </div>
   );
 };

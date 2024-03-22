@@ -22,7 +22,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 }) => {
   const getButtonClasses = (): string => {
     let buttonClass =
-      "flex gap-3 items-center px-4 font-medium" +
+      "flex gap-3 items-center px-4 font-medium text-bloomTitle" +
       " lg:h-[46px] lg:py-3 lg:text-base lg:self-start " +
       " md:h-[46px] md:py-3 md:text-sm md:self-center " +
       " xs:text-base xs:py-2 xs:self-start ";

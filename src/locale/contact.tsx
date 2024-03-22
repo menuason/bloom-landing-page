@@ -1,5 +1,6 @@
 const ContactUsPageTranslation = {
   en: {
+    formSuccessMessage: "Your Message is successfully sent!",
     contact: {
       title: "Contact Us",
       nav1: "Home",
@@ -22,6 +23,7 @@ const ContactUsPageTranslation = {
     },
   },
   ru: {
+    formSuccessMessage: "Ваше сообщение успешно отправлено!",
     contact: {
       title: "Связаться с нами",
       nav1: "Главная",
@@ -44,6 +46,7 @@ const ContactUsPageTranslation = {
     },
   },
   hy: {
+    formSuccessMessage: "Ձեր հաղորդագրությունը հաջողությամբ ուղարկվել է",
     contact: {
       title: "Կապ մեզ հետ",
       nav1: "Գլխավոր",

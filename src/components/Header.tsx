@@ -49,7 +49,7 @@ const Header = () => {
       >
         <img src={logo} alt="logo" />
       </a>
-      <div className="flex items-center gap-12 cursor-pointer text-bloomBlack">
+      <div className="flex items-center gap-12 cursor-pointer text-bloomTitle">
         <div className="hidden lg:flex gap-12 items-center font-medium mt-2">
           {
             NAV_BAR_ITEMS_WEB.map((item) => (

@@ -3,6 +3,9 @@ import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/Button";
 import { ErrorIcon } from "../../../public/icons/error/error";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { showSuccessNotification } from "./NotificationService";
 
 type ContactUsFormInputs = {
   name: string;
@@ -41,6 +44,7 @@ const ContactUsForm = () => {
         "Q7lDXCEz-QilqliyC"
       );
       reset(formDefaultValues);
+      showSuccessNotification(t("contactUsPage.formSuccessMessage"))
     } catch (error) {
       console.error("Error sending email:", error);
     }
@@ -48,6 +52,7 @@ const ContactUsForm = () => {
 
   return (
     <div className="flex flex-col gap-8 w-full xs:px-4 xs:items-center lg:items-end">
+      <ToastContainer />
       <form onSubmit={handleSubmit(onSubmit)} className="contents">
         <div className="flex flex-col gap-8 w-fit lg:mt-2 md:w-full">
           <div className="text-lg font-normal lg:w-[580px] md:w-[580px] xs:w-[295px] text-bloomTitle">
@@ -61,10 +66,10 @@ const ContactUsForm = () => {
               xs:flex-col
             "
           >
-            <div className="flex flex-col gap-2 font-normal">
+            <div className="flex flex-col gap-2 font-normal text-bloomBody">
               <label htmlFor="name">{t("contactUsPage.form.inputOne")}</label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none rounded-none"
                 type="text"
                 id="name"
                 {...register("name", { required: "Name is required" })}
@@ -81,7 +86,7 @@ const ContactUsForm = () => {
                 {t("contactUsPage.form.inputTwo")}
               </label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none rounded-none"
                 type="text"
                 id="surname"
                 {...register("surname", { required: "Surname is required" })}
@@ -107,7 +112,7 @@ const ContactUsForm = () => {
                 {t("contactUsPage.form.inputThree")}
               </label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none rounded-none"
                 type="email"
                 id="email"
                 {...register("email", { required: "Email is required" })}
@@ -122,7 +127,7 @@ const ContactUsForm = () => {
             <div className="flex flex-col gap-2 font-normal text-bloomBody">
               <label htmlFor="phone">{t("contactUsPage.form.inputFour")}</label>
               <input
-                className="w-[288px] py-1 border-b border-bloomBody outline-none px-2 rounded-none"
+                className="w-[288px] py-1 border-b border-bloomBody outline-none rounded-none"
                 type="tel"
                 id="phone"
                 {...register("phone", { required: "Phone is required" })}
@@ -140,7 +145,7 @@ const ContactUsForm = () => {
             <label htmlFor="message">{t("contactUsPage.form.textarea")}</label>
             <textarea
               id="message"
-              className="border border-bloomBody resize-none outline-none px-2"
+              className="border border-bloomBody resize-none outline-none p-2"
               rows={6}
               {...register("message", { required: "Message is required" })}
             ></textarea>

@@ -44,7 +44,7 @@ export const GetInTouchSection = () => {
 
       <div
         className="flex w-full
-        lg:flex-col lg:gap-6 lg:items-start
+        lg:flex-col lg:gap-12 lg:items-start
         md:flex-row md:gap-10 md:justify-between
         xs:flex-col xs:gap-6 xs:items-center
       "
@@ -71,7 +71,7 @@ export const GetInTouchSection = () => {
                 </a>
                 <span className="text-sm/[16px] font-thin leading-6">|</span>
                 <a href={item.link.tel2}>
-                  <span>+910 7103567</span>
+                  <span>+7 910 7103567</span>
                 </a>
               </div>
             </div>
@@ -83,7 +83,7 @@ export const GetInTouchSection = () => {
             <p>{t("contactUsPage.mainContent.subTitleTwo")}</p>
           </div>
 
-          <div className="flex flex-col gap-4 text-bloomBody">
+          <div className="flex flex-col gap-6 text-bloomBody">
             <div className="flex gap-4 items-center tracking-wider">
               <MailFilledIcon color={"black"} />
               <a href="mailto:info@bloomhouse.am">

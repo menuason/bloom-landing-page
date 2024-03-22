@@ -66,8 +66,8 @@ export const WhyChooseUs = () => {
       >
         <p
           className="text-bloomTitle items-center font-medium w-full
-           lg:text-3xl
-           md:text-2xl
+           lg:text-4xl
+           md:text-2xl md:font-semibold
            xs:text-2xl
           "
         >
@@ -86,9 +86,8 @@ export const WhyChooseUs = () => {
 
 
       <div>
-
         <div className="flex lg:mt-9 lg:flex-row md:flex-col xs:flex-col">
-          <div className="flex flex-col m-0 bg-green-200 lg:w-1/2">
+          <div className="flex flex-col m-0 lg:w-1/2">
             <img
               src="../../home-page-photos/choose.png"
               alt="Bloom House"
@@ -101,12 +100,12 @@ export const WhyChooseUs = () => {
               return (
                 <div
                   key={index}
-                  className="w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
+                  className="text-bloomBody w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
                 >
                   <img src={item.icon} alt="Bloom House" />
                   <span>
                  <p
-                   className="text-center font-normal
+                   className="text-center font-medium
                    lg:text-base
                    md:text-sm
                    xs:text-base
@@ -115,7 +114,7 @@ export const WhyChooseUs = () => {
                    {item.textOne}
                  </p>
                  <p
-                   className="text-center font-normal
+                   className="text-center font-medium
                    lg:text-base
                    md:text-sm
                    xs:text-base
@@ -142,10 +141,10 @@ export const WhyChooseUs = () => {
                 >
                   <h1 className="text-5xl text-[#529b3c]">{item.number}</h1>
                   <div className="flex flex-col ml-2 gap-2">
-                    <h4 className="font-medium lg:text-xl md:text-xl xs:text-lg">
+                    <h4 className="font-semibold lg:text-xl md:text-xl xs:text-lg">
                       {item.header}
                     </h4>
-                    <p className={`w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs xs:leading-6`}>
+                    <p className={`w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-base xs:leading-6`}>
                       {item.description}
                     </p>
                   </div>
@@ -161,12 +160,12 @@ export const WhyChooseUs = () => {
               return (
                 <div
                   key={index}
-                  className="w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
+                  className="text-bloomBody w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
                 >
                   <img src={item.icon} alt="Bloom House" />
                   <span>
                  <p
-                   className="text-center font-normal
+                   className="text-center font-medium
                    lg:text-base
                    md:text-sm
                    xs:text-base
@@ -175,7 +174,7 @@ export const WhyChooseUs = () => {
                    {item.textOne}
                  </p>
                  <p
-                   className="text-center font-normal
+                   className="text-center font-medium
                    lg:text-base
                    md:text-sm
                    xs:text-base
@@ -191,9 +190,9 @@ export const WhyChooseUs = () => {
 
           <div
             className="h-fit min-h-40 flex gap-2 text-bloomBody first:border-b first:border-[#b0b4c0] p-6 bg-[#232427]
-          lg:first:border-t-0 lg:w-1/2
-          md:first:border-t
-          xs:first:border-t
+            lg:first:border-t-0 lg:w-1/2
+            md:first:border-t
+            xs:first:border-t
         "
           >
             <h1 className="text-5xl text-[#529b3c]">3</h1>
@@ -201,7 +200,7 @@ export const WhyChooseUs = () => {
               <h4 className="font-medium lg:text-xl md:text-xl xs:text-lg text-white">
                 {t("homePage.whyChooseUs.reasons.numbers.threeTitle")}
               </h4>
-              <p className="w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-xs xs:leading-6 text-[#E2E2E2]">
+              <p className="w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-base xs:leading-6 text-[#E2E2E2]">
                 {t("homePage.whyChooseUs.reasons.numbers.threeDescription")}
               </p>
             </div>

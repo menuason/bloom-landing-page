@@ -38,12 +38,12 @@ export const Assortment = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center lg:mt-12 lg:gap-1 lg:px-20 md:px-8 md:my-6 xs:pl-4 xs:gap-4">
+    <div className="flex flex-col items-center lg:mt-12 lg:gap-1 lg:px-20 md:px-8 md:my-6 xs:pl-4 xs:gap-4 xs:mt-6">
       <div className="flex flex-col justify-center lg:items-center lg:gap-4 md:items-center md:gap-1 xs:gap-2">
         <p
           className="text-bloomTitle font-medium
-             lg:text-3xl lg:text-center
-             md:text-2xl md:text-start
+             lg:text-4xl lg:text-center
+             md:text-2xl md:text-start md:font-semibold
              xs:text-2xl xs:text-start
           "
         >
