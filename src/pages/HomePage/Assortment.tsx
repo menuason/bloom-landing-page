@@ -44,7 +44,7 @@ export const Assortment = () => {
           className="text-bloomTitle font-medium
              lg:text-4xl lg:text-center
              md:text-2xl md:text-start md:font-semibold
-             xs:text-2xl xs:text-start
+             xs:text-2xl xs:text-start xs:font-semibold
           "
         >
           {t("homePage.assortment.assortmentSectionTitle")}

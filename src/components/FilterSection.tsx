@@ -562,7 +562,7 @@ export const FilterSection = () => {
           max-h-[100vh]
         "
       >
-        <p className="font-normal md:text-base md:text-base xs:text-base">
+        <p className="font-normal md:text-base xs:text-base">
           <span className="text-bloomBody">{t("cataloguePage.filterHeader.showing")}</span> |
           <span className="text-bloomBody">{catalogueFlowers.length + " "}</span>
           <span className="text-bloomBody">{t("cataloguePage.filterHeader.items")}</span>

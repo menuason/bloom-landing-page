@@ -68,7 +68,7 @@ export const WhyChooseUs = () => {
           className="text-bloomTitle items-center font-medium w-full
            lg:text-4xl
            md:text-2xl md:font-semibold
-           xs:text-2xl
+           xs:text-2xl xs:font-semibold
           "
         >
           {t("homePage.whyChooseUs.whyChooseUsTitle")}

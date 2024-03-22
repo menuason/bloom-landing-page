@@ -83,7 +83,7 @@ export const AboutUsGallerySection = () => {
           className="font-medium text-[#232427]
            lg:text-4xl lg:self-center
            md:text-2xl md:self-center md:font-semibold
-           xs:text-2xl xs:self-start
+           xs:text-2xl xs:self-start xs:font-semibold
           "
         >
           {t("aboutUsPage.gallerySection.title")}

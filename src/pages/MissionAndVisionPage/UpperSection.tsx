@@ -18,7 +18,7 @@ export const MissionAndVisionUpperSection = () => {
         <p className="text-4xl text-bloomTitle font-medium
          lg:text-4xl lg:text-start
          md:text-2xl md:text-center md:font-semibold
-         xs:text-2xl xs:text-start
+         xs:text-2xl xs:text-start xs:font-semibold
          "
         >
           {t("missionAndVisionPage.product.title")}

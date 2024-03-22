@@ -37,7 +37,7 @@ export const AboutUsInteriorSection = () => {
           className="text-4xl text-bloomTitle font-medium
            lg:text-4xl lg:self-start
            md:text-2xl md:self-center md:font-semibold
-           xs:text-2xl xs:self-start
+           xs:text-2xl xs:self-start xs:font-semibold
           "
         >
           {t("aboutUsPage.interiorSection.title")}
