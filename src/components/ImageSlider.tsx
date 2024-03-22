@@ -28,18 +28,39 @@ export const ImageSlider: FC<ImageSliderProps> = ({
             alt="Selected"
             className="w-full cursor-auto self-center"
           />
-          <div className="absolute my-auto top-1/2 left-0 transform -translate-y-1/2 lg:p-10 md:p-4 xs:p-2 ">
-            <button autoFocus onClick={onBack} onKeyDown={onKeydown}>
+          <div
+            onClick={onBack}
+            className="flex items-center absolute my-auto top-1/2 left-0 transform -translate-y-1/2 rounded hover:bg-white/[.07] cursor-pointer
+              lg:m-6 lg:p-4
+              md:p-4
+              xs:p-2
+             "
+          >
+            <button autoFocus onKeyDown={onKeydown}>
               <ArrowLeftIcon color="white" width={11} height={16} />
             </button>
           </div>
-          <div className="absolute top-0 right-0 lg:p-10 md:p-4 xs:p-2">
+          <div
+            onClick={onClose}
+            className="absolute top-0 right-0 cursor-pointer rounded hover:bg-white/[.09]
+              lg:m-6 lg:py-3 px-4
+              md:p-4
+              xs:p-2
+            "
+          >
             <button onClick={onClose}>
               <CloseIcon />
             </button>
           </div>
-          <div className="absolute my-auto top-1/2 right-0 transform -translate-y-1/2 lg:p-10 md:p-4 xs:p-2">
-            <button autoFocus onClick={onNext} onKeyDown={onKeydown}>
+          <div
+            onClick={onNext}
+            className="flex items-center absolute my-auto top-1/2 right-0 transform -translate-y-1/2 rounded hover:bg-white/[.07] cursor-pointer
+              lg:m-6 lg:p-4
+              md:p-4
+              xs:p-2
+            "
+          >
+            <button autoFocus onKeyDown={onKeydown}>
               <ArrowRightIcon color="white" width={11} height={16} />
             </button>
           </div>

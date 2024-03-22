@@ -58,7 +58,7 @@ export const AboutBloomHouse = () => {
         </div>
 
         <div>
-          <img alt="Bloom House" src="../../home-page-photos/Home.png" />
+          <img alt="Bloom House" src="../../home-page-photos/home.png" />
         </div>
 
         <div

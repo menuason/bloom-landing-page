@@ -3,6 +3,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { useTranslation } from "react-i18next";
 import { RootComponent } from "./components/RootComponent";
+import { catalogueFlowers } from "./components/FilterSection";
 
 const HomePage = React.lazy(() => import("./pages/HomePage/HomePage"));
 const PackagingPage = React.lazy(() => import("./pages/PackagingPage/PackagingPage"));
@@ -67,12 +68,15 @@ function App() {
     return () => clearTimeout(timeout);
   }, []);
 
+  const randomFlowerInd = Math.floor(Math.random() * catalogueFlowers.length);
+  const randomFlowerPath = catalogueFlowers[randomFlowerInd].image;
+
   return (
     <React.StrictMode>
       <Suspense fallback={
         <div className="flex justify-center items-center h-screen">
           <img
-            src="../../catalogue-page-photos/catalogue-flowers/Mandala.png"
+            src={randomFlowerPath}
             alt="Bloom House"
             className={`w-64 h-64 ${isLoading ? "animate-spin" : ""}`}
           />

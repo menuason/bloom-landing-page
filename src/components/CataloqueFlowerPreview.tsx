@@ -68,9 +68,9 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
           "
         >
           <Dialog.Close asChild>
-            <div className="flex justify-end">
-              <button>
-                <CloseIcon color="black" className="m-2" />
+            <div className="flex justify-end -mr-4">
+              <button  className="lg:px-4 lg:h-12 lg:rounded lg:hover:bg-black/[.04]">
+                <CloseIcon color="black" />
               </button>
             </div>
           </Dialog.Close>
@@ -78,7 +78,12 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
           <div
             className={`flex justify-center lg:gap-8 md:gap-4 items-center h-[${previewContentSize}]`}
           >
-            <button autoFocus onClick={handleBack} onKeyDown={handleKeyDown}>
+            <button
+              autoFocus
+              onClick={handleBack}
+              onKeyDown={handleKeyDown}
+              className="lg:px-2 lg:h-12 lg:rounded lg:hover:bg-black/[.06]"
+            >
               <ArrowLeftIcon
                 color="black"
                 width={11}
@@ -139,7 +144,12 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
                 </div>
               </div>
             </div>
-            <button autoFocus onClick={handleNext} onKeyDown={handleKeyDown}>
+            <button
+              autoFocus
+              onClick={handleNext}
+              onKeyDown={handleKeyDown}
+              className="lg:px-2 lg:h-12 lg:rounded lg:hover:bg-black/[.06]"
+            >
               <ArrowRightIcon
                 color="black"
                 width={11}
