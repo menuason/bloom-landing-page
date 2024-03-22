@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AboutBloomHouse, Assortment, WhyChooseUs } from ".";
-import { PlayIcon } from "../../../public/icons/roundArrowRight/play";
 import { RoundedArrowDownIcon } from "../../../public/icons/roundedArrowDown/roundedArrowDown";
+import { RoundPlayIcon } from "../../../public/icons/roundArrowRight/roundPlay";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -58,8 +58,7 @@ const HomePage = () => {
                 {t("homePage.videoNotSupported")}
               </video>
 
-              <div
-                className="animate-bounce lg:block md:block xs:hidden absolute bottom-24 left-1/2 transform -translate-x-1/2 cursor-pointer">
+              <div className="animate-bounce lg:block md:block xs:hidden absolute bottom-24 left-1/2 transform -translate-x-1/2 cursor-pointer">
                 <RoundedArrowDownIcon onClick={scrollDown} />
               </div>
             </div>
@@ -69,9 +68,7 @@ const HomePage = () => {
                 alt="Bloom House"
                 src="../../home-page-photos/thumbnail.jpg"
               />
-              <PlayIcon
-                width={60}
-                height={60}
+              <RoundPlayIcon
                 color="white"
                 className="flex items-center justify-center bg-black/[.2] w-full h-full lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 onClick={toggleVideoPlay}
