@@ -20,6 +20,7 @@
     "@radix-ui/themes": "^2.0.3",
     "@types/react-i18next": "^8.1.0",
     "autoprefixer": "^10.4.17",
+    "emailjs-com": "^3.2.0",
     "firebase": "^10.9.0",
     "firebase-tools": "^13.5.1",
     "i18next": "^23.9.0",
