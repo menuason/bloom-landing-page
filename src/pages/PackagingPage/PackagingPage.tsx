@@ -5,6 +5,7 @@ import { PlayIcon } from "../../../public/icons/roundArrowRight/play";
 import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
 import { Button } from "../../components/Button";
 import { PackagingFullScreenVideo } from "../../components/PackagingFullScreenVideo";
+import { RoundPlayIcon } from "../../../public/icons/roundArrowRight/roundPlay";
 
 const PACKAGING_IMAGE_LIST = [
   {
@@ -50,15 +51,13 @@ const PackagingPage: FC<PackagingPageProps> = () => {
        "
       >
         <div className="flex relative lg:w-1/2">
-            <img
-              alt="Bloom House"
-              src="../../packaging-page-photos/mainPic.png"
-              className="w-full h-full"
-            />
+          <img
+            alt="Bloom House"
+            src="../../packaging-page-photos/mainPic.png"
+            className="w-full h-full"
+          />
           <PackagingFullScreenVideo>
-            <PlayIcon
-              width={60}
-              height={60}
+            <RoundPlayIcon
               color="white"
               className="flex items-center justify-center bg-black/[.2] w-full h-full lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             />
