@@ -23,7 +23,7 @@ export const AboutBloomHouse = () => {
         >
           <p
             className="text-bloomTitle items-center font-medium w-full
-            lg:text-4xl
+            lg:text-4xl lg:leading-9
             md:text-2xl md:font-semibold
             xs:text-2xl
            "
