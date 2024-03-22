@@ -6,7 +6,7 @@ import { CatalogueFlower } from "../pages/Catalogue/CataloguePage";
 import Pagination from "../pages/Catalogue/Pagination";
 import { FilterIcon } from "../../public/icons/filter/filterIcon";
 
-const catalogueFlowers: CatalogueFlower[] = [
+export const catalogueFlowers: CatalogueFlower[] = [
   {
     image: "../../catalogue-page-photos/catalogue-flowers/Esmara.png",
     name: "Esmara",

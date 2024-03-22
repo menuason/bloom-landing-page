@@ -40,11 +40,16 @@ const InlinePhotoSlider: FC<PhotoSliderProps> = ({ images }) => {
 
   return (
     <div className="flex lg:w-full xs:justify-center md:justify-center relative">
-      <button onClick={handleNext} className="p-5">
-        <ArrowLeftIcon color="black" />
-      </button>
+      <div className="flex items-center">
+        <button
+          onClick={handleNext}
+          className="lg:mx-2 lg:px-4 lg:h-12 lg:rounded lg:hover:bg-black/[.06] md:px-5 xs:px-5"
+        >
+          <ArrowLeftIcon color="black" />
+        </button>
+      </div>
 
-      <div className="relative">
+      <div className="relative max-w-[600px]">
         <img
           src={imagesArray[currentPhotoIndex]}
           alt={`Photo ${currentPhotoIndex + 1}`}
@@ -52,13 +57,22 @@ const InlinePhotoSlider: FC<PhotoSliderProps> = ({ images }) => {
         />
 
         <div className="w-full h-full absolute m-auto top-0">
-          <ImageList images={INTERIOR_PHOTOS} className="opacity-0" />
+          <ImageList
+            isForInlineSlider
+            images={INTERIOR_PHOTOS}
+            className="opacity-0"
+          />
         </div>
       </div>
 
-      <button onClick={handleBack} className="p-5">
-        <ArrowRightIcon color="black" />
-      </button>
+      <div className="flex items-center">
+        <button
+          onClick={handleBack}
+          className="lg:mx-2 lg:px-4 lg:h-12 lg:rounded lg:hover:bg-black/[.06] md:px-5 xs:px-5"
+        >
+          <ArrowRightIcon color="black" />
+        </button>
+      </div>
     </div>
   );
 };

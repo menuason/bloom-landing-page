@@ -17,7 +17,7 @@ export const AboutUsSection = () => {
       <PageSection
         isImageFirst
         imageClassName="w-full"
-        image="../../about-us-page-photos/mainPic1.png"
+        image="../../about-us-page-photos/mainPic.png"
       >
         <div
           className="flex flex-col justify-center
