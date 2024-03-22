@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/Button";
 import { ErrorIcon } from "../../../public/icons/error/error";
@@ -31,8 +32,18 @@ const ContactUsForm = () => {
     defaultValues: formDefaultValues,
   });
 
-  const onSubmit = () => {
-    reset(formDefaultValues);
+  const onSubmit = async (data: Record<string, unknown> | undefined) => {
+    try {
+      await emailjs.send(
+        "service_7grj5ma",
+        "template_yyosx0h",
+        data,
+        "Q7lDXCEz-QilqliyC"
+      );
+      reset(formDefaultValues);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
   };
 
   return (
