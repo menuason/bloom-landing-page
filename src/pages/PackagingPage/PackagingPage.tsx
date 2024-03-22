@@ -1,32 +1,32 @@
-import { FC } from "react";
-import { useTranslation } from "react-i18next";
-import { ImageList } from "../../components/ImageList";
-import { PlayIcon } from "../../../public/icons/roundArrowRight/play";
-import { PageDescriptionHeader } from "../../components/PageDescriptionHeader";
-import { Button } from "../../components/Button";
-import { PackagingFullScreenVideo } from "../../components/PackagingFullScreenVideo";
-import { RoundPlayIcon } from "../../../public/icons/roundArrowRight/roundPlay";
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
+import { ImageList } from '../../components/ImageList';
+import { PlayIcon } from '../../../public/icons/roundArrowRight/play';
+import { PageDescriptionHeader } from '../../components/PageDescriptionHeader';
+import { Button } from '../../components/Button';
+import { PackagingFullScreenVideo } from '../../components/PackagingFullScreenVideo';
+import { RoundPlayIcon } from '../../../public/icons/roundArrowRight/roundPlay';
 
 const PACKAGING_IMAGE_LIST = [
   {
-    thumbnail: "../../packaging-page-photos/pic-1.png",
-    hoverImg: "../../packaging-page-photos/pic1-2.png",
-    sliderImg: "../../packaging-page-photos/pic-1-dialog.png",
+    thumbnail: '../../packaging-page-photos/pic-1.png',
+    hoverImg: '../../packaging-page-photos/pic1-2.png',
+    sliderImg: '../../packaging-page-photos/pic-1-dialog.png',
   },
   {
-    thumbnail: "../../packaging-page-photos/pic-2.png",
-    hoverImg: "../../packaging-page-photos/pic2-2.png",
-    sliderImg: "../../packaging-page-photos/pic-2-dialog.png",
+    thumbnail: '../../packaging-page-photos/pic-2.png',
+    hoverImg: '../../packaging-page-photos/pic2-2.png',
+    sliderImg: '../../packaging-page-photos/pic-2-dialog.png',
   },
   {
-    thumbnail: "../../packaging-page-photos/pic-3.png",
-    hoverImg: "../../packaging-page-photos/pic3-2.png",
-    sliderImg: "../../packaging-page-photos/pic-3-dialog.png",
+    thumbnail: '../../packaging-page-photos/pic-3.png',
+    hoverImg: '../../packaging-page-photos/pic3-2.png',
+    sliderImg: '../../packaging-page-photos/pic-3-dialog.png',
   },
   {
-    thumbnail: "../../packaging-page-photos/pic-4.png",
-    hoverImg: "../../packaging-page-photos/pic4-2.png",
-    sliderImg: "../../packaging-page-photos/pic-4-dialog.png",
+    thumbnail: '../../packaging-page-photos/pic-4.png',
+    hoverImg: '../../packaging-page-photos/pic4-2.png',
+    sliderImg: '../../packaging-page-photos/pic-4-dialog.png',
   },
 ];
 
@@ -39,8 +39,8 @@ const PackagingPage: FC<PackagingPageProps> = () => {
     <>
       <PageDescriptionHeader
         image="../../packaging-page-photos/packaging.png"
-        title={t("packagingPage.packaging.title")}
-        navOne={t("packagingPage.packaging.nav2")}
+        title={t('packagingPage.packaging.title')}
+        navOne={t('packagingPage.packaging.nav2')}
       />
 
       <div
@@ -53,7 +53,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
         <div className="flex relative lg:w-1/2">
           <img
             alt="Bloom House"
-            src="../../packaging-page-photos/mainPic.png"
+            src={'../../packaging-page-photos/mainPic.png'}
             className="w-full h-full"
           />
           <PackagingFullScreenVideo>
@@ -78,7 +78,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
              xs:text-2xl xs:self-start xs:font-semibold
            "
           >
-            {t("packagingPage.mainContent.title")}
+            {t('packagingPage.mainContent.title')}
           </p>
           <div
             className="font-normal text-bloomBody
@@ -87,12 +87,12 @@ const PackagingPage: FC<PackagingPageProps> = () => {
             xs:text-base xs:leading-6
            "
           >
-            <p>{t("packagingPage.mainContent.text.p1")}</p>
-            <p>{t("packagingPage.mainContent.text.p2")}</p>
-            <p>{t("packagingPage.mainContent.text.p3")}</p>
+            <p>{t('packagingPage.mainContent.text.p1')}</p>
+            <p>{t('packagingPage.mainContent.text.p2')}</p>
+            <p>{t('packagingPage.mainContent.text.p3')}</p>
 
             <div className="flex flex-col lg:gap-8 lg:mt-3">
-              <p>{t("packagingPage.mainContent.text.p4")}</p>
+              <p>{t('packagingPage.mainContent.text.p4')}</p>
 
               <PackagingFullScreenVideo>
                 <Button
@@ -100,7 +100,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
                   className="hidden lg:flex"
                   startIcon={<PlayIcon color="#232427" width={24} height={24} />}
                 >
-                  {t("packagingPage.mainContent.button.text")}
+                  {t('packagingPage.mainContent.button.text')}
                 </Button>
               </PackagingFullScreenVideo>
             </div>
@@ -129,7 +129,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
              xs:text-2xl xs:self-start
             "
           >
-            {t("packagingPage.gallerySection.title")}
+            {t('packagingPage.gallerySection.title')}
           </p>
           <p
             className="font-normal text-bloomBody
@@ -138,7 +138,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
             xs:text-base
            "
           >
-            {t("packagingPage.gallerySection.text")}
+            {t('packagingPage.gallerySection.text')}
           </p>
         </div>
       </div>
