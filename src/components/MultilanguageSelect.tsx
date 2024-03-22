@@ -54,7 +54,7 @@ const MultiLanguageSelect = () => {
           <div className="flex gap-2 hover:text-[#7E7E7E]">
             <div className="flex gap-4">
               <div className="lg:block md:hidden xs:hidden text-[#7E7E7E]">|</div>
-              <div className="flex gap-2 font-medium hover:text-[#7E7E7E]">
+              <div className="flex gap-2 font-medium hover:text-[#7E7E7E] text-bloomTitle">
                 <span>
                   {languages[selectedLanguage].shortName.toUpperCase()}
                 </span>

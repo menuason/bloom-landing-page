@@ -81,8 +81,8 @@ export const AboutUsGallerySection = () => {
       >
         <p
           className="font-medium text-[#232427]
-           lg:text-3xl lg:self-center
-           md:text-2xl md:self-center
+           lg:text-4xl lg:self-center
+           md:text-2xl md:self-center md:font-semibold
            xs:text-2xl xs:self-start
           "
         >

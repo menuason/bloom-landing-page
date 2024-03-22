@@ -27,9 +27,9 @@ export const AboutUsSection = () => {
          "
         >
           <p
-            className="text-4xl font-medium text-bloomTitle
-             lg:text-3xl lg:self-start
-             md:text-2xl md:self-center
+            className="text-4xl text-medium
+             lg:text-4xl lg:self-start
+             md:text-2xl md:self-center md:font-semibold
              xs:text-2xl xs:self-start
            "
           >

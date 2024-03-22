@@ -73,8 +73,8 @@ const PackagingPage: FC<PackagingPageProps> = () => {
         >
           <p
             className="text-4xl text-bloomTitle font-medium
-             lg:text-3xl lg:self-start
-             md:text-2xl md:self-center
+             lg:text-4xl lg:self-start
+             md:text-2xl md:self-center md:font-semibold
              xs:text-2xl xs:self-start
            "
           >
@@ -98,7 +98,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
                 <Button
                   type="outlined"
                   className="hidden lg:flex"
-                  startIcon={<PlayIcon color="black" width={24} height={24} />}
+                  startIcon={<PlayIcon color="#232427" width={24} height={24} />}
                 >
                   {t("packagingPage.mainContent.button.text")}
                 </Button>
@@ -124,7 +124,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
         >
           <p
             className="font-medium
-             lg:text-3xl lg:self-center
+             lg:text-4xl lg:self-center
              md:text-2xl md:self-center
              xs:text-2xl xs:self-start
             "

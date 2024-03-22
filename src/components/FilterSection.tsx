@@ -450,7 +450,7 @@ export const FilterSection = () => {
   const handleChange = (
     checked: string | boolean,
     label: string,
-    filterType: "color" | "brand"
+    filterType: "color" | "brand",
   ) => {
     filterType === "color"
       ? filterColors(checked, label)
@@ -533,11 +533,11 @@ export const FilterSection = () => {
              ${showFilter ? "w-[337px] py-8 px-4 overflow-hidden" : "w-0 p-0"}`}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex flex-col gap-3 ">
-            <p className="font-normal md:text-base md:text- xs:text-base">
-              {t("cataloguePage.filterHeader.showing")} |
-              {catalogueFlowers.length + " "}
-              {t("cataloguePage.filterHeader.items")}
+          <div className="flex flex-col gap-3">
+            <p className="font-normal md:text-base md:text-base xs:text-base">
+              <span className="text-bloomBody">{t("cataloguePage.filterHeader.showing")}</span> |
+              <span className="text-bloomBody">{catalogueFlowers.length + " "}</span>
+              <span className="text-bloomBody">{t("cataloguePage.filterHeader.items")}</span>
             </p>
 
             <CatalogueFilter
@@ -562,10 +562,10 @@ export const FilterSection = () => {
           max-h-[100vh]
         "
       >
-        <p className="font-normal md:text-base xs:text-base">
-          {t("cataloguePage.filterHeader.showing")} |
-          {catalogueFlowers.length + " "}
-          {t("cataloguePage.filterHeader.items")}
+        <p className="font-normal md:text-base md:text-base xs:text-base">
+          <span className="text-bloomBody">{t("cataloguePage.filterHeader.showing")}</span> |
+          <span className="text-bloomBody">{catalogueFlowers.length + " "}</span>
+          <span className="text-bloomBody">{t("cataloguePage.filterHeader.items")}</span>
         </p>
 
         <CatalogueFilter

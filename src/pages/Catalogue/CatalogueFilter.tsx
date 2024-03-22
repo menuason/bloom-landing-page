@@ -38,7 +38,7 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({
 
       <div>
         <button
-          className="w-full h-12 text-left focus:outline-none flex justify-between items-center"
+          className="w-full h-12 text-left focus:outline-none flex justify-between items-center text-bloomBody"
           onClick={toggleColorsAccordion}
         >
           {t("cataloguePage.filterType.colour")}
@@ -62,7 +62,7 @@ const CatalogueFilter: FC<CatalogueFilterProps> = ({
 
       <div>
         <button
-          className="w-full h-12 text-left focus:outline-none flex justify-between items-center"
+          className="w-full h-12 text-left focus:outline-none flex justify-between items-center text-bloomBody"
           onClick={toggleBrandsAccordion}
         >
           {t("cataloguePage.filterType.brand")}

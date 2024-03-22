@@ -23,11 +23,11 @@ export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({ image, t
           className="w-full lg:h-full xs:h-[102px]"
         />
         <div className="absolute inset-0 p-0 m-0 w-fit h-fit text-center text-white flex flex-col m-auto
-         lg:gap-2 md:gap-1
+         lg:gap-2 md:gap-1 xs:gap-1
        "
         >
           <h2 className="font-medium
-            lg:text-4xl lg:mt-6 md:mt-5 md:text-xl xs:text-xl
+            lg:text-4xl lg:mt-6 md:mt-5 md:text-xl xs:text-[22px]
          "
           >
             {title}
