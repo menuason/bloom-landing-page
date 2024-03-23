@@ -23,11 +23,7 @@ const HomePage = () => {
     return () => {
       window.removeEventListener('resize', updateScreenSize);
     };
-  }, [width]);
-
-  useEffect(() => {
-    videoForMobile.current?.play();
-  });
+  }, []);
 
   const scrollDown = () => {
     window.scrollTo({
@@ -77,6 +73,7 @@ const HomePage = () => {
                 height="100%"
                 muted
                 loop
+                autoPlay={!isMobile}
               >
                 <source
                   src={'../../videos/Bloom House.mp4'}

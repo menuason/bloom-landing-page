@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { SyntheticEvent, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
@@ -46,9 +46,9 @@ const MultiLanguageSelect = () => {
     setSelectedLanguage(lang || i18n.language);
   }, [i18n.language, lang]);
 
-  const handleLanguageSelect = (ev: Event, lang: string) => {
-    changeLanguage(lang);
+  const handleLanguageSelect = (ev: SyntheticEvent, lang: string) => {
     ev.stopPropagation();
+    changeLanguage(lang);
   };
 
   return (
@@ -79,7 +79,8 @@ const MultiLanguageSelect = () => {
             <DropdownMenu.Item
               key={item}
               className="flex font-medium justify-between gap-2 py-2 tracking-wide cursor-pointer hover:outline-none normal hover:text-[#7E7E7E]"
-              onSelect={(ev) => handleLanguageSelect(ev, item)}
+              // onSelect={(ev) => handleLanguageSelect(ev, item)}
+              onClick={(ev) => handleLanguageSelect(ev, item)}
             >
               <span>{languages[item].shortName.toUpperCase()}</span>
               <img src={languages[item].flagPath} alt="logo" />
