@@ -57,7 +57,7 @@ const HomePage = () => {
               ref={videoForWeb}
             >
               <source
-                src={'../../videos/Bloom House.mp4'}
+                src={'https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/Bloom%20House%20Opening.mp4?alt=media&token=74c31a52-72ed-4127-a91a-df623ea480ed'}
                 type="video/mp4"
               />
               {t('homePage.videoNotSupported')}
@@ -76,7 +76,7 @@ const HomePage = () => {
                 autoPlay={!isMobile}
               >
                 <source
-                  src={'../../videos/Bloom House.mp4'}
+                  src={'https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/Bloom%20House%20Opening.mp4?alt=media&token=74c31a52-72ed-4127-a91a-df623ea480ed'}
                   type="video/mp4"
                 />
                 {t('homePage.videoNotSupported')}

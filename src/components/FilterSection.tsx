@@ -529,12 +529,12 @@ export const FilterSection = () => {
         onClick={handleToggle}
       >
         <div
-          className={`overflow-hidden flex flex-col gap-3 absolute top-0 left-0 h-full bg-white
-             ${showFilter ? "w-[337px] py-8 px-4 overflow-hidden" : "w-0 p-0"}`}
+          className={`overflow-auto flex flex-col gap-3 absolute top-0 left-0 h-full bg-white
+             ${showFilter ? "w-[337px] py-8 px-4" : "w-0 p-0"}`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col gap-3">
-            <p className="font-normal md:text-base md:text-base xs:text-base">
+            <p className="font-normal md:text-base xs:text-base">
               <span className="text-bloomBody">{t("cataloguePage.filterHeader.showing")}</span> |
               <span className="text-bloomBody">{catalogueFlowers.length + " "}</span>
               <span className="text-bloomBody">{t("cataloguePage.filterHeader.items")}</span>

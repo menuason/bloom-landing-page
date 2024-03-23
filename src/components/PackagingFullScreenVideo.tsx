@@ -39,12 +39,12 @@ export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) =>
 
           <div className="bg-black bg-opacity-75 absolute inset-0"></div>
           <video
-            src={'../videos/Bloom House Packaging.mp4'}
+            src={'https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/Bloom%20House%20Video.mp4?alt=media&token=0b7feb1f-d683-4606-9f15-09f1615fe651'}
             autoPlay={true}
             loop
             muted
             controls
-            style={{ position: 'absolute'}}
+            style={{ position: 'absolute' }}
           />
         </Dialog.Content>
       </Dialog.Portal>
