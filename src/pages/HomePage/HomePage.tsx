@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { AboutBloomHouse, Assortment, WhyChooseUs } from ".";
-import { RoundedArrowDownIcon } from "../../../public/icons/roundedArrowDown/roundedArrowDown";
-import { RoundPlayIcon } from "../../../public/icons/roundArrowRight/roundPlay";
+import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { AboutBloomHouse, Assortment, WhyChooseUs } from '.';
+import { RoundedArrowDownIcon } from '../../../public/icons/roundedArrowDown/roundedArrowDown';
+import { RoundPlayIcon } from '../../../public/icons/roundArrowRight/roundPlay';
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -19,27 +19,30 @@ const HomePage = () => {
 
   useEffect(() => {
     updateScreenSize();
-    window.addEventListener("resize", updateScreenSize);
+    window.addEventListener('resize', updateScreenSize);
     return () => {
-      window.removeEventListener("resize", updateScreenSize);
+      window.removeEventListener('resize', updateScreenSize);
     };
   }, [width]);
 
   useEffect(() => {
     videoForMobile.current?.play();
-  })
+  });
 
   const scrollDown = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
-  const video = useRef<HTMLVideoElement>();
-  const toggleVideoPlay = () => {
+  const toggleMobileVideoPlay = () => {
     setIsVideoPlaying(true);
-    video.current?.play();
+    videoForMobile.current?.play();
+  };
+  const toggleWebVideoPlay = () => {
+    setIsVideoPlaying(true);
+    videoForWeb.current?.play();
   };
 
   return (
@@ -54,14 +57,14 @@ const HomePage = () => {
               autoPlay={!isMobile}
               muted
               loop
-              onClick={toggleVideoPlay}
+              onClick={toggleWebVideoPlay}
               ref={videoForWeb}
             >
               <source
-                src={"../../videos/Bloom House.mp4"}
+                src={'../../videos/Bloom House.mp4'}
                 type="video/mp4"
               />
-              {t("homePage.videoNotSupported")}
+              {t('homePage.videoNotSupported')}
             </video>
           </div>
         ) : (
@@ -76,13 +79,14 @@ const HomePage = () => {
                 loop
               >
                 <source
-                  src={"../../videos/Bloom House.mp4"}
+                  src={'../../videos/Bloom House.mp4'}
                   type="video/mp4"
                 />
-                {t("homePage.videoNotSupported")}
+                {t('homePage.videoNotSupported')}
               </video>
 
-              <div className="animate-bounce lg:block md:block xs:hidden absolute bottom-24 left-1/2 transform -translate-x-1/2 cursor-pointer">
+              <div
+                className="animate-bounce lg:block md:block xs:hidden absolute bottom-24 left-1/2 transform -translate-x-1/2 cursor-pointer">
                 <RoundedArrowDownIcon onClick={scrollDown} />
               </div>
             </div>
@@ -90,12 +94,12 @@ const HomePage = () => {
             <div className="relative lg:hidden md:hidden xs:block">
               <img
                 alt="Bloom House"
-                src={"../../home-page-photos/thumbnail.jpg"}
+                src={'../../home-page-photos/thumbnail.jpg'}
               />
               <RoundPlayIcon
                 color="white"
                 className="flex items-center justify-center bg-black/[.2] w-full h-full lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                onClick={toggleVideoPlay}
+                onClick={toggleMobileVideoPlay}
               />
             </div>
           </>
