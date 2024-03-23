@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { ImageList } from '../../components/ImageList';
 import { PlayIcon } from '../../../public/icons/roundArrowRight/play';
 import { PageDescriptionHeader } from '../../components/PageDescriptionHeader';
-import { Button } from '../../components/Button';
 import { PackagingFullScreenVideo } from '../../components/PackagingFullScreenVideo';
 import { RoundPlayIcon } from '../../../public/icons/roundArrowRight/roundPlay';
 
@@ -95,13 +94,10 @@ const PackagingPage: FC<PackagingPageProps> = () => {
               <p>{t('packagingPage.mainContent.text.p4')}</p>
 
               <PackagingFullScreenVideo>
-                <Button
-                  type="outlined"
-                  className="hidden lg:flex"
-                  startIcon={<PlayIcon color="#232427" width={24} height={24} />}
-                >
+                <div className="hidden lg:flex items-center px-3 h-12 w-40 border border-bloomBlack text-bloomBlack">
+                  <PlayIcon color="#232427" width={24} height={24} className="mr-3" />
                   {t('packagingPage.mainContent.button.text')}
-                </Button>
+                </div>
               </PackagingFullScreenVideo>
             </div>
           </div>
