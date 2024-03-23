@@ -99,10 +99,10 @@ const OurSystemPage = () => {
           "
         >
           <p
-            className="font-medium text-bloomTitle
-             lg:text-4xl lg:self-center
-             md:text-2xl md:self-center
-             xs:text-2xl  xs:self-start
+            className="text-bloomTitle font-medium
+             lg:text-4xl lg:self-center lg:font-medium
+             md:text-2xl md:self-center md:font-semibold
+             xs:text-2xl  xs:self-start xs:font-semibold
             "
           >
             {t("systemPage.gallerySection.title")}

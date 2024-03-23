@@ -22,7 +22,7 @@ export const AboutBloomHouse = () => {
          "
         >
           <p
-            className="text-bloomTitle items-center font-medium w-full
+            className="text-bloomTitle items-center c w-full
             lg:text-4xl lg:leading-9
             md:text-2xl md:font-semibold
             xs:text-2xl xs:font-semibold
@@ -58,7 +58,7 @@ export const AboutBloomHouse = () => {
         </div>
 
         <div>
-          <img alt="Bloom House" src="../../home-page-photos/home.png" />
+          <img alt="Bloom House" src={"../../home-page-photos/home.png"} />
         </div>
 
         <div

@@ -114,33 +114,31 @@ const FlowerPreview: FC<PropsWithChildren<DialogDemoProps>> = ({
               </div>
 
               <div className="flex flex-col py-3 gap-1 lg:w-[385px] md:w-[480px] xs:w-[250px]">
-                <div className="text-sm flex gap-2 py-3 px-4 bg-[#F6F6F7]">
-                  <span className="font-normal min-w-16">
+                <div className="lg:text-base md:text-sm xs:text-sm flex gap-2 py-3 px-4 bg-[#F6F6F7]">
+                  <span className="font-normal min-w-16 text-bloomBody">
                     {t("cataloguePage.previewItems.name")}:
                   </span>
-                  <span className="font-medium">{selectedFlower?.name}</span>
+                  <span className="font-medium text-bloomTitle">{selectedFlower?.name}</span>
                 </div>
-                <div className="text-sm flex gap-2 py-3 px-4">
-                  <span className="font-normal min-w-16">
+                <div className="lg:text-base md:text-sm xs:text-sm flex gap-2 py-3 px-4">
+                  <span className="font-normal min-w-16 text-bloomBody">
                     {t("cataloguePage.filterType.colour")}:
                   </span>
-                  <span className="font-medium">
-                    {t(
-                      `cataloguePage.filterType.colourType.${selectedFlower?.color}`
-                    )}
+                  <span className="font-medium text-bloomTitle">
+                    {t(`cataloguePage.filterType.colourType.${selectedFlower?.color}`)}
                   </span>
                 </div>
-                <div className="text-sm flex gap-2 py-3 px-4 bg-[#F6F6F7]">
-                  <span className="font-normal min-w-16">
+                <div className="lg:text-base md:text-sm xs:text-sm flex gap-2 py-3 px-4 bg-[#F6F6F7]">
+                  <span className="font-normal min-w-16 text-bloomBody">
                     {t("cataloguePage.previewItems.brand")}:
                   </span>
-                  <span className="font-medium">{selectedFlower?.brand}</span>
+                  <span className="font-medium text-bloomTitle">{selectedFlower?.brand}</span>
                 </div>
-                <div className="text-sm flex gap-2 py-3 px-4">
-                  <span className="font-normal min-w-16">
+                <div className="lg:text-base md:text-sm xs:text-sm flex gap-2 py-3 px-4">
+                  <span className="font-normal min-w-16 text-bloomBody">
                     {t("cataloguePage.previewItems.size")}:
                   </span>
-                  <span className="font-medium">{selectedFlower?.size}</span>
+                  <span className="font-medium text-bloomTitle">{selectedFlower?.size}</span>
                 </div>
               </div>
             </div>

@@ -89,7 +89,7 @@ export const WhyChooseUs = () => {
         <div className="flex lg:mt-9 lg:flex-row md:flex-col xs:flex-col">
           <div className="flex flex-col m-0 lg:w-1/2">
             <img
-              src="../../home-page-photos/choose.png"
+              src={"../../home-page-photos/choose.png"}
               alt="Bloom House"
               className="h-full"
             />
@@ -207,7 +207,6 @@ export const WhyChooseUs = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

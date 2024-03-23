@@ -22,7 +22,6 @@ const formDefaultValues: ContactUsFormInputs = {
   phone: null,
   message: '',
 };
-
 const ContactUsForm = () => {
   const { t } = useTranslation();
 

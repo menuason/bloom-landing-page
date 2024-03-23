@@ -125,8 +125,8 @@ const PackagingPage: FC<PackagingPageProps> = () => {
           <p
             className="font-medium
              lg:text-4xl lg:self-center
-             md:text-2xl md:self-center
-             xs:text-2xl xs:self-start
+             md:text-2xl md:self-center md:font-semibold
+             xs:text-2xl xs:self-start xs:font-semibold
             "
           >
             {t('packagingPage.gallerySection.title')}
