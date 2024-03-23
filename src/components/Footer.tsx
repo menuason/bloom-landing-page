@@ -28,7 +28,6 @@ const Footer: FC = () => {
         >
           <a
             href={`/home/${i18n.language}`}
-            target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-400"
           >

@@ -52,17 +52,16 @@ const Header = () => {
       <div className="flex items-center gap-12 cursor-pointer text-bloomTitle">
         <div className="hidden lg:flex gap-12 items-center font-medium mt-2">
           {
-            NAV_BAR_ITEMS_WEB.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                className="hover:text-[#7E7E7E]"
-              >
-                {item?.component ?? item.title}
-              </a>
+            NAV_BAR_ITEMS_WEB.map(({ component, title, href }, ind) => (
+              <div key={ind}>
+                {
+                  component
+                    ? <>{component}</>
+                    : (<a key={title} href={href} className="hover:text-[#7E7E7E]">{title}</a>)
+                }
+              </div>
             ))
           }
-
         </div>
       </div>
       <div className="flex gap-4">
