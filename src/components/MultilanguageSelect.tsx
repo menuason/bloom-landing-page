@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { ArrowDownIcon } from "../../public/icons/arrowDown/arrowDownIcon";
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { ArrowDownIcon } from '../../public/icons/arrowDown/arrowDownIcon';
 
 type LanguageInfo = {
   shortName: string;
@@ -14,9 +14,9 @@ type Languages = {
 };
 
 const languages: Languages = {
-  en: { shortName: "EN", flagPath: "../../icons/flags/en.svg" },
-  ru: { shortName: "РУ", flagPath: "../../icons/flags/ru.svg" },
-  hy: { shortName: "հԱ", flagPath: "../../icons/flags/hy.svg" },
+  en: { shortName: 'EN', flagPath: '../../icons/flags/en.svg' },
+  ru: { shortName: 'РУ', flagPath: '../../icons/flags/ru.svg' },
+  hy: { shortName: 'հԱ', flagPath: '../../icons/flags/hy.svg' },
 };
 
 const MultiLanguageSelect = () => {
@@ -46,6 +46,11 @@ const MultiLanguageSelect = () => {
     setSelectedLanguage(lang || i18n.language);
   }, [i18n.language, lang]);
 
+  const handleLanguageSelect = (ev: Event, lang: string) => {
+    changeLanguage(lang);
+    ev.stopPropagation();
+  };
+
   return (
     <>
       <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
@@ -62,7 +67,7 @@ const MultiLanguageSelect = () => {
               </div>
             </div>
 
-            <ArrowDownIcon className={`flex items-center transition-transform ${isMenuOpen ? "rotate-180" : " "}`} />
+            <ArrowDownIcon className={`flex items-center transition-transform ${isMenuOpen ? 'rotate-180' : ' '}`} />
           </div>
         </DropdownMenu.Trigger>
 
@@ -73,8 +78,8 @@ const MultiLanguageSelect = () => {
           {Object.keys(languages).map((item) => (
             <DropdownMenu.Item
               key={item}
-              onSelect={() => changeLanguage(`${item}`)}
               className="flex font-medium justify-between gap-2 py-2 tracking-wide cursor-pointer hover:outline-none normal hover:text-[#7E7E7E]"
+              onSelect={(ev) => handleLanguageSelect(ev, item)}
             >
               <span>{languages[item].shortName.toUpperCase()}</span>
               <img src={languages[item].flagPath} alt="logo" />

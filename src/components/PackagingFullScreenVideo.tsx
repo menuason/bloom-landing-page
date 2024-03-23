@@ -1,7 +1,6 @@
-import { FC, PropsWithChildren, useEffect } from "react";
-import * as Dialog from "@radix-ui/react-dialog";
-import ReactPlayer from "react-player";
-import { CloseIcon } from "../../public/icons/close/close";
+import { FC, PropsWithChildren, useEffect } from 'react';
+import * as Dialog from '@radix-ui/react-dialog';
+import { CloseIcon } from '../../public/icons/close/close';
 
 export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
@@ -15,12 +14,12 @@ export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) =>
 
   const handleOpen = () => {
     const body = document.body;
-    body.style.overflow = "hidden";
+    body.style.overflow = 'hidden';
   };
 
   const handleClose = () => {
     const body = document.body;
-    body.style.overflow = "auto";
+    body.style.overflow = 'auto';
   };
 
   return (
@@ -39,23 +38,13 @@ export const PackagingFullScreenVideo: FC<PropsWithChildren> = ({ children }) =>
           </div>
 
           <div className="bg-black bg-opacity-75 absolute inset-0"></div>
-
-          <ReactPlayer
-            url="https://firebasestorage.googleapis.com/v0/b/bloom-test-ec336.appspot.com/o/packaging-page%2FBloom%20House%20Packaging.mp4?alt=media&token=67d9613d-cbe7-4311-b184-4450e4106837"
-            width="100%"
-            height="100%"
+          <video
+            src={'../videos/Bloom House Packaging.mp4'}
+            autoPlay={true}
+            loop
+            muted
             controls
-            playing
-            config={{
-              file: {
-                attributes: {
-                  autoPlay: true,
-                  loop: true,
-                  muted: true,
-                },
-              },
-            }}
-            style={{ position: "absolute", top: 0, left: 0 }}
+            style={{ position: 'absolute'}}
           />
         </Dialog.Content>
       </Dialog.Portal>
