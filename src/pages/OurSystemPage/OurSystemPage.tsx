@@ -49,7 +49,7 @@ const OurSystemPage = () => {
          "
         >
           <p
-            className="text-4xl text-bloomTitle items-center font-medium
+            className="text-4xl text-bloomTitle items-center font-medium capitalize
              lg:text-4xl lg:self-start
              md:text-2xl md:self-center md:font-semibold
              xs:text-2xl xs:self-start xs:font-semibold
@@ -99,7 +99,7 @@ const OurSystemPage = () => {
           "
         >
           <p
-            className="text-bloomTitle font-medium
+            className="text-bloomTitle font-medium capitalize
              lg:text-4xl lg:self-center lg:font-medium
              md:text-2xl md:self-center md:font-semibold
              xs:text-2xl  xs:self-start xs:font-semibold

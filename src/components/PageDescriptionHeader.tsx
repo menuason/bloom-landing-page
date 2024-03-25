@@ -11,7 +11,13 @@ interface PageDescriptionHeaderProps {
   navTwoLink?: string;
 }
 
-export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({ image, title, navOne, navTwo, navTwoLink }) => {
+export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({
+  image,
+  title,
+  navOne,
+  navTwo,
+  navTwoLink,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -22,11 +28,13 @@ export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({ image, t
           alt="Bloom House"
           className="w-full lg:h-full xs:h-[102px]"
         />
-        <div className="absolute inset-0 p-0 m-0 w-fit h-fit text-center text-white flex flex-col m-auto
+        <div
+          className="absolute inset-0 p-0 m-0 w-fit h-fit text-center text-white flex flex-col m-auto
          lg:gap-2 md:gap-1 xs:gap-1
        "
         >
-          <h2 className="font-medium
+          <h2
+            className="font-medium capitalize
             lg:text-4xl lg:mt-6 md:mt-5 md:text-xl xs:text-[22px]
          "
           >
@@ -34,21 +42,24 @@ export const PageDescriptionHeader: FC<PageDescriptionHeaderProps> = ({ image, t
           </h2>
           <div className="flex items-center gap-3 justify-center font-light">
             <a href={`/home/${i18n.language}`}>
-              <p className="cursor-pointer hover:text-[#C0C0C0]">{t("systemPage.system.nav1")}</p>
+              <p className="cursor-pointer hover:text-[#C0C0C0]">
+                {t("systemPage.system.nav1")}
+              </p>
             </a>
             <ArrowRightIcon color="white" width={8} height={12} />
-            {
-              navTwoLink ? (
-                <>
-                  <a href={`${navTwoLink}`}>
-                    <p className="cursor-pointer hover:text-[#C0C0C0]">{navOne}</p>
-                  </a>
-                  <ArrowRightIcon color="white" width={8} height={12} />
-                  {navTwo}
-                </>
-              ) : (
-                <span>{navOne}</span>
-              )}
+            {navTwoLink ? (
+              <>
+                <a href={`${navTwoLink}`}>
+                  <p className="cursor-pointer hover:text-[#C0C0C0]">
+                    {navOne}
+                  </p>
+                </a>
+                <ArrowRightIcon color="white" width={8} height={12} />
+                {navTwo}
+              </>
+            ) : (
+              <span>{navOne}</span>
+            )}
           </div>
         </div>
       </div>

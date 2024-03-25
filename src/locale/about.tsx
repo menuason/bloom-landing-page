@@ -64,7 +64,7 @@ const AboutUsPageTranslation = {
       button: "Читать Далее",
     },
     gallerySection: {
-      title: "Галерея Блум Хауса",
+      title: "Галерея Bloom House",
       text: "Исследуйте каждый уголок Bloom House с помощью нашей избранной галереи.",
       imgTextOne: "Наша эстетика",
       imgTextTwo: "Солнечная энергия",
