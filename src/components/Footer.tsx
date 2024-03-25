@@ -109,7 +109,7 @@ const Footer: FC = () => {
           <div className="flex gap-2 text-[#E2E2E2] ">
             <LocationFilledIcon color="#E2E2E2" />
             <a
-              href="https://www.google.com/maps/place/46th+St,+0815/@40.0488,44.4698,17z/data=!4m6!3m5!1s0x406ac7dd852d1143:0xfda2d06cdeba888!8m2!3d40.0487835!4d44.4721143!16s%2Fg%2F11f7r131dm?hl=en&entry=ttu"
+              href="https://www.google.com/maps/@40.0494073,44.4689376,18z?entry=ttu"
               target="_blank"
               rel="noopener noreferrer"
             >
