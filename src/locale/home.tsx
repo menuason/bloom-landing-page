@@ -75,7 +75,7 @@ const HomePageTranslation = {
         author: "By Schreurs",
       },
       snowKing: {
-        name: "snowKing",
+        name: "Snow King",
         author: "By HiverdaFlorist",
       },
       mariatta: {
@@ -99,7 +99,7 @@ const HomePageTranslation = {
       aboutBloomHouseButton: "Узнать Больше",
     },
     whyChooseUs: {
-      whyChooseUsTitle: "Почему Выбрали Нас?",
+      whyChooseUsTitle: "Почему Выбрать Нас?",
       whyChooseDescription:
         "В нашей теплице созданы оптимальные условия для выращивания гербер.",
       reasons: {

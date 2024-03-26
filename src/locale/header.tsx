@@ -21,7 +21,7 @@ const HeaderTranslation = {
       system: "Наша система",
       partners: "Партнеры",
     },
-    contact: "Контакт",
+    contact: "Контакты",
   },
   hy: {
     home: "Գլխավոր",
