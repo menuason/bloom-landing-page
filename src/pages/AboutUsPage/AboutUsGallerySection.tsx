@@ -17,7 +17,7 @@ export const AboutUsGallerySection = () => {
           "../../about-us-page-photos/aest/aest4.png",
           "../../about-us-page-photos/aest/aest5.png",
           "../../about-us-page-photos/aest/aest6.png",
-        ]
+        ],
       },
     },
     {
@@ -32,7 +32,7 @@ export const AboutUsGallerySection = () => {
           "../../about-us-page-photos/heating/heat-5.png",
           "../../about-us-page-photos/heating/heat-6.png",
         ],
-      }
+      },
     },
     {
       thumbnail: "../../about-us-page-photos/env/env.png",
@@ -46,7 +46,7 @@ export const AboutUsGallerySection = () => {
           "../../about-us-page-photos/env/env-5.png",
           "../../about-us-page-photos/env/env-6.png",
         ],
-      }
+      },
     },
     {
       thumbnail: "../../about-us-page-photos/packaging/packaging.png",
@@ -60,7 +60,7 @@ export const AboutUsGallerySection = () => {
           "../../about-us-page-photos/packaging/pac-5.png",
           "../../about-us-page-photos/packaging/pac-6.png",
         ],
-      }
+      },
     },
   ];
 
@@ -82,7 +82,7 @@ export const AboutUsGallerySection = () => {
         <p
           className="text-[#232427] font-medium
            lg:text-4xl lg:self-center
-           md:text-2xl md:self-center md:font-semibold
+           md:text-[26px] md:self-center md:font-semibold
            xs:text-2xl xs:self-start xs:font-semibold
           "
         >
@@ -93,7 +93,7 @@ export const AboutUsGallerySection = () => {
           <p
             className="font-normal text-[#323232]
               lg:text-base
-              md:text-sm
+              md:text-base
               xs:text-base
             "
           >

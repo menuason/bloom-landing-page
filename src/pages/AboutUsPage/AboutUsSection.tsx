@@ -29,7 +29,7 @@ export const AboutUsSection = () => {
           <p
             className="
              lg:text-4xl lg:leading-[3rem] lg:self-start
-             md:text-2xl md:self-center md:font-semibold
+             md:text-[26px] md:self-center md:font-semibold
              xs:text-2xl xs:self-start xs:font-semibold
            "
           >
@@ -39,7 +39,7 @@ export const AboutUsSection = () => {
             <div
               className="flex flex-col font-normal text-bloomBody
               lg:text-base lg:gap-6
-              md:text-sm
+              md:text-base
               xs:text-base xs:leading-6
              "
             >
