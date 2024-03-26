@@ -53,7 +53,7 @@ const MultiLanguageSelect = () => {
 
   return (
     <>
-      <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
+      <DropdownMenu.Root onOpenChange={(isOpen) => setIsMenuOpen(isOpen)} modal={false}>
         <DropdownMenu.Trigger
           className="flex items-center cursor-pointer mt-2 text-bloomBlack border-none hover:border-none hover:outline-none focus:outline-none">
           <div className="flex gap-2 hover:text-[#7E7E7E]">

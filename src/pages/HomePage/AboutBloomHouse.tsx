@@ -16,13 +16,13 @@ export const AboutBloomHouse = () => {
       >
         <div
           className="flex flex-col justify-center
-          lg:gap-6 lg:text-start
+          lg:gap-6 lg:text-start lg:w-1/2
           md:gap-4 md:text-center
           xs:gap-4 xs:text-start
          "
         >
           <p
-            className="text-bloomTitle items-center c w-full
+            className="text-bloomTitle items-center w-full
             lg:text-4xl lg:leading-9
             md:text-2xl md:font-semibold
             xs:text-2xl xs:font-semibold
@@ -57,7 +57,7 @@ export const AboutBloomHouse = () => {
           </div>
         </div>
 
-        <div>
+        <div className="lg:w-1/2">
           <img alt="Bloom House" src={"../../home-page-photos/home.png"} />
         </div>
 
