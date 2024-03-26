@@ -67,7 +67,7 @@ export const WhyChooseUs = () => {
         <p
           className="text-bloomTitle items-center font-medium w-full
            lg:text-4xl
-           md:text-2xl md:font-semibold
+           md:text-[26px] md:font-semibold
            xs:text-2xl xs:font-semibold
           "
         >
@@ -76,7 +76,7 @@ export const WhyChooseUs = () => {
         <div
           className="font-normal text-bloomBody
           lg:text-base
-          md:text-sm
+          md:text-base
           xs:text-base
           "
         >
@@ -91,7 +91,7 @@ export const WhyChooseUs = () => {
             <img
               src={"../../home-page-photos/choose.png"}
               alt="Bloom House"
-              className="h-full"
+              className="h-auto lg:h-full md:h-full xs:h-auto"
             />
           </div>
 
@@ -107,7 +107,7 @@ export const WhyChooseUs = () => {
                  <p
                    className="text-center font-medium
                    lg:text-base
-                   md:text-sm
+                   md:text-base
                    xs:text-base
                  "
                  >
@@ -116,7 +116,7 @@ export const WhyChooseUs = () => {
                  <p
                    className="text-center font-medium
                    lg:text-base
-                   md:text-sm
+                   md:text-base
                    xs:text-base
                  "
                  >
@@ -144,7 +144,7 @@ export const WhyChooseUs = () => {
                     <h4 className="font-semibold lg:text-xl md:text-xl xs:text-lg">
                       {item.header}
                     </h4>
-                    <p className={`w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-base xs:leading-6`}>
+                    <p className={`w-11/12 font-normal text-base lg:text-base md:text-base xs:text-base xs:leading-6`}>
                       {item.description}
                     </p>
                   </div>
@@ -162,12 +162,12 @@ export const WhyChooseUs = () => {
                   key={index}
                   className="text-bloomBody w-full h-full border-r border-[#b0b4c0] flex flex-col items-center justify-center gap-3 last:border-0"
                 >
-                  <img src={item.icon} alt="Bloom House" />
+                  <img className="h-auto" src={item.icon} alt="Bloom House" />
                   <span>
                  <p
                    className="text-center font-medium
                    lg:text-base
-                   md:text-sm
+                   md:text-base
                    xs:text-base
                  "
                  >
@@ -176,7 +176,7 @@ export const WhyChooseUs = () => {
                  <p
                    className="text-center font-medium
                    lg:text-base
-                   md:text-sm
+                   md:text-base
                    xs:text-base
                  "
                  >
@@ -200,7 +200,7 @@ export const WhyChooseUs = () => {
               <h4 className="font-medium lg:text-xl md:text-xl xs:text-lg text-white">
                 {t("homePage.whyChooseUs.reasons.numbers.threeTitle")}
               </h4>
-              <p className="w-11/12 font-normal text-base lg:text-base md:text-sm xs:text-base xs:leading-6 text-[#E2E2E2]">
+              <p className="w-11/12 font-normal text-base lg:text-base md:text-base xs:text-base xs:leading-6 text-[#E2E2E2]">
                 {t("homePage.whyChooseUs.reasons.numbers.threeDescription")}
               </p>
             </div>

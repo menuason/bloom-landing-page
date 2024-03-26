@@ -139,7 +139,7 @@ export const ImageList: FC<ImageListProps> = ({ images, isForInlineSlider, class
             />
             {image.sliderImages?.title && (
               <div
-                className="w-full bg-[#23242759] cursor-pointer cursor-auto text-white flex items-start justify-center flex-col absolute bottom-0 left-0 opacity-1
+                className="w-full bg-[#23242759] cursor-pointer text-white flex items-start justify-center flex-col absolute bottom-0 left-0 opacity-1
                    lg:h-1/5 lg:px-4
                    md:h-1/4 md:px-2
                    xs:h-1/4 xs:px-2
@@ -147,7 +147,7 @@ export const ImageList: FC<ImageListProps> = ({ images, isForInlineSlider, class
               >
                 <div className="flex items-center justify-between w-full">
                   <div>
-                    <h4 className="lg:text-lg md:text-sm xs:text-xs">
+                    <h4 className="lg:text-lg md:text-base xs:text-xs">
                       {image.sliderImages?.title}
                     </h4>
                     <p className="font-light text-sm">

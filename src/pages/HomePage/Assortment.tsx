@@ -43,7 +43,7 @@ export const Assortment = () => {
         <p
           className="text-bloomTitle font-medium capitalize
              lg:text-4xl lg:text-center
-             md:text-2xl md:text-start md:font-semibold
+             md:text-[26px] md:text-start md:font-semibold
              xs:text-2xl xs:text-start xs:font-semibold
           "
         >
@@ -53,7 +53,7 @@ export const Assortment = () => {
         <p
           className="text-bloomBody lg:w-3/5 font-normal
             lg:text-base lg:text-center
-            md:text-sm md:text-center
+            md:text-base md:text-center
             xs:text-base xs:items-start  xs:leading-6
           "
         >

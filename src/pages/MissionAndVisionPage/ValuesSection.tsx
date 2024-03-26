@@ -37,7 +37,7 @@ export const ValuesSection = () => {
       >
         <p className="text-4xl text-bloomTitle font-medium
            lg:text-4xl lg:text-start
-           md:text-2xl md:text-center md:font-semibold
+           md:text-[26px] md:text-center md:font-semibold
            xs:text-2xl xs:text-start xs:font-semibold
          "
         >
@@ -47,7 +47,7 @@ export const ValuesSection = () => {
         <div className="flex flex-col gap-8">
           <div className="flex flex-col font-normal text-bloomBody
             lg:text-base
-            md:text-sm
+            md:text-base
             xs:text-base xs:leading-6
            "
           >

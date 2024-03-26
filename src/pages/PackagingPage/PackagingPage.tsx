@@ -45,8 +45,8 @@ const PackagingPage: FC<PackagingPageProps> = () => {
       <div
         className="flex
         lg:flex-row lg:gap-[72px] lg:px-20 lg:mt-[72px] lg:mb-[124px]
-        md:flex-col md:gap-6 md:px-8 md:mt-12 md:mb-6
-        xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-6
+        md:flex-col md:gap-6 md:px-8 md:mt-12 md:mb-12
+        xs:flex-col xs:gap-6 xs:px-4 xs:mt-6 xs:mb-12
        "
       >
         <div className="flex relative lg:w-1/2">
@@ -73,7 +73,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
           <p
             className="text-4xl text-bloomTitle font-medium
              lg:text-4xl lg:self-start
-             md:text-2xl md:self-center md:font-semibold
+             md:text-[26px] md:self-center md:font-semibold
              xs:text-2xl xs:self-start xs:font-semibold
            "
           >
@@ -82,7 +82,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
           <div
             className="font-normal text-bloomBody
             lg:text-base
-            md:text-sm
+            md:text-base
             xs:text-base xs:leading-6
            "
           >
@@ -121,7 +121,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
           <p
             className="font-medium
              lg:text-4xl lg:self-center
-             md:text-2xl md:self-center md:font-semibold
+             md:text-[26px] md:self-center md:font-semibold
              xs:text-2xl xs:self-start xs:font-semibold
             "
           >
@@ -130,7 +130,7 @@ const PackagingPage: FC<PackagingPageProps> = () => {
           <p
             className="font-normal text-bloomBody
             lg:text-base
-            md:text-sm
+            md:text-base
             xs:text-base
            "
           >

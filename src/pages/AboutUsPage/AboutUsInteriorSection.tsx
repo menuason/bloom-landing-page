@@ -36,7 +36,7 @@ export const AboutUsInteriorSection = () => {
         <p
           className="text-bloomTitle font-medium
            lg:text-4xl lg:self-start lg:leading-[3rem]
-           md:text-2xl md:self-center md:font-semibold
+           md:text-[26px] md:self-center md:font-semibold
            xs:text-2xl xs:self-start xs:font-semibold
           "
         >
@@ -45,7 +45,7 @@ export const AboutUsInteriorSection = () => {
         <div
           className="flex flex-col gap-8 font-normal text-bloomBody
           lg:text-base
-          md:text-sm
+          md:text-base
           xs:text-base
          "
         >

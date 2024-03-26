@@ -24,7 +24,7 @@ export const AboutBloomHouse = () => {
           <p
             className="text-bloomTitle items-center w-full
             lg:text-4xl lg:leading-9
-            md:text-2xl md:font-semibold
+            md:text-[26px] md:font-semibold
             xs:text-2xl xs:font-semibold
            "
           >
@@ -34,7 +34,7 @@ export const AboutBloomHouse = () => {
             <div
               className="font-normal text-bloomBody
               lg:text-base lg:text-start
-              md:text-sm md:text-center
+              md:text-base md:text-center
               xs:text-base xs:text-start xs:leading-6
               "
             >
