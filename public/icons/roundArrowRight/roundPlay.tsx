@@ -19,7 +19,7 @@ export const RoundPlayIcon: FC<RoundPlayIconProps> = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_2632_6758)">
+        <g clipPath="url(#clip0_2632_6758)">
           <path
             opacity="0.35"
             d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72Z"
